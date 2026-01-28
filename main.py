@@ -613,8 +613,8 @@ async def run_main(
         return "PAUSED_DUE_TO_COST"
     
     # Models to process
-    opensource_models = ['solagent-64k-tracker-4b-instruct-lora'] # 'Qwen/Qwen3-8B' Qwen/Qwen3-32B 'solagent-4k-tracker-v1' 'solagent-4k-mixed-v1' 'solagent-4k-tracker-v2' solagent-20k-tracker-4b-instruct-v2 Qwen/Qwen3-4B-Instruct-2507-v solagent-256k-tracker-4b-instruct solagent-4k-mixed-v2
-    models = opensource_models# + ["gpt-5-mini", "gpt-5.1", "claude-sonnet-4-5"] 
+    opensource_models = [] # 'Qwen/Qwen3-8B' Qwen/Qwen3-32B 'solagent-4k-tracker-v1' 'solagent-4k-mixed-v1' 'solagent-4k-tracker-v2' solagent-20k-tracker-4b-instruct-v2 Qwen/Qwen3-4B-Instruct-2507-v solagent-256k-tracker-4b-instruct solagent-4k-mixed-v2
+    models = opensource_models + ["gpt-5-mini", "gpt-5.1", "claude-sonnet-4-5"] 
     
     # Process each model
     for model_name in models:
