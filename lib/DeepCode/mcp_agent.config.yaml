@@ -1,0 +1,89 @@
+$schema: ./schema/mcp-agent.config.schema.json
+anthropic:
+  default_model: claude-sonnet-4-5
+default_search_server: brave
+document_segmentation:
+  enabled: true
+  size_threshold_chars: 50000
+execution_engine: asyncio
+llm_provider: openai
+logger:
+  level: info
+  path_settings:
+    path_pattern: logs/mcp-agent-{unique_id}.jsonl
+    timestamp_format: '%Y%m%d_%H%M%S'
+    unique_id: timestamp
+  progress_display: true
+  transports:
+  - console
+  - file
+mcp:
+  servers:
+    bocha-mcp:
+      args:
+      - tools/bocha_search_server.py
+      command: /opt/homebrew/Caskroom/miniforge/base/envs/agent2deepcode/bin/python3
+      env:
+        BOCHA_API_KEY: ''
+        PYTHONPATH: .
+    brave:
+      args:
+      - -y
+      - '@modelcontextprotocol/server-brave-search'
+      command: npx
+      env:
+        BRAVE_API_KEY: ''
+    code-implementation:
+      args:
+      - tools/code_implementation_server.py
+      command: /opt/homebrew/Caskroom/miniforge/base/envs/agent2deepcode/bin/python
+      description: Paper code reproduction tool server - provides file operations,
+        code execution, search and other functions
+      env:
+        PYTHONPATH: .
+    code-reference-indexer:
+      args:
+      - tools/code_reference_indexer.py
+      command: /opt/homebrew/Caskroom/miniforge/base/envs/agent2deepcode/bin/python
+      description: Code reference indexer server - Provides intelligent code reference
+        search from indexed repositories
+      env:
+        PYTHONPATH: .
+    command-executor:
+      args:
+      - tools/command_executor.py
+      command: /opt/homebrew/Caskroom/miniforge/base/envs/agent2deepcode/bin/python
+      env:
+        PYTHONPATH: .
+    document-segmentation:
+      args:
+      - tools/document_segmentation_server.py
+      command: /opt/homebrew/Caskroom/miniforge/base/envs/agent2deepcode/bin/python
+      description: Document segmentation server - Provides intelligent document analysis
+        and segmented reading to optimize token usage
+      env:
+        PYTHONPATH: .
+    fetch:
+      args:
+      - mcp-server-fetch
+      command: uvx
+    file-downloader:
+      args:
+      - tools/pdf_downloader.py
+      command: /opt/homebrew/Caskroom/miniforge/base/envs/agent2deepcode/bin/python
+      env:
+        PYTHONPATH: .
+    filesystem:
+      args:
+      - -y
+      - '@modelcontextprotocol/server-filesystem'
+      command: npx
+    github-downloader:
+      args:
+      - tools/git_command.py
+      command: /opt/homebrew/Caskroom/miniforge/base/envs/agent2deepcode/bin/python
+      env:
+        PYTHONPATH: .
+openai:
+  default_model: gpt-5-mini
+planning_mode: traditional

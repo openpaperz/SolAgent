@@ -1,0 +1,2 @@
+repository.tar.bz2 filter=lfs diff=lfs merge=lfs -text
+output/progress.db filter=lfs diff=lfs merge=lfs -text

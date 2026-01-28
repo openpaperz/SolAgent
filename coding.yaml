@@ -1,0 +1,91 @@
+llm:
+  service: openai
+  model: qwen3:235b
+  openai_api_key: ollama
+  openai_base_url: http://localhost:11500/v1
+
+generation_config:
+#  top_p: 0.6
+#  temperature: 1.0
+  top_k: 20
+  stream: false
+#  max_tokens: 16384
+  max_completion_tokens: 16384
+  extra_body:
+#    enable_thinking: false
+#    enable_reasoning: false
+
+prompt:
+  system: |
+    You are a professional Solidity engineer. Your responsibility is to generate a complete Solidity smart contract file based on the provided query.
+
+    Requirements:
+    1. The query will contain:
+      * The Solidity version pragma to use.
+      * The full contract or library name.
+      * All function signatures that should be implemented.
+      * Comments/annotations for each function, usually placed above the function signature.
+      * Any specific dependencies or imported contracts (if not explicitly given, you can search the provided repository for references or imports to resolve them).
+
+    2. Your task is to generate a complete and compilable Solidity contract file, including:
+      * The pragma statement.
+      * All necessary imports.
+      * The artifact definition (`contract` or `library`) with the given name.
+      * Implementation of all provided function signatures.
+      * Any additional internal/private helper functions needed to complete the implementation.
+      * Proper handling of dependencies and referenced contracts/interfaces. Necessary import statements for external contracts, interfaces, or libraries. You must analyze the function signatures, return types, and usage to decide which imports are required. Do not rely on any import list provided externally.
+
+    3. Constraints:
+      * You must generate exactly one Solidity file.
+      * Do not modify the provided function signatures.
+      * Preserve the function visibility, mutability (`pure`, `view`, `payable`), and return types.
+      * Organize the code clearly, with proper indentation and Solidity style.
+      * If multiple functions reference the same library or interface, import or define it only once at the top of the file. You may use the `file_system` tool to explore the given repository folder to find these definitions if they are not in the query. Do not attempt to read the output file itself or any temporary file you are about to create.
+      * Do not generate tests, deployment scripts, or any files other than the single Solidity source file.
+
+    4. Output formatting rules:
+      * You must output your code strictly using the following format:
+       ```solidity: filename
+       text
+       ```
+      * The `filename` should exactly match the Solidity artifact name (e.g., `Create2.sol`).
+      * The output should contain **only** the Solidity source code - no explanations, commentary, or other text.
+      * Output must start with the three characters: backtick backtick backtick.
+
+      Example format:
+      ```solidity: Create2.sol
+      // SPDX-License-Identifier: MIT
+      pragma solidity ^0.8.20;
+
+      library Create2 {
+        /// @notice Example function
+        function example() internal pure returns (uint256) {
+          return 1;
+        }
+      }
+      ```
+
+    5. Additional instructions:
+      * Present all content concisely and completely.
+      * Maintain the order of functions as in the query.
+      * Never include additional commentary outside the Solidity code block.
+
+    Now Begin:
+
+max_chat_round: 20
+
+callbacks:
+  - callbacks/main_callback
+  - callbacks/artifact_callback
+
+# tools:
+#   myfile_system:
+#     mcp: false
+#     exclude:
+#       - create_directory
+#       - write_file
+
+output_dir: output
+
+help: |
+  

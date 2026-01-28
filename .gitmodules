@@ -1,0 +1,3 @@
+[submodule "lib/ms-agent"]
+	path = lib/ms-agent
+	url = https://github.com/modelscope/ms-agent.git # use commit dd07b0d8

@@ -1,0 +1,109 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @dev Library for deploying contracts using the CREATE2 opcode.
+ * Allows for deterministic address computation before deployment.
+ */
+library Create2 {
+    /**
+     * @dev Error thrown when the contract has insufficient balance for deployment.
+     */
+    error InsufficientBalance(uint256 balance, uint256 needed);
+
+    /**
+     * @dev Error thrown when the bytecode is empty.
+     */
+    error Create2EmptyBytecode();
+
+    /**
+     * @dev Error thrown when the deployment fails.
+     */
+    error FailedDeployment();
+
+    /**
+     * @notice Deploys a new contract using the CREATE2 opcode with the provided bytecode and salt.
+     *
+     * @param amount The amount of Ether to send with the deployment.
+     * @param salt A unique salt to ensure deterministic address generation.
+     * @param bytecode The bytecode of the contract to be deployed.
+     * @return addr The address of the newly deployed contract.
+     *
+     * Steps:
+     * 1. Check if the contract has sufficient balance to cover the deployment cost. If not, revert with `InsufficientBalance` error.
+     * 2. Check if the provided bytecode is empty. If so, revert with `Create2EmptyBytecode` error.
+     * 3. Use inline assembly to deploy the contract using the CREATE2 opcode:
+     *    - Pass the amount of Ether, bytecode, and salt to the CREATE2 opcode.
+     *    - If the deployment fails and returndata is not empty, revert with the returned error data.
+     * 4. If the deployment address is `address(0)`, revert with `FailedDeployment` error.
+     * 5. Return the address of the deployed contract.
+     */
+    function deploy(uint256 amount, bytes32 salt, bytes memory bytecode) internal returns (address addr) {
+        if (address(this).balance < amount) {
+            revert InsufficientBalance(address(this).balance, amount);
+        }
+        if (bytecode.length == 0) {
+            revert Create2EmptyBytecode();
+        }
+        assembly {
+            addr := create2(amount, add(bytecode, 0x20), mload(bytecode), salt)
+            if returndatasize() {
+                returndatacopy(0, 0, returndatasize())
+                revert(0, returndatasize())
+            }
+        }
+        if (addr == address(0)) {
+            revert FailedDeployment();
+        }
+    }
+
+    /**
+     * @notice Computes the address of a contract that will be deployed using the CREATE2 opcode.
+     * 
+     * @param salt A random value used to ensure the uniqueness of the deployed contract's address.
+     * @param bytecodeHash The keccak256 hash of the contract's bytecode.
+     * @param deployer The address of the account deploying the contract.
+     * 
+     * @return addr The computed address of the contract that will be deployed.
+     * 
+     * Steps:
+     * 1. Load the free memory pointer to allocate memory for the computation.
+     * 2. Store the bytecode hash, salt, and deployer address in memory.
+     * 3. Adjust the memory pointer to include a 0xff byte, which is required for CREATE2 address computation.
+     * 4. Compute the keccak256 hash of the memory region containing the deployer address, salt, and bytecode hash.
+     * 5. Mask the hash to ensure it is a valid Ethereum address (160 bits).
+     * 6. Return the computed address.
+     */
+    function computeAddress(bytes32 salt, bytes32 bytecodeHash) internal view returns (address) {
+        return computeAddress(salt, bytecodeHash, address(this));
+    }
+
+    /**
+     * @notice Computes the address of a contract that will be deployed using the CREATE2 opcode.
+     * 
+     * @param salt A random value used to ensure the uniqueness of the deployed contract's address.
+     * @param bytecodeHash The keccak256 hash of the contract's bytecode.
+     * @param deployer The address of the account deploying the contract.
+     * 
+     * @return addr The computed address of the contract that will be deployed.
+     * 
+     * Steps:
+     * 1. Load the free memory pointer to allocate memory for the computation.
+     * 2. Store the bytecode hash, salt, and deployer address in memory.
+     * 3. Adjust the memory pointer to include a 0xff byte, which is required for CREATE2 address computation.
+     * 4. Compute the keccak256 hash of the memory region containing the deployer address, salt, and bytecode hash.
+     * 5. Mask the hash to ensure it is a valid Ethereum address (160 bits).
+     * 6. Return the computed address.
+     */
+    function computeAddress(bytes32 salt, bytes32 bytecodeHash, address deployer) internal pure returns (address addr) {
+        assembly {
+            let ptr := mload(0x40)
+            mstore(add(ptr, 0x40), bytecodeHash)
+            mstore(add(ptr, 0x20), salt)
+            mstore(ptr, deployer)
+            let start := add(ptr, 0x0b)
+            mstore8(start, 0xff)
+            addr := keccak256(start, 85)
+        }
+    }
+}

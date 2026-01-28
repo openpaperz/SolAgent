@@ -1,0 +1,1 @@
+git config alias.addsafe "add . ':!lib/ms-agent'"

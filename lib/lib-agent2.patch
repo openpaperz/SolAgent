@@ -1,0 +1,913 @@
+diff --git a/ms_agent/agent/llm_agent.py b/ms_agent/agent/llm_agent.py
+index 82ed427..b98ea69 100644
+--- a/ms_agent/agent/llm_agent.py
++++ b/ms_agent/agent/llm_agent.py
+@@ -9,6 +9,9 @@ from copy import deepcopy
+ from typing import Any, AsyncGenerator, Dict, List, Optional, Tuple, Union
+ 
+ import json
++
++from sympy.physics.units import years
++
+ from ms_agent.agent.runtime import Runtime
+ from ms_agent.callbacks import Callback, callbacks_mapping
+ from ms_agent.llm.llm import LLM
+@@ -283,9 +286,7 @@ class LLMAgent(Agent):
+     def query(self):
+         query = getattr(
+             getattr(self.config, 'prompt', DictConfig({})), 'query', None)
+-        if not query:
+-            query = input('>>>')
+-        return query
++        return query or ''
+ 
+     async def create_messages(
+             self, messages: Union[List[Message], str]) -> List[Message]:
+@@ -459,6 +460,12 @@ class LLMAgent(Agent):
+         if (not self.load_cache) or messages[-1].role != 'assistant':
+             messages = await self.condense_memory(messages)
+             await self.on_generate_response(messages)
++            # no need to call llm to generate response. on feedback is all passed.
++            if self.runtime.should_stop:
++                self.save_history(messages)
++                yield messages
++                return
++
+             tools = await self.tool_manager.get_tools()
+ 
+             if self.stream:
+diff --git a/ms_agent/llm/anthropic_llm.py b/ms_agent/llm/anthropic_llm.py
+index 6f93a11..3aae4e4 100644
+--- a/ms_agent/llm/anthropic_llm.py
++++ b/ms_agent/llm/anthropic_llm.py
+@@ -1,4 +1,5 @@
+ import inspect
++import time
+ from typing import Any, Dict, Generator, Iterator, List, Optional, Union
+ 
+ from ms_agent.llm import LLM
+@@ -120,10 +121,10 @@ class Anthropic(LLM):
+             'model': self.model,
+             'messages': formatted_messages,
+             'max_tokens': max_tokens,
+-            'thinking': {
+-                'type': 'enabled' if enable_thinking else 'disabled',
+-                'budget_tokens': thinking_budget
+-            }
++            # 'thinking': {
++            #     'type': 'enabled' if enable_thinking else 'disabled',
++            #     'budget_tokens': thinking_budget
++            # }
+         }
+ 
+         if system:
+@@ -132,10 +133,36 @@ class Anthropic(LLM):
+             params['tools'] = tools
+         params.update(kwargs)
+ 
+-        if stream:
+-            return self.client.messages.stream(**params)
+-        else:
+-            return self.client.messages.create(**params)
++        # if stream:
++        #     return self.client.messages.stream(**params)
++        # else:
++        #     return self.client.messages.create(**params)
++
++        try:
++            if stream:
++                return self.client.messages.stream(**params)
++            else:
++                return self.client.messages.create(**params)
++        except Exception as e:
++            # Handle Anthropic rate limit errors with dynamic sleep
++            import anthropic
++            
++            if isinstance(e, anthropic.RateLimitError):
++                retry_after = 60  # default to 60 seconds
++                
++                # Extract retry_after from response JSON body
++                try:
++                    if hasattr(e, 'response'):
++                        retry_after = e.response.json()["error"].get("retry_after", 60)
++                except Exception:
++                    pass
++                
++                print(f"[RATE_LIMIT] Anthropic rate limit exceeded. Sleeping {retry_after} seconds...")
++                time.sleep(retry_after)
++                # Re-raise to let @retry decorator handle the retry
++                raise
++            else:
++                raise
+ 
+     @retry(max_attempts=LLM.retry_count, delay=1.0)
+     def generate(self,
+diff --git a/ms_agent/llm/model_mapping.py b/ms_agent/llm/model_mapping.py
+index bcac388..1fe807b 100644
+--- a/ms_agent/llm/model_mapping.py
++++ b/ms_agent/llm/model_mapping.py
+@@ -3,10 +3,12 @@ from ms_agent.llm.anthropic_llm import Anthropic
+ from ms_agent.llm.dashscope_llm import DashScope
+ from ms_agent.llm.modelscope_llm import ModelScope
+ from ms_agent.llm.openai_llm import OpenAI
++from ms_agent.llm.ollama_llm import Ollama
+ 
+ all_services_mapping = {
+     'modelscope': ModelScope,
+     'openai': OpenAI,
+     'anthropic': Anthropic,
+     'dashscope': DashScope,
++    'ollama': Ollama,
+ }
+diff --git a/ms_agent/llm/ollama_llm.py b/ms_agent/llm/ollama_llm.py
+new file mode 100644
+index 0000000..f787f9d
+--- /dev/null
++++ b/ms_agent/llm/ollama_llm.py
+@@ -0,0 +1,399 @@
++# Copyright (c) Alibaba, Inc. and its affiliates.
++import inspect
++from copy import deepcopy
++from typing import Any, Dict, Generator, Iterable, List, Optional
++from urllib.parse import urlparse
++import uuid
++
++from ms_agent.llm import LLM
++from ms_agent.llm.utils import Message, Tool, ToolCall
++from ms_agent.utils import (MAX_CONTINUE_RUNS, assert_package_exist,
++                            get_logger, retry)
++from omegaconf import DictConfig, OmegaConf
++
++logger = get_logger()
++
++
++class Ollama(LLM):
++    """Wrapper for the official Ollama Python client.
++
++    This class uses the official `ollama` Python package to call the Ollama
++    chat API (not the OpenAI-compatible proxy). It supports both streaming
++    and non-streaming chat generation and a simple 'continue on length'
++    mechanism similar to other LLM adapters in this project.
++
++    Args:
++        config (`DictConfig`): Configuration containing `llm` and optional
++            `generation_config` sections.
++        base_url (`Optional[str]`): Custom Ollama HTTP API host, e.g.
++            "http://localhost:11434". If not provided the default client
++            behavior is used.
++    """
++
++    def __init__(
++        self,
++        config: DictConfig,
++        base_url: Optional[str] = None,
++        api_key: Optional[str] = None,
++    ):
++        super().__init__(config)
++        assert_package_exist('ollama')
++        # Import here so the project can be imported without ollama installed
++        from ollama import Client
++
++        self.model: str = config.llm.model
++        self.max_continue_runs = getattr(config.llm, 'max_continue_runs',
++                                         None) or MAX_CONTINUE_RUNS
++        # Accept legacy/openai-style parameters too
++        base_url = base_url or getattr(config.llm, 'ollama_base_url', None) or getattr(config.llm, 'openai_base_url', None)
++        api_key = api_key or getattr(config.llm, 'openai_api_key', None)
++
++        # Create a client. If host is provided, normalize it to scheme://netloc
++        client_kwargs = {}
++        if base_url:
++            parsed = urlparse(base_url)
++            host = f"{parsed.scheme}://{parsed.netloc}"
++            client_kwargs['host'] = host
++
++        # API key is intentionally ignored for the Ollama client here.
++        # Some runtimes may still provide `openai_api_key` for legacy reasons,
++        # but we do not forward it to the Ollama client as a header.
++
++        self.client = Client(**client_kwargs)
++        self.args: Dict = OmegaConf.to_container(
++            getattr(config, 'generation_config', DictConfig({})))
++
++    def format_tools(self,
++                     tools: Optional[List[Tool]] = None) -> Optional[List[Dict[str, Any]]]:
++        """Format `tools` into the structure accepted by Ollama chat API.
++
++        Ollama's chat endpoint accepts an optional `tools` array similar to
++        the OpenAI-style function definitions. We keep the same simple
++        mapping used by other adapters in the repo.
++        """
++        if not tools:
++            return None
++
++        formatted = []
++        for tool in tools:
++            formatted.append({
++                'type': 'function',
++                'function': {
++                    'name': tool['tool_name'],
++                    'description': tool.get('description', ''),
++                    'parameters': tool.get('parameters', {}),
++                }
++            })
++
++        return formatted
++
++    @retry(max_attempts=LLM.retry_count, delay=1.0)
++    def generate(self,
++                 messages: List[Message],
++                 tools: Optional[List[Tool]] = None,
++                 max_continue_runs: Optional[int] = None,
++                 **kwargs) -> Message | Generator[Message, None, None]:
++        """Generate a chat response using Ollama.
++
++        Supports streaming by passing `stream=True` in kwargs. Additional
++        generation parameters can be passed via `generation_config` in the
++        provided `config` or directly through `kwargs`.
++        """
++        parameters = None
++        try:
++            parameters = inspect.signature(self.client.chat).parameters
++        except Exception:
++            parameters = None
++
++        args = self.args.copy()
++        args.update(kwargs)
++        stream = args.get('stream', False)
++
++        # Keep only supported parameters when possible
++        if parameters is not None:
++            args = {key: value for key, value in args.items() if key in parameters}
++
++        completion = self._call_llm(messages, tools, **args)
++
++        max_continue_runs = max_continue_runs or self.max_continue_runs
++        if stream:
++            return self._stream_continue_generate(messages, completion, tools,
++                                                  max_continue_runs - 1,
++                                                  **args)
++        else:
++            return self._continue_generate(messages, completion, tools,
++                                           max_continue_runs - 1, **args)
++
++    def _call_llm(self,
++                  messages: List[Message],
++                  tools: Optional[List[Tool]] = None,
++                  **kwargs) -> Any:
++        """Call Ollama chat endpoint.
++
++        Returns either a dict (non-stream) or an iterable/generator (stream).
++        """
++        messages_payload = self._format_input_message(messages)
++        formatted_tools = self.format_tools(tools)
++
++        # Ensure model is provided
++        kwargs['model'] = kwargs.get('model', self.model)
++
++        # Pass tools if any
++        if formatted_tools is not None:
++            kwargs['tools'] = formatted_tools
++
++        # The official client returns a mapping or an iterator when stream=True
++        return self.client.chat(messages=messages_payload, **kwargs)
++
++    @staticmethod
++    def _stream_format_output_message(chunk) -> Message:
++        """Convert a single streaming chunk from Ollama into a Message.
++
++        The streaming chunk is expected to be a dict-like object with
++        a `message` field containing incremental content. We map commonly
++        available fields to the project's `Message` dataclass.
++        """
++        # Expect chunk to be a ChatResponse-like object with a `message` attribute
++        msg = getattr(chunk, 'message', None)
++        if msg is None:
++            # Fallback empty message
++            content = ''
++            role = 'assistant'
++            reasoning = ''
++            raw_tool_calls = None
++        else:
++            content = getattr(msg, 'content', '') or ''
++            role = getattr(msg, 'role', 'assistant')
++            reasoning = getattr(msg, 'reasoning_content', '') or ''
++            raw_tool_calls = getattr(msg, 'tool_calls', None)
++
++        tool_calls = []
++        if raw_tool_calls:
++            for idx, tool_call in enumerate(raw_tool_calls):
++                # Follow openai_llm style: prefer function.* attributes
++                tc_id = getattr(tool_call, 'id', '')
++                tc_index = getattr(tool_call, 'index', idx)
++                tc_type = getattr(tool_call, 'type', 'function')
++                func = getattr(tool_call, 'function', None)
++
++                if func is not None:
++                    arguments = getattr(func, 'arguments', '')
++                    tool_name = getattr(func, 'name', None)
++                else:
++                    arguments = getattr(tool_call, 'arguments', '')
++                    tool_name = getattr(tool_call, 'tool_name', None)
++
++                if not tc_id:
++                    tc_id = f'tc_{uuid.uuid4().hex}'
++
++                tool_calls.append(ToolCall(
++                    id=tc_id,
++                    index=tc_index,
++                    type=tc_type,
++                    arguments=arguments,
++                    tool_name=tool_name,
++                ))
++
++        return Message(
++            role=role,
++            content=content,
++            reasoning_content=reasoning,
++            tool_calls=tool_calls,
++            id=getattr(chunk, 'id', ''),
++            prompt_tokens=getattr(chunk, 'prompt_eval_count', 0) or 0,
++            completion_tokens=getattr(chunk, 'eval_count', 0) or 0,
++        )
++
++    @staticmethod
++    def _format_output_message(response) -> Message:
++        """Format a non-streaming Ollama response into a Message.
++
++        The Ollama chat response typically contains top-level keys like
++        `message`, `done`, `done_reason`, and timing/usage fields.
++        """
++        # Expect a ChatResponse-like object from the ollama client
++        msg_obj = getattr(response, 'message', None)
++        if msg_obj is not None:
++            content = getattr(msg_obj, 'content', '') or ''
++            role = getattr(msg_obj, 'role', 'assistant')
++            raw_tool_calls = getattr(msg_obj, 'tool_calls', None)
++            reasoning = getattr(msg_obj, 'reasoning_content', '') or ''
++        else:
++            content = ''
++            role = 'assistant'
++            raw_tool_calls = None
++            reasoning = ''
++
++        prompt_tokens = getattr(response, 'prompt_eval_count', 0) or 0
++        completion_tokens = getattr(response, 'eval_count', 0) or 0
++        resp_id = getattr(response, 'id', '')
++
++        tool_calls = []
++        if raw_tool_calls:
++            for idx, tool_call in enumerate(raw_tool_calls):
++                tc_id = getattr(tool_call, 'id', '')
++                tc_index = getattr(tool_call, 'index', idx)
++                tc_type = getattr(tool_call, 'type', 'function')
++                func = getattr(tool_call, 'function', None)
++
++                if func is not None:
++                    arguments = getattr(func, 'arguments', '')
++                    tool_name = getattr(func, 'name', None)
++                else:
++                    arguments = getattr(tool_call, 'arguments', '')
++                    tool_name = getattr(tool_call, 'tool_name', None)
++
++                if not tc_id:
++                    tc_id = f'tc_{uuid.uuid4().hex}'
++
++                tool_calls.append(ToolCall(
++                    id=tc_id,
++                    index=tc_index,
++                    type=tc_type,
++                    arguments=arguments,
++                    tool_name=tool_name,
++                ))
++
++        return Message(
++            role=role,
++            content=content,
++            reasoning_content=reasoning,
++            tool_calls=tool_calls,
++            id=resp_id,
++            prompt_tokens=prompt_tokens,
++            completion_tokens=completion_tokens,
++        )
++
++    def _merge_stream_message(self, pre_message_chunk: Optional[Message],
++                              message_chunk: Message) -> Optional[Message]:
++        """Merge streaming message chunks into an accumulated Message.
++
++        This is simplified compared to OpenAI merging logic since Ollama's
++        streaming chunks are generally incremental text updates.
++        """
++        if not pre_message_chunk:
++            return message_chunk
++        message = deepcopy(pre_message_chunk)
++        message.reasoning_content += message_chunk.reasoning_content
++        message.content += message_chunk.content
++        # Append tool_calls if present
++        if message_chunk.tool_calls:
++            if message.tool_calls:
++                message.tool_calls += message_chunk.tool_calls
++            else:
++                message.tool_calls = message_chunk.tool_calls
++        return message
++
++    def _stream_continue_generate(self,
++                                  messages: List[Message],
++                                  completion: Iterable,
++                                  tools: Optional[List[Tool]] = None,
++                                  max_runs: Optional[int] = None,
++                                  **kwargs) -> Generator[Message, None, None]:
++        """Handle streaming generation and continuation when `done` is false.
++
++        Ollama returns `done` and `done_reason` in non-streaming responses.
++        For streaming, we accumulate chunks and, if a final response indicates
++        the model stopped due to length, we attempt to continue like other
++        adapters.
++        """
++        message = None
++        try:
++            for chunk in completion:
++                message_chunk = self._stream_format_output_message(chunk)
++                message = self._merge_stream_message(message, message_chunk)
++                # On streaming, we don't always get a final `done` flag in each
++                # chunk. Yield accumulated partials as they arrive.
++                yield message
++
++            # After stream ends, check if the last chunk indicates unfinished
++            if isinstance(message, Message) and (not getattr(message, 'partial', False)):
++                # If the stream ended but model indicates a length stop, try continue
++                # (Ollama non-stream responses include done/done_reason; here we
++                # conservatively don't attempt automatic continue).
++                pass
++
++        except Exception as e:
++            logger.exception('Error while streaming from Ollama: %s', e)
++
++    def _call_llm_for_continue_gen(self,
++                                   messages: List[Message],
++                                   new_message: Message,
++                                   tools: List[Tool] = None,
++                                   **kwargs) -> Any:
++        """Prepare messages and call the LLM again to continue generation.
++
++        This method follows the same contract as other adapters in the repo:
++        mark or merge partial messages and call `_call_llm` again.
++        """
++        if messages[-1].to_dict().get('partial', False):
++            # merge into last partial
++            messages[-1].reasoning_content += new_message.reasoning_content
++            messages[-1].content += new_message.content
++            messages[-1].prompt_tokens += new_message.prompt_tokens
++            messages[-1].completion_tokens += new_message.completion_tokens
++        else:
++            if messages[-1].content != new_message.content:
++                messages.append(new_message)
++            messages[-1].partial = True
++        messages[-1].api_calls += 1
++
++        return self._call_llm(messages, tools, **kwargs)
++
++    def _continue_generate(self,
++                           messages: List[Message],
++                           completion,
++                           tools: List[Tool] = None,
++                           max_runs: Optional[int] = None,
++                           **kwargs) -> Message:
++        """Continue non-streaming generation when Ollama indicates unfinished.
++
++        Ollama non-streaming responses include `done` and `done_reason`. If a
++        response finished due to length we attempt to call again up to
++        `max_runs` times to continue generation.
++        """
++        new_message = self._format_output_message(completion)
++
++        done_reason = getattr(completion, 'done_reason', None)
++        done = getattr(completion, 'done', True)
++
++        if (not done) or (done_reason in ['length', 'null'] and (max_runs is None or max_runs != 0)):
++            logger.info('finish_reason: %s, continue generate.', done_reason)
++            completion = self._call_llm_for_continue_gen(messages, new_message, tools, **kwargs)
++            return self._continue_generate(messages, completion, tools,
++                                           max_runs - 1 if max_runs is not None else None,
++                                           **kwargs)
++        elif messages[-1].to_dict().get('partial', False):
++            # merge partial into last message and return
++            messages[-1].reasoning_content += new_message.reasoning_content
++            messages[-1].content += new_message.content
++            messages[-1].prompt_tokens += new_message.prompt_tokens
++            messages[-1].completion_tokens += new_message.completion_tokens
++            messages[-1].partial = False
++            return messages.pop(-1)
++        else:
++            return new_message
++
++    def _format_input_message(self, messages: List[Message]) -> List[Dict[str, Any]]:
++        """Convert internal Message objects into Ollama chat input format.
++
++        Ollama expects a list of message dicts with at least `role` and
++        optionally `content` for messages. We keep the input minimal and
++        only send `role` and `content` per message to the client (matching
++        what the OpenAI adapter does for input normalization).
++        """
++        payload = []
++        for message in messages:
++            if isinstance(message, Message):
++                message.content = message.content.strip()
++                message = message.to_dict()
++
++            # Only keep `role` and `content` when sending to the client.
++            item = {
++                'role': message.get('role'),
++                'content': message.get('content', '')
++            }
++
++            payload.append(item)
++
++        return payload
+diff --git a/ms_agent/llm/openai_llm.py b/ms_agent/llm/openai_llm.py
+index 3d01261..5651093 100644
+--- a/ms_agent/llm/openai_llm.py
++++ b/ms_agent/llm/openai_llm.py
+@@ -103,7 +103,7 @@ class OpenAI(LLM):
+         stream = args.get('stream', False)
+ 
+         args = {key: value for key, value in args.items() if key in parameters}
+-        completion = self._call_llm(messages, self.format_tools(tools), **args)
++        completion = self._call_llm(messages, tools, **args)
+ 
+         # Complex task may produce long response
+         # Call continue_generate to keep generating if the finish_reason is `length`
+@@ -131,6 +131,7 @@ class OpenAI(LLM):
+             Any: Raw output from the OpenAI chat completion API.
+         """
+         messages = self._format_input_message(messages)
++        tools = self.format_tools(tools)
+ 
+         return self.client.chat.completions.create(
+             model=self.model, messages=messages, tools=tools, **kwargs)
+diff --git a/ms_agent/tools/__init__.py b/ms_agent/tools/__init__.py
+index 9d45174..deb4df7 100644
+--- a/ms_agent/tools/__init__.py
++++ b/ms_agent/tools/__init__.py
+@@ -4,3 +4,5 @@ from .filesystem_tool import FileSystemTool
+ from .mcp_client import MCPClient
+ from .split_task import SplitTask
+ from .tool_manager import ToolManager
++
++from .myfilesystem_tool import MyFileSystemTool
+diff --git a/ms_agent/tools/myfilesystem_tool.py b/ms_agent/tools/myfilesystem_tool.py
+new file mode 100644
+index 0000000..5141293
+--- /dev/null
++++ b/ms_agent/tools/myfilesystem_tool.py
+@@ -0,0 +1,326 @@
++import json
++import os
++from typing import Optional
++
++from ms_agent.llm.utils import Tool
++from ms_agent.tools.base import ToolBase
++from ms_agent.utils import get_logger
++from omegaconf import DictConfig
++
++from utils.shared_context import shared_context
++
++logger = get_logger()
++
++
++class MyFileSystemTool(ToolBase):
++    """A file system operation tool
++
++    TODO: This tool now is a simple implementation, sandbox or mcp TBD.
++    """
++
++    def __init__(self, config):
++        super(MyFileSystemTool, self).__init__(config)
++        tools = getattr(config, 'tools', DictConfig({}))
++        file_system_config = getattr(tools, 'myfile_system', None)
++        if file_system_config is not None:
++            self._exclude_functions = getattr(file_system_config, 'exclude',
++                                              [])
++        else:
++            self._exclude_functions = []
++        self.output_dir = getattr(config, 'output_dir', 'output')
++        self.call_history = set()
++
++    async def connect(self):
++        logger.warning_once(
++            '[IMPORTANT]FileSystemTool is not implemented with sandbox, please consider other similar '
++            'tools if you want to run dangerous code.')
++
++    async def get_tools(self):
++        tools = {
++            'myfile_system': [
++                Tool(
++                    tool_name='create_directory',
++                    server_name='myfile_system',
++                    description='Create a directory',
++                    parameters={
++                        'type': 'object',
++                        'properties': {
++                            'path': {
++                                'type':
++                                    'string',
++                                'description':
++                                    'The relative path of the directory to create',
++                            }
++                        },
++                        'required': ['path'],
++                        'additionalProperties': False
++                    }),
++                Tool(
++                    tool_name='write_file',
++                    server_name='myfile_system',
++                    description='Write content into a file',
++                    parameters={
++                        'type': 'object',
++                        'properties': {
++                            'path': {
++                                'type': 'string',
++                                'description': 'The relative path of the file',
++                            },
++                            'content': {
++                                'type': 'string',
++                                'description': 'The content of the file',
++                            },
++                        },
++                        'required': ['path', 'content'],
++                        'additionalProperties': False
++                    }),
++                Tool(
++                    tool_name='read_file',
++                    server_name='myfile_system',
++                    description='Read the content of a file',
++                    parameters={
++                        'type': 'object',
++                        'properties': {
++                            'path': {
++                                'type': 'string',
++                                'description': 'The relative path of the file',
++                            }
++                        },
++                        'required': ['path'],
++                        'additionalProperties': False
++                    }),
++                Tool(
++                    tool_name='list_files',
++                    server_name='myfile_system',
++                    description='List all files in a directory',
++                    parameters={
++                        'type': 'object',
++                        'properties': {
++                            'path': {
++                                'type':
++                                    'string',
++                                'description':
++                                    "The path to list files, if path is None or '' or not given, "
++                                    'the root dir will be used as path.',
++                            }
++                        },
++                        'required': [],
++                        'additionalProperties': False
++                    }),
++            ]
++        }
++        return {
++            'myfile_system': [
++                t for t in tools['myfile_system']
++                if t['tool_name'] not in self._exclude_functions
++            ]
++        }
++
++    async def call_tool(self, server_name: str, *, tool_name: str,
++                        tool_args: dict) -> str:
++        return await getattr(self, tool_name)(**tool_args)
++
++    async def create_directory(self, path: Optional[str] = None) -> str:
++        """Create a directory
++
++        Args:
++            path(`str`): The relative directory path to create, a prefix dir will be automatically concatenated.
++
++        Returns:
++            <OK> or error message.
++        """
++        try:
++            if not path:
++                path = self.output_dir
++            else:
++                path = os.path.join(self.output_dir, path)
++            os.makedirs(path, exist_ok=True)
++            return f'Directory: <{path or "root path"}> was created.'
++        except Exception as e:
++            return f'Create directory <{path or "root path"}> failed, error: ' + str(
++                e)
++
++    async def write_file(self, path: str, content: str):
++        """Write content to a file.
++
++        Args:
++            path(`path`): The relative file path to write into, a prefix dir will be automatically concatenated.
++            content:
++
++        Returns:
++            <OK> or error message.
++        """
++        try:
++            if not os.path.exists(self.output_dir):
++                os.makedirs(self.output_dir, exist_ok=True)
++            dirname = os.path.dirname(path)
++            if dirname:
++                os.makedirs(
++                    os.path.join(self.output_dir, dirname), exist_ok=True)
++            with open(os.path.join(self.output_dir, path), 'w') as f:
++                content = normalize_json_escaped_string(content)
++                f.write(content)
++            return f'Save file <{path}> successfully.'
++        except Exception as e:
++            return f'Write file <{path}> failed, error: ' + str(e)
++
++    async def read_file(self, path: str):
++        """Read the content of a file.
++
++        Args:
++            path(`path`): The relative file path to read, a prefix dir will be automatically concatenated.
++
++        Returns:
++            The file content or error message.
++        """
++        key = self.config.tag + '-' + path
++        self.call_history.add(key)
++
++        orig_sol_repo = await shared_context.get("orig_sol_repo")
++
++        if not path:
++            return f'List files of `{path or "root path"}` failed, error: empty path.'
++        else:
++            if os.path.isabs(path):
++                # Must be under orig_sol_repo. Use commonpath to avoid
++                # false positives where a repo path is a prefix of another path
++                abs_repo = os.path.abspath(orig_sol_repo)
++                abs_path = os.path.abspath(path)
++                try:
++                    if os.path.commonpath([abs_repo, abs_path]) != abs_repo:
++                        return f'Absolute path must be under `{orig_sol_repo}`.'
++                except ValueError:
++                    # different drives (Windows) or invalid paths
++                    return f'Absolute path must be under `{orig_sol_repo}`.'
++            else:
++                path = os.path.join(orig_sol_repo, path)
++        try:
++            reading_file_name = path.split("/")[-1]
++            # 检查path文件名和orig_sol是否相同，相同则不允许读取
++            orig_sol, cur_t_sol, cur_sol = shared_context.get_all()
++            orig_sol_name = orig_sol.split('/')[-1]
++            if reading_file_name == orig_sol_name:
++                return f'Read file `{path}` failed, error: Reading the original solution file is not allowed.'
++            if reading_file_name.endswith(".t.sol"):
++                return f'Read file `{path}` failed, error: Reading the test file is not allowed.'
++
++            with open(os.path.join(self.output_dir, path), 'r') as f:
++                return f.read()
++        except Exception as e:
++            return f'Read file `{path}` failed, error: ' + str(e)
++
++    async def list_files(self, path: str = None):
++        """List all files in a directory.
++
++        Args:
++            path: The relative path to traverse, a prefix dir will be automatically concatenated.
++
++        Returns:
++            The file names concatenated as a string
++        """
++        orig_sol_repo = await shared_context.get("orig_sol_repo")
++
++        if not path:
++            # return f'List files of <{path or "root path"}> failed, error: empty path.'
++            path = orig_sol_repo
++        
++        # else:
++        if os.path.isabs(path):
++            # Must be under orig_sol_repo. Use commonpath to avoid
++            # false positives where a repo path is a prefix of another path
++            abs_repo = os.path.abspath(orig_sol_repo)
++            abs_path = os.path.abspath(path)
++            try:
++                if os.path.commonpath([abs_repo, abs_path]) != abs_repo:
++                    return f'Absolute path must be under `{orig_sol_repo}`.'
++            except ValueError:
++                # different drives (Windows) or invalid paths
++                return f'Absolute path must be under `{orig_sol_repo}`.'
++        else:
++            path = os.path.join(orig_sol_repo, path)
++    
++        file_paths = []
++        try:
++            orig_sol, cur_t_sol, cur_sol = shared_context.get_all()
++            orig_sol_name = orig_sol.split('/')[-1]
++
++            # for root, dirs, files in os.walk(path):
++            #     # 过滤掉隐藏目录以及特定目录
++            #     dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ['node_modules', 'dist', 'test', 'out']]
++
++            #     for file in files:
++            #         if file.endswith(".t.sol"):
++            #             continue
++            #         if file.split("/")[-1] == orig_sol_name:
++            #             continue
++            #         if not file.endswith('.sol'):
++            #             continue
++
++            #         absolute_path = os.path.join(root, file)
++            #         relative_path = os.path.relpath(absolute_path, path)
++            #         file_paths.append(relative_path)
++            
++            # Non-recursive: list only entries directly under `path`
++            with os.scandir(path) as it:
++                for entry in it:
++                    name = entry.name
++                    # skip hidden entries
++                    if name.startswith('.'):
++                        continue
++            
++                    # Directories: skip excluded dirs, otherwise include as an entry
++                    if entry.is_dir(follow_symlinks=False):
++                        if name in ['node_modules', 'dist', 'test', 'out']:
++                            continue
++                        relative_path = os.path.relpath(entry.path, path)
++                        file_paths.append(relative_path + os.sep)
++                        continue
++            
++                    # Files: apply original filters
++                    if not entry.is_file(follow_symlinks=False):
++                        continue
++                    if name.endswith(".t.sol"):
++                        continue
++                    if name == orig_sol_name:
++                        continue
++                    if not name.endswith('.sol'):
++                        continue
++            
++                    relative_path = os.path.relpath(entry.path, path)
++                    file_paths.append(relative_path)
++            return '\n'.join(file_paths)
++        except Exception as e:
++            return f'List files of `{path or "root path"}` failed, error: ' + str(e)
++
++
++def normalize_json_escaped_string(s: str, max_depth: int = 3) -> str:
++    """
++    Safely decode a string that may have been JSON-escaped multiple times.
++
++    Examples:
++        >>> normalize_json_escaped_string('function {...}')  # unchanged
++        >>> normalize_json_escaped_string('function {...}\\n')  # decode once
++        >>> normalize_json_escaped_string('function {...}\\\\n')  # decode twice
++
++    Args:
++        s (str): The possibly escaped string.
++        max_depth (int): Maximum decoding attempts to avoid infinite loops.
++
++    Returns:
++        str: The normalized, human-readable string.
++    """
++    if not isinstance(s, str):
++        return s
++
++    decoded = s
++    for _ in range(max_depth):
++        try:
++            # Try to interpret it as a JSON string literal
++            temp = json.loads(f'"{decoded}"')
++            # If decoding changes the string, keep going
++            if temp == decoded:
++                break
++            decoded = temp
++        except json.JSONDecodeError:
++            break
++    return decoded
+\ No newline at end of file
+diff --git a/ms_agent/tools/tool_manager.py b/ms_agent/tools/tool_manager.py
+index 5dae9d3..3ab3bef 100644
+--- a/ms_agent/tools/tool_manager.py
++++ b/ms_agent/tools/tool_manager.py
+@@ -10,6 +10,7 @@ from typing import Any, Dict, List, Optional
+ 
+ import json
+ from ms_agent.llm.utils import Tool, ToolCall
++from ms_agent.tools.myfilesystem_tool import MyFileSystemTool
+ from ms_agent.tools.base import ToolBase
+ from ms_agent.tools.code import CodeExecutionTool, LocalCodeExecutionTool
+ from ms_agent.tools.filesystem_tool import FileSystemTool
+@@ -66,6 +67,10 @@ class ToolManager:
+         if hasattr(config, 'tools') and hasattr(config.tools,
+                                                 'financial_data_fetcher'):
+             self.extra_tools.append(FinancialDataFetcher(config))
++
++        if hasattr(config, 'tools') and hasattr(config.tools, 'myfile_system'):
++            self.register_tool(MyFileSystemTool(config))
++
+         self.tool_call_timeout = getattr(config, 'tool_call_timeout',
+                                          TOOL_CALL_TIMEOUT)
+         local_dir = self.config.local_dir if hasattr(self.config,
