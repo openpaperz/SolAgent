@@ -371,3 +371,4 @@ z0train/output
 *.txt
 !requirements.txt
 !progress.db.7z
+!repository.7z
