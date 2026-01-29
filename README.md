@@ -47,7 +47,7 @@ SolAgent is an intelligent agent system for generating Solidity smart contract c
 
    **Note**: `ORIG_REPO` should point to the original repository path used in the dataset. This is used for path remapping.
 
-4. **Dataset**: Ensure `data/dataset.json` exists with the required dataset structure. The dataset should contain file paths and their corresponding requirements/context.
+4. **Dataset**: Ensure `data/dataset.json` exists with the required structure (file paths and their requirements/context). The source repository is shipped as `repository.7z`; extract it under the project root as `repository/`, and set up a copy at the path given by `ORIG_REPO`.
 
 5. **Test Mapping**: Ensure `data/test_map_cargo.pkl` exists, which maps source files to their test file paths.
 
