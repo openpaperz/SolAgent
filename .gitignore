@@ -370,5 +370,6 @@ z0train/output
 *.sqlite3-query
 *.txt
 !requirements.txt
+ex_rq1_mythril.py
 !progress.db.7z
 !repository.7z

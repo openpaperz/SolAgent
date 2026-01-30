@@ -8,7 +8,7 @@ SolAgent is an intelligent agent system for generating Solidity smart contract c
 .
 ├── baseline_*.py              # Baseline agent implementations
 ├── main.py                    # Main SolAgent implementation
-├── main_nopatch.py           # SolAgent without patch mode
+├── main_nopatch.py           # SolAgent main entrypoint
 ├── main_ablation_*.py        # Ablation study experiments
 ├── coding.yaml               # Code generation agent configuration
 ├── refine.yaml               # Refinement agent configuration
@@ -96,7 +96,7 @@ This script tests the original Solidity files from the dataset using Forge and S
 
 ### 2. SolAgent Main Experiment
 
-Run the main SolAgent implementation (without patch mode):
+Run the main SolAgent implementation:
 
 ```bash
 python main_nopatch.py
@@ -150,7 +150,6 @@ All experiments store their results in SQLite database files located in the `out
   - Baseline agents: Agent-specific tables
   - SolAgent: `process_tracking` table
   - Ablation studies: `process_tracking_ablation` table
-  - Patch mode: `progress_tracker_patch` table
   - Raw model baseline: `progress_tracker_rawmodel` table
   - Agent baselines: `progress_tracker_agent` table
   - Summary version: `process_tracking_summary` table
