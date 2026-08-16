@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/LibMap.sol",
+  "eval_full_pass": false,
+  "code_sha256": "eddce88c844da34a9512e2251e1124e19d4f4b912d558d8edf9cee8a77cec1a3",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:56.762063+00:00",
+  "skip_reason": "not eval FullPass"
+}

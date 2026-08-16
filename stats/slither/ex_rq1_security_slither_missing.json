@@ -1,0 +1,1459 @@
+{
+  "scope": "RQ1 seed1 eval FullPass files with invalid historical Slither",
+  "scan_target": "exact eval-selected code in sibling .solagent_gen.sol",
+  "records": [
+    {
+      "source": "copilot",
+      "model": "claude-sonnet-4-5",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/attacks/CoinFlipAttack.sol",
+      "row_id": 3871,
+      "status": "analyzed",
+      "code_sha256": "eadfc2190cc95b98503c40c7af38b28cb5149ccc25613f7c9d7bf8c55960cf25",
+      "code_bytes": 1392,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "eadfc2190cc95b98503c40c7af38b28cb5149ccc25613f7c9d7bf8c55960cf25"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 2,
+        "Low": 0
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "incorrect-equality"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "Medium",
+          "check": "unused-return"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "claude-sonnet-4-5",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/GoodSamaritan.sol",
+      "row_id": 3880,
+      "status": "analyzed",
+      "code_sha256": "8556529dd11f2602b55afc1110061f31b227b76e9407bb8e9b4dedd9850300eb",
+      "code_bytes": 6101,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "8556529dd11f2602b55afc1110061f31b227b76e9407bb8e9b4dedd9850300eb"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 1,
+        "Low": 0
+      },
+      "vuln_count": 1,
+      "findings": [
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "erc20-interface"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "claude-sonnet-4-5",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+      "row_id": 3885,
+      "status": "analyzed",
+      "code_sha256": "b7871c5e298644dbc40301b40daeda9f9e65546d40cef510a49c7474b5a8e117",
+      "code_bytes": 7215,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "b7871c5e298644dbc40301b40daeda9f9e65546d40cef510a49c7474b5a8e117"
+      },
+      "counts": {
+        "High": 2,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "claude-sonnet-4-5",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Preservation.sol",
+      "row_id": 3877,
+      "status": "analyzed",
+      "code_sha256": "c3404685c92bc2413843285d8500a73b0f60d804dec201a0178da9bf0cf5a8b0",
+      "code_bytes": 2502,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "c3404685c92bc2413843285d8500a73b0f60d804dec201a0178da9bf0cf5a8b0"
+      },
+      "counts": {
+        "High": 2,
+        "Medium": 2,
+        "Low": 2
+      },
+      "vuln_count": 6,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "Medium",
+          "check": "unchecked-lowlevel"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "Medium",
+          "check": "unchecked-lowlevel"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "claude-sonnet-4-5",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Stake.sol",
+      "row_id": 3889,
+      "status": "analyzed",
+      "code_sha256": "04f001d0029086dd6c311413eefdfa232a3834d0cb087770ce1eaba7dfd3c1e9",
+      "code_bytes": 4718,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "04f001d0029086dd6c311413eefdfa232a3834d0cb087770ce1eaba7dfd3c1e9"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 2
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "reentrancy-benign"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "claude-sonnet-4-5",
+      "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+      "row_id": 3899,
+      "status": "analyzed",
+      "code_sha256": "dccb2743ce883debd9ab271d4b195225b403f5a2a2140020bc3102c5265a6005",
+      "code_bytes": 9407,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "dccb2743ce883debd9ab271d4b195225b403f5a2a2140020bc3102c5265a6005"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 1,
+        "Low": 0
+      },
+      "vuln_count": 1,
+      "findings": [
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "locked-ether"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "gpt-5-mini",
+      "file_path": "repository/Account2/lib/Account2/src/Greeter.sol",
+      "row_id": 4058,
+      "status": "analyzed",
+      "code_sha256": "7039aa7d99e2e38dd5865162cf74bb8a530f5f99e6b66b6e6a0598411812a932",
+      "code_bytes": 1376,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "7039aa7d99e2e38dd5865162cf74bb8a530f5f99e6b66b6e6a0598411812a932"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "gpt-5-mini",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Dex.sol",
+      "row_id": 4034,
+      "status": "analyzed",
+      "code_sha256": "fec8fd929ff4e4f6253e5187c3164fe25ef2fd1613a23fb9d25c96892f307ced",
+      "code_bytes": 10449,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "fec8fd929ff4e4f6253e5187c3164fe25ef2fd1613a23fb9d25c96892f307ced"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 2,
+        "Low": 3
+      },
+      "vuln_count": 5,
+      "findings": [
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "erc20-interface"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "Medium",
+          "check": "unused-return"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "gpt-5-mini",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Privacy.sol",
+      "row_id": 4040,
+      "status": "analyzed",
+      "code_sha256": "640179e050c40c1460f5ba82df90d2f9712f7a4b4f4a5419f1762b885b027d03",
+      "code_bytes": 999,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "640179e050c40c1460f5ba82df90d2f9712f7a4b4f4a5419f1762b885b027d03"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "gpt-5-mini",
+      "file_path": "repository/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+      "row_id": 4029,
+      "status": "analyzed",
+      "code_sha256": "10dc0e8658f012c899c7d485d549a64d121103014a827e332e743f1cd5af195c",
+      "code_bytes": 11406,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "10dc0e8658f012c899c7d485d549a64d121103014a827e332e743f1cd5af195c"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/EnumerableMapLib.sol",
+      "row_id": 4083,
+      "status": "analyzed",
+      "code_sha256": "3b318c6b6a9dab42a271595dc2ae7b4de8e27f76d4e8cb1d1a52368a7b9d959e",
+      "code_bytes": 19232,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "3b318c6b6a9dab42a271595dc2ae7b4de8e27f76d4e8cb1d1a52368a7b9d959e"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/SafeCastLib.sol",
+      "row_id": 3990,
+      "status": "analyzed",
+      "code_sha256": "77d010b19e9e7f9500ec9ba50d048f39dad0691057da82cc7f3d58cd9b2dc723",
+      "code_bytes": 71573,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "77d010b19e9e7f9500ec9ba50d048f39dad0691057da82cc7f3d58cd9b2dc723"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "copilot",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+      "row_id": 3980,
+      "status": "analyzed",
+      "code_sha256": "3f5cc71c3370136a15cf42f69d988dbb975cfe4114eaaace9e352a5d3cb30250",
+      "code_bytes": 6377,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "3f5cc71c3370136a15cf42f69d988dbb975cfe4114eaaace9e352a5d3cb30250"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "deepcode",
+      "model": "gpt-5-mini",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Dex.sol",
+      "row_id": 3221,
+      "status": "analyzed",
+      "code_sha256": "7a91aec4896ec3b820228e8a7f5557297b9b70af3ffc38146e31738ea15c1608",
+      "code_bytes": 9792,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "deepcode_tool_call",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "7a91aec4896ec3b820228e8a7f5557297b9b70af3ffc38146e31738ea15c1608"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 1,
+        "Low": 3
+      },
+      "vuln_count": 5,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "unchecked-transfer"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "erc20-interface"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "deepcode",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/EnumerableMapLib.sol",
+      "row_id": 3270,
+      "status": "analyzed",
+      "code_sha256": "df6e3de43e11faf3a42340d4776120cf8117f11f156113c5e945f878e53deba4",
+      "code_bytes": 22838,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "deepcode_tool_call",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "df6e3de43e11faf3a42340d4776120cf8117f11f156113c5e945f878e53deba4"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "deepcode",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "row_id": 3260,
+      "status": "analyzed",
+      "code_sha256": "2a6331f6c50f03b2759655519bca59afe08f51c44fd34e627dd6d3cd3e0da5bd",
+      "code_bytes": 9235,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "deepcode_tool_call",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "2a6331f6c50f03b2759655519bca59afe08f51c44fd34e627dd6d3cd3e0da5bd"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 3,
+        "Low": 0
+      },
+      "vuln_count": 3,
+      "findings": [
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "tautology"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "tautology"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "tautology"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "deepcode",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+      "row_id": 3248,
+      "status": "analyzed",
+      "code_sha256": "76f4249cbf62efb274fe285b0fd3d16e69136060ec2a99534757807b36c1b58e",
+      "code_bytes": 6592,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "deepcode_tool_call",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "76f4249cbf62efb274fe285b0fd3d16e69136060ec2a99534757807b36c1b58e"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "deepcode",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/EnumerableMapLib.sol",
+      "row_id": 3198,
+      "status": "analyzed",
+      "code_sha256": "747c4a78a91b7c6e8f1a8c24101bf50f76ea9df92b3066e9f84e476cfc7f06f1",
+      "code_bytes": 27815,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "747c4a78a91b7c6e8f1a8c24101bf50f76ea9df92b3066e9f84e476cfc7f06f1"
+      },
+      "counts": {
+        "High": 2,
+        "Medium": 2,
+        "Low": 0
+      },
+      "vuln_count": 4,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "High",
+          "check": "incorrect-shift"
+        },
+        {
+          "impact": "High",
+          "confidence": "High",
+          "check": "incorrect-shift"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "write-after-write"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "write-after-write"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "deepcode",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/SafeCastLib.sol",
+      "row_id": 3186,
+      "status": "analyzed",
+      "code_sha256": "4fd851ff17ec0f3c63462ee59b32ebc80ad36690a79bc39779ede6c7e05e4370",
+      "code_bytes": 70813,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "4fd851ff17ec0f3c63462ee59b32ebc80ad36690a79bc39779ede6c7e05e4370"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "metagpt",
+      "model": "gpt-5-mini",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/PuzzleWallet.sol",
+      "row_id": 3751,
+      "status": "analyzed",
+      "code_sha256": "81d0bd588ffb28373c18c413d96c1671d133b9a4237a6d849895028b747a8877",
+      "code_bytes": 8401,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "try_extract_code",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "81d0bd588ffb28373c18c413d96c1671d133b9a4237a6d849895028b747a8877"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 1,
+        "Low": 6
+      },
+      "vuln_count": 8,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "delegatecall-loop"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "incorrect-equality"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "calls-loop"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "metagpt",
+      "model": "gpt-5-mini",
+      "file_path": "repository/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+      "row_id": 3737,
+      "status": "analyzed",
+      "code_sha256": "3c577baa61b14f7122e4e61c879d1a76e102787446c0ea4a95573d3dc9e5d527",
+      "code_bytes": 15283,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "try_extract_code",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "3c577baa61b14f7122e4e61c879d1a76e102787446c0ea4a95573d3dc9e5d527"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "metagpt",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+      "row_id": 3786,
+      "status": "analyzed",
+      "code_sha256": "29d3a96bbe6b02ff67977d7e8f7447fab500cba1c902318ddb327358a494b49e",
+      "code_bytes": 5999,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "try_extract_code",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "29d3a96bbe6b02ff67977d7e8f7447fab500cba1c902318ddb327358a494b49e"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "metagpt",
+      "model": "gpt-5.1",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/PuzzleWallet.sol",
+      "row_id": 3670,
+      "status": "analyzed",
+      "code_sha256": "7a43013bc74ca153c1559456ae64ed0f661c83352d29b7ae1768a82c90c1049b",
+      "code_bytes": 9119,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "try_extract_code",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "7a43013bc74ca153c1559456ae64ed0f661c83352d29b7ae1768a82c90c1049b"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 1,
+        "Low": 7
+      },
+      "vuln_count": 9,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "delegatecall-loop"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "incorrect-equality"
+        },
+        {
+          "impact": "Low",
+          "confidence": "High",
+          "check": "shadowing-local"
+        },
+        {
+          "impact": "Low",
+          "confidence": "High",
+          "check": "shadowing-local"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "calls-loop"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "metagpt",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/SafeCastLib.sol",
+      "row_id": 3698,
+      "status": "analyzed",
+      "code_sha256": "c28928518d395c4c62cc1e0d75e4c164c066a0980402868063bc7a19ac03c09a",
+      "code_bytes": 72035,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "try_extract_code",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "c28928518d395c4c62cc1e0d75e4c164c066a0980402868063bc7a19ac03c09a"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "metagpt",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+      "row_id": 3688,
+      "status": "analyzed",
+      "code_sha256": "4773914727c1d587e019c27dfcbcc398622b1840e6ecb3395ffcd4006c65c172",
+      "code_bytes": 8883,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "try_extract_code",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "4773914727c1d587e019c27dfcbcc398622b1840e6ecb3395ffcd4006c65c172"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "qwenagent",
+      "model": "gpt-5-mini",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Stake.sol",
+      "row_id": 3506,
+      "status": "analyzed",
+      "code_sha256": "d28f537eab77a4d1f6f5827959984c73b461f180026c2a87278bc5cd7e8a80e2",
+      "code_bytes": 5219,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "d28f537eab77a4d1f6f5827959984c73b461f180026c2a87278bc5cd7e8a80e2"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 1,
+      "findings": [
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "reentrancy-benign"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "qwenagent",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/EnumerableMapLib.sol",
+      "row_id": 3538,
+      "status": "analyzed",
+      "code_sha256": "33f04aa1e8402a030062963e538f673851b4b8a52b14f4bfa6dd8e35ecc05e7f",
+      "code_bytes": 18879,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "33f04aa1e8402a030062963e538f673851b4b8a52b14f4bfa6dd8e35ecc05e7f"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "qwenagent",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+      "row_id": 3516,
+      "status": "analyzed",
+      "code_sha256": "5391c555a233fc65deb0ba32c30ec53eeddab6786bcb5e50f4472df284fe1c3f",
+      "code_bytes": 5663,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "5391c555a233fc65deb0ba32c30ec53eeddab6786bcb5e50f4472df284fe1c3f"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 1,
+        "Low": 2
+      },
+      "vuln_count": 4,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "Medium",
+          "check": "reentrancy-no-eth"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "reentrancy-events"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "qwenagent",
+      "model": "gpt-5.1",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/DexTwo.sol",
+      "row_id": 3302,
+      "status": "analyzed",
+      "code_sha256": "2de19078b82be82732b412cc57f2bf4d6e6c72c9ef87982350f6bd6d03bbb5ce",
+      "code_bytes": 10592,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "2de19078b82be82732b412cc57f2bf4d6e6c72c9ef87982350f6bd6d03bbb5ce"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 1,
+        "Low": 5
+      },
+      "vuln_count": 6,
+      "findings": [
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "erc20-interface"
+        },
+        {
+          "impact": "Low",
+          "confidence": "High",
+          "check": "shadowing-local"
+        },
+        {
+          "impact": "Low",
+          "confidence": "High",
+          "check": "shadowing-local"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "qwenagent",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/SafeCastLib.sol",
+      "row_id": 3363,
+      "status": "analyzed",
+      "code_sha256": "27f4dedc929b8642fb4f7693f5289ce6de1af8a88a4328ee558518e7f3919825",
+      "code_bytes": 34611,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "27f4dedc929b8642fb4f7693f5289ce6de1af8a88a4328ee558518e7f3919825"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    },
+    {
+      "source": "rawmodel",
+      "model": "claude-sonnet-4-5",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Stake.sol",
+      "row_id": 117,
+      "status": "analyzed",
+      "code_sha256": "9c714b5394a5178b76287b1b9553dafed017a4ed76758f5f38efc6b006c9ea4e",
+      "code_bytes": 4904,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "9c714b5394a5178b76287b1b9553dafed017a4ed76758f5f38efc6b006c9ea4e"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 1,
+      "findings": [
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "reentrancy-benign"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "rawmodel",
+      "model": "gpt-5-mini",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Stake.sol",
+      "row_id": 685,
+      "status": "analyzed",
+      "code_sha256": "a64e6b5fefcaed065b79adc7720ef5d6755d79f3065f02697cbb5ab663ae1801",
+      "code_bytes": 5416,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "a64e6b5fefcaed065b79adc7720ef5d6755d79f3065f02697cbb5ab663ae1801"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 1,
+      "findings": [
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "reentrancy-benign"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "rawmodel",
+      "model": "gpt-5-mini",
+      "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+      "row_id": 695,
+      "status": "analyzed",
+      "code_sha256": "cb8c542e9412fe35e151f1ee8c730eaa4b5688572836d4731156fd9dd5ae4e95",
+      "code_bytes": 5936,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "cb8c542e9412fe35e151f1ee8c730eaa4b5688572836d4731156fd9dd5ae4e95"
+      },
+      "counts": {
+        "High": 1,
+        "Medium": 0,
+        "Low": 1
+      },
+      "vuln_count": 2,
+      "findings": [
+        {
+          "impact": "High",
+          "confidence": "Medium",
+          "check": "controlled-delegatecall"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "rawmodel",
+      "model": "gpt-5.1",
+      "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/DexTwo.sol",
+      "row_id": 751,
+      "status": "analyzed",
+      "code_sha256": "04d0cfe1f5103088a4bef43dc26b036f5bf5d015ceb70ec89677843f5b20e32e",
+      "code_bytes": 7944,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "04d0cfe1f5103088a4bef43dc26b036f5bf5d015ceb70ec89677843f5b20e32e"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 2,
+        "Low": 3
+      },
+      "vuln_count": 5,
+      "findings": [
+        {
+          "impact": "Medium",
+          "confidence": "High",
+          "check": "erc20-interface"
+        },
+        {
+          "impact": "Medium",
+          "confidence": "Medium",
+          "check": "unused-return"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        },
+        {
+          "impact": "Low",
+          "confidence": "Medium",
+          "check": "missing-zero-check"
+        }
+      ],
+      "error": null
+    },
+    {
+      "source": "rawmodel",
+      "model": "gpt-5.1",
+      "file_path": "repository/solady/lib/solady/src/utils/SafeCastLib.sol",
+      "row_id": 787,
+      "status": "analyzed",
+      "code_sha256": "b4d08c8bf4dd910f0cb10f3c3fdf893978e842587edb8acea5ec7994ac9cee59",
+      "code_bytes": 70765,
+      "code_selection": {
+        "strategy": "eval_report_selection",
+        "selection_policy": "best-pass-first",
+        "skip_reason": null,
+        "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+        "code_selection": "coding_messages",
+        "code_extractor": "extract_code_blocks",
+        "best_round": null,
+        "best_pass": null,
+        "best_total": null,
+        "best_vuln": null,
+        "sha256": "b4d08c8bf4dd910f0cb10f3c3fdf893978e842587edb8acea5ec7994ac9cee59"
+      },
+      "counts": {
+        "High": 0,
+        "Medium": 0,
+        "Low": 0
+      },
+      "vuln_count": 0,
+      "findings": [],
+      "error": null
+    }
+  ]
+}

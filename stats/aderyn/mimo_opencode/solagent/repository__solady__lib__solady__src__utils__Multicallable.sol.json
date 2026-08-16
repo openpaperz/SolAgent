@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/Multicallable.sol",
+  "eval_full_pass": false,
+  "code_sha256": "55c4251b3de200b90040b16f4bdd2b861ad3c8045e74f675345327deacdf7ef9",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:56.761812+00:00",
+  "skip_reason": "not eval FullPass"
+}

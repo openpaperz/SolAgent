@@ -1,0 +1,306 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/ext/ithaca/BLS.sol",
+        "-o",
+        "/tmp/aderyn_report_z5xc3ywe/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/ext/ithaca/BLS.sol",
+      "profile": "ithaca",
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - cancun\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/ext/ithaca/BLS.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_z5xc3ywe/report.json\n\nAderyn saved you hours of headaches.\n\u2615 Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/ext/ithaca/BLS.sol",
+              "n_sloc": 161
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 161,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 404,
+                  "src": "20183:16",
+                  "src_char": "20183:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 135,
+                  "src": "5631:3",
+                  "src_char": "5631:3"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 229,
+                  "src": "10595:3",
+                  "src_char": "10595:3"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 6,
+                  "src": "97:20",
+                  "src_char": "97:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 7,
+                  "src": "122:20",
+                  "src_char": "122:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 8,
+                  "src": "147:20",
+                  "src_char": "147:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 9,
+                  "src": "172:20",
+                  "src_char": "172:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 10,
+                  "src": "197:20",
+                  "src_char": "197:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 11,
+                  "src": "222:20",
+                  "src_char": "222:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 13,
+                  "src": "274:24",
+                  "src_char": "274:24"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 14,
+                  "src": "303:25",
+                  "src_char": "303:25"
+                }
+              ],
+              "title": "Unused Error"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 161,
+    "summary": {
+      "High": 1,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "6ffb900e82fc5c88659b2c72cb59165add731106cbe2813fdbaafd4db005f2bc",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:15.119070+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 20876,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 10,
+    "extract_error": null,
+    "failed_tests": 9,
+    "forge_failed": 9,
+    "forge_total": 10,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 1,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3282,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/ext/ithaca/BLS.sol",
+  "id": 3282,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:20.834250+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "deepcode",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 9,
+  "test_pass": 1,
+  "test_source": "eval_seed1",
+  "test_total": 10
+}

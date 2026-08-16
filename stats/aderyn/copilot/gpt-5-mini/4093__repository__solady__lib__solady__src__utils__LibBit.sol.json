@@ -1,0 +1,369 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibBit.sol",
+        "-o",
+        "/tmp/aderyn_report_jc5tbrku/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibBit.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibBit.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_jc5tbrku/report.json\n\n\ud83d\udc26 Aderyn finds bugs. You write safer code.\n\u2b50 Star us on GitHub if that sounds fair:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibBit.sol",
+              "n_sloc": 85
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 85,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 9,
+                  "src": "210:3",
+                  "src_char": "210:3"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 12,
+                  "src": "347:3",
+                  "src_char": "347:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 12,
+                  "src": "361:3",
+                  "src_char": "361:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 12,
+                  "src": "371:3",
+                  "src_char": "371:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 13,
+                  "src": "414:2",
+                  "src_char": "414:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 13,
+                  "src": "428:2",
+                  "src_char": "428:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 13,
+                  "src": "438:2",
+                  "src_char": "438:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 14,
+                  "src": "480:2",
+                  "src_char": "480:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 14,
+                  "src": "494:2",
+                  "src_char": "494:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 14,
+                  "src": "504:2",
+                  "src_char": "504:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 15,
+                  "src": "546:2",
+                  "src_char": "546:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 15,
+                  "src": "560:2",
+                  "src_char": "560:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 15,
+                  "src": "570:2",
+                  "src_char": "570:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 16,
+                  "src": "612:1",
+                  "src_char": "612:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 16,
+                  "src": "626:1",
+                  "src_char": "626:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 16,
+                  "src": "636:1",
+                  "src_char": "636:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 17,
+                  "src": "677:1",
+                  "src_char": "677:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 17,
+                  "src": "691:1",
+                  "src_char": "691:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 17,
+                  "src": "701:1",
+                  "src_char": "701:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 28,
+                  "src": "1072:3",
+                  "src_char": "1072:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 38,
+                  "src": "1396:3",
+                  "src_char": "1396:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 73,
+                  "src": "2459:3",
+                  "src_char": "2459:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 83,
+                  "src": "2736:2",
+                  "src_char": "2736:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 84,
+                  "src": "2769:1",
+                  "src_char": "2769:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 85,
+                  "src": "2804:1",
+                  "src_char": "2804:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 85,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "384de42d9ca3ec3888f5f87d89f7f8a46721bc05a042c39374890315c1f242c8",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:33.854319+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 4527,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 13,
+    "extract_error": null,
+    "failed_tests": 1,
+    "forge_failed": 1,
+    "forge_total": 13,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 12,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 4093,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibBit.sol",
+  "id": 4093,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:22.045196+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "copilot",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 1,
+  "test_pass": 12,
+  "test_source": "eval_seed1",
+  "test_total": 13
+}

@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/MetadataReaderLib.sol",
+  "eval_full_pass": false,
+  "code_sha256": "d5f1780f9fec31feafcf92c79ce5a7f001ea7f9d8b40831f013baadd462c32b4",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:56.763870+00:00",
+  "skip_reason": "not eval FullPass"
+}

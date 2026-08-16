@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 31700,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "6fc42891b260c5e830047ba76c6d2ccc61b42e14cc03def1d036fb83e7acff2c",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 585,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:49.225969+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (6275): Source \"contracts/governance/utils/introspection/ERC165.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\nParserError: Source \"contracts/governance/utils/introspection/ERC165.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\n --> contracts/governance/Governor.solagent_gen.sol:4:1:\n  |\n4 | import \"./utils/introspection/ERC165.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (6275): Source \"contracts/governance/utils/introspection/IERC165.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\nParserError: Source \"contracts/governance/utils/introspection/IERC165.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\n --> contracts/governance/Governor.solagent_gen.sol:5:1:\n  |\n5 | import \"./utils/introspection/IERC165.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (6275): Source \"contracts/governance/token/ERC1155/IERC1155Receiver.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\nParserError: Source \"contracts/governance/token/ERC1155/IERC1155Receiver.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\n --> contracts/governance/Governor.solagent_gen.sol:6:1:\n  |\n6 | import \"./token/ERC1155/IERC1155Receiver.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (6275): Source \"contracts/governance/token/ERC721/IERC721Receiver.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\nParserError: Source \"contracts/governance/token/ERC721/IERC721Receiver.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\n --> contracts/governance/Governor.solagent_gen.sol:7:1:\n  |\n7 | import \"./token/ERC721/IERC721Receiver.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (6275): Source \"contracts/governance/utils/Address.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\nParserError: Source \"contracts/governance/utils/Address.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\n --> contracts/governance/Governor.solagent_gen.sol:8:1:\n  |\n8 | import \"./utils/Address.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (6275): Source \"contracts/governance/utils/cryptography/ECDSA.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\nParserError: Source \"contracts/governance/utils/cryptography/ECDSA.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\n --> contracts/governance/Governor.solagent_gen.sol:9:1:\n  |\n9 | import \"./utils/cryptography/ECDSA.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (6275): Source \"contracts/governance/utils/cryptography/EIP712.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\nParserError: Source \"contracts/governance/utils/cryptography/EIP712.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts\".\n  --> contracts/governance/Governor.solagent_gen.sol:10:1:\n   |\n10 | import \"./utils/cryptography/EIP712.sol\";\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/governance/Governor.t.sol",
+    "expected_tests": 39,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 329,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+  "id": 329,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:15.230099+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "skipped",
+  "table": "process_tracking_ablation",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

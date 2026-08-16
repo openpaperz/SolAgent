@@ -1,0 +1,299 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/DynamicArrayLib.sol",
+        "-o",
+        "/tmp/aderyn_report_r1ds77dr/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/DynamicArrayLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/DynamicArrayLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_r1ds77dr/report.json\n\n✔  Done! Fast, clean, effective.\n⭐ Support the project with a star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/DynamicArrayLib.sol",
+              "n_sloc": 559
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 559,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "This causes the transaction execution to halt, and nothing after that call will execute including code following the assembly block.",
+              "detector_name": "yul-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 349,
+                  "src": "12933:38",
+                  "src_char": "12333:38"
+                }
+              ],
+              "title": "Yul block contains `return`"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 233,
+                  "src": "8519:4",
+                  "src_char": "7994:4"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 345,
+                  "src": "12775:12",
+                  "src_char": "12175:12"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 580,
+                  "src": "21228:1",
+                  "src_char": "20478:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 587,
+                  "src": "21503:1",
+                  "src_char": "20753:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 594,
+                  "src": "21766:1",
+                  "src_char": "21016:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 640,
+                  "src": "23463:3",
+                  "src_char": "22638:3"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 474,
+                  "src": "16944:18",
+                  "src_char": "16269:18"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 530,
+                  "src": "19391:18",
+                  "src_char": "18641:18"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Function returns a value but it is ignored. Consider checking the return value.",
+              "detector_name": "unchecked-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 431,
+                  "src": "15527:18",
+                  "src_char": "14852:18"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 449,
+                  "src": "16133:18",
+                  "src_char": "15458:18"
+                }
+              ],
+              "title": "Unchecked Return"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 559,
+    "summary": {
+      "High": 1,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": 16,
+    "best_round": 3,
+    "best_total": 22,
+    "best_vuln": 2,
+    "code_bytes": 37620,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "1928b5cb24be6219d3f2c0dc56fb3126b5201230166089f3d1f4bbd5880dd217",
+    "skip_reason": null,
+    "sloc": 559,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:39.284437+00:00",
+  "eval": {
+    "best_round": 3,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/DynamicArrayLib.t.sol",
+    "expected_tests": 84,
+    "extract_error": null,
+    "forge_total": 84,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 74,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 442,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/DynamicArrayLib.sol",
+  "id": 442,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:13.090013+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 2,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 2
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 10,
+  "test_pass": 74,
+  "test_source": "rq2_eval",
+  "test_total": 84
+}

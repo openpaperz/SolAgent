@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/JSONParserLib.sol",
+  "eval_full_pass": false,
+  "code_sha256": "84b542b155882ebcfeb435cd49f89d5a76600ba53bbbd8cfea073e1a98721320",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:56.975297+00:00",
+  "skip_reason": "not eval FullPass"
+}

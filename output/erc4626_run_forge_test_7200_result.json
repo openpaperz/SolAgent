@@ -1,0 +1,116 @@
+{
+  "passed": 27,
+  "failed": 0,
+  "total": 27,
+  "fails": {},
+  "gas_fees": {
+    "testFail_redeem((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1200058,
+      "~": 1202449
+    },
+    "testFail_withdraw((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1205797,
+      "~": 1207660
+    },
+    "testFuzzDecimalsOverflow(uint8)": {
+      "-": 1133394,
+      "~": 1133551
+    },
+    "test_RT_deposit_redeem((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1267577,
+      "~": 1268407
+    },
+    "test_RT_deposit_withdraw((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1270608,
+      "~": 1270376
+    },
+    "test_RT_mint_redeem((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1268749,
+      "~": 1268536
+    },
+    "test_RT_mint_withdraw((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1271079,
+      "~": 1270511
+    },
+    "test_RT_redeem_deposit((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1269039,
+      "~": 1268512
+    },
+    "test_RT_redeem_mint((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1269142,
+      "~": 1268449
+    },
+    "test_RT_withdraw_deposit((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1270573,
+      "~": 1270422
+    },
+    "test_RT_withdraw_mint((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1271199,
+      "~": 1270461
+    },
+    "test_asset((address[4],uint256[4],uint256[4],int256))": {
+      "-": 1070716,
+      "~": 1071073
+    },
+    "test_convertToAssets((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1133247,
+      "~": 1133132
+    },
+    "test_convertToShares((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1133095,
+      "~": 1133198
+    },
+    "test_deposit((address[4],uint256[4],uint256[4],int256),uint256,uint256)": {
+      "-": 1224183,
+      "~": 1224448
+    },
+    "test_maxDeposit((address[4],uint256[4],uint256[4],int256))": {
+      "-": 1070703,
+      "~": 1071106
+    },
+    "test_maxMint((address[4],uint256[4],uint256[4],int256))": {
+      "-": 1070856,
+      "~": 1071103
+    },
+    "test_maxRedeem((address[4],uint256[4],uint256[4],int256))": {
+      "-": 1070806,
+      "~": 1071250
+    },
+    "test_maxWithdraw((address[4],uint256[4],uint256[4],int256))": {
+      "-": 1073087,
+      "~": 1073188
+    },
+    "test_mint((address[4],uint256[4],uint256[4],int256),uint256,uint256)": {
+      "-": 1224754,
+      "~": 1224586
+    },
+    "test_previewDeposit((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1242784,
+      "~": 1242949
+    },
+    "test_previewMint((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1243443,
+      "~": 1243081
+    },
+    "test_previewRedeem((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1244835,
+      "~": 1243689
+    },
+    "test_previewWithdraw((address[4],uint256[4],uint256[4],int256),uint256)": {
+      "-": 1246708,
+      "~": 1245672
+    },
+    "test_redeem((address[4],uint256[4],uint256[4],int256),uint256,uint256)": {
+      "-": 1226103,
+      "~": 1225788
+    },
+    "test_totalAssets((address[4],uint256[4],uint256[4],int256))": {
+      "-": 1071392,
+      "~": 1071798
+    },
+    "test_withdraw((address[4],uint256[4],uint256[4],int256),uint256,uint256)": {
+      "-": 1228658,
+      "~": 1227729
+    }
+  }
+}

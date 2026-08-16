@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/structs/Heap.sol",
+  "eval_full_pass": false,
+  "code_sha256": "5ec39f73a5ca2b337a33bb4ac1c8cd3b2dd9afa9f4192872c556b09d8ea01c8a",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:57.492440+00:00",
+  "skip_reason": "not eval FullPass"
+}

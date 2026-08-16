@@ -1,0 +1,336 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/proxy/Clones.sol",
+        "-o",
+        "/tmp/aderyn_report_0v5xvoli/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/proxy/Clones.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n------------------------------------------------------------------------------------------------\n# Configuration\n------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n------------------------------------------------------------------------------------------------\n# Source Scope\n------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/proxy/Clones.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n------------------------------------------------------------------------------------------------\n# Scanning Contracts\n------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_0v5xvoli/report.json\n\n\u2714  Done! Fast, clean, effective.\n\u2b50 Support the project with a star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/proxy/Clones.sol",
+              "n_sloc": 121
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 121,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 35,
+                  "src": "1593:16",
+                  "src_char": "1593:16"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 75,
+                  "src": "3268:16",
+                  "src_char": "3268:16"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 100,
+                  "src": "4360:16",
+                  "src_char": "4360:16"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 265,
+                  "src": "12584:16",
+                  "src_char": "12584:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 29,
+                  "src": "1255:5",
+                  "src_char": "1255:5"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 70,
+                  "src": "2971:18",
+                  "src_char": "2971:18"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 99,
+                  "src": "4196:27",
+                  "src_char": "4196:27"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 141,
+                  "src": "6340:22",
+                  "src_char": "6340:22"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 178,
+                  "src": "8124:35",
+                  "src_char": "8124:35"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 204,
+                  "src": "9318:44",
+                  "src_char": "9318:44"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 37,
+                  "src": "1662:25",
+                  "src_char": "1662:25"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 77,
+                  "src": "3337:25",
+                  "src_char": "3337:25"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 102,
+                  "src": "4429:25",
+                  "src_char": "4429:25"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 107,
+                  "src": "4610:4",
+                  "src_char": "4610:4"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 206,
+                  "src": "9626:4",
+                  "src_char": "9626:4"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 267,
+                  "src": "12653:25",
+                  "src_char": "12653:25"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 121,
+    "summary": {
+      "High": 1,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "17d5b3d0e639a5cc86401969a5ee0c9d1a07bb13d485b6369c6fbe79e22170d9",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:31.763846+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 12831,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 13,
+    "extract_error": null,
+    "failed_tests": 4,
+    "forge_failed": 4,
+    "forge_total": 13,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 9,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 4031,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+  "id": 4031,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:21.984086+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "copilot",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 4,
+  "test_pass": 9,
+  "test_source": "eval_seed1",
+  "test_total": 13
+}

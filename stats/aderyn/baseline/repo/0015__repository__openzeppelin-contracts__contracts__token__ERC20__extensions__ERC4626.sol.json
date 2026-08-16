@@ -1,0 +1,218 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/token/ERC20/extensions/ERC4626.sol",
+        "-o",
+        "/tmp/aderyn_report_0fq_kf4y/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/token/ERC20/extensions/ERC4626.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n--------------------------------------------------------------------------------\n# Configuration\n--------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n--------------------------------------------------------------------------------\n# Source Scope\n--------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/token/ERC20/extensions/ERC4626.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n--------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n--------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n--------------------------------------------------------------------------------\n# Scanning Contracts\n--------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_0fq_kf4y/report.json\n\n\ud83d\udc26 Aderyn finds bugs. You write safer code.\n\u2b50 Star us on GitHub if that sounds fair:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/token/ERC20/extensions/ERC4626.sol",
+              "n_sloc": 134
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 134,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC20/extensions/ERC4626.sol",
+                  "line_no": 226,
+                  "src": "9941:2",
+                  "src_char": "9941:2"
+                },
+                {
+                  "contract_path": "contracts/token/ERC20/extensions/ERC4626.sol",
+                  "line_no": 233,
+                  "src": "10297:2",
+                  "src_char": "10297:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC20/extensions/ERC4626.sol",
+                  "line_no": 4,
+                  "src": "118:24",
+                  "src_char": "118:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC20/extensions/ERC4626.sol",
+                  "line_no": 4,
+                  "src": "118:24",
+                  "src_char": "118:24"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 134,
+    "summary": {
+      "High": 0,
+      "Low": 3
+    }
+  },
+  "code": {
+    "skip_reason": null,
+    "strategy": "repository_file"
+  },
+  "created_at": "2026-07-11T03:47:03.365748+00:00",
+  "eval": null,
+  "file_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+  "id": 15,
+  "model": "repo",
+  "refreshed_at": "2026-07-11T07:31:15.791574+00:00",
+  "slither": {
+    "count": 10,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 10,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "baseline",
+  "source_kind": "baseline",
+  "status": "analyzed",
+  "table": "baseline_test",
+  "test_fail": 0,
+  "test_pass": 27,
+  "test_source": "database",
+  "test_total": 27
+}

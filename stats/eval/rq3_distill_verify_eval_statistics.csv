@@ -1,0 +1,5 @@
+model,database_model,method,attempted,compiled,compilation_rate,passed_tests,expected_tests,test_pass_rate,pass_at_1,pass_at_1_rate,compile_errors,extract_errors,missing_rows
+Qwen3-8B,Qwen/Qwen3-8B,SolAgent,17,2,0.11764705882352941,1,373,0.002680965147453083,1,0.058823529411764705,15,0,0
+Qwen3-32B,Qwen/Qwen3-32B,SolAgent,17,5,0.29411764705882354,13,373,0.03485254691689008,2,0.11764705882352941,7,5,0
+SOLAGENT-tracker-v1,solagent-4k-tracker-v1,SolAgent,17,3,0.17647058823529413,1,373,0.002680965147453083,1,0.058823529411764705,14,0,0
+SOLAGENT-tracker-v2,solagent-4k-tracker-v2,SolAgent,17,3,0.17647058823529413,1,373,0.002680965147453083,1,0.058823529411764705,12,2,0

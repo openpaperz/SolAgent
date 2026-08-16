@@ -1,0 +1,1042 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/utils/Packing.sol",
+        "-o",
+        "/tmp/aderyn_report_a9_ihr9b/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/utils/Packing.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n------------------------------------------------------------------------------------------------\n# Configuration\n------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n------------------------------------------------------------------------------------------------\n# Source Scope\n------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/utils/Packing.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n------------------------------------------------------------------------------------------------\n# Scanning Contracts\n------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_a9_ihr9b/report.json\n\n\ud83d\udee1\ufe0f Together we make Solidity safer.\n\u2728 Support open-source security \u2014 star Aderyn:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/utils/Packing.sol",
+              "n_sloc": 1643
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 1643,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 461,
+                  "src": "15688:11",
+                  "src_char": "15688:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 479,
+                  "src": "16331:11",
+                  "src_char": "16331:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 497,
+                  "src": "16974:11",
+                  "src_char": "16974:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 515,
+                  "src": "17629:11",
+                  "src_char": "17629:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 533,
+                  "src": "18272:11",
+                  "src_char": "18272:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 551,
+                  "src": "18927:11",
+                  "src_char": "18927:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 569,
+                  "src": "19582:11",
+                  "src_char": "19582:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 587,
+                  "src": "20225:11",
+                  "src_char": "20225:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 605,
+                  "src": "20880:11",
+                  "src_char": "20880:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 623,
+                  "src": "21535:11",
+                  "src_char": "21535:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 641,
+                  "src": "22190:12",
+                  "src_char": "22190:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 659,
+                  "src": "22839:12",
+                  "src_char": "22839:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 677,
+                  "src": "23500:12",
+                  "src_char": "23500:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 695,
+                  "src": "24161:12",
+                  "src_char": "24161:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 713,
+                  "src": "24822:12",
+                  "src_char": "24822:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 731,
+                  "src": "25483:12",
+                  "src_char": "25483:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 749,
+                  "src": "26133:12",
+                  "src_char": "26133:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 767,
+                  "src": "26795:12",
+                  "src_char": "26795:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 785,
+                  "src": "27456:12",
+                  "src_char": "27456:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 803,
+                  "src": "28117:12",
+                  "src_char": "28117:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 821,
+                  "src": "28778:13",
+                  "src_char": "28778:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 839,
+                  "src": "29445:12",
+                  "src_char": "29445:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 857,
+                  "src": "30095:12",
+                  "src_char": "30095:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 875,
+                  "src": "30757:12",
+                  "src_char": "30757:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 893,
+                  "src": "31419:12",
+                  "src_char": "31419:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 911,
+                  "src": "32081:12",
+                  "src_char": "32081:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 929,
+                  "src": "32742:13",
+                  "src_char": "32742:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 947,
+                  "src": "33409:13",
+                  "src_char": "33409:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 965,
+                  "src": "34076:12",
+                  "src_char": "34076:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 983,
+                  "src": "34726:12",
+                  "src_char": "34726:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1001,
+                  "src": "35388:12",
+                  "src_char": "35388:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1019,
+                  "src": "36050:12",
+                  "src_char": "36050:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1037,
+                  "src": "36712:12",
+                  "src_char": "36712:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1055,
+                  "src": "37374:13",
+                  "src_char": "37374:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1073,
+                  "src": "38042:13",
+                  "src_char": "38042:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1091,
+                  "src": "38709:13",
+                  "src_char": "38709:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1109,
+                  "src": "39376:12",
+                  "src_char": "39376:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1127,
+                  "src": "40026:12",
+                  "src_char": "40026:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1145,
+                  "src": "40688:12",
+                  "src_char": "40688:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1163,
+                  "src": "41350:12",
+                  "src_char": "41350:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1181,
+                  "src": "42012:12",
+                  "src_char": "42012:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1199,
+                  "src": "42674:13",
+                  "src_char": "42674:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1217,
+                  "src": "43342:13",
+                  "src_char": "43342:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1235,
+                  "src": "44010:13",
+                  "src_char": "44010:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1253,
+                  "src": "44677:13",
+                  "src_char": "44677:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1271,
+                  "src": "45342:12",
+                  "src_char": "45342:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1289,
+                  "src": "45992:12",
+                  "src_char": "45992:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1307,
+                  "src": "46654:12",
+                  "src_char": "46654:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1325,
+                  "src": "47316:12",
+                  "src_char": "47316:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1343,
+                  "src": "47978:12",
+                  "src_char": "47978:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1361,
+                  "src": "48640:13",
+                  "src_char": "48640:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1379,
+                  "src": "49308:13",
+                  "src_char": "49308:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1397,
+                  "src": "49976:13",
+                  "src_char": "49976:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1415,
+                  "src": "50643:13",
+                  "src_char": "50643:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1433,
+                  "src": "51308:13",
+                  "src_char": "51308:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1451,
+                  "src": "51973:12",
+                  "src_char": "51973:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1469,
+                  "src": "52623:12",
+                  "src_char": "52623:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1487,
+                  "src": "53285:12",
+                  "src_char": "53285:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1505,
+                  "src": "53947:12",
+                  "src_char": "53947:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1523,
+                  "src": "54609:12",
+                  "src_char": "54609:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1541,
+                  "src": "55271:13",
+                  "src_char": "55271:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1559,
+                  "src": "55939:13",
+                  "src_char": "55939:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1577,
+                  "src": "56607:13",
+                  "src_char": "56607:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1595,
+                  "src": "57275:13",
+                  "src_char": "57275:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1613,
+                  "src": "57940:13",
+                  "src_char": "57940:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1631,
+                  "src": "58605:13",
+                  "src_char": "58605:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1649,
+                  "src": "59270:12",
+                  "src_char": "59270:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1667,
+                  "src": "59920:12",
+                  "src_char": "59920:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1685,
+                  "src": "60582:12",
+                  "src_char": "60582:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1703,
+                  "src": "61244:12",
+                  "src_char": "61244:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1721,
+                  "src": "61906:12",
+                  "src_char": "61906:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1739,
+                  "src": "62568:13",
+                  "src_char": "62568:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1757,
+                  "src": "63236:13",
+                  "src_char": "63236:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1775,
+                  "src": "63904:13",
+                  "src_char": "63904:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1793,
+                  "src": "64572:13",
+                  "src_char": "64572:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1811,
+                  "src": "65238:13",
+                  "src_char": "65238:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1829,
+                  "src": "65904:13",
+                  "src_char": "65904:13"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1847,
+                  "src": "66569:13",
+                  "src_char": "66569:13"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 534,
+                  "src": "18372:1",
+                  "src_char": "18372:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 588,
+                  "src": "20325:1",
+                  "src_char": "20325:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 606,
+                  "src": "20980:1",
+                  "src_char": "20980:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 660,
+                  "src": "22941:1",
+                  "src_char": "22941:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 678,
+                  "src": "23602:1",
+                  "src_char": "23602:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 696,
+                  "src": "24263:1",
+                  "src_char": "24263:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 750,
+                  "src": "26235:2",
+                  "src_char": "26235:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 768,
+                  "src": "26897:1",
+                  "src_char": "26897:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 786,
+                  "src": "27558:1",
+                  "src_char": "27558:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 804,
+                  "src": "28219:1",
+                  "src_char": "28219:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 858,
+                  "src": "30197:2",
+                  "src_char": "30197:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 876,
+                  "src": "30859:2",
+                  "src_char": "30859:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 894,
+                  "src": "31521:2",
+                  "src_char": "31521:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 912,
+                  "src": "32183:1",
+                  "src_char": "32183:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 930,
+                  "src": "32846:1",
+                  "src_char": "32846:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 948,
+                  "src": "33513:1",
+                  "src_char": "33513:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 984,
+                  "src": "34828:2",
+                  "src_char": "34828:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1002,
+                  "src": "35490:2",
+                  "src_char": "35490:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1020,
+                  "src": "36152:2",
+                  "src_char": "36152:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1038,
+                  "src": "36814:2",
+                  "src_char": "36814:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1056,
+                  "src": "37478:2",
+                  "src_char": "37478:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1074,
+                  "src": "38146:1",
+                  "src_char": "38146:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1092,
+                  "src": "38813:1",
+                  "src_char": "38813:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1128,
+                  "src": "40128:2",
+                  "src_char": "40128:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1146,
+                  "src": "40790:2",
+                  "src_char": "40790:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1164,
+                  "src": "41452:2",
+                  "src_char": "41452:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1182,
+                  "src": "42114:2",
+                  "src_char": "42114:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1200,
+                  "src": "42778:2",
+                  "src_char": "42778:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1218,
+                  "src": "43446:2",
+                  "src_char": "43446:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1236,
+                  "src": "44114:1",
+                  "src_char": "44114:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1290,
+                  "src": "46094:2",
+                  "src_char": "46094:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1308,
+                  "src": "46756:2",
+                  "src_char": "46756:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1326,
+                  "src": "47418:2",
+                  "src_char": "47418:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1344,
+                  "src": "48080:2",
+                  "src_char": "48080:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1362,
+                  "src": "48744:2",
+                  "src_char": "48744:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1380,
+                  "src": "49412:2",
+                  "src_char": "49412:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1398,
+                  "src": "50080:1",
+                  "src_char": "50080:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1416,
+                  "src": "50747:1",
+                  "src_char": "50747:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1470,
+                  "src": "52725:2",
+                  "src_char": "52725:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1488,
+                  "src": "53387:2",
+                  "src_char": "53387:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1506,
+                  "src": "54049:2",
+                  "src_char": "54049:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1524,
+                  "src": "54711:2",
+                  "src_char": "54711:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1542,
+                  "src": "55375:2",
+                  "src_char": "55375:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1560,
+                  "src": "56043:2",
+                  "src_char": "56043:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1578,
+                  "src": "56711:2",
+                  "src_char": "56711:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1596,
+                  "src": "57379:1",
+                  "src_char": "57379:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1614,
+                  "src": "58044:1",
+                  "src_char": "58044:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1632,
+                  "src": "58709:1",
+                  "src_char": "58709:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1704,
+                  "src": "61346:2",
+                  "src_char": "61346:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1722,
+                  "src": "62008:2",
+                  "src_char": "62008:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1740,
+                  "src": "62672:2",
+                  "src_char": "62672:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1758,
+                  "src": "63340:2",
+                  "src_char": "63340:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1776,
+                  "src": "64008:2",
+                  "src_char": "64008:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1794,
+                  "src": "64676:2",
+                  "src_char": "64676:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1812,
+                  "src": "65342:2",
+                  "src_char": "65342:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1830,
+                  "src": "66008:1",
+                  "src_char": "66008:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 1848,
+                  "src": "66673:1",
+                  "src_char": "66673:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Packing.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 1643,
+    "summary": {
+      "High": 0,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "bbb0a483c18ab401fe522c606da3560ca59b37d7e18203d2e5fb86ad3f399413",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:25.587169+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 67221,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 212,
+    "extract_error": null,
+    "failed_tests": 182,
+    "forge_failed": 182,
+    "forge_total": 212,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 30,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3006,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/Packing.sol",
+  "id": 3006,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-11T07:31:21.738401+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "qwenagent",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 182,
+  "test_pass": 30,
+  "test_source": "eval_seed1",
+  "test_total": 212
+}

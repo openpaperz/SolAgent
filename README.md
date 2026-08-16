@@ -1,4 +1,4 @@
-# SolAgent - A Specialized Multi-Agent Framework for Solidity Code Generation
+# SolAgent
 
 SolAgent is an intelligent agent system for generating Solidity smart contract code. This project includes baseline implementations, the main SolAgent system, and ablation study experiments.
 
@@ -23,37 +23,68 @@ SolAgent is an intelligent agent system for generating Solidity smart contract c
 
 ### Environment Setup
 
-1. **Python Environment**: Python 3.8 or higher
+1. **Python Environment**: Python 3.8 or higher. Use separate Conda environments for different baseline/agent frameworks to avoid dependency conflicts.
 
-2. **Install Dependencies**:
+2. **Initialize and Patch MS-Agent**:
+   SolAgent depends on a patched version of `ms-agent`. Initialize the submodule at
+   the recorded base commit, apply the project patch, and install it in editable
+   mode before running experiments. Apply the patch on a clean checkout of the
+   base commit; if the patch has already been applied, do not apply it again.
+   ```bash
+   git submodule update --init --recursive
+   cd lib/ms-agent
+   git checkout dd07b0d86e155ed5adb4a2d02185b592633324af
+   git apply ../lib-agent2.patch
+   cd ../..
+   pip install -e lib/ms-agent
+   ```
+
+   The patch adds the custom `MyFileSystemTool`, Ollama backend support, tool
+   registration changes, and LLM call handling required by SolAgent.
+
+3. **Install Project Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Environment Variables**: Create a `.env` file in the project root with the following variables:
+4. **Environment Variables**: Create a `.env` file in the project root with the following variables:
    ```bash
    OPENAI_API_KEY=your_openai_api_key
    OPENAI_BASE_URL=your_openai_base_url
-   ANTHROPIC_API_KEY=your_anthropic_api_key
-   ANTHROPIC_OPENAI_BASE_URL=your_anthropic_base_url
-   MS_OPENAI_BASE_URL=your_ms_openai_base_url
-   MS_API_KEY=your_ms_api_key
-   API2D_OPENAI_API_KEY=your_api2d_key
-   API2D_OPENAI_BASE_URL=your_api2d_base_url
-   OLLAMA_OPENAI_BASE_URL=your_ollama_base_url  # Optional
-   VLLM_OPENAI_BASE_URL=your_vllm_base_url      # Optional
+   FORGE_PATH=/path/to/forge
+   SLITHER_PATH=/path/to/slither
+   ADERYN_BIN=/absolute/path/to/aderyn
    ORIG_REPO=/path/to/original/repository       # Required for main experiments
    ```
 
    **Note**: `ORIG_REPO` should point to the original repository path used in the dataset. This is used for path remapping.
 
-4. **Dataset**: Ensure `data/dataset.json` exists with the required structure (file paths and their requirements/context). The source repository is shipped as `repository.7z`; extract it under the project root as `repository/`, and set up a copy at the path given by `ORIG_REPO`.
+5. **Dataset**: Ensure `data/dataset.json` exists with the required structure (file paths and their requirements/context). The source repository is shipped as `repository.7z`; extract it under the project root as `repository/`, and set up a copy at the path given by `ORIG_REPO`.
 
-5. **Test Mapping**: Ensure `data/test_map_cargo.pkl` exists, which maps source files to their test file paths.
+6. **Test Mapping**: Ensure `data/test_map_cargo.pkl` exists, which maps source files to their test file paths.
 
-6. **External Tools**:
-   - **Foundry/Forge**: For Solidity compilation and testing
-   - **Slither**: For static analysis (optional, used in some experiments)
+7. **External Tools**: The reported experiments use these fixed versions:
+
+   - **Forge 0.3.0**: Solidity compilation and concrete testing
+   - **Slither 0.11.3**: Primary static security analysis
+   - **Aderyn 0.6.8**: Independent static-analysis validation
+   - **Halmos 0.3.3**: RQ3 symbolic testing
+
+   Halmos 0.3.3 requires Python 3.11 or newer. A separate environment avoids
+   dependency conflicts with the generation frameworks:
+
+   ```bash
+   conda create -n halmos-py311 python=3.11 -y
+   conda activate halmos-py311
+   python -m pip install "halmos==0.3.3"
+   export HALMOS_BIN="$(command -v halmos)"
+   "$HALMOS_BIN" --version  # expected: halmos 0.3.3
+   conda deactivate
+   ```
+
+   Verify Aderyn with `"$(command -v aderyn)" --version` and set its absolute
+   path in `ADERYN_BIN`. The RQ3 runner reads `HALMOS_BIN`; equivalently, pass
+   `--halmos-bin /absolute/path/to/halmos` on the command line.
 
 ## Running Experiments
 
@@ -152,81 +183,221 @@ All experiments store their results in SQLite database files located in the `out
   - Ablation studies: `process_tracking_ablation` table
   - Raw model baseline: `progress_tracker_rawmodel` table
   - Agent baselines: `progress_tracker_agent` table
-  - Summary version: `process_tracking_summary` table
 
 ### Viewing Results
 
 Results can be queried from the database or analyzed using the statistics scripts in the `stats/` directory:
 
 ```bash
-# Run all statistics
-python stats/run_all_stats.py
-
 # Run specific statistics
-python stats/rq1_statistics.py      # RQ1: Main comparison
+python stats/rq1_statistics.py      # RQ1: legacy DB feedback-test/gas comparison
+python stats/rq1_verify_eval_statistics.py  # RQ1: seed1 eval test-level correctness
+python stats/rq1_security_statistics.py  # RQ1: SecurePass@1 and conditional security
+python stats/rq1_security_slither_statistics.py  # RQ1: seed1 eval + Slither security
 python stats/rq2_ablation_statistics.py  # RQ2: Ablation study
-python stats/rq3_distill_statistics.py  # RQ3: Distillation comparison
+python stats/rq2_verify_eval_statistics.py  # RQ2: seed1 eval ablation correctness
+python stats/rq3_symbolic_testing_statistics.py  # RQ3: Halmos symbolic testing
 ```
 
-## Key Features
+To run the hidden eval tests for RQ1 model outputs stored in `output/progress.db`, use `python testing/rq1_verify_eval_models.py`; the JSON report is written to `testing/eval/rq1_verify_eval_models.json`.
+To run the hidden eval tests for RQ2 ablation outputs, use `python testing/rq2_verify_eval_ablation.py`; the JSON report is written to `testing/eval/rq2_verify_eval_ablation.json`.
+Generate the corresponding paper-ready correctness table with
+`python stats/rq2_verify_eval_statistics.py`; it is written to
+`stats/eval/rq2_verify_eval_statistics.csv`.
 
-- **Multi-Agent Architecture**: Separate agents for code generation and refinement
-- **Tool Integration**: File system operations, Forge testing, Slither analysis
-- **Progress Tracking**: Comprehensive database tracking of all experiments
+To rerun the RQ3 Halmos experiment, use
+`python testing/rq3_verify_symbolic_models.py`; the report is written to
+`testing/symbolic/rq3_verify_symbolic_models.json`. Generate the paper table
+with `python stats/rq3_symbolic_testing_statistics.py`; it is written to
+`stats/symbolic/rq3_symbolic_testing_statistics.csv`.
+RQ3 uses the same `test-first-security-second` checkpoint selection policy as
+RQ1 and RQ2.
 
-## Workflow Overview
+The legacy distillation script reads feedback tests from the database. To run
+the independent eval on the 17 files excluded from distillation training and
+generate its five-column table, use:
 
-### SolAgent Pipeline
+```bash
+python testing/rq3_distill_verify_eval.py
+python stats/rq3_distill_verify_eval_statistics.py
+```
 
-1. **Code Generation**: The code agent reads requirements from the dataset and generates initial Solidity code
-2. **Refinement**: The refine agent improves the generated code using:
-   - Forge testing (compilation and unit tests)
-   - Slither static analysis (vulnerability detection)
-   - File system tools (reading context, writing code)
-3. **Tracking**: All results are stored in the database with metrics.
+### Mimo SolAgent vs OpenCode
 
-### Model Configuration
+The `mimo-v2.5-pro` comparison uses the SolAgent rows in `output/progress.db`
+and the 81 OpenCode artifacts under `baseline_opencode/result/mimo-v2.5-pro`.
+Run the independent seed-1 eval and the paper-style tables with:
 
-Models are configured in the scripts themselves. To change models, edit the `models` list in `main.py` or the respective baseline/ablation scripts. Supported models include:
-- OpenAI-compatible models (GPT-5, Qwen, etc.)
-- Anthropic Claude models
-- Local models via Ollama or vLLM
+```bash
+python testing/mimo_solagent_verify_eval.py
+python testing/mimo_opencode_verify_eval.py
+python stats/mimo_opencode_verify_eval_statistics.py
+python stats/mimo_opencode_security_slither_statistics.py
 
-## Troubleshooting
+python testing/rq3_verify_symbolic_models.py --db output/progress.db \
+  --source solagent --model mimo-v2.5-pro \
+  --selection-policy test-first-security-second \
+  --report testing/symbolic/mimo_solagent_verify_symbolic.json
+python testing/mimo_opencode_verify_symbolic.py
+python stats/mimo_opencode_symbolic_testing_statistics.py
+```
 
-1. **Import Errors**: Ensure all submodules in `lib/` are properly initialized (they are git submodules)
-   ```bash
-   git submodule update --init --recursive
-   ```
+Aderyn is run separately on a machine with the scanner installed. The scan
+runner and its table generator are intentionally separate:
 
-2. **Database Locked**: If you encounter database lock errors, ensure no other processes are accessing `output/progress.db`
+```bash
+python stats/ex_mimo_opencode_security_aderyn.py --aderyn-bin /path/to/aderyn
+python stats/mimo_opencode_security_aderyn_statistics.py
+```
 
-3. **API Errors**: Check your `.env` file and ensure API keys are correctly configured
+### Reproducing the RQ1 Aderyn Security Results
 
-4. **ORIG_REPO Not Set**: Ensure the `ORIG_REPO` environment variable is set to the correct repository path
+The reported Aderyn results use **Aderyn 0.6.8** and a fixed Forge fuzz seed of
+`0x0000000000000000000000000000000000000000000000000000000000000001`.
+The scanner reads `output/progress.db` in read-only mode and writes per-sample
+JSON files and aggregate results under `stats/aderyn/`; it does not update the
+database.
 
-5. **Forge/Slither Not Found**: Install Foundry and Slither if running experiments that require them:
-   ```bash
-   # Install Foundry
-   curl -L https://foundry.paradigm.xyz | bash
-   foundryup
-   
-   # Install Slither
-   pip install slither-analyzer
-   ```
+Before running the experiment, set `ORIG_REPO` and the absolute Aderyn path in
+`.env`:
+
+```bash
+ORIG_REPO=/absolute/path/to/original/repository
+ADERYN_BIN=/absolute/path/to/aderyn
+```
+
+Verify that the configured binary is the required version:
+
+```bash
+"$(grep '^ADERYN_BIN=' .env | cut -d= -f2- | tr -d '\"')" --version
+# Expected: aderyn 0.6.8
+```
+
+If the three committed eval reports under `testing/eval/` are available,
+rerun every Aderyn scan from scratch and regenerate the paper table with:
+
+```bash
+python stats/ex_rq1_security_aderyn.py --timeout 300 --no-resume
+python stats/rq1_security_aderyn_statistics.py
+```
+
+The scanner consumes these eval reports by default:
+
+- `testing/eval/rq1_verify_eval_agents_seed1.json`
+- `testing/eval/rq1_verify_eval_models_security_selected_seed1.json`
+- `testing/eval/rq1_verify_eval_rawmodel_seed1.json`
+
+For a complete reproduction starting from `output/progress.db`, first recreate
+the eval reports. RawModel and baseline agents use `best-pass-first`; SolAgent
+uses the experiment-time `test-first-security-second` selection policy:
+
+```bash
+SEED=0x0000000000000000000000000000000000000000000000000000000000000001
+
+python testing/rq1_verify_eval_models.py \
+  --source rawmodel \
+  --selection-policy best-pass-first \
+  --fuzz-seed "$SEED" \
+  --report testing/eval/rq1_verify_eval_rawmodel_seed1.json
+
+python testing/rq1_verify_eval_models.py \
+  --source agent \
+  --selection-policy best-pass-first \
+  --fuzz-seed "$SEED" \
+  --report testing/eval/rq1_verify_eval_agents_seed1.json
+
+python testing/rq1_verify_eval_models.py \
+  --source solagent \
+  --selection-policy test-first-security-second \
+  --fuzz-seed "$SEED" \
+  --report testing/eval/rq1_verify_eval_models_security_selected_seed1.json
+
+python testing/rq1_verify_eval_models.py \
+  --source solagent-summary \
+  --selection-policy test-first-security-second \
+  --fuzz-seed "$SEED" \
+  --report testing/eval/rq1_verify_eval_solagent_summary_seed1.json
+
+python stats/rq1_verify_eval_statistics.py
+python stats/ex_rq1_security_aderyn.py --timeout 300 --no-resume
+python stats/rq1_security_aderyn_statistics.py
+```
+
+The test-level correctness table is written to
+`stats/eval/rq1_verify_eval_statistics.csv`.
+
+To regenerate only the tables from an existing `stats/aderyn/summary.json`, run:
+
+```bash
+python stats/rq1_security_aderyn_statistics.py
+```
+
+To compute the corresponding Slither table directly from the same fixed-seed
+eval reports and the exact selected-round Slither results in `progress.db`, run:
+
+```bash
+python stats/rq1_security_slither_statistics.py --db output/progress.db
+```
+
+The output filename is derived from the script name, so this writes the
+paper-ready table to `stats/slither/rq1_security_slither_statistics.csv`. It
+does not rerun Slither or modify the database.
+
+The paper-ready main table is written to
+`stats/aderyn/rq1_security_aderyn_statistics.csv`.
+
+#### Reproducing the RQ2 Cross-Analyzer Validation
+
+RQ2 compares Full SolAgent with the `ablation_type=3` variant that does not
+receive Slither feedback during refinement. Both variants use the same
+experiment-time checkpoint rule: maximize feedback-test passes, minimize
+offline Slither H+M+L findings only among identical `(passed,total)` ties, and
+then keep the earliest round.
+
+The cross-analyzer experiment uses these pinned tools:
+
+- [Aderyn](https://github.com/Cyfrin/aderyn) 0.6.8
+
+The committed `testing/eval/rq2_verify_eval_ablation.json` can be reused. To
+regenerate it with the fixed seed, run:
+
+```bash
+python testing/rq2_verify_eval_ablation.py \
+  --selection-policy test-first-security-second \
+  --fuzz-seed 0x0000000000000000000000000000000000000000000000000000000000000001
+```
+
+```bash
+python stats/ex_rq2_security_aderyn.py \
+  --timeout 300 --no-rq1-reuse --no-resume
+python stats/rq2_security_cross_analyzer_statistics.py
+```
+
+To reproduce each analyzer independently, use separate feedback/eval entry
+points, matching the two Slither statistics scripts:
+
+```bash
+python stats/rq2_security_aderyn_statistics_feedback.py
+python stats/rq2_security_aderyn_statistics_eval.py
+```
+
+Each script writes `statistics_feedback.{json,csv}` or
+`statistics_eval.{json,csv}` under its analyzer's `stats/<analyzer>/rq2/`
+directory. The cross-analyzer script is an optional combined view, not the
+only reproduction entry point.
+
+The paper tables, paired tests, analyzer ranking, and scan-coverage audit are
+written under `stats/rq2_cross_analyzer/`. Reproduce the same-tool Slither
+feedback and independent-eval tables separately with:
+
+```bash
+python stats/rq2_slither_feedback_statistics_feedback.py
+python stats/rq2_slither_feedback_statistics_eval.py
+```
 
 ## Distillation Training
 
 This project supports knowledge distillation training to create smaller, efficient models based on the SolAgent results. The distillation process consists of two steps: data processing and model training.
-
-### Prerequisites
-
-1. **Alibaba SWIFT Framework**: Install SWIFT for training
-   ```bash
-   pip install ms-swift
-   ```
-
-2. **Completed Experiments**: Ensure you have run the main SolAgent experiments and have results in `output/progress.db`
 
 ### Step 1: Data Processing
 
@@ -235,24 +406,6 @@ Process the experimental results from the database to generate training datasets
 ```bash
 python z0train/data_processor.py
 ```
-
-This script:
-- Reads data from `output/progress.db` (`process_tracking` table)
-- Filters by model whitelist (default: `["gpt-5.1", "claude-sonnet-4-5", "gpt-5-mini"]`)
-- Filters by status (default: status >= 1, meaning completed experiments)
-- Generates training datasets:
-  - `z0train/output/processed_tracker.json` - From tracker table
-  - `z0train/output/processed_mixed.json` - Combined dataset (tracker + summary, if summary data exists)
-
-**Output Datasets**:
-- `processed_tracker.json`: Training data from the main tracker table
-- `processed_mixed.json`: Combined dataset including both tracker and summary data (if available)
-
-**Configuration**:
-- Edit `DEFAULT_MODEL_WHITELIST` in `z0train/data_processor.py` to change which models' data to include
-- Modify `status_filter` in the `main()` function to change status filtering criteria
-
-**Note**: You can use either `processed_tracker.json` or `processed_mixed.json` for training. The mixed dataset includes additional data from summary experiments if available.
 
 ### Step 2: Model Training
 
@@ -310,17 +463,4 @@ python z0train/train_sft_swift.py \
 
 ## Statistics and Analysis
 
-After running experiments, use the statistics scripts to analyze results:
-
-- `stats/rq1_statistics.py`: Compare SolAgent with baselines (Pass@1, Gas usage, Vulnerabilities)
-- `stats/rq2_ablation_statistics.py`: Analyze ablation study results
-- `stats/rq3_distill_statistics.py`: Compare distilled models
 - `stats/ex_rq1_*.py`: Supplementary statistics (LOC, Token usage, Gas analysis)
-
-## License
-
-[Add your license information here]
-
-## Citation
-
-[Add citation information if applicable]

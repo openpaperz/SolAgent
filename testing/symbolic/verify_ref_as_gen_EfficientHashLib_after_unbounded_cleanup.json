@@ -1,0 +1,1913 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 48,
+      "proved_checks": 48,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 48,
+        "proved_checks": 48,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 48,
+        "passed_methods": 48,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 48
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 48,
+          "passed_methods": 48,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 48
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/EfficientHashLib.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/EfficientHashLib.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/EfficientHashLib.sol"
+      ],
+      "test_names": [
+        "test_EfficientHashLib_hash_0",
+        "test_EfficientHashLib_hash_1",
+        "test_EfficientHashLib_hash_2",
+        "test_EfficientHashLib_hash_3",
+        "test_EfficientHashLib_hash_4",
+        "test_EfficientHashLib_hash_5",
+        "test_EfficientHashLib_hash_6",
+        "test_EfficientHashLib_hash_7",
+        "test_EfficientHashLib_hash_8",
+        "test_EfficientHashLib_hash_9",
+        "test_EfficientHashLib_hash_10",
+        "test_EfficientHashLib_hash_11",
+        "test_EfficientHashLib_hash_12",
+        "test_EfficientHashLib_hash_13",
+        "test_EfficientHashLib_hash_14",
+        "test_EfficientHashLib_hash_15",
+        "test_EfficientHashLib_hash_16",
+        "test_EfficientHashLib_hash_17",
+        "test_EfficientHashLib_hash_18",
+        "test_EfficientHashLib_hash_19",
+        "test_EfficientHashLib_hash_20",
+        "test_EfficientHashLib_hash_21",
+        "test_EfficientHashLib_hash_22",
+        "test_EfficientHashLib_hash_23",
+        "test_EfficientHashLib_hash_24",
+        "test_EfficientHashLib_hash_25",
+        "test_EfficientHashLib_hash_26",
+        "test_EfficientHashLib_hash_27",
+        "test_EfficientHashLib_hash_28",
+        "test_EfficientHashLib_free_32",
+        "test_EfficientHashLib_eq_33",
+        "test_EfficientHashLib_eq_34",
+        "test_EfficientHashLib_hash_37",
+        "test_EfficientHashLib_hashCalldata_40",
+        "test_EfficientHashLib_property_set_bytes32_0",
+        "test_EfficientHashLib_property_set_uint256_1",
+        "test_EfficientHashLib_property_malloc_2",
+        "test_EfficientHashLib_property_hash_memory_range_3",
+        "test_EfficientHashLib_property_hash_memory_start_4",
+        "test_EfficientHashLib_property_hash_calldata_range_5",
+        "test_EfficientHashLib_property_hash_calldata_start_6",
+        "test_EfficientHashLib_property_sha2_bytes32_7",
+        "test_EfficientHashLib_property_sha2_memory_range_8",
+        "test_EfficientHashLib_property_sha2_memory_start_9",
+        "test_EfficientHashLib_property_sha2_memory_10",
+        "test_EfficientHashLib_property_sha2_calldata_range_11",
+        "test_EfficientHashLib_property_sha2_calldata_start_12",
+        "test_EfficientHashLib_property_sha2_calldata_13"
+      ],
+      "check_names": [
+        "check_EfficientHashLib_hash_0",
+        "check_EfficientHashLib_hash_1",
+        "check_EfficientHashLib_hash_2",
+        "check_EfficientHashLib_hash_3",
+        "check_EfficientHashLib_hash_4",
+        "check_EfficientHashLib_hash_5",
+        "check_EfficientHashLib_hash_6",
+        "check_EfficientHashLib_hash_7",
+        "check_EfficientHashLib_hash_8",
+        "check_EfficientHashLib_hash_9",
+        "check_EfficientHashLib_hash_10",
+        "check_EfficientHashLib_hash_11",
+        "check_EfficientHashLib_hash_12",
+        "check_EfficientHashLib_hash_13",
+        "check_EfficientHashLib_hash_14",
+        "check_EfficientHashLib_hash_15",
+        "check_EfficientHashLib_hash_16",
+        "check_EfficientHashLib_hash_17",
+        "check_EfficientHashLib_hash_18",
+        "check_EfficientHashLib_hash_19",
+        "check_EfficientHashLib_hash_20",
+        "check_EfficientHashLib_hash_21",
+        "check_EfficientHashLib_hash_22",
+        "check_EfficientHashLib_hash_23",
+        "check_EfficientHashLib_hash_24",
+        "check_EfficientHashLib_hash_25",
+        "check_EfficientHashLib_hash_26",
+        "check_EfficientHashLib_hash_27",
+        "check_EfficientHashLib_hash_28",
+        "check_EfficientHashLib_free_32",
+        "check_EfficientHashLib_eq_33",
+        "check_EfficientHashLib_eq_34",
+        "check_EfficientHashLib_hash_37",
+        "check_EfficientHashLib_hashCalldata_40",
+        "check_EfficientHashLib_property_set_bytes32_0",
+        "check_EfficientHashLib_property_set_uint256_1",
+        "check_EfficientHashLib_property_malloc_2",
+        "check_EfficientHashLib_property_hash_memory_range_3",
+        "check_EfficientHashLib_property_hash_memory_start_4",
+        "check_EfficientHashLib_property_hash_calldata_range_5",
+        "check_EfficientHashLib_property_hash_calldata_start_6",
+        "check_EfficientHashLib_property_sha2_bytes32_7",
+        "check_EfficientHashLib_property_sha2_memory_range_8",
+        "check_EfficientHashLib_property_sha2_memory_start_9",
+        "check_EfficientHashLib_property_sha2_memory_10",
+        "check_EfficientHashLib_property_sha2_calldata_range_11",
+        "check_EfficientHashLib_property_sha2_calldata_start_12",
+        "check_EfficientHashLib_property_sha2_calldata_13"
+      ],
+      "methods_count": 48,
+      "manifest_skipped_checks": 14,
+      "skipped_checks": 0,
+      "expected_checks": 48,
+      "expected_tests": 48,
+      "proved_checks": 48,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_EfficientHashLib_hash_0": "PASS",
+        "check_EfficientHashLib_hash_1": "PASS",
+        "check_EfficientHashLib_hash_2": "PASS",
+        "check_EfficientHashLib_hash_3": "PASS",
+        "check_EfficientHashLib_hash_4": "PASS",
+        "check_EfficientHashLib_hash_5": "PASS",
+        "check_EfficientHashLib_hash_6": "PASS",
+        "check_EfficientHashLib_hash_7": "PASS",
+        "check_EfficientHashLib_hash_8": "PASS",
+        "check_EfficientHashLib_hash_9": "PASS",
+        "check_EfficientHashLib_hash_10": "PASS",
+        "check_EfficientHashLib_hash_11": "PASS",
+        "check_EfficientHashLib_hash_12": "PASS",
+        "check_EfficientHashLib_hash_13": "PASS",
+        "check_EfficientHashLib_hash_14": "PASS",
+        "check_EfficientHashLib_hash_15": "PASS",
+        "check_EfficientHashLib_hash_16": "PASS",
+        "check_EfficientHashLib_hash_17": "PASS",
+        "check_EfficientHashLib_hash_18": "PASS",
+        "check_EfficientHashLib_hash_19": "PASS",
+        "check_EfficientHashLib_hash_20": "PASS",
+        "check_EfficientHashLib_hash_21": "PASS",
+        "check_EfficientHashLib_hash_22": "PASS",
+        "check_EfficientHashLib_hash_23": "PASS",
+        "check_EfficientHashLib_hash_24": "PASS",
+        "check_EfficientHashLib_hash_25": "PASS",
+        "check_EfficientHashLib_hash_26": "PASS",
+        "check_EfficientHashLib_hash_27": "PASS",
+        "check_EfficientHashLib_hash_28": "PASS",
+        "check_EfficientHashLib_free_32": "PASS",
+        "check_EfficientHashLib_eq_33": "PASS",
+        "check_EfficientHashLib_eq_34": "PASS",
+        "check_EfficientHashLib_hash_37": "PASS",
+        "check_EfficientHashLib_hashCalldata_40": "PASS",
+        "check_EfficientHashLib_property_set_bytes32_0": "PASS",
+        "check_EfficientHashLib_property_set_uint256_1": "PASS",
+        "check_EfficientHashLib_property_malloc_2": "PASS",
+        "check_EfficientHashLib_property_hash_memory_range_3": "PASS",
+        "check_EfficientHashLib_property_hash_memory_start_4": "PASS",
+        "check_EfficientHashLib_property_hash_calldata_range_5": "PASS",
+        "check_EfficientHashLib_property_hash_calldata_start_6": "PASS",
+        "check_EfficientHashLib_property_sha2_bytes32_7": "PASS",
+        "check_EfficientHashLib_property_sha2_memory_range_8": "PASS",
+        "check_EfficientHashLib_property_sha2_memory_start_9": "PASS",
+        "check_EfficientHashLib_property_sha2_memory_10": "PASS",
+        "check_EfficientHashLib_property_sha2_calldata_range_11": "PASS",
+        "check_EfficientHashLib_property_sha2_calldata_start_12": "PASS",
+        "check_EfficientHashLib_property_sha2_calldata_13": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "eq",
+          "visibility": "internal",
+          "full_signature": "function eq(bytes memory a, bytes32 b) internal pure returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_eq_34",
+              "test_name": "test_EfficientHashLib_eq_34",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "eq",
+          "visibility": "internal",
+          "full_signature": "function eq(bytes32 a, bytes memory b) internal pure returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_eq_33",
+              "test_name": "test_EfficientHashLib_eq_33",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "free",
+          "visibility": "internal",
+          "full_signature": "function free(bytes32[] memory buffer) internal pure",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_free_32",
+              "test_name": "test_EfficientHashLib_free_32",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes memory b) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_37",
+              "test_name": "test_EfficientHashLib_hash_37",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes memory b, uint256 start) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_hash_memory_start_4",
+              "test_name": "test_EfficientHashLib_property_hash_memory_start_4",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes memory b, uint256 start, uint256 end) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_hash_memory_range_3",
+              "test_name": "test_EfficientHashLib_property_hash_memory_range_3",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_0",
+              "test_name": "test_EfficientHashLib_hash_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_2",
+              "test_name": "test_EfficientHashLib_hash_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_4",
+              "test_name": "test_EfficientHashLib_hash_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_6",
+              "test_name": "test_EfficientHashLib_hash_6",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_8",
+              "test_name": "test_EfficientHashLib_hash_8",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_10",
+              "test_name": "test_EfficientHashLib_hash_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_12",
+              "test_name": "test_EfficientHashLib_hash_12",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6, bytes32 v7) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_14",
+              "test_name": "test_EfficientHashLib_hash_14",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6, bytes32 v7, bytes32 v8) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_16",
+              "test_name": "test_EfficientHashLib_hash_16",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6, bytes32 v7, bytes32 v8, bytes32 v9) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_18",
+              "test_name": "test_EfficientHashLib_hash_18",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6, bytes32 v7, bytes32 v8, bytes32 v9, bytes32 v10) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_20",
+              "test_name": "test_EfficientHashLib_hash_20",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6, bytes32 v7, bytes32 v8, bytes32 v9, bytes32 v10, bytes32 v11) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_22",
+              "test_name": "test_EfficientHashLib_hash_22",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6, bytes32 v7, bytes32 v8, bytes32 v9, bytes32 v10, bytes32 v11, bytes32 v12) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_24",
+              "test_name": "test_EfficientHashLib_hash_24",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6, bytes32 v7, bytes32 v8, bytes32 v9, bytes32 v10, bytes32 v11, bytes32 v12, bytes32 v13) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_26",
+              "test_name": "test_EfficientHashLib_hash_26",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(bytes32[] memory buffer) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_28",
+              "test_name": "test_EfficientHashLib_hash_28",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_1",
+              "test_name": "test_EfficientHashLib_hash_1",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_3",
+              "test_name": "test_EfficientHashLib_hash_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_5",
+              "test_name": "test_EfficientHashLib_hash_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_7",
+              "test_name": "test_EfficientHashLib_hash_7",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_9",
+              "test_name": "test_EfficientHashLib_hash_9",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_11",
+              "test_name": "test_EfficientHashLib_hash_11",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_13",
+              "test_name": "test_EfficientHashLib_hash_13",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6, uint256 v7) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_15",
+              "test_name": "test_EfficientHashLib_hash_15",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6, uint256 v7, uint256 v8) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_17",
+              "test_name": "test_EfficientHashLib_hash_17",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6, uint256 v7, uint256 v8, uint256 v9) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_19",
+              "test_name": "test_EfficientHashLib_hash_19",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6, uint256 v7, uint256 v8, uint256 v9, uint256 v10) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_21",
+              "test_name": "test_EfficientHashLib_hash_21",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6, uint256 v7, uint256 v8, uint256 v9, uint256 v10, uint256 v11) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_23",
+              "test_name": "test_EfficientHashLib_hash_23",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6, uint256 v7, uint256 v8, uint256 v9, uint256 v10, uint256 v11, uint256 v12) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_25",
+              "test_name": "test_EfficientHashLib_hash_25",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hash",
+          "visibility": "internal",
+          "full_signature": "function hash(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6, uint256 v7, uint256 v8, uint256 v9, uint256 v10, uint256 v11, uint256 v12, uint256 v13) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hash_27",
+              "test_name": "test_EfficientHashLib_hash_27",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hashCalldata",
+          "visibility": "internal",
+          "full_signature": "function hashCalldata(bytes calldata b) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_hashCalldata_40",
+              "test_name": "test_EfficientHashLib_hashCalldata_40",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hashCalldata",
+          "visibility": "internal",
+          "full_signature": "function hashCalldata(bytes calldata b, uint256 start) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_hash_calldata_start_6",
+              "test_name": "test_EfficientHashLib_property_hash_calldata_start_6",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "hashCalldata",
+          "visibility": "internal",
+          "full_signature": "function hashCalldata(bytes calldata b, uint256 start, uint256 end) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_hash_calldata_range_5",
+              "test_name": "test_EfficientHashLib_property_hash_calldata_range_5",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "malloc",
+          "visibility": "internal",
+          "full_signature": "function malloc(uint256 n) internal pure returns (bytes32[] memory buffer)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_malloc_2",
+              "test_name": "test_EfficientHashLib_property_malloc_2",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "set",
+          "visibility": "internal",
+          "full_signature": "function set(bytes32[] memory buffer, uint256 i, bytes32 value) internal pure returns (bytes32[] memory)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_set_bytes32_0",
+              "test_name": "test_EfficientHashLib_property_set_bytes32_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "set",
+          "visibility": "internal",
+          "full_signature": "function set(bytes32[] memory buffer, uint256 i, uint256 value) internal pure returns (bytes32[] memory)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_set_uint256_1",
+              "test_name": "test_EfficientHashLib_property_set_uint256_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "sha2",
+          "visibility": "internal",
+          "full_signature": "function sha2(bytes memory b) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_sha2_memory_10",
+              "test_name": "test_EfficientHashLib_property_sha2_memory_10",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "sha2",
+          "visibility": "internal",
+          "full_signature": "function sha2(bytes memory b, uint256 start) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_sha2_memory_start_9",
+              "test_name": "test_EfficientHashLib_property_sha2_memory_start_9",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "sha2",
+          "visibility": "internal",
+          "full_signature": "function sha2(bytes memory b, uint256 start, uint256 end) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_sha2_memory_range_8",
+              "test_name": "test_EfficientHashLib_property_sha2_memory_range_8",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "sha2",
+          "visibility": "internal",
+          "full_signature": "function sha2(bytes32 b) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_sha2_bytes32_7",
+              "test_name": "test_EfficientHashLib_property_sha2_bytes32_7",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "sha2Calldata",
+          "visibility": "internal",
+          "full_signature": "function sha2Calldata(bytes calldata b) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_sha2_calldata_13",
+              "test_name": "test_EfficientHashLib_property_sha2_calldata_13",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "sha2Calldata",
+          "visibility": "internal",
+          "full_signature": "function sha2Calldata(bytes calldata b, uint256 start) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_sha2_calldata_start_12",
+              "test_name": "test_EfficientHashLib_property_sha2_calldata_start_12",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EfficientHashLib.sol",
+          "class_name": "EfficientHashLib",
+          "class_kind": "library",
+          "method_name": "sha2Calldata",
+          "visibility": "internal",
+          "full_signature": "function sha2Calldata(bytes calldata b, uint256 start, uint256 end) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EfficientHashLib_property_sha2_calldata_range_11",
+              "test_name": "test_EfficientHashLib_property_sha2_calldata_range_11",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 48,
+        "passed_methods": 48,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 48
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_EfficientHashLib_hash_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/48 ---\nCompiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 1.23s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n --> test/EfficientHashLib.t.sol:9:5:\n  |\n9 |     function ref_call_hash_0(bytes32 v0) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:12:5:\n   |\n12 |     function ref_call_hash_1(uint256 v0) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:15:5:\n   |\n15 |     function ref_call_hash_2(bytes32 v0, bytes32 v1) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:18:5:\n   |\n18 |     function ref_call_hash_3(uint256 v0, uint256 v1) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:21:5:\n   |\n21 |     function ref_call_hash_4(bytes32 v0, bytes32 v1, bytes32 v2) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:24:5:\n   |\n24 |     function ref_call_hash_5(uint256 v0, uint256 v1, uint256 v2) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:27:5:\n   |\n27 |     function ref_call_hash_6(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:30:5:\n   |\n30 |     function ref_call_hash_7(uint256 v0, uint256 v1, uint256 v2, uint256 v3) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:33:5:\n   |\n33 |     function ref_call_hash_8(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:36:5:\n   |\n36 |     function ref_call_hash_9(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:39:5:\n   |\n39 |     function ref_call_hash_10(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:42:5:\n   |\n42 |     function ref_call_hash_11(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:45:5:\n   |\n45 |     function ref_call_hash_12(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:48:5:\n   |\n48 |     function ref_call_hash_13(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:51:5:\n   |\n51 |     function ref_call_hash_14(bytes32 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:54:5:\n   |\n54 |     function ref_call_hash_15(uint256 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:57:5:\n   |\n57 |     function ref_call_hash_16(bytes32 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:60:5:\n   |\n60 |     function ref_call_hash_17(uint256 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:63:5:\n   |\n63 |     function ref_call_hash_18(bytes32 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:66:5:\n   |\n66 |     function ref_call_hash_19(uint256 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:69:5:\n   |\n69 |     function ref_call_hash_20(bytes32[11] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:72:5:\n   |\n72 |     function ref_call_hash_21(uint256[11] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:75:5:\n   |\n75 |     function ref_call_hash_22(bytes32[12] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:78:5:\n   |\n78 |     function ref_call_hash_23(uint256[12] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:81:5:\n   |\n81 |     function ref_call_hash_24(bytes32[13] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:84:5:\n   |\n84 |     function ref_call_hash_25(uint256[13] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:87:5:\n   |\n87 |     function ref_call_hash_26(bytes32[14] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:90:5:\n   |\n90 |     function ref_call_hash_27(uint256[14] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:93:5:\n   |\n93 |     function ref_call_hash_28(bytes32[] memory buffer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:96:5:\n   |\n96 |     function ref_call_set_29(bytes32[] memory buffer, uint256 i, bytes32 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:99:5:\n   |\n99 |     function ref_call_set_30(bytes32[] memory buffer, uint256 i, uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:102:5:\n    |\n102 |     function ref_call_malloc_31(uint256 n) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:105:5:\n    |\n105 |     function ref_call_free_32(bytes32[] memory buffer) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:108:5:\n    |\n108 |     function ref_call_eq_33(bytes32 a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:111:5:\n    |\n111 |     function ref_call_eq_34(bytes memory a, bytes32 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:114:5:\n    |\n114 |     function ref_call_hash_35(bytes memory b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:117:5:\n    |\n117 |     function ref_call_hash_36(bytes memory b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:120:5:\n    |\n120 |     function ref_call_hash_37(bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:123:5:\n    |\n123 |     function ref_call_hashCalldata_38(bytes calldata b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:126:5:\n    |\n126 |     function ref_call_hashCalldata_39(bytes calldata b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:129:5:\n    |\n129 |     function ref_call_hashCalldata_40(bytes calldata b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:132:5:\n    |\n132 |     function ref_call_sha2_41(bytes32 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:135:5:\n    |\n135 |     function ref_call_sha2_42(bytes memory b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:138:5:\n    |\n138 |     function ref_call_sha2_43(bytes memory b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:141:5:\n    |\n141 |     function ref_call_sha2_44(bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:144:5:\n    |\n144 |     function ref_call_sha2Calldata_45(bytes calldata b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:147:5:\n    |\n147 |     function ref_call_sha2Calldata_46(bytes calldata b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:150:5:\n    |\n150 |     function ref_call_sha2Calldata_47(bytes calldata b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:153:5:\n    |\n153 |     function gen_call_hash_0(bytes32 v0) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:156:5:\n    |\n156 |     function gen_call_hash_1(uint256 v0) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:159:5:\n    |\n159 |     function gen_call_hash_2(bytes32 v0, bytes32 v1) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:162:5:\n    |\n162 |     function gen_call_hash_3(uint256 v0, uint256 v1) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:165:5:\n    |\n165 |     function gen_call_hash_4(bytes32 v0, bytes32 v1, bytes32 v2) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:168:5:\n    |\n168 |     function gen_call_hash_5(uint256 v0, uint256 v1, uint256 v2) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:171:5:\n    |\n171 |     function gen_call_hash_6(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:174:5:\n    |\n174 |     function gen_call_hash_7(uint256 v0, uint256 v1, uint256 v2, uint256 v3) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:177:5:\n    |\n177 |     function gen_call_hash_8(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:180:5:\n    |\n180 |     function gen_call_hash_9(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:183:5:\n    |\n183 |     function gen_call_hash_10(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:186:5:\n    |\n186 |     function gen_call_hash_11(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:189:5:\n    |\n189 |     function gen_call_hash_12(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:192:5:\n    |\n192 |     function gen_call_hash_13(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:195:5:\n    |\n195 |     function gen_call_hash_14(bytes32 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:198:5:\n    |\n198 |     function gen_call_hash_15(uint256 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:201:5:\n    |\n201 |     function gen_call_hash_16(bytes32 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:204:5:\n    |\n204 |     function gen_call_hash_17(uint256 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted \n...[truncated 24209 chars]",
+      "halmos_stderr": "--- halmos chunk 1/48 ---\n\n\n--- halmos chunk 2/48 ---\n\n\n--- halmos chunk 3/48 ---\n\n\n--- halmos chunk 4/48 ---\n\n\n--- halmos chunk 5/48 ---\n\n\n--- halmos chunk 6/48 ---\n\n\n--- halmos chunk 7/48 ---\n\n\n--- halmos chunk 8/48 ---\n\n\n--- halmos chunk 9/48 ---\n\n\n--- halmos chunk 10/48 ---\n\n\n--- halmos chunk 11/48 ---\n\n\n--- halmos chunk 12/48 ---\n\n\n--- halmos chunk 13/48 ---\n\n\n--- halmos chunk 14/48 ---\n\n\n--- halmos chunk 15/48 ---\n\n\n--- halmos chunk 16/48 ---\n\n\n--- halmos chunk 17/48 ---\n\n\n--- halmos chunk 18/48 ---\n\n\n--- halmos chunk 19/48 ---\n\n\n--- halmos chunk 20/48 ---\n\n\n--- halmos chunk 21/48 ---\n\n\n--- halmos chunk 22/48 ---\n\n\n--- halmos chunk 23/48 ---\n\n\n--- halmos chunk 24/48 ---\n\n\n--- halmos chunk 25/48 ---\n\n\n--- halmos chunk 26/48 ---\n\n\n--- halmos chunk 27/48 ---\n\n\n--- halmos chunk 28/48 ---\n\n\n--- halmos chunk 29/48 ---\n\n\n--- halmos chunk 30/48 ---\n\n\n--- halmos chunk 31/48 ---\n\n\n--- halmos chunk 32/48 ---\n\n\n--- halmos chunk 33/48 ---\n\n\n--- halmos chunk 34/48 ---\n\n\n--- halmos chunk 35/48 ---\n\n\n--- halmos chunk 36/48 ---\n\n\n--- halmos chunk 37/48 ---\n\n\n--- halmos chunk 38/48 ---\n\n\n--- halmos chunk 39/48 ---\n\n\n--- halmos chunk 40/48 ---\n\n\n--- halmos chunk 41/48 ---\n\n\n--- halmos chunk 42/48 ---\n\n\n--- halmos chunk 43/48 ---\n\n\n--- halmos chunk 44/48 ---\n\n\n--- halmos chunk 45/48 ---\n\n\n--- halmos chunk 46/48 ---\n\n\n--- halmos chunk 47/48 ---\n\n\n--- halmos chunk 48/48 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 48,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_9(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_11(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_13(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_14(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_15(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_16(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_17(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_18(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_19(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_20(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_21(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_22(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_23(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_24(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_25(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_26(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_27(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_28(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_free_32(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_eq_33(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_eq_34(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hash_37(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_hashCalldata_40(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_set_bytes32_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_set_uint256_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_malloc_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_hash_memory_range_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_hash_memory_start_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_hash_calldata_range_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_hash_calldata_start_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_sha2_bytes32_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_sha2_memory_range_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_sha2_memory_start_9(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_sha2_memory_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_sha2_calldata_range_11(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_sha2_calldata_start_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EfficientHashLib_property_sha2_calldata_13(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

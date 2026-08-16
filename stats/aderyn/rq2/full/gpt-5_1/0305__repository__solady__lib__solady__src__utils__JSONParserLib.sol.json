@@ -1,0 +1,411 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/JSONParserLib.sol",
+        "-o",
+        "/tmp/aderyn_report_amkeybyg/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/JSONParserLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/JSONParserLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_amkeybyg/report.json\n\n🪶 Aderyn spotted all it could. Stay secure.\nIf our little bird helped you out, give it a perch with a GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/JSONParserLib.sol",
+              "n_sloc": 299
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 299,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 65,
+                  "src": "2286:3",
+                  "src_char": "2286:3"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 75,
+                  "src": "2575:8",
+                  "src_char": "2575:8"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 137,
+                  "src": "4572:8",
+                  "src_char": "4572:8"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 173,
+                  "src": "5790:9",
+                  "src_char": "5790:9"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 226,
+                  "src": "7610:16",
+                  "src_char": "7610:16"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 76,
+                  "src": "2692:1",
+                  "src_char": "2692:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 83,
+                  "src": "2892:1",
+                  "src_char": "2892:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 90,
+                  "src": "3112:1",
+                  "src_char": "3112:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 177,
+                  "src": "6029:2",
+                  "src_char": "6029:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 180,
+                  "src": "6132:2",
+                  "src_char": "6132:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 180,
+                  "src": "6142:2",
+                  "src_char": "6142:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 181,
+                  "src": "6202:2",
+                  "src_char": "6202:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 183,
+                  "src": "6312:2",
+                  "src_char": "6312:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 238,
+                  "src": "8079:2",
+                  "src_char": "8079:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 238,
+                  "src": "8090:2",
+                  "src_char": "8090:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 238,
+                  "src": "8102:2",
+                  "src_char": "8102:2"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 242,
+                  "src": "8286:1",
+                  "src_char": "8286:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 266,
+                  "src": "9192:1",
+                  "src_char": "9192:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 268,
+                  "src": "9355:1",
+                  "src_char": "9355:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 269,
+                  "src": "9383:1",
+                  "src_char": "9383:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 310,
+                  "src": "10700:1",
+                  "src_char": "10700:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 311,
+                  "src": "10742:1",
+                  "src_char": "10742:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 316,
+                  "src": "10895:4",
+                  "src_char": "10895:4"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 319,
+                  "src": "11064:1",
+                  "src_char": "11064:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 320,
+                  "src": "11118:4",
+                  "src_char": "11118:4"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 320,
+                  "src": "11131:4",
+                  "src_char": "11131:4"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 323,
+                  "src": "11286:4",
+                  "src_char": "11286:4"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 323,
+                  "src": "11301:1",
+                  "src_char": "11301:1"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 323,
+                  "src": "11306:4",
+                  "src_char": "11306:4"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 324,
+                  "src": "11363:4",
+                  "src_char": "11363:4"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 324,
+                  "src": "11376:4",
+                  "src_char": "11376:4"
+                },
+                {
+                  "contract_path": "src/utils/JSONParserLib.sol",
+                  "line_no": 326,
+                  "src": "11432:1",
+                  "src_char": "11432:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 299,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 11,
+    "best_round": 5,
+    "best_total": 30,
+    "best_vuln": 2,
+    "code_bytes": 12535,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "fdb0a5f1a83ca16dca5c0ef31928928f7d5c1e772f38282d9a377274b6c0a892",
+    "skip_reason": null,
+    "sloc": 299,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:22.306660+00:00",
+  "eval": {
+    "best_round": 5,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/JSONParserLib.t.sol",
+    "expected_tests": 21,
+    "extract_error": null,
+    "forge_total": 21,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 4,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 305,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/JSONParserLib.sol",
+  "id": 305,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:09.978985+00:00",
+  "reused_from": "stats/aderyn/solagent/gpt-5_1/0305__repository__solady__lib__solady__src__utils__JSONParserLib.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 2,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 2
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 17,
+  "test_pass": 4,
+  "test_source": "rq2_eval",
+  "test_total": 21
+}

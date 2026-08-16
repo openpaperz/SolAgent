@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 1,
+      "proved_checks": 1,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 1,
+        "proved_checks": 1,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 1,
+        "passed_methods": 1,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 1
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 1,
+          "passed_methods": 1,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 1
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/FixedPointMathLib.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/FixedPointMathLib.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/FixedPointMathLib.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/FixedPointMathLib.sol"
+      ],
+      "test_names": [
+        "test_FixedPointMathLib_property_lambert_w0_wad_5"
+      ],
+      "check_names": [
+        "check_FixedPointMathLib_property_lambert_w0_wad_5"
+      ],
+      "methods_count": 1,
+      "manifest_skipped_checks": 20,
+      "skipped_checks": 0,
+      "expected_checks": 1,
+      "expected_tests": 1,
+      "proved_checks": 1,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_FixedPointMathLib_property_lambert_w0_wad_5": "PASS"
+      },
+      "compile_error": null,
+      "counterexamples": [],
+      "unsupported_error": "not been fully explored due to the loop unrolling bound: 2",
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/FixedPointMathLib.sol",
+          "class_name": "FixedPointMathLib",
+          "class_kind": "library",
+          "method_name": "lambertW0Wad",
+          "visibility": "internal",
+          "full_signature": "function lambertW0Wad(int256 x) internal pure returns (int256 w)",
+          "checks": [
+            {
+              "check_name": "check_FixedPointMathLib_property_lambert_w0_wad_5",
+              "test_name": "test_FixedPointMathLib_property_lambert_w0_wad_5",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 1,
+        "passed_methods": 1,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 1
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_FixedPointMathLib_property_lambert_w0_wad_5(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "No files changed, compilation skipped\n\nRunning 1 tests for test/FixedPointMathLib.t.sol:FixedPointMathLibEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_FixedPointMathLib_property_lambert_w0_wad_5(int256) (paths: 87, time: 53.99s, bounds: [])\nWARNING  check_FixedPointMathLib_property_lambert_w0_wad_5(int256): paths have  \n         not been fully explored due to the loop unrolling bound: 2             \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 54.01s\n",
+      "halmos_stderr": "",
+      "halmos_json_error": null,
+      "failure_category": null
+    }
+  ]
+}

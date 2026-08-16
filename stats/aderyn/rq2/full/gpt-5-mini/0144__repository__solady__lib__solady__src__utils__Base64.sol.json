@@ -1,0 +1,518 @@
+{
+  "aderyn": {
+    "count": 1,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/Base64.sol",
+        "-o",
+        "/tmp/aderyn_report_dvimxjbu/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/Base64.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/Base64.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_dvimxjbu/report.json\n\n✔ Aderyn did its job. Solidity's a bit safer now.\n💫 Like the tool? A star on GitHub goes a long way:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/Base64.sol",
+              "n_sloc": 139
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 139,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 29,
+                  "src": "1394:1",
+                  "src_char": "1394:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 29,
+                  "src": "1411:1",
+                  "src_char": "1411:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 44,
+                  "src": "1900:1",
+                  "src_char": "1900:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 44,
+                  "src": "1915:1",
+                  "src_char": "1915:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 49,
+                  "src": "2087:2",
+                  "src_char": "2087:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 49,
+                  "src": "2099:1",
+                  "src_char": "2099:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 51,
+                  "src": "2154:2",
+                  "src_char": "2154:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 51,
+                  "src": "2160:4",
+                  "src_char": "2160:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 52,
+                  "src": "2217:2",
+                  "src_char": "2217:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 52,
+                  "src": "2223:4",
+                  "src_char": "2223:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 53,
+                  "src": "2280:1",
+                  "src_char": "2280:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 53,
+                  "src": "2285:4",
+                  "src_char": "2285:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 54,
+                  "src": "2320:1",
+                  "src_char": "2320:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 54,
+                  "src": "2340:4",
+                  "src_char": "2340:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 56,
+                  "src": "2365:1",
+                  "src_char": "2365:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 63,
+                  "src": "2538:2",
+                  "src_char": "2538:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 65,
+                  "src": "2590:2",
+                  "src_char": "2590:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 65,
+                  "src": "2596:4",
+                  "src_char": "2596:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 66,
+                  "src": "2653:2",
+                  "src_char": "2653:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 66,
+                  "src": "2659:4",
+                  "src_char": "2659:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 69,
+                  "src": "2778:1",
+                  "src_char": "2778:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 71,
+                  "src": "2827:1",
+                  "src_char": "2827:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 75,
+                  "src": "2982:2",
+                  "src_char": "2982:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 75,
+                  "src": "2994:1",
+                  "src_char": "2994:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 77,
+                  "src": "3045:2",
+                  "src_char": "3045:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 77,
+                  "src": "3051:4",
+                  "src_char": "3051:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 78,
+                  "src": "3108:2",
+                  "src_char": "3108:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 78,
+                  "src": "3114:4",
+                  "src_char": "3114:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 79,
+                  "src": "3171:1",
+                  "src_char": "3171:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 79,
+                  "src": "3176:4",
+                  "src_char": "3176:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 81,
+                  "src": "3245:1",
+                  "src_char": "3245:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 83,
+                  "src": "3294:1",
+                  "src_char": "3294:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 91,
+                  "src": "3603:1",
+                  "src_char": "3603:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 157,
+                  "src": "6078:1",
+                  "src_char": "6078:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 160,
+                  "src": "6162:1",
+                  "src_char": "6162:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 165,
+                  "src": "6319:1",
+                  "src_char": "6319:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 165,
+                  "src": "6324:1",
+                  "src_char": "6324:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 178,
+                  "src": "6830:1",
+                  "src_char": "6830:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 178,
+                  "src": "6852:1",
+                  "src_char": "6852:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 180,
+                  "src": "6915:2",
+                  "src_char": "6915:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 180,
+                  "src": "6936:2",
+                  "src_char": "6936:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 180,
+                  "src": "6957:1",
+                  "src_char": "6957:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 183,
+                  "src": "7067:2",
+                  "src_char": "7067:2"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 187,
+                  "src": "7207:1",
+                  "src_char": "7207:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 195,
+                  "src": "7406:1",
+                  "src_char": "7406:1"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 207,
+                  "src": "7708:4",
+                  "src_char": "7708:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 208,
+                  "src": "7766:4",
+                  "src_char": "7766:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 211,
+                  "src": "7834:4",
+                  "src_char": "7834:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 212,
+                  "src": "7892:4",
+                  "src_char": "7892:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 215,
+                  "src": "7965:4",
+                  "src_char": "7965:4"
+                },
+                {
+                  "contract_path": "src/utils/Base64.sol",
+                  "line_no": 216,
+                  "src": "8023:4",
+                  "src_char": "8023:4"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 139,
+    "summary": {
+      "High": 0,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 12,
+    "best_round": 4,
+    "best_total": 13,
+    "best_vuln": 2,
+    "code_bytes": 8341,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "0a6bcff0a939f539a39d496d55099f5c4fc39983d06a20ed4655a14bb0c00492",
+    "skip_reason": null,
+    "sloc": 139,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:19.597633+00:00",
+  "eval": {
+    "best_round": 4,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/Base64.t.sol",
+    "expected_tests": 4,
+    "extract_error": null,
+    "forge_total": 4,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 3,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 144,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/Base64.sol",
+  "id": 144,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:08.577157+00:00",
+  "reused_from": "stats/aderyn/solagent/gpt-5-mini/0144__repository__solady__lib__solady__src__utils__Base64.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 2,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 2
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 1,
+  "test_pass": 3,
+  "test_source": "rq2_eval",
+  "test_total": 4
+}

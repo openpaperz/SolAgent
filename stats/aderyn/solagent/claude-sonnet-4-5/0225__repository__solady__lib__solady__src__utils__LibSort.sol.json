@@ -1,0 +1,298 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibSort.sol",
+        "-o",
+        "/tmp/aderyn_report_xh_uffb0/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibSort.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibSort.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_xh_uffb0/report.json\n\n\ud83d\udee1\ufe0f Together we make Solidity safer.\n\u2728 Support open-source security \u2014 star Aderyn:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibSort.sol",
+              "n_sloc": 571
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 571,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Example: `shl(shifted, 4)` will shift the right constant `4` by `a` bits. The correct order is `shl(4, shifted)`.",
+              "detector_name": "incorrect-shift-order",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 355,
+                  "src": "13463:11",
+                  "src_char": "12938:11"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 531,
+                  "src": "20095:11",
+                  "src_char": "19345:11"
+                }
+              ],
+              "title": "Incorrect Assembly Shift Parameter Order"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 232,
+                  "src": "8698:12",
+                  "src_char": "8398:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 236,
+                  "src": "8863:12",
+                  "src_char": "8563:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 240,
+                  "src": "9065:12",
+                  "src_char": "8765:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 244,
+                  "src": "9258:12",
+                  "src_char": "8958:12"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 237,
+                  "src": "9028:3",
+                  "src_char": "8728:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 237,
+                  "src": "9039:3",
+                  "src_char": "8739:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 424,
+                  "src": "16106:3",
+                  "src_char": "15506:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 440,
+                  "src": "16814:3",
+                  "src_char": "16214:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 456,
+                  "src": "17502:3",
+                  "src_char": "16902:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 571,
+    "summary": {
+      "High": 1,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 33,
+    "best_round": 2,
+    "best_total": 66,
+    "best_vuln": 0,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "selection_policy": "test-first-security-second",
+    "sha256": "d5ec98a4d41e2f8f23f22c59aff301dac6158626adc797bf64f512f73a6ea09f",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:33.886330+00:00",
+  "eval": {
+    "best_pass": 33,
+    "best_round": 2,
+    "best_total": 66,
+    "best_vuln": 0,
+    "code_bytes": 25282,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 49,
+    "extract_error": null,
+    "failed_tests": 8,
+    "forge_failed": 8,
+    "forge_total": 49,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 41,
+    "report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "row_id": 225,
+    "row_status": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+  "id": 225,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-11T07:31:18.168642+00:00",
+  "slither": {
+    "best_pass": 33,
+    "best_round": 2,
+    "best_total": 66,
+    "count": 0,
+    "min_vuln_count": 0,
+    "min_vuln_round": 2,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "summary": {}
+  },
+  "source": "solagent",
+  "source_kind": "solagent",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 8,
+  "test_pass": 41,
+  "test_source": "eval_seed1",
+  "test_total": 49
+}

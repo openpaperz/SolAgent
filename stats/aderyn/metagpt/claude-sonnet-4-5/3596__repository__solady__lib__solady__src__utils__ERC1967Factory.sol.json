@@ -1,0 +1,368 @@
+{
+  "aderyn": {
+    "count": 8,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/ERC1967Factory.sol",
+        "-o",
+        "/tmp/aderyn_report_lpjzdjzg/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/ERC1967Factory.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/ERC1967Factory.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_lpjzdjzg/report.json\n\nAderyn saved you hours of headaches.\n\u2615 Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/ERC1967Factory.sol",
+              "n_sloc": 167
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 167,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "It appears that the contract includes a payable function to accept Ether but lacks a corresponding function to withdraw it, which leads to the Ether being locked in the contract. To resolve this issue, please implement a public or external function that allows for the withdrawal of Ether from the contract.",
+              "detector_name": "contract-locks-ether",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 4,
+                  "src": "66:14",
+                  "src_char": "66:14"
+                }
+              ],
+              "title": "Contract locks Ether without a withdraw function"
+            },
+            {
+              "description": "Consider protecting the initializer functions with modifiers.",
+              "detector_name": "unprotected-initializer",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 305,
+                  "src": "14029:12",
+                  "src_char": "14029:12"
+                }
+              ],
+              "title": "Unprotected initializer"
+            },
+            {
+              "description": "This causes the transaction execution to halt, and nothing after that call will execute including code following the assembly block.",
+              "detector_name": "yul-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 343,
+                  "src": "15974:15",
+                  "src_char": "15974:15"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 354,
+                  "src": "16522:15",
+                  "src_char": "16522:15"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 364,
+                  "src": "16999:15",
+                  "src_char": "16999:15"
+                }
+              ],
+              "title": "Yul block contains `return`"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 3,
+          "low": 5
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Function returns a value but it is ignored. Consider checking the return value.",
+              "detector_name": "unchecked-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 306,
+                  "src": "14091:11",
+                  "src_char": "14091:11"
+                }
+              ],
+              "title": "Unchecked Return"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 20,
+                  "src": "854:21",
+                  "src_char": "854:21"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 23,
+                  "src": "935:35",
+                  "src_char": "935:35"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 26,
+                  "src": "1018:25",
+                  "src_char": "1018:25"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 29,
+                  "src": "1082:22",
+                  "src_char": "1082:22"
+                }
+              ],
+              "title": "Unused Error"
+            },
+            {
+              "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+              "detector_name": "unused-public-function",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 42,
+                  "src": "1577:7",
+                  "src_char": "1577:7"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 64,
+                  "src": "2450:11",
+                  "src_char": "2450:11"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 90,
+                  "src": "3539:7",
+                  "src_char": "3539:7"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 148,
+                  "src": "6494:6",
+                  "src_char": "6494:6"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 182,
+                  "src": "8199:19",
+                  "src_char": "8199:19"
+                },
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 283,
+                  "src": "13305:27",
+                  "src_char": "13305:27"
+                }
+              ],
+              "title": "Public Function Not Used Internally"
+            },
+            {
+              "description": "State variable appears to be unused. No analysis has been performed to see if any inline assembly references it. Consider removing this unused variable.",
+              "detector_name": "unused-state-variable",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ERC1967Factory.sol",
+                  "line_no": 7,
+                  "src": "255:20",
+                  "src_char": "255:20"
+                }
+              ],
+              "title": "Unused State Variable"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 167,
+    "summary": {
+      "High": 3,
+      "Low": 5
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "try_extract_code",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "5b132d41e9e4dd9a233f449e80daf27bc8370d2f68b019e16657adbef570b333",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:09.274502+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 17396,
+    "code_extractor": "try_extract_code",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 13,
+    "extract_error": null,
+    "failed_tests": 8,
+    "forge_failed": 8,
+    "forge_total": 13,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 5,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3596,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/ERC1967Factory.sol",
+  "id": 3596,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-11T07:31:19.322492+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "metagpt",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 8,
+  "test_pass": 5,
+  "test_source": "eval_seed1",
+  "test_total": 13
+}

@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 2,
+        "proved_checks": 2,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 2,
+          "passed_methods": 2,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 2
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/utils/Strings.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/utils/Strings.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/utils/Strings.sol"
+      ],
+      "test_names": [
+        "test_Strings_toHexString_4",
+        "test_Strings_equal_6"
+      ],
+      "check_names": [
+        "check_Strings_toHexString_4",
+        "check_Strings_equal_6"
+      ],
+      "methods_count": 2,
+      "manifest_skipped_checks": 43,
+      "skipped_checks": 0,
+      "expected_checks": 2,
+      "expected_tests": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_Strings_toHexString_4": "PASS",
+        "check_Strings_equal_6": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+          "class_name": "Strings",
+          "class_kind": "library",
+          "method_name": "equal",
+          "visibility": "internal",
+          "full_signature": "function equal(string memory a, string memory b) internal pure returns (bool)",
+          "checks": [
+            {
+              "check_name": "check_Strings_equal_6",
+              "test_name": "test_Strings_equal_6",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+          "class_name": "Strings",
+          "class_kind": "library",
+          "method_name": "toHexString",
+          "visibility": "internal",
+          "full_signature": "function toHexString(address addr) internal pure returns (string memory)",
+          "checks": [
+            {
+              "check_name": "check_Strings_toHexString_4",
+              "test_name": "test_Strings_toHexString_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_Strings_toHexString_4(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/2 ---\nCompiling 3 files with Solc 0.8.24\nSolc 0.8.24 finished in 1.49s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n --> test/utils/Strings.t.sol:9:5:\n  |\n9 |     function ref_call_toString_0(uint256 value) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:12:5:\n   |\n12 |     function ref_call_toStringSigned_1(int256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:15:5:\n   |\n15 |     function ref_call_toHexString_2(uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:18:5:\n   |\n18 |     function ref_call_toHexString_3(uint256 value, uint256 length) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:21:5:\n   |\n21 |     function ref_call_toHexString_4(address addr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:24:5:\n   |\n24 |     function ref_call_toChecksumHexString_5(address addr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:27:5:\n   |\n27 |     function ref_call_equal_6(string memory a, string memory b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:30:5:\n   |\n30 |     function ref_call_parseUint_7(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:33:5:\n   |\n33 |     function ref_call_parseUint_8(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:36:5:\n   |\n36 |     function ref_call_tryParseUint_9(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:39:5:\n   |\n39 |     function ref_call_tryParseUint_10(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:42:5:\n   |\n42 |     function ref_call_parseInt_11(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:45:5:\n   |\n45 |     function ref_call_parseInt_12(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:48:5:\n   |\n48 |     function ref_call_tryParseInt_13(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:51:5:\n   |\n51 |     function ref_call_tryParseInt_14(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:54:5:\n   |\n54 |     function ref_call_parseHexUint_15(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:57:5:\n   |\n57 |     function ref_call_parseHexUint_16(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:60:5:\n   |\n60 |     function ref_call_tryParseHexUint_17(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:63:5:\n   |\n63 |     function ref_call_tryParseHexUint_18(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:66:5:\n   |\n66 |     function ref_call_parseAddress_19(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:69:5:\n   |\n69 |     function ref_call_parseAddress_20(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:72:5:\n   |\n72 |     function ref_call_tryParseAddress_21(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:75:5:\n   |\n75 |     function ref_call_tryParseAddress_22(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:78:5:\n   |\n78 |     function gen_call_toString_0(uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:81:5:\n   |\n81 |     function gen_call_toStringSigned_1(int256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:84:5:\n   |\n84 |     function gen_call_toHexString_2(uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:87:5:\n   |\n87 |     function gen_call_toHexString_3(uint256 value, uint256 length) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:90:5:\n   |\n90 |     function gen_call_toHexString_4(address addr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:93:5:\n   |\n93 |     function gen_call_toChecksumHexString_5(address addr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:96:5:\n   |\n96 |     function gen_call_equal_6(string memory a, string memory b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Strings.t.sol:99:5:\n   |\n99 |     function gen_call_parseUint_7(string memory input) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:102:5:\n    |\n102 |     function gen_call_parseUint_8(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:105:5:\n    |\n105 |     function gen_call_tryParseUint_9(string memory input) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:108:5:\n    |\n108 |     function gen_call_tryParseUint_10(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:111:5:\n    |\n111 |     function gen_call_parseInt_11(string memory input) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:114:5:\n    |\n114 |     function gen_call_parseInt_12(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:117:5:\n    |\n117 |     function gen_call_tryParseInt_13(string memory input) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:120:5:\n    |\n120 |     function gen_call_tryParseInt_14(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:123:5:\n    |\n123 |     function gen_call_parseHexUint_15(string memory input) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:126:5:\n    |\n126 |     function gen_call_parseHexUint_16(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:129:5:\n    |\n129 |     function gen_call_tryParseHexUint_17(string memory input) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:132:5:\n    |\n132 |     function gen_call_tryParseHexUint_18(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:135:5:\n    |\n135 |     function gen_call_parseAddress_19(string memory input) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:138:5:\n    |\n138 |     function gen_call_parseAddress_20(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:141:5:\n    |\n141 |     function gen_call_tryParseAddress_21(string memory input) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Strings.t.sol:144:5:\n    |\n144 |     function gen_call_tryParseAddress_22(string memory input, uint256 begin, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/utils/Strings.t.sol:StringsEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Strings_toHexString_4(address) (paths: 2, time: 0.28s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.29s\n\n\n--- halmos chunk 2/2 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Strings.t.sol:StringsEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Strings_equal_6(string,string) (paths: 9, time: 0.22s, bounds: [a=[0, 65, 1024], b=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.24s\n",
+      "halmos_stderr": "--- halmos chunk 1/2 ---\n\n\n--- halmos chunk 2/2 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 2,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Strings_toHexString_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Strings_equal_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

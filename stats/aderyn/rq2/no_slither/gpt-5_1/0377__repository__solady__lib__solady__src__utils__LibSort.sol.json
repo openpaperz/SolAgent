@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 30706,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "256df3f24f3c32853f8c2d7a303b77a65cd7a76fa2c51402d67dfc8002a80885",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 822,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:50.526323+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (8149): Keyword \"leave\" can only be used inside a function.\n  --> src/utils/LibSort.solagent_gen.sol:11:27:\n   |\n11 |             if lt(n, 2) { leave }\n   |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n  --> src/utils/LibSort.solagent_gen.sol:37:27:\n   |\n37 |             if lt(n, 2) { leave }\n   |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n  --> src/utils/LibSort.solagent_gen.sol:63:27:\n   |\n63 |             if lt(n, 2) { leave }\n   |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n  --> src/utils/LibSort.solagent_gen.sol:89:27:\n   |\n89 |             if lt(n, 2) { leave }\n   |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:115:27:\n    |\n115 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:241:27:\n    |\n241 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:262:27:\n    |\n262 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:283:27:\n    |\n283 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:304:27:\n    |\n304 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:367:27:\n    |\n367 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:381:27:\n    |\n381 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:395:27:\n    |\n395 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:409:27:\n    |\n409 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:484:27:\n    |\n484 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:502:27:\n    |\n502 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:520:27:\n    |\n520 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:538:27:\n    |\n538 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:556:27:\n    |\n556 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:574:27:\n    |\n574 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:592:27:\n    |\n592 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:610:27:\n    |\n610 |             if lt(n, 2) { leave }\n    |                           ^^^^^\n\nError (8149): Keyword \"leave\" can only be used inside a function.\n   --> src/utils/LibSort.solagent_gen.sol:776:17:\n    |\n776 |                 leave\n    |                 ^^^^^\n\nError (6913): Call or assignment expected.\n   --> src/utils/LibSort.solagent_gen.sol:790:24:\n    |\n790 |                 } else {\n    |                        ^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibSort.t.sol",
+    "expected_tests": 49,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 377,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+  "id": 377,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:15.627710+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "skipped",
+  "table": "process_tracking_ablation",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

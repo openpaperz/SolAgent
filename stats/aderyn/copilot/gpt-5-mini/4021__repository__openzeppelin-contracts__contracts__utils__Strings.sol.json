@@ -1,0 +1,499 @@
+{
+  "aderyn": {
+    "count": 5,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/utils/Strings.sol",
+        "-o",
+        "/tmp/aderyn_report_g90_t368/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/utils/Strings.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n------------------------------------------------------------------------------------------------\n# Configuration\n------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n------------------------------------------------------------------------------------------------\n# Source Scope\n------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/utils/Strings.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n------------------------------------------------------------------------------------------------\n# Scanning Contracts\n------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_g90_t368/report.json\n\n\ud83d\udca1 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star \u2b50\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/utils/Strings.sol",
+              "n_sloc": 269
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 269,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 52,
+                  "src": "1765:16",
+                  "src_char": "1765:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 4
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 93,
+                  "src": "3002:11",
+                  "src_char": "3002:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 164,
+                  "src": "5625:12",
+                  "src_char": "5625:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 217,
+                  "src": "7565:11",
+                  "src_char": "7565:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 286,
+                  "src": "10263:15",
+                  "src_char": "10263:15"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 344,
+                  "src": "12497:15",
+                  "src_char": "12497:15"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 21,
+                  "src": "572:2",
+                  "src_char": "572:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 27,
+                  "src": "755:2",
+                  "src_char": "755:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 27,
+                  "src": "769:2",
+                  "src_char": "769:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 28,
+                  "src": "797:2",
+                  "src_char": "797:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 85,
+                  "src": "2830:1",
+                  "src_char": "2830:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 104,
+                  "src": "3565:2",
+                  "src_char": "3565:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 105,
+                  "src": "3602:2",
+                  "src_char": "3602:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 109,
+                  "src": "3767:2",
+                  "src_char": "3767:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 112,
+                  "src": "3848:2",
+                  "src_char": "3848:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 118,
+                  "src": "4110:1",
+                  "src_char": "4110:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 123,
+                  "src": "4307:2",
+                  "src_char": "4307:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 123,
+                  "src": "4334:3",
+                  "src_char": "4334:3"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 186,
+                  "src": "6620:2",
+                  "src_char": "6620:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 186,
+                  "src": "6630:2",
+                  "src_char": "6630:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 190,
+                  "src": "6743:2",
+                  "src_char": "6743:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 190,
+                  "src": "6753:2",
+                  "src_char": "6753:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 308,
+                  "src": "11318:2",
+                  "src_char": "11318:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 308,
+                  "src": "11352:3",
+                  "src_char": "11352:3"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 308,
+                  "src": "11386:2",
+                  "src_char": "11386:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 355,
+                  "src": "13051:2",
+                  "src_char": "13051:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 359,
+                  "src": "13200:2",
+                  "src_char": "13200:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 359,
+                  "src": "13238:3",
+                  "src_char": "13238:3"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 359,
+                  "src": "13276:2",
+                  "src_char": "13276:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 363,
+                  "src": "13398:2",
+                  "src_char": "13398:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 363,
+                  "src": "13403:2",
+                  "src_char": "13403:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 377,
+                  "src": "13930:2",
+                  "src_char": "13930:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 377,
+                  "src": "13941:2",
+                  "src_char": "13941:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 378,
+                  "src": "13970:2",
+                  "src_char": "13970:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 381,
+                  "src": "14022:2",
+                  "src_char": "14022:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 381,
+                  "src": "14033:3",
+                  "src_char": "14033:3"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 382,
+                  "src": "14059:2",
+                  "src_char": "14059:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 382,
+                  "src": "14069:2",
+                  "src_char": "14069:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 385,
+                  "src": "14122:2",
+                  "src_char": "14122:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 386,
+                  "src": "14158:2",
+                  "src_char": "14158:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 386,
+                  "src": "14168:2",
+                  "src_char": "14168:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero to improve code readability.",
+              "detector_name": "uninitialized-local-variable",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 18,
+                  "src": "494:6",
+                  "src_char": "494:6"
+                }
+              ],
+              "title": "Uninitialized Local Variable"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 269,
+    "summary": {
+      "High": 1,
+      "Low": 4
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "f95bc3788e8dfbd560e1b18d86eacad39614d3549317208b1e44698d37900008",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:30.984985+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 14618,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 23,
+    "extract_error": null,
+    "failed_tests": 8,
+    "forge_failed": 8,
+    "forge_total": 23,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 15,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 4021,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+  "id": 4021,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:21.970847+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "copilot",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 8,
+  "test_pass": 15,
+  "test_source": "eval_seed1",
+  "test_total": 23
+}

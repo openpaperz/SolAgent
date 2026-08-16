@@ -1,0 +1,358 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibRLP.sol",
+        "-o",
+        "/tmp/aderyn_report_20k1yhlu/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibRLP.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibRLP.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_20k1yhlu/report.json\n\n🛡️ Together we make Solidity safer.\n✨ Support open-source security — star Aderyn:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibRLP.sol",
+              "n_sloc": 194
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 194,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 19,
+                  "src": "627:16",
+                  "src_char": "627:16"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 25,
+                  "src": "899:16",
+                  "src_char": "899:16"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 105,
+                  "src": "4008:16",
+                  "src_char": "4008:16"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 148,
+                  "src": "5366:16",
+                  "src_char": "5366:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 15,
+                  "src": "519:4",
+                  "src_char": "519:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 21,
+                  "src": "718:2",
+                  "src_char": "718:2"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 22,
+                  "src": "772:4",
+                  "src_char": "772:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 25,
+                  "src": "929:4",
+                  "src_char": "929:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 97,
+                  "src": "3684:4",
+                  "src_char": "3684:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 101,
+                  "src": "3815:2",
+                  "src_char": "3815:2"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 102,
+                  "src": "3872:4",
+                  "src_char": "3872:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 105,
+                  "src": "4038:4",
+                  "src_char": "4038:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 171,
+                  "src": "5986:4",
+                  "src_char": "5986:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 175,
+                  "src": "6119:4",
+                  "src_char": "6119:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 177,
+                  "src": "6184:2",
+                  "src_char": "6184:2"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 179,
+                  "src": "6282:4",
+                  "src_char": "6282:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 185,
+                  "src": "6587:4",
+                  "src_char": "6587:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 194,
+                  "src": "6993:4",
+                  "src_char": "6993:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 198,
+                  "src": "7126:2",
+                  "src_char": "7126:2"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 200,
+                  "src": "7217:4",
+                  "src_char": "7217:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 206,
+                  "src": "7495:4",
+                  "src_char": "7495:4"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 221,
+                  "src": "7988:1",
+                  "src_char": "7988:1"
+                },
+                {
+                  "contract_path": "src/utils/LibRLP.sol",
+                  "line_no": 226,
+                  "src": "8158:1",
+                  "src_char": "8158:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 194,
+    "summary": {
+      "High": 1,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 10,
+    "best_round": 5,
+    "best_total": 23,
+    "best_vuln": 0,
+    "code_bytes": 8196,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "4462811f66005c582408d57a04545cf2926e69447bf08ff5b406ef7540ab926e",
+    "skip_reason": null,
+    "sloc": 194,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:19.709470+00:00",
+  "eval": {
+    "best_round": 5,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibRLP.t.sol",
+    "expected_tests": 17,
+    "extract_error": null,
+    "forge_total": 17,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 9,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 148,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+  "id": 148,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:08.672876+00:00",
+  "reused_from": "stats/aderyn/solagent/gpt-5-mini/0148__repository__solady__lib__solady__src__utils__LibRLP.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 8,
+  "test_pass": 9,
+  "test_source": "rq2_eval",
+  "test_total": 17
+}

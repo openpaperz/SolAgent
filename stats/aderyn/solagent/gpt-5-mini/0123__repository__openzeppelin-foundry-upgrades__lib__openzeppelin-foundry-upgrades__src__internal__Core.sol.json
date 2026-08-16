@@ -1,0 +1,365 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades",
+        "-i",
+        "src/internal/Core.sol",
+        "-o",
+        "/tmp/aderyn_report_cxm2nk1r/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/internal/Core.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades",
+      "raw_stderr": "",
+      "raw_stdout": "\n-----------------------------------------------------------------------------------------------------------------------------------\n# Configuration\n-----------------------------------------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src\nRemappings - [\n    \"openzeppelin-foundry-upgrades/=src/\",\n    \"@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/\",\n    \"@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/solidity-stringutils/lib/ds-test/src/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"hardhat/=node_modules/hardhat/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/\",\n    \"solidity-stringutils/=lib/solidity-stringutils/\",\n]\nEVM version - prague\n-----------------------------------------------------------------------------------------------------------------------------------\n# Source Scope\n-----------------------------------------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/internal/Core.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-----------------------------------------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-----------------------------------------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-----------------------------------------------------------------------------------------------------------------------------------\n# Scanning Contracts\n-----------------------------------------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_cxm2nk1r/report.json\n\n\u2714 Aderyn did its job. Solidity's a bit safer now.\n\ud83d\udcab Like the tool? A star on GitHub goes a long way:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/internal/Core.sol",
+              "n_sloc": 320
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 320,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 296,
+                  "src": "11637:16",
+                  "src_char": "11637:16"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 316,
+                  "src": "12295:16",
+                  "src_char": "12295:16"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 365,
+                  "src": "14057:16",
+                  "src_char": "14057:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 128,
+                  "src": "5951:2",
+                  "src_char": "5951:2"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 139,
+                  "src": "6345:2",
+                  "src_char": "6345:2"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 144,
+                  "src": "6530:2",
+                  "src_char": "6530:2"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 156,
+                  "src": "6909:2",
+                  "src_char": "6909:2"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 175,
+                  "src": "7469:2",
+                  "src_char": "7469:2"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 204,
+                  "src": "8399:2",
+                  "src_char": "8399:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+              "detector_name": "unused-public-function",
+              "instances": [
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 11,
+                  "src": "210:12",
+                  "src_char": "210:12"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 21,
+                  "src": "736:14",
+                  "src_char": "736:14"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 78,
+                  "src": "3626:13",
+                  "src_char": "3626:13"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 88,
+                  "src": "4110:15",
+                  "src_char": "4110:15"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 99,
+                  "src": "4640:22",
+                  "src_char": "4640:22"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 111,
+                  "src": "5162:15",
+                  "src_char": "5162:15"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 115,
+                  "src": "5306:14",
+                  "src_char": "5306:14"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 134,
+                  "src": "6062:24",
+                  "src_char": "6062:24"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 151,
+                  "src": "6642:16",
+                  "src_char": "6642:16"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 195,
+                  "src": "8035:15",
+                  "src_char": "8035:15"
+                },
+                {
+                  "contract_path": "src/internal/Core.sol",
+                  "line_no": 214,
+                  "src": "8639:20",
+                  "src_char": "8639:20"
+                }
+              ],
+              "title": "Public Function Not Used Internally"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 320,
+    "summary": {
+      "High": 1,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": 11,
+    "best_round": 10,
+    "best_total": 13,
+    "best_vuln": 0,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "selection_policy": "test-first-security-second",
+    "sha256": "b15eb1ef5c7abb6839a3b601693091f7e0324e7f58255acc2f7fcc89b0115e38",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:40.965211+00:00",
+  "eval": {
+    "best_pass": 11,
+    "best_round": 10,
+    "best_total": 13,
+    "best_vuln": 0,
+    "code_bytes": 14220,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 19,
+    "extract_error": null,
+    "failed_tests": 13,
+    "forge_failed": 13,
+    "forge_total": 19,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 6,
+    "report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "row_id": 123,
+    "row_status": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Core.sol",
+  "id": 123,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:18.453244+00:00",
+  "slither": {
+    "best_pass": 11,
+    "best_round": 10,
+    "best_total": 13,
+    "count": 0,
+    "min_vuln_count": 0,
+    "min_vuln_round": 10,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "summary": {}
+  },
+  "source": "solagent",
+  "source_kind": "solagent",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 13,
+  "test_pass": 6,
+  "test_source": "eval_seed1",
+  "test_total": 19
+}

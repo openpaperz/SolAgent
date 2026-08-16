@@ -1,0 +1,282 @@
+{
+  "aderyn": {
+    "count": 1,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/EnumerableMapLib.sol",
+        "-o",
+        "/tmp/aderyn_report_gynu5791/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/EnumerableMapLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/EnumerableMapLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_gynu5791/report.json\n\n\u2714 Aderyn did its job. Solidity's a bit safer now.\n\ud83d\udcab Like the tool? A star on GitHub goes a long way:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/EnumerableMapLib.sol",
+              "n_sloc": 431
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 431,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 47,
+                  "src": "1431:8",
+                  "src_char": "1431:8"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 88,
+                  "src": "2787:8",
+                  "src_char": "2787:8"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 129,
+                  "src": "4143:8",
+                  "src_char": "4143:8"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 217,
+                  "src": "6768:6",
+                  "src_char": "6768:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 256,
+                  "src": "8314:6",
+                  "src_char": "8314:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 295,
+                  "src": "9851:6",
+                  "src_char": "9851:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 334,
+                  "src": "11397:6",
+                  "src_char": "11397:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 373,
+                  "src": "12943:6",
+                  "src_char": "12943:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 412,
+                  "src": "14480:6",
+                  "src_char": "14480:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 451,
+                  "src": "16026:6",
+                  "src_char": "16026:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 490,
+                  "src": "17572:6",
+                  "src_char": "17572:6"
+                },
+                {
+                  "contract_path": "src/utils/EnumerableMapLib.sol",
+                  "line_no": 529,
+                  "src": "19109:6",
+                  "src_char": "19109:6"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 431,
+    "summary": {
+      "High": 0,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "8ab1e78b336dae528ca327d39932c91aa654577166f40bee940565456d7fc796",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:03.287998+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 19954,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 72,
+    "extract_error": null,
+    "failed_tests": 36,
+    "forge_failed": 36,
+    "forge_total": 72,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 36,
+    "report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "row_id": 717,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/EnumerableMapLib.sol",
+  "id": 717,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:17.208871+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "rawmodel",
+  "source_kind": "rawmodel",
+  "status": "analyzed",
+  "table": "progress_tracker_rawmodel",
+  "test_fail": 36,
+  "test_pass": 36,
+  "test_source": "eval_seed1",
+  "test_total": 72
+}

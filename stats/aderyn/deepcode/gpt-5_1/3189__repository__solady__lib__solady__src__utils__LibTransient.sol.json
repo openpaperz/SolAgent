@@ -1,0 +1,426 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibTransient.sol",
+        "-o",
+        "/tmp/aderyn_report_o_u0q612/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibTransient.sol",
+      "profile": "post_cancun",
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - cancun\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibTransient.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_o_u0q612/report.json\n\n\ud83e\udeb6 Aderyn spotted all it could. Stay secure.\nIf our little bird helped you out, give it a perch with a GitHub Star \u2b50\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibTransient.sol",
+              "n_sloc": 475
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 475,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Downcasting int/uints in Solidity can be unsafe due to the potential for data loss and unintended behavior.When downcasting a larger integer type to a smaller one (e.g., uint256 to uint128), the value may exceed the range of the target type,leading to truncation and loss of significant digits. Use OpenZeppelin's SafeCast library to safely downcast integers.",
+              "detector_name": "unsafe-casting",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 343,
+                  "src": "11653:10",
+                  "src_char": "11653:10"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 351,
+                  "src": "11935:10",
+                  "src_char": "11935:10"
+                }
+              ],
+              "title": "Unsafe Casting of integers"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 24,
+                  "src": "740:3",
+                  "src_char": "740:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 36,
+                  "src": "1128:3",
+                  "src_char": "1128:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 49,
+                  "src": "1507:5",
+                  "src_char": "1507:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 62,
+                  "src": "1847:3",
+                  "src_char": "1847:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 78,
+                  "src": "2379:3",
+                  "src_char": "2379:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 94,
+                  "src": "2956:3",
+                  "src_char": "2956:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 110,
+                  "src": "3488:3",
+                  "src_char": "3488:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 126,
+                  "src": "4065:9",
+                  "src_char": "4065:9"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 152,
+                  "src": "5220:9",
+                  "src_char": "5220:9"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 188,
+                  "src": "6655:3",
+                  "src_char": "6655:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 198,
+                  "src": "7014:3",
+                  "src_char": "7014:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 210,
+                  "src": "7372:5",
+                  "src_char": "7372:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 222,
+                  "src": "7693:3",
+                  "src_char": "7693:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 238,
+                  "src": "8218:3",
+                  "src_char": "8218:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 254,
+                  "src": "8786:3",
+                  "src_char": "8786:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 270,
+                  "src": "9311:3",
+                  "src_char": "9311:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 296,
+                  "src": "10164:3",
+                  "src_char": "10164:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 306,
+                  "src": "10528:3",
+                  "src_char": "10528:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 318,
+                  "src": "10891:5",
+                  "src_char": "10891:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 340,
+                  "src": "11500:3",
+                  "src_char": "11500:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 354,
+                  "src": "11968:3",
+                  "src_char": "11968:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 366,
+                  "src": "12331:5",
+                  "src_char": "12331:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 388,
+                  "src": "12925:3",
+                  "src_char": "12925:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 402,
+                  "src": "13352:3",
+                  "src_char": "13352:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 414,
+                  "src": "13700:5",
+                  "src_char": "13700:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 436,
+                  "src": "14290:6",
+                  "src_char": "14290:6"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 510,
+                  "src": "16621:5",
+                  "src_char": "16621:5"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 439,
+                  "src": "14441:3",
+                  "src_char": "14441:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 447,
+                  "src": "14714:3",
+                  "src_char": "14714:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 475,
+    "summary": {
+      "High": 1,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "e49bdd166bef87c71f63c9040e0872d0f6031f1c1835a8d9c80655fb2fc7f9a2",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:17.955931+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 18452,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 72,
+    "extract_error": null,
+    "failed_tests": 12,
+    "forge_failed": 12,
+    "forge_total": 72,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 60,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3189,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+  "id": 3189,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-11T07:31:21.071512+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "deepcode",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 12,
+  "test_pass": 60,
+  "test_source": "eval_seed1",
+  "test_total": 72
+}

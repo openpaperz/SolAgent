@@ -1,0 +1,3 @@
+model,method,attempted,compiled,compile_rate,passed_checks,expected_checks,symbolic_check_pass_rate,symbolic_pass_at_1_count,symbolic_pass_at_1,compile_errors,extract_errors,missing_rows
+mimo-v2.5-pro,SolAgent,81,48,0.5925925925925926,495,1672,0.29605263157894735,27,0.3333333333333333,14,19,0
+mimo-v2.5-pro,OpenCode,81,35,0.43209876543209874,393,1672,0.23504784688995214,19,0.2345679012345679,46,0,0

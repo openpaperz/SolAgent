@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 2,
+        "proved_checks": 2,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 2,
+          "passed_methods": 2,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 2
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/SignatureCheckerLib.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/SignatureCheckerLib.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/SignatureCheckerLib.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/SignatureCheckerLib.sol"
+      ],
+      "test_names": [
+        "test_SignatureCheckerLib_toEthSignedMessageHash_10",
+        "test_SignatureCheckerLib_emptySignature_12"
+      ],
+      "check_names": [
+        "check_SignatureCheckerLib_toEthSignedMessageHash_10",
+        "check_SignatureCheckerLib_emptySignature_12"
+      ],
+      "methods_count": 2,
+      "manifest_skipped_checks": 22,
+      "skipped_checks": 0,
+      "expected_checks": 2,
+      "expected_tests": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_SignatureCheckerLib_toEthSignedMessageHash_10": "PASS",
+        "check_SignatureCheckerLib_emptySignature_12": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/SignatureCheckerLib.sol",
+          "class_name": "SignatureCheckerLib",
+          "class_kind": "library",
+          "method_name": "emptySignature",
+          "visibility": "internal",
+          "full_signature": "function emptySignature() internal pure returns (bytes calldata signature)",
+          "checks": [
+            {
+              "check_name": "check_SignatureCheckerLib_emptySignature_12",
+              "test_name": "test_SignatureCheckerLib_emptySignature_12",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/SignatureCheckerLib.sol",
+          "class_name": "SignatureCheckerLib",
+          "class_kind": "library",
+          "method_name": "toEthSignedMessageHash",
+          "visibility": "internal",
+          "full_signature": "function toEthSignedMessageHash(bytes32 hash) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_SignatureCheckerLib_toEthSignedMessageHash_10",
+              "test_name": "test_SignatureCheckerLib_toEthSignedMessageHash_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_SignatureCheckerLib_toEthSignedMessageHash_10(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/2 ---\nCompiling 6 files with Solc 0.8.28\nSolc 0.8.28 finished in 1.13s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to view\n --> test/ECDSA.t.sol:9:5:\n  |\n9 |     function ref_call_recover_0(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:12:5:\n   |\n12 |     function ref_call_recoverCalldata_1(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:15:5:\n   |\n15 |     function ref_call_recover_2(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:18:5:\n   |\n18 |     function ref_call_recover_3(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:21:5:\n   |\n21 |     function ref_call_tryRecover_4(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:24:5:\n   |\n24 |     function ref_call_tryRecoverCalldata_5(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:27:5:\n   |\n27 |     function ref_call_tryRecover_6(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:30:5:\n   |\n30 |     function ref_call_tryRecover_7(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:33:5:\n   |\n33 |     function ref_call_toEthSignedMessageHash_8(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:36:5:\n   |\n36 |     function ref_call_toEthSignedMessageHash_9(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:39:5:\n   |\n39 |     function ref_call_canonicalHash_10(bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:42:5:\n   |\n42 |     function ref_call_canonicalHashCalldata_11(bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:45:5:\n   |\n45 |     function ref_call_canonicalHash_12(bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:48:5:\n   |\n48 |     function ref_call_canonicalHash_13(uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:51:5:\n   |\n51 |     function ref_call_emptySignature_14() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:54:5:\n   |\n54 |     function gen_call_recover_0(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:57:5:\n   |\n57 |     function gen_call_recoverCalldata_1(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:60:5:\n   |\n60 |     function gen_call_recover_2(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:63:5:\n   |\n63 |     function gen_call_recover_3(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:66:5:\n   |\n66 |     function gen_call_tryRecover_4(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:69:5:\n   |\n69 |     function gen_call_tryRecoverCalldata_5(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:72:5:\n   |\n72 |     function gen_call_tryRecover_6(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:75:5:\n   |\n75 |     function gen_call_tryRecover_7(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:78:5:\n   |\n78 |     function gen_call_toEthSignedMessageHash_8(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:81:5:\n   |\n81 |     function gen_call_toEthSignedMessageHash_9(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:84:5:\n   |\n84 |     function gen_call_canonicalHash_10(bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:87:5:\n   |\n87 |     function gen_call_canonicalHashCalldata_11(bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:90:5:\n   |\n90 |     function gen_call_canonicalHash_12(bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:93:5:\n   |\n93 |     function gen_call_canonicalHash_13(uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:96:5:\n   |\n96 |     function gen_call_emptySignature_14() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n --> test/SignatureCheckerLib.t.sol:9:5:\n  |\n9 |     function ref_call_isValidSignatureNow_0(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:12:5:\n   |\n12 |     function ref_call_isValidSignatureNowCalldata_1(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:15:5:\n   |\n15 |     function ref_call_isValidSignatureNow_2(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:18:5:\n   |\n18 |     function ref_call_isValidSignatureNow_3(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:21:5:\n   |\n21 |     function ref_call_isValidERC1271SignatureNow_4(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:24:5:\n   |\n24 |     function ref_call_isValidERC1271SignatureNowCalldata_5(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:27:5:\n   |\n27 |     function ref_call_isValidERC1271SignatureNow_6(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:30:5:\n   |\n30 |     function ref_call_isValidERC1271SignatureNow_7(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:39:5:\n   |\n39 |     function ref_call_toEthSignedMessageHash_10(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:42:5:\n   |\n42 |     function ref_call_toEthSignedMessageHash_11(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:45:5:\n   |\n45 |     function ref_call_emptySignature_12() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:48:5:\n   |\n48 |     function gen_call_isValidSignatureNow_0(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:51:5:\n   |\n51 |     function gen_call_isValidSignatureNowCalldata_1(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:54:5:\n   |\n54 |     function gen_call_isValidSignatureNow_2(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:57:5:\n   |\n57 |     function gen_call_isValidSignatureNow_3(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:60:5:\n   |\n60 |     function gen_call_isValidERC1271SignatureNow_4(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:63:5:\n   |\n63 |     function gen_call_isValidERC1271SignatureNowCalldata_5(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:66:5:\n   |\n66 |     function gen_call_isValidERC1271SignatureNow_6(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:69:5:\n   |\n69 |     function gen_call_isValidERC1271SignatureNow_7(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:78:5:\n   |\n78 |     function gen_call_toEthSignedMessageHash_10(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:81:5:\n   |\n81 |     function gen_call_toEthSignedMessageHash_11(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:84:5:\n   |\n84 |     function gen_call_emptySignature_12() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/SignatureCheckerLib.t.sol:SignatureCheckerLibEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_SignatureCheckerLib_toEthSignedMessageHash_10(bytes32) (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 2/2 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/SignatureCheckerLib.t.sol:SignatureCheckerLibEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_SignatureCheckerLib_emptySignature_12() (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n",
+      "halmos_stderr": "--- halmos chunk 1/2 ---\n\n\n--- halmos chunk 2/2 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 2,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_SignatureCheckerLib_toEthSignedMessageHash_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_SignatureCheckerLib_emptySignature_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

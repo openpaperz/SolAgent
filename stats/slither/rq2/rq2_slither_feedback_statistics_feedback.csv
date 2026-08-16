@@ -1,0 +1,7 @@
+analyzer,analyzer_name,model,mode,files,full_findings,no_slither_findings,finding_reduction,full_lower,equal,full_higher,discordant,p_value,holm_p_within_analyzer
+slither,Slither,claude-sonnet-4-5,feedback_functionality_matched,55,160,177,0.096045197740113,7,48,0,7,0.015625,0.03125
+slither,Slither,gpt-5-mini,feedback_functionality_matched,47,81,110,0.2636363636363636,10,37,0,10,0.001953125,0.005859375
+slither,Slither,gpt-5.1,feedback_functionality_matched,46,47,63,0.25396825396825395,8,37,1,9,0.0390625,0.0390625
+slither,Slither,claude-sonnet-4-5,feedback_both_full_pass,39,131,132,0.007575757575757576,1,38,0,1,1.0,1.0
+slither,Slither,gpt-5-mini,feedback_both_full_pass,30,72,91,0.2087912087912088,6,24,0,6,0.03125,0.09375
+slither,Slither,gpt-5.1,feedback_both_full_pass,19,28,32,0.125,3,15,1,4,0.625,1.0

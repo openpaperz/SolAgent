@@ -1,0 +1,3564 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 151,
+      "proved_checks": 151,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 151,
+        "proved_checks": 151,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 151,
+        "passed_methods": 151,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 151
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 151,
+          "passed_methods": 151,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 151
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/DynamicBufferLib.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/DynamicBufferLib.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol"
+      ],
+      "test_names": [
+        "test_DynamicBufferLib_length_0",
+        "test_DynamicBufferLib_clear_2",
+        "test_DynamicBufferLib_p_77",
+        "test_DynamicBufferLib_p_78",
+        "test_DynamicBufferLib_p_79",
+        "test_DynamicBufferLib_p_80",
+        "test_DynamicBufferLib_p_81",
+        "test_DynamicBufferLib_p_82",
+        "test_DynamicBufferLib_pBool_85",
+        "test_DynamicBufferLib_pAddress_86",
+        "test_DynamicBufferLib_pUint8_87",
+        "test_DynamicBufferLib_pUint16_88",
+        "test_DynamicBufferLib_pUint24_89",
+        "test_DynamicBufferLib_pUint32_90",
+        "test_DynamicBufferLib_pUint40_91",
+        "test_DynamicBufferLib_pUint48_92",
+        "test_DynamicBufferLib_pUint56_93",
+        "test_DynamicBufferLib_pUint64_94",
+        "test_DynamicBufferLib_pUint72_95",
+        "test_DynamicBufferLib_pUint80_96",
+        "test_DynamicBufferLib_pUint88_97",
+        "test_DynamicBufferLib_pUint96_98",
+        "test_DynamicBufferLib_pUint104_99",
+        "test_DynamicBufferLib_pUint112_100",
+        "test_DynamicBufferLib_pUint120_101",
+        "test_DynamicBufferLib_pUint128_102",
+        "test_DynamicBufferLib_pUint136_103",
+        "test_DynamicBufferLib_pUint144_104",
+        "test_DynamicBufferLib_pUint152_105",
+        "test_DynamicBufferLib_pUint160_106",
+        "test_DynamicBufferLib_pUint168_107",
+        "test_DynamicBufferLib_pUint176_108",
+        "test_DynamicBufferLib_pUint184_109",
+        "test_DynamicBufferLib_pUint192_110",
+        "test_DynamicBufferLib_pUint200_111",
+        "test_DynamicBufferLib_pUint208_112",
+        "test_DynamicBufferLib_pUint216_113",
+        "test_DynamicBufferLib_pUint224_114",
+        "test_DynamicBufferLib_pUint232_115",
+        "test_DynamicBufferLib_pUint240_116",
+        "test_DynamicBufferLib_pUint248_117",
+        "test_DynamicBufferLib_pUint256_118",
+        "test_DynamicBufferLib_pBytes1_119",
+        "test_DynamicBufferLib_pBytes2_120",
+        "test_DynamicBufferLib_pBytes3_121",
+        "test_DynamicBufferLib_pBytes4_122",
+        "test_DynamicBufferLib_pBytes5_123",
+        "test_DynamicBufferLib_pBytes6_124",
+        "test_DynamicBufferLib_pBytes7_125",
+        "test_DynamicBufferLib_pBytes8_126",
+        "test_DynamicBufferLib_pBytes9_127",
+        "test_DynamicBufferLib_pBytes10_128",
+        "test_DynamicBufferLib_pBytes11_129",
+        "test_DynamicBufferLib_pBytes12_130",
+        "test_DynamicBufferLib_pBytes13_131",
+        "test_DynamicBufferLib_pBytes14_132",
+        "test_DynamicBufferLib_pBytes15_133",
+        "test_DynamicBufferLib_pBytes16_134",
+        "test_DynamicBufferLib_pBytes17_135",
+        "test_DynamicBufferLib_pBytes18_136",
+        "test_DynamicBufferLib_pBytes19_137",
+        "test_DynamicBufferLib_pBytes20_138",
+        "test_DynamicBufferLib_pBytes21_139",
+        "test_DynamicBufferLib_pBytes22_140",
+        "test_DynamicBufferLib_pBytes23_141",
+        "test_DynamicBufferLib_pBytes24_142",
+        "test_DynamicBufferLib_pBytes25_143",
+        "test_DynamicBufferLib_pBytes26_144",
+        "test_DynamicBufferLib_pBytes27_145",
+        "test_DynamicBufferLib_pBytes28_146",
+        "test_DynamicBufferLib_pBytes29_147",
+        "test_DynamicBufferLib_pBytes30_148",
+        "test_DynamicBufferLib_pBytes31_149",
+        "test_DynamicBufferLib_pBytes32_150",
+        "test_DynamicBufferLib_property_reserve_1_0",
+        "test_DynamicBufferLib_property_s_3_1",
+        "test_DynamicBufferLib_property_p_buffer_bytes_4_2",
+        "test_DynamicBufferLib_property_p_buffer_bytes_5_3",
+        "test_DynamicBufferLib_property_p_buffer_bytes_6_4",
+        "test_DynamicBufferLib_property_p_buffer_bytes_7_5",
+        "test_DynamicBufferLib_property_p_buffer_bytes_8_6",
+        "test_DynamicBufferLib_property_p_buffer_bytes_9_7",
+        "test_DynamicBufferLib_property_p_buffer_bytes_10_8",
+        "test_DynamicBufferLib_property_pBool_buffer_11_9",
+        "test_DynamicBufferLib_property_pAddress_buffer_12_10",
+        "test_DynamicBufferLib_property_pUint8_buffer_13_11",
+        "test_DynamicBufferLib_property_pUint16_buffer_14_12",
+        "test_DynamicBufferLib_property_pUint24_buffer_15_13",
+        "test_DynamicBufferLib_property_pUint32_buffer_16_14",
+        "test_DynamicBufferLib_property_pUint40_buffer_17_15",
+        "test_DynamicBufferLib_property_pUint48_buffer_18_16",
+        "test_DynamicBufferLib_property_pUint56_buffer_19_17",
+        "test_DynamicBufferLib_property_pUint64_buffer_20_18",
+        "test_DynamicBufferLib_property_pUint72_buffer_21_19",
+        "test_DynamicBufferLib_property_pUint80_buffer_22_20",
+        "test_DynamicBufferLib_property_pUint88_buffer_23_21",
+        "test_DynamicBufferLib_property_pUint96_buffer_24_22",
+        "test_DynamicBufferLib_property_pUint104_buffer_25_23",
+        "test_DynamicBufferLib_property_pUint112_buffer_26_24",
+        "test_DynamicBufferLib_property_pUint120_buffer_27_25",
+        "test_DynamicBufferLib_property_pUint128_buffer_28_26",
+        "test_DynamicBufferLib_property_pUint136_buffer_29_27",
+        "test_DynamicBufferLib_property_pUint144_buffer_30_28",
+        "test_DynamicBufferLib_property_pUint152_buffer_31_29",
+        "test_DynamicBufferLib_property_pUint160_buffer_32_30",
+        "test_DynamicBufferLib_property_pUint168_buffer_33_31",
+        "test_DynamicBufferLib_property_pUint176_buffer_34_32",
+        "test_DynamicBufferLib_property_pUint184_buffer_35_33",
+        "test_DynamicBufferLib_property_pUint192_buffer_36_34",
+        "test_DynamicBufferLib_property_pUint200_buffer_37_35",
+        "test_DynamicBufferLib_property_pUint208_buffer_38_36",
+        "test_DynamicBufferLib_property_pUint216_buffer_39_37",
+        "test_DynamicBufferLib_property_pUint224_buffer_40_38",
+        "test_DynamicBufferLib_property_pUint232_buffer_41_39",
+        "test_DynamicBufferLib_property_pUint240_buffer_42_40",
+        "test_DynamicBufferLib_property_pUint248_buffer_43_41",
+        "test_DynamicBufferLib_property_pUint256_buffer_44_42",
+        "test_DynamicBufferLib_property_pBytes1_buffer_45_43",
+        "test_DynamicBufferLib_property_pBytes2_buffer_46_44",
+        "test_DynamicBufferLib_property_pBytes3_buffer_47_45",
+        "test_DynamicBufferLib_property_pBytes4_buffer_48_46",
+        "test_DynamicBufferLib_property_pBytes5_buffer_49_47",
+        "test_DynamicBufferLib_property_pBytes6_buffer_50_48",
+        "test_DynamicBufferLib_property_pBytes7_buffer_51_49",
+        "test_DynamicBufferLib_property_pBytes8_buffer_52_50",
+        "test_DynamicBufferLib_property_pBytes9_buffer_53_51",
+        "test_DynamicBufferLib_property_pBytes10_buffer_54_52",
+        "test_DynamicBufferLib_property_pBytes11_buffer_55_53",
+        "test_DynamicBufferLib_property_pBytes12_buffer_56_54",
+        "test_DynamicBufferLib_property_pBytes13_buffer_57_55",
+        "test_DynamicBufferLib_property_pBytes14_buffer_58_56",
+        "test_DynamicBufferLib_property_pBytes15_buffer_59_57",
+        "test_DynamicBufferLib_property_pBytes16_buffer_60_58",
+        "test_DynamicBufferLib_property_pBytes17_buffer_61_59",
+        "test_DynamicBufferLib_property_pBytes18_buffer_62_60",
+        "test_DynamicBufferLib_property_pBytes19_buffer_63_61",
+        "test_DynamicBufferLib_property_pBytes20_buffer_64_62",
+        "test_DynamicBufferLib_property_pBytes21_buffer_65_63",
+        "test_DynamicBufferLib_property_pBytes22_buffer_66_64",
+        "test_DynamicBufferLib_property_pBytes23_buffer_67_65",
+        "test_DynamicBufferLib_property_pBytes24_buffer_68_66",
+        "test_DynamicBufferLib_property_pBytes25_buffer_69_67",
+        "test_DynamicBufferLib_property_pBytes26_buffer_70_68",
+        "test_DynamicBufferLib_property_pBytes27_buffer_71_69",
+        "test_DynamicBufferLib_property_pBytes28_buffer_72_70",
+        "test_DynamicBufferLib_property_pBytes29_buffer_73_71",
+        "test_DynamicBufferLib_property_pBytes30_buffer_74_72",
+        "test_DynamicBufferLib_property_pBytes31_buffer_75_73",
+        "test_DynamicBufferLib_property_pBytes32_buffer_76_74",
+        "test_DynamicBufferLib_property_p_shorthand_bytes_83_81",
+        "test_DynamicBufferLib_property_p_shorthand_bytes_84_82"
+      ],
+      "check_names": [
+        "check_DynamicBufferLib_length_0",
+        "check_DynamicBufferLib_clear_2",
+        "check_DynamicBufferLib_p_77",
+        "check_DynamicBufferLib_p_78",
+        "check_DynamicBufferLib_p_79",
+        "check_DynamicBufferLib_p_80",
+        "check_DynamicBufferLib_p_81",
+        "check_DynamicBufferLib_p_82",
+        "check_DynamicBufferLib_pBool_85",
+        "check_DynamicBufferLib_pAddress_86",
+        "check_DynamicBufferLib_pUint8_87",
+        "check_DynamicBufferLib_pUint16_88",
+        "check_DynamicBufferLib_pUint24_89",
+        "check_DynamicBufferLib_pUint32_90",
+        "check_DynamicBufferLib_pUint40_91",
+        "check_DynamicBufferLib_pUint48_92",
+        "check_DynamicBufferLib_pUint56_93",
+        "check_DynamicBufferLib_pUint64_94",
+        "check_DynamicBufferLib_pUint72_95",
+        "check_DynamicBufferLib_pUint80_96",
+        "check_DynamicBufferLib_pUint88_97",
+        "check_DynamicBufferLib_pUint96_98",
+        "check_DynamicBufferLib_pUint104_99",
+        "check_DynamicBufferLib_pUint112_100",
+        "check_DynamicBufferLib_pUint120_101",
+        "check_DynamicBufferLib_pUint128_102",
+        "check_DynamicBufferLib_pUint136_103",
+        "check_DynamicBufferLib_pUint144_104",
+        "check_DynamicBufferLib_pUint152_105",
+        "check_DynamicBufferLib_pUint160_106",
+        "check_DynamicBufferLib_pUint168_107",
+        "check_DynamicBufferLib_pUint176_108",
+        "check_DynamicBufferLib_pUint184_109",
+        "check_DynamicBufferLib_pUint192_110",
+        "check_DynamicBufferLib_pUint200_111",
+        "check_DynamicBufferLib_pUint208_112",
+        "check_DynamicBufferLib_pUint216_113",
+        "check_DynamicBufferLib_pUint224_114",
+        "check_DynamicBufferLib_pUint232_115",
+        "check_DynamicBufferLib_pUint240_116",
+        "check_DynamicBufferLib_pUint248_117",
+        "check_DynamicBufferLib_pUint256_118",
+        "check_DynamicBufferLib_pBytes1_119",
+        "check_DynamicBufferLib_pBytes2_120",
+        "check_DynamicBufferLib_pBytes3_121",
+        "check_DynamicBufferLib_pBytes4_122",
+        "check_DynamicBufferLib_pBytes5_123",
+        "check_DynamicBufferLib_pBytes6_124",
+        "check_DynamicBufferLib_pBytes7_125",
+        "check_DynamicBufferLib_pBytes8_126",
+        "check_DynamicBufferLib_pBytes9_127",
+        "check_DynamicBufferLib_pBytes10_128",
+        "check_DynamicBufferLib_pBytes11_129",
+        "check_DynamicBufferLib_pBytes12_130",
+        "check_DynamicBufferLib_pBytes13_131",
+        "check_DynamicBufferLib_pBytes14_132",
+        "check_DynamicBufferLib_pBytes15_133",
+        "check_DynamicBufferLib_pBytes16_134",
+        "check_DynamicBufferLib_pBytes17_135",
+        "check_DynamicBufferLib_pBytes18_136",
+        "check_DynamicBufferLib_pBytes19_137",
+        "check_DynamicBufferLib_pBytes20_138",
+        "check_DynamicBufferLib_pBytes21_139",
+        "check_DynamicBufferLib_pBytes22_140",
+        "check_DynamicBufferLib_pBytes23_141",
+        "check_DynamicBufferLib_pBytes24_142",
+        "check_DynamicBufferLib_pBytes25_143",
+        "check_DynamicBufferLib_pBytes26_144",
+        "check_DynamicBufferLib_pBytes27_145",
+        "check_DynamicBufferLib_pBytes28_146",
+        "check_DynamicBufferLib_pBytes29_147",
+        "check_DynamicBufferLib_pBytes30_148",
+        "check_DynamicBufferLib_pBytes31_149",
+        "check_DynamicBufferLib_pBytes32_150",
+        "check_DynamicBufferLib_property_reserve_1_0",
+        "check_DynamicBufferLib_property_s_3_1",
+        "check_DynamicBufferLib_property_p_buffer_bytes_4_2",
+        "check_DynamicBufferLib_property_p_buffer_bytes_5_3",
+        "check_DynamicBufferLib_property_p_buffer_bytes_6_4",
+        "check_DynamicBufferLib_property_p_buffer_bytes_7_5",
+        "check_DynamicBufferLib_property_p_buffer_bytes_8_6",
+        "check_DynamicBufferLib_property_p_buffer_bytes_9_7",
+        "check_DynamicBufferLib_property_p_buffer_bytes_10_8",
+        "check_DynamicBufferLib_property_pBool_buffer_11_9",
+        "check_DynamicBufferLib_property_pAddress_buffer_12_10",
+        "check_DynamicBufferLib_property_pUint8_buffer_13_11",
+        "check_DynamicBufferLib_property_pUint16_buffer_14_12",
+        "check_DynamicBufferLib_property_pUint24_buffer_15_13",
+        "check_DynamicBufferLib_property_pUint32_buffer_16_14",
+        "check_DynamicBufferLib_property_pUint40_buffer_17_15",
+        "check_DynamicBufferLib_property_pUint48_buffer_18_16",
+        "check_DynamicBufferLib_property_pUint56_buffer_19_17",
+        "check_DynamicBufferLib_property_pUint64_buffer_20_18",
+        "check_DynamicBufferLib_property_pUint72_buffer_21_19",
+        "check_DynamicBufferLib_property_pUint80_buffer_22_20",
+        "check_DynamicBufferLib_property_pUint88_buffer_23_21",
+        "check_DynamicBufferLib_property_pUint96_buffer_24_22",
+        "check_DynamicBufferLib_property_pUint104_buffer_25_23",
+        "check_DynamicBufferLib_property_pUint112_buffer_26_24",
+        "check_DynamicBufferLib_property_pUint120_buffer_27_25",
+        "check_DynamicBufferLib_property_pUint128_buffer_28_26",
+        "check_DynamicBufferLib_property_pUint136_buffer_29_27",
+        "check_DynamicBufferLib_property_pUint144_buffer_30_28",
+        "check_DynamicBufferLib_property_pUint152_buffer_31_29",
+        "check_DynamicBufferLib_property_pUint160_buffer_32_30",
+        "check_DynamicBufferLib_property_pUint168_buffer_33_31",
+        "check_DynamicBufferLib_property_pUint176_buffer_34_32",
+        "check_DynamicBufferLib_property_pUint184_buffer_35_33",
+        "check_DynamicBufferLib_property_pUint192_buffer_36_34",
+        "check_DynamicBufferLib_property_pUint200_buffer_37_35",
+        "check_DynamicBufferLib_property_pUint208_buffer_38_36",
+        "check_DynamicBufferLib_property_pUint216_buffer_39_37",
+        "check_DynamicBufferLib_property_pUint224_buffer_40_38",
+        "check_DynamicBufferLib_property_pUint232_buffer_41_39",
+        "check_DynamicBufferLib_property_pUint240_buffer_42_40",
+        "check_DynamicBufferLib_property_pUint248_buffer_43_41",
+        "check_DynamicBufferLib_property_pUint256_buffer_44_42",
+        "check_DynamicBufferLib_property_pBytes1_buffer_45_43",
+        "check_DynamicBufferLib_property_pBytes2_buffer_46_44",
+        "check_DynamicBufferLib_property_pBytes3_buffer_47_45",
+        "check_DynamicBufferLib_property_pBytes4_buffer_48_46",
+        "check_DynamicBufferLib_property_pBytes5_buffer_49_47",
+        "check_DynamicBufferLib_property_pBytes6_buffer_50_48",
+        "check_DynamicBufferLib_property_pBytes7_buffer_51_49",
+        "check_DynamicBufferLib_property_pBytes8_buffer_52_50",
+        "check_DynamicBufferLib_property_pBytes9_buffer_53_51",
+        "check_DynamicBufferLib_property_pBytes10_buffer_54_52",
+        "check_DynamicBufferLib_property_pBytes11_buffer_55_53",
+        "check_DynamicBufferLib_property_pBytes12_buffer_56_54",
+        "check_DynamicBufferLib_property_pBytes13_buffer_57_55",
+        "check_DynamicBufferLib_property_pBytes14_buffer_58_56",
+        "check_DynamicBufferLib_property_pBytes15_buffer_59_57",
+        "check_DynamicBufferLib_property_pBytes16_buffer_60_58",
+        "check_DynamicBufferLib_property_pBytes17_buffer_61_59",
+        "check_DynamicBufferLib_property_pBytes18_buffer_62_60",
+        "check_DynamicBufferLib_property_pBytes19_buffer_63_61",
+        "check_DynamicBufferLib_property_pBytes20_buffer_64_62",
+        "check_DynamicBufferLib_property_pBytes21_buffer_65_63",
+        "check_DynamicBufferLib_property_pBytes22_buffer_66_64",
+        "check_DynamicBufferLib_property_pBytes23_buffer_67_65",
+        "check_DynamicBufferLib_property_pBytes24_buffer_68_66",
+        "check_DynamicBufferLib_property_pBytes25_buffer_69_67",
+        "check_DynamicBufferLib_property_pBytes26_buffer_70_68",
+        "check_DynamicBufferLib_property_pBytes27_buffer_71_69",
+        "check_DynamicBufferLib_property_pBytes28_buffer_72_70",
+        "check_DynamicBufferLib_property_pBytes29_buffer_73_71",
+        "check_DynamicBufferLib_property_pBytes30_buffer_74_72",
+        "check_DynamicBufferLib_property_pBytes31_buffer_75_73",
+        "check_DynamicBufferLib_property_pBytes32_buffer_76_74",
+        "check_DynamicBufferLib_property_p_shorthand_bytes_83_81",
+        "check_DynamicBufferLib_property_p_shorthand_bytes_84_82"
+      ],
+      "methods_count": 151,
+      "manifest_skipped_checks": 149,
+      "skipped_checks": 0,
+      "expected_checks": 151,
+      "expected_tests": 151,
+      "proved_checks": 151,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_DynamicBufferLib_length_0": "PASS",
+        "check_DynamicBufferLib_clear_2": "PASS",
+        "check_DynamicBufferLib_p_77": "PASS",
+        "check_DynamicBufferLib_p_78": "PASS",
+        "check_DynamicBufferLib_p_79": "PASS",
+        "check_DynamicBufferLib_p_80": "PASS",
+        "check_DynamicBufferLib_p_81": "PASS",
+        "check_DynamicBufferLib_p_82": "PASS",
+        "check_DynamicBufferLib_pBool_85": "PASS",
+        "check_DynamicBufferLib_pAddress_86": "PASS",
+        "check_DynamicBufferLib_pUint8_87": "PASS",
+        "check_DynamicBufferLib_pUint16_88": "PASS",
+        "check_DynamicBufferLib_pUint24_89": "PASS",
+        "check_DynamicBufferLib_pUint32_90": "PASS",
+        "check_DynamicBufferLib_pUint40_91": "PASS",
+        "check_DynamicBufferLib_pUint48_92": "PASS",
+        "check_DynamicBufferLib_pUint56_93": "PASS",
+        "check_DynamicBufferLib_pUint64_94": "PASS",
+        "check_DynamicBufferLib_pUint72_95": "PASS",
+        "check_DynamicBufferLib_pUint80_96": "PASS",
+        "check_DynamicBufferLib_pUint88_97": "PASS",
+        "check_DynamicBufferLib_pUint96_98": "PASS",
+        "check_DynamicBufferLib_pUint104_99": "PASS",
+        "check_DynamicBufferLib_pUint112_100": "PASS",
+        "check_DynamicBufferLib_pUint120_101": "PASS",
+        "check_DynamicBufferLib_pUint128_102": "PASS",
+        "check_DynamicBufferLib_pUint136_103": "PASS",
+        "check_DynamicBufferLib_pUint144_104": "PASS",
+        "check_DynamicBufferLib_pUint152_105": "PASS",
+        "check_DynamicBufferLib_pUint160_106": "PASS",
+        "check_DynamicBufferLib_pUint168_107": "PASS",
+        "check_DynamicBufferLib_pUint176_108": "PASS",
+        "check_DynamicBufferLib_pUint184_109": "PASS",
+        "check_DynamicBufferLib_pUint192_110": "PASS",
+        "check_DynamicBufferLib_pUint200_111": "PASS",
+        "check_DynamicBufferLib_pUint208_112": "PASS",
+        "check_DynamicBufferLib_pUint216_113": "PASS",
+        "check_DynamicBufferLib_pUint224_114": "PASS",
+        "check_DynamicBufferLib_pUint232_115": "PASS",
+        "check_DynamicBufferLib_pUint240_116": "PASS",
+        "check_DynamicBufferLib_pUint248_117": "PASS",
+        "check_DynamicBufferLib_pUint256_118": "PASS",
+        "check_DynamicBufferLib_pBytes1_119": "PASS",
+        "check_DynamicBufferLib_pBytes2_120": "PASS",
+        "check_DynamicBufferLib_pBytes3_121": "PASS",
+        "check_DynamicBufferLib_pBytes4_122": "PASS",
+        "check_DynamicBufferLib_pBytes5_123": "PASS",
+        "check_DynamicBufferLib_pBytes6_124": "PASS",
+        "check_DynamicBufferLib_pBytes7_125": "PASS",
+        "check_DynamicBufferLib_pBytes8_126": "PASS",
+        "check_DynamicBufferLib_pBytes9_127": "PASS",
+        "check_DynamicBufferLib_pBytes10_128": "PASS",
+        "check_DynamicBufferLib_pBytes11_129": "PASS",
+        "check_DynamicBufferLib_pBytes12_130": "PASS",
+        "check_DynamicBufferLib_pBytes13_131": "PASS",
+        "check_DynamicBufferLib_pBytes14_132": "PASS",
+        "check_DynamicBufferLib_pBytes15_133": "PASS",
+        "check_DynamicBufferLib_pBytes16_134": "PASS",
+        "check_DynamicBufferLib_pBytes17_135": "PASS",
+        "check_DynamicBufferLib_pBytes18_136": "PASS",
+        "check_DynamicBufferLib_pBytes19_137": "PASS",
+        "check_DynamicBufferLib_pBytes20_138": "PASS",
+        "check_DynamicBufferLib_pBytes21_139": "PASS",
+        "check_DynamicBufferLib_pBytes22_140": "PASS",
+        "check_DynamicBufferLib_pBytes23_141": "PASS",
+        "check_DynamicBufferLib_pBytes24_142": "PASS",
+        "check_DynamicBufferLib_pBytes25_143": "PASS",
+        "check_DynamicBufferLib_pBytes26_144": "PASS",
+        "check_DynamicBufferLib_pBytes27_145": "PASS",
+        "check_DynamicBufferLib_pBytes28_146": "PASS",
+        "check_DynamicBufferLib_pBytes29_147": "PASS",
+        "check_DynamicBufferLib_pBytes30_148": "PASS",
+        "check_DynamicBufferLib_pBytes31_149": "PASS",
+        "check_DynamicBufferLib_pBytes32_150": "PASS",
+        "check_DynamicBufferLib_property_reserve_1_0": "PASS",
+        "check_DynamicBufferLib_property_s_3_1": "PASS",
+        "check_DynamicBufferLib_property_p_buffer_bytes_4_2": "PASS",
+        "check_DynamicBufferLib_property_p_buffer_bytes_5_3": "PASS",
+        "check_DynamicBufferLib_property_p_buffer_bytes_6_4": "PASS",
+        "check_DynamicBufferLib_property_p_buffer_bytes_7_5": "PASS",
+        "check_DynamicBufferLib_property_p_buffer_bytes_8_6": "PASS",
+        "check_DynamicBufferLib_property_p_buffer_bytes_9_7": "PASS",
+        "check_DynamicBufferLib_property_p_buffer_bytes_10_8": "PASS",
+        "check_DynamicBufferLib_property_pBool_buffer_11_9": "PASS",
+        "check_DynamicBufferLib_property_pAddress_buffer_12_10": "PASS",
+        "check_DynamicBufferLib_property_pUint8_buffer_13_11": "PASS",
+        "check_DynamicBufferLib_property_pUint16_buffer_14_12": "PASS",
+        "check_DynamicBufferLib_property_pUint24_buffer_15_13": "PASS",
+        "check_DynamicBufferLib_property_pUint32_buffer_16_14": "PASS",
+        "check_DynamicBufferLib_property_pUint40_buffer_17_15": "PASS",
+        "check_DynamicBufferLib_property_pUint48_buffer_18_16": "PASS",
+        "check_DynamicBufferLib_property_pUint56_buffer_19_17": "PASS",
+        "check_DynamicBufferLib_property_pUint64_buffer_20_18": "PASS",
+        "check_DynamicBufferLib_property_pUint72_buffer_21_19": "PASS",
+        "check_DynamicBufferLib_property_pUint80_buffer_22_20": "PASS",
+        "check_DynamicBufferLib_property_pUint88_buffer_23_21": "PASS",
+        "check_DynamicBufferLib_property_pUint96_buffer_24_22": "PASS",
+        "check_DynamicBufferLib_property_pUint104_buffer_25_23": "PASS",
+        "check_DynamicBufferLib_property_pUint112_buffer_26_24": "PASS",
+        "check_DynamicBufferLib_property_pUint120_buffer_27_25": "PASS",
+        "check_DynamicBufferLib_property_pUint128_buffer_28_26": "PASS",
+        "check_DynamicBufferLib_property_pUint136_buffer_29_27": "PASS",
+        "check_DynamicBufferLib_property_pUint144_buffer_30_28": "PASS",
+        "check_DynamicBufferLib_property_pUint152_buffer_31_29": "PASS",
+        "check_DynamicBufferLib_property_pUint160_buffer_32_30": "PASS",
+        "check_DynamicBufferLib_property_pUint168_buffer_33_31": "PASS",
+        "check_DynamicBufferLib_property_pUint176_buffer_34_32": "PASS",
+        "check_DynamicBufferLib_property_pUint184_buffer_35_33": "PASS",
+        "check_DynamicBufferLib_property_pUint192_buffer_36_34": "PASS",
+        "check_DynamicBufferLib_property_pUint200_buffer_37_35": "PASS",
+        "check_DynamicBufferLib_property_pUint208_buffer_38_36": "PASS",
+        "check_DynamicBufferLib_property_pUint216_buffer_39_37": "PASS",
+        "check_DynamicBufferLib_property_pUint224_buffer_40_38": "PASS",
+        "check_DynamicBufferLib_property_pUint232_buffer_41_39": "PASS",
+        "check_DynamicBufferLib_property_pUint240_buffer_42_40": "PASS",
+        "check_DynamicBufferLib_property_pUint248_buffer_43_41": "PASS",
+        "check_DynamicBufferLib_property_pUint256_buffer_44_42": "PASS",
+        "check_DynamicBufferLib_property_pBytes1_buffer_45_43": "PASS",
+        "check_DynamicBufferLib_property_pBytes2_buffer_46_44": "PASS",
+        "check_DynamicBufferLib_property_pBytes3_buffer_47_45": "PASS",
+        "check_DynamicBufferLib_property_pBytes4_buffer_48_46": "PASS",
+        "check_DynamicBufferLib_property_pBytes5_buffer_49_47": "PASS",
+        "check_DynamicBufferLib_property_pBytes6_buffer_50_48": "PASS",
+        "check_DynamicBufferLib_property_pBytes7_buffer_51_49": "PASS",
+        "check_DynamicBufferLib_property_pBytes8_buffer_52_50": "PASS",
+        "check_DynamicBufferLib_property_pBytes9_buffer_53_51": "PASS",
+        "check_DynamicBufferLib_property_pBytes10_buffer_54_52": "PASS",
+        "check_DynamicBufferLib_property_pBytes11_buffer_55_53": "PASS",
+        "check_DynamicBufferLib_property_pBytes12_buffer_56_54": "PASS",
+        "check_DynamicBufferLib_property_pBytes13_buffer_57_55": "PASS",
+        "check_DynamicBufferLib_property_pBytes14_buffer_58_56": "PASS",
+        "check_DynamicBufferLib_property_pBytes15_buffer_59_57": "PASS",
+        "check_DynamicBufferLib_property_pBytes16_buffer_60_58": "PASS",
+        "check_DynamicBufferLib_property_pBytes17_buffer_61_59": "PASS",
+        "check_DynamicBufferLib_property_pBytes18_buffer_62_60": "PASS",
+        "check_DynamicBufferLib_property_pBytes19_buffer_63_61": "PASS",
+        "check_DynamicBufferLib_property_pBytes20_buffer_64_62": "PASS",
+        "check_DynamicBufferLib_property_pBytes21_buffer_65_63": "PASS",
+        "check_DynamicBufferLib_property_pBytes22_buffer_66_64": "PASS",
+        "check_DynamicBufferLib_property_pBytes23_buffer_67_65": "PASS",
+        "check_DynamicBufferLib_property_pBytes24_buffer_68_66": "PASS",
+        "check_DynamicBufferLib_property_pBytes25_buffer_69_67": "PASS",
+        "check_DynamicBufferLib_property_pBytes26_buffer_70_68": "PASS",
+        "check_DynamicBufferLib_property_pBytes27_buffer_71_69": "PASS",
+        "check_DynamicBufferLib_property_pBytes28_buffer_72_70": "PASS",
+        "check_DynamicBufferLib_property_pBytes29_buffer_73_71": "PASS",
+        "check_DynamicBufferLib_property_pBytes30_buffer_74_72": "PASS",
+        "check_DynamicBufferLib_property_pBytes31_buffer_75_73": "PASS",
+        "check_DynamicBufferLib_property_pBytes32_buffer_76_74": "PASS",
+        "check_DynamicBufferLib_property_p_shorthand_bytes_83_81": "PASS",
+        "check_DynamicBufferLib_property_p_shorthand_bytes_84_82": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "clear",
+          "visibility": "internal",
+          "full_signature": "function clear(DynamicBuffer memory buffer) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_clear_2",
+              "test_name": "test_DynamicBufferLib_clear_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "length",
+          "visibility": "internal",
+          "full_signature": "function length(DynamicBuffer memory buffer) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_length_0",
+              "test_name": "test_DynamicBufferLib_length_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p() internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_p_77",
+              "test_name": "test_DynamicBufferLib_p_77",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(DynamicBuffer memory buffer, bytes memory data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_buffer_bytes_4_2",
+              "test_name": "test_DynamicBufferLib_property_p_buffer_bytes_4_2",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(DynamicBuffer memory buffer, bytes memory data0, bytes memory data1) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_buffer_bytes_5_3",
+              "test_name": "test_DynamicBufferLib_property_p_buffer_bytes_5_3",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(DynamicBuffer memory buffer, bytes memory data0, bytes memory data1, bytes memory data2) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_buffer_bytes_6_4",
+              "test_name": "test_DynamicBufferLib_property_p_buffer_bytes_6_4",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(DynamicBuffer memory buffer, bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_buffer_bytes_7_5",
+              "test_name": "test_DynamicBufferLib_property_p_buffer_bytes_7_5",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(DynamicBuffer memory buffer, bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3, bytes memory data4) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_buffer_bytes_8_6",
+              "test_name": "test_DynamicBufferLib_property_p_buffer_bytes_8_6",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(DynamicBuffer memory buffer, bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3, bytes memory data4, bytes memory data5) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_buffer_bytes_9_7",
+              "test_name": "test_DynamicBufferLib_property_p_buffer_bytes_9_7",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(DynamicBuffer memory buffer, bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3, bytes memory data4, bytes memory data5, bytes memory data6) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_buffer_bytes_10_8",
+              "test_name": "test_DynamicBufferLib_property_p_buffer_bytes_10_8",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_p_78",
+              "test_name": "test_DynamicBufferLib_p_78",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory data0, bytes memory data1) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_p_79",
+              "test_name": "test_DynamicBufferLib_p_79",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory data0, bytes memory data1, bytes memory data2) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_p_80",
+              "test_name": "test_DynamicBufferLib_p_80",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_p_81",
+              "test_name": "test_DynamicBufferLib_p_81",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3, bytes memory data4) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_p_82",
+              "test_name": "test_DynamicBufferLib_p_82",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3, bytes memory data4, bytes memory data5) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_shorthand_bytes_83_81",
+              "test_name": "test_DynamicBufferLib_property_p_shorthand_bytes_83_81",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory data0, bytes memory data1, bytes memory data2, bytes memory data3, bytes memory data4, bytes memory data5, bytes memory data6) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_p_shorthand_bytes_84_82",
+              "test_name": "test_DynamicBufferLib_property_p_shorthand_bytes_84_82",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pAddress",
+          "visibility": "internal",
+          "full_signature": "function pAddress(DynamicBuffer memory buffer, address data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pAddress_buffer_12_10",
+              "test_name": "test_DynamicBufferLib_property_pAddress_buffer_12_10",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pAddress",
+          "visibility": "internal",
+          "full_signature": "function pAddress(address data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pAddress_86",
+              "test_name": "test_DynamicBufferLib_pAddress_86",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBool",
+          "visibility": "internal",
+          "full_signature": "function pBool(DynamicBuffer memory buffer, bool data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBool_buffer_11_9",
+              "test_name": "test_DynamicBufferLib_property_pBool_buffer_11_9",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBool",
+          "visibility": "internal",
+          "full_signature": "function pBool(bool data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBool_85",
+              "test_name": "test_DynamicBufferLib_pBool_85",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes1",
+          "visibility": "internal",
+          "full_signature": "function pBytes1(DynamicBuffer memory buffer, bytes1 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes1_buffer_45_43",
+              "test_name": "test_DynamicBufferLib_property_pBytes1_buffer_45_43",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes1",
+          "visibility": "internal",
+          "full_signature": "function pBytes1(bytes1 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes1_119",
+              "test_name": "test_DynamicBufferLib_pBytes1_119",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes10",
+          "visibility": "internal",
+          "full_signature": "function pBytes10(DynamicBuffer memory buffer, bytes10 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes10_buffer_54_52",
+              "test_name": "test_DynamicBufferLib_property_pBytes10_buffer_54_52",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes10",
+          "visibility": "internal",
+          "full_signature": "function pBytes10(bytes10 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes10_128",
+              "test_name": "test_DynamicBufferLib_pBytes10_128",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes11",
+          "visibility": "internal",
+          "full_signature": "function pBytes11(DynamicBuffer memory buffer, bytes11 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes11_buffer_55_53",
+              "test_name": "test_DynamicBufferLib_property_pBytes11_buffer_55_53",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes11",
+          "visibility": "internal",
+          "full_signature": "function pBytes11(bytes11 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes11_129",
+              "test_name": "test_DynamicBufferLib_pBytes11_129",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes12",
+          "visibility": "internal",
+          "full_signature": "function pBytes12(DynamicBuffer memory buffer, bytes12 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes12_buffer_56_54",
+              "test_name": "test_DynamicBufferLib_property_pBytes12_buffer_56_54",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes12",
+          "visibility": "internal",
+          "full_signature": "function pBytes12(bytes12 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes12_130",
+              "test_name": "test_DynamicBufferLib_pBytes12_130",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes13",
+          "visibility": "internal",
+          "full_signature": "function pBytes13(DynamicBuffer memory buffer, bytes13 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes13_buffer_57_55",
+              "test_name": "test_DynamicBufferLib_property_pBytes13_buffer_57_55",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes13",
+          "visibility": "internal",
+          "full_signature": "function pBytes13(bytes13 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes13_131",
+              "test_name": "test_DynamicBufferLib_pBytes13_131",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes14",
+          "visibility": "internal",
+          "full_signature": "function pBytes14(DynamicBuffer memory buffer, bytes14 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes14_buffer_58_56",
+              "test_name": "test_DynamicBufferLib_property_pBytes14_buffer_58_56",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes14",
+          "visibility": "internal",
+          "full_signature": "function pBytes14(bytes14 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes14_132",
+              "test_name": "test_DynamicBufferLib_pBytes14_132",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes15",
+          "visibility": "internal",
+          "full_signature": "function pBytes15(DynamicBuffer memory buffer, bytes15 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes15_buffer_59_57",
+              "test_name": "test_DynamicBufferLib_property_pBytes15_buffer_59_57",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes15",
+          "visibility": "internal",
+          "full_signature": "function pBytes15(bytes15 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes15_133",
+              "test_name": "test_DynamicBufferLib_pBytes15_133",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes16",
+          "visibility": "internal",
+          "full_signature": "function pBytes16(DynamicBuffer memory buffer, bytes16 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes16_buffer_60_58",
+              "test_name": "test_DynamicBufferLib_property_pBytes16_buffer_60_58",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes16",
+          "visibility": "internal",
+          "full_signature": "function pBytes16(bytes16 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes16_134",
+              "test_name": "test_DynamicBufferLib_pBytes16_134",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes17",
+          "visibility": "internal",
+          "full_signature": "function pBytes17(DynamicBuffer memory buffer, bytes17 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes17_buffer_61_59",
+              "test_name": "test_DynamicBufferLib_property_pBytes17_buffer_61_59",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes17",
+          "visibility": "internal",
+          "full_signature": "function pBytes17(bytes17 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes17_135",
+              "test_name": "test_DynamicBufferLib_pBytes17_135",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes18",
+          "visibility": "internal",
+          "full_signature": "function pBytes18(DynamicBuffer memory buffer, bytes18 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes18_buffer_62_60",
+              "test_name": "test_DynamicBufferLib_property_pBytes18_buffer_62_60",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes18",
+          "visibility": "internal",
+          "full_signature": "function pBytes18(bytes18 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes18_136",
+              "test_name": "test_DynamicBufferLib_pBytes18_136",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes19",
+          "visibility": "internal",
+          "full_signature": "function pBytes19(DynamicBuffer memory buffer, bytes19 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes19_buffer_63_61",
+              "test_name": "test_DynamicBufferLib_property_pBytes19_buffer_63_61",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes19",
+          "visibility": "internal",
+          "full_signature": "function pBytes19(bytes19 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes19_137",
+              "test_name": "test_DynamicBufferLib_pBytes19_137",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes2",
+          "visibility": "internal",
+          "full_signature": "function pBytes2(DynamicBuffer memory buffer, bytes2 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes2_buffer_46_44",
+              "test_name": "test_DynamicBufferLib_property_pBytes2_buffer_46_44",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes2",
+          "visibility": "internal",
+          "full_signature": "function pBytes2(bytes2 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes2_120",
+              "test_name": "test_DynamicBufferLib_pBytes2_120",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes20",
+          "visibility": "internal",
+          "full_signature": "function pBytes20(DynamicBuffer memory buffer, bytes20 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes20_buffer_64_62",
+              "test_name": "test_DynamicBufferLib_property_pBytes20_buffer_64_62",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes20",
+          "visibility": "internal",
+          "full_signature": "function pBytes20(bytes20 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes20_138",
+              "test_name": "test_DynamicBufferLib_pBytes20_138",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes21",
+          "visibility": "internal",
+          "full_signature": "function pBytes21(DynamicBuffer memory buffer, bytes21 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes21_buffer_65_63",
+              "test_name": "test_DynamicBufferLib_property_pBytes21_buffer_65_63",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes21",
+          "visibility": "internal",
+          "full_signature": "function pBytes21(bytes21 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes21_139",
+              "test_name": "test_DynamicBufferLib_pBytes21_139",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes22",
+          "visibility": "internal",
+          "full_signature": "function pBytes22(DynamicBuffer memory buffer, bytes22 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes22_buffer_66_64",
+              "test_name": "test_DynamicBufferLib_property_pBytes22_buffer_66_64",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes22",
+          "visibility": "internal",
+          "full_signature": "function pBytes22(bytes22 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes22_140",
+              "test_name": "test_DynamicBufferLib_pBytes22_140",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes23",
+          "visibility": "internal",
+          "full_signature": "function pBytes23(DynamicBuffer memory buffer, bytes23 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes23_buffer_67_65",
+              "test_name": "test_DynamicBufferLib_property_pBytes23_buffer_67_65",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes23",
+          "visibility": "internal",
+          "full_signature": "function pBytes23(bytes23 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes23_141",
+              "test_name": "test_DynamicBufferLib_pBytes23_141",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes24",
+          "visibility": "internal",
+          "full_signature": "function pBytes24(DynamicBuffer memory buffer, bytes24 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes24_buffer_68_66",
+              "test_name": "test_DynamicBufferLib_property_pBytes24_buffer_68_66",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes24",
+          "visibility": "internal",
+          "full_signature": "function pBytes24(bytes24 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes24_142",
+              "test_name": "test_DynamicBufferLib_pBytes24_142",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes25",
+          "visibility": "internal",
+          "full_signature": "function pBytes25(DynamicBuffer memory buffer, bytes25 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes25_buffer_69_67",
+              "test_name": "test_DynamicBufferLib_property_pBytes25_buffer_69_67",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes25",
+          "visibility": "internal",
+          "full_signature": "function pBytes25(bytes25 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes25_143",
+              "test_name": "test_DynamicBufferLib_pBytes25_143",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes26",
+          "visibility": "internal",
+          "full_signature": "function pBytes26(DynamicBuffer memory buffer, bytes26 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes26_buffer_70_68",
+              "test_name": "test_DynamicBufferLib_property_pBytes26_buffer_70_68",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes26",
+          "visibility": "internal",
+          "full_signature": "function pBytes26(bytes26 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes26_144",
+              "test_name": "test_DynamicBufferLib_pBytes26_144",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes27",
+          "visibility": "internal",
+          "full_signature": "function pBytes27(DynamicBuffer memory buffer, bytes27 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes27_buffer_71_69",
+              "test_name": "test_DynamicBufferLib_property_pBytes27_buffer_71_69",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes27",
+          "visibility": "internal",
+          "full_signature": "function pBytes27(bytes27 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes27_145",
+              "test_name": "test_DynamicBufferLib_pBytes27_145",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes28",
+          "visibility": "internal",
+          "full_signature": "function pBytes28(DynamicBuffer memory buffer, bytes28 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes28_buffer_72_70",
+              "test_name": "test_DynamicBufferLib_property_pBytes28_buffer_72_70",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes28",
+          "visibility": "internal",
+          "full_signature": "function pBytes28(bytes28 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes28_146",
+              "test_name": "test_DynamicBufferLib_pBytes28_146",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes29",
+          "visibility": "internal",
+          "full_signature": "function pBytes29(DynamicBuffer memory buffer, bytes29 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes29_buffer_73_71",
+              "test_name": "test_DynamicBufferLib_property_pBytes29_buffer_73_71",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes29",
+          "visibility": "internal",
+          "full_signature": "function pBytes29(bytes29 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes29_147",
+              "test_name": "test_DynamicBufferLib_pBytes29_147",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes3",
+          "visibility": "internal",
+          "full_signature": "function pBytes3(DynamicBuffer memory buffer, bytes3 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes3_buffer_47_45",
+              "test_name": "test_DynamicBufferLib_property_pBytes3_buffer_47_45",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes3",
+          "visibility": "internal",
+          "full_signature": "function pBytes3(bytes3 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes3_121",
+              "test_name": "test_DynamicBufferLib_pBytes3_121",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes30",
+          "visibility": "internal",
+          "full_signature": "function pBytes30(DynamicBuffer memory buffer, bytes30 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes30_buffer_74_72",
+              "test_name": "test_DynamicBufferLib_property_pBytes30_buffer_74_72",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes30",
+          "visibility": "internal",
+          "full_signature": "function pBytes30(bytes30 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes30_148",
+              "test_name": "test_DynamicBufferLib_pBytes30_148",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes31",
+          "visibility": "internal",
+          "full_signature": "function pBytes31(DynamicBuffer memory buffer, bytes31 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes31_buffer_75_73",
+              "test_name": "test_DynamicBufferLib_property_pBytes31_buffer_75_73",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes31",
+          "visibility": "internal",
+          "full_signature": "function pBytes31(bytes31 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes31_149",
+              "test_name": "test_DynamicBufferLib_pBytes31_149",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes32",
+          "visibility": "internal",
+          "full_signature": "function pBytes32(DynamicBuffer memory buffer, bytes32 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes32_buffer_76_74",
+              "test_name": "test_DynamicBufferLib_property_pBytes32_buffer_76_74",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes32",
+          "visibility": "internal",
+          "full_signature": "function pBytes32(bytes32 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes32_150",
+              "test_name": "test_DynamicBufferLib_pBytes32_150",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes4",
+          "visibility": "internal",
+          "full_signature": "function pBytes4(DynamicBuffer memory buffer, bytes4 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes4_buffer_48_46",
+              "test_name": "test_DynamicBufferLib_property_pBytes4_buffer_48_46",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes4",
+          "visibility": "internal",
+          "full_signature": "function pBytes4(bytes4 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes4_122",
+              "test_name": "test_DynamicBufferLib_pBytes4_122",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes5",
+          "visibility": "internal",
+          "full_signature": "function pBytes5(DynamicBuffer memory buffer, bytes5 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes5_buffer_49_47",
+              "test_name": "test_DynamicBufferLib_property_pBytes5_buffer_49_47",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes5",
+          "visibility": "internal",
+          "full_signature": "function pBytes5(bytes5 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes5_123",
+              "test_name": "test_DynamicBufferLib_pBytes5_123",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes6",
+          "visibility": "internal",
+          "full_signature": "function pBytes6(DynamicBuffer memory buffer, bytes6 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes6_buffer_50_48",
+              "test_name": "test_DynamicBufferLib_property_pBytes6_buffer_50_48",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes6",
+          "visibility": "internal",
+          "full_signature": "function pBytes6(bytes6 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes6_124",
+              "test_name": "test_DynamicBufferLib_pBytes6_124",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes7",
+          "visibility": "internal",
+          "full_signature": "function pBytes7(DynamicBuffer memory buffer, bytes7 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes7_buffer_51_49",
+              "test_name": "test_DynamicBufferLib_property_pBytes7_buffer_51_49",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes7",
+          "visibility": "internal",
+          "full_signature": "function pBytes7(bytes7 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes7_125",
+              "test_name": "test_DynamicBufferLib_pBytes7_125",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes8",
+          "visibility": "internal",
+          "full_signature": "function pBytes8(DynamicBuffer memory buffer, bytes8 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes8_buffer_52_50",
+              "test_name": "test_DynamicBufferLib_property_pBytes8_buffer_52_50",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes8",
+          "visibility": "internal",
+          "full_signature": "function pBytes8(bytes8 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes8_126",
+              "test_name": "test_DynamicBufferLib_pBytes8_126",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes9",
+          "visibility": "internal",
+          "full_signature": "function pBytes9(DynamicBuffer memory buffer, bytes9 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pBytes9_buffer_53_51",
+              "test_name": "test_DynamicBufferLib_property_pBytes9_buffer_53_51",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pBytes9",
+          "visibility": "internal",
+          "full_signature": "function pBytes9(bytes9 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pBytes9_127",
+              "test_name": "test_DynamicBufferLib_pBytes9_127",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint104",
+          "visibility": "internal",
+          "full_signature": "function pUint104(DynamicBuffer memory buffer, uint104 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint104_buffer_25_23",
+              "test_name": "test_DynamicBufferLib_property_pUint104_buffer_25_23",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint104",
+          "visibility": "internal",
+          "full_signature": "function pUint104(uint104 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint104_99",
+              "test_name": "test_DynamicBufferLib_pUint104_99",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint112",
+          "visibility": "internal",
+          "full_signature": "function pUint112(DynamicBuffer memory buffer, uint112 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint112_buffer_26_24",
+              "test_name": "test_DynamicBufferLib_property_pUint112_buffer_26_24",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint112",
+          "visibility": "internal",
+          "full_signature": "function pUint112(uint112 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint112_100",
+              "test_name": "test_DynamicBufferLib_pUint112_100",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint120",
+          "visibility": "internal",
+          "full_signature": "function pUint120(DynamicBuffer memory buffer, uint120 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint120_buffer_27_25",
+              "test_name": "test_DynamicBufferLib_property_pUint120_buffer_27_25",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint120",
+          "visibility": "internal",
+          "full_signature": "function pUint120(uint120 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint120_101",
+              "test_name": "test_DynamicBufferLib_pUint120_101",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint128",
+          "visibility": "internal",
+          "full_signature": "function pUint128(DynamicBuffer memory buffer, uint128 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint128_buffer_28_26",
+              "test_name": "test_DynamicBufferLib_property_pUint128_buffer_28_26",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint128",
+          "visibility": "internal",
+          "full_signature": "function pUint128(uint128 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint128_102",
+              "test_name": "test_DynamicBufferLib_pUint128_102",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint136",
+          "visibility": "internal",
+          "full_signature": "function pUint136(DynamicBuffer memory buffer, uint136 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint136_buffer_29_27",
+              "test_name": "test_DynamicBufferLib_property_pUint136_buffer_29_27",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint136",
+          "visibility": "internal",
+          "full_signature": "function pUint136(uint136 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint136_103",
+              "test_name": "test_DynamicBufferLib_pUint136_103",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint144",
+          "visibility": "internal",
+          "full_signature": "function pUint144(DynamicBuffer memory buffer, uint144 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint144_buffer_30_28",
+              "test_name": "test_DynamicBufferLib_property_pUint144_buffer_30_28",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint144",
+          "visibility": "internal",
+          "full_signature": "function pUint144(uint144 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint144_104",
+              "test_name": "test_DynamicBufferLib_pUint144_104",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint152",
+          "visibility": "internal",
+          "full_signature": "function pUint152(DynamicBuffer memory buffer, uint152 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint152_buffer_31_29",
+              "test_name": "test_DynamicBufferLib_property_pUint152_buffer_31_29",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint152",
+          "visibility": "internal",
+          "full_signature": "function pUint152(uint152 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint152_105",
+              "test_name": "test_DynamicBufferLib_pUint152_105",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint16",
+          "visibility": "internal",
+          "full_signature": "function pUint16(DynamicBuffer memory buffer, uint16 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint16_buffer_14_12",
+              "test_name": "test_DynamicBufferLib_property_pUint16_buffer_14_12",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint16",
+          "visibility": "internal",
+          "full_signature": "function pUint16(uint16 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint16_88",
+              "test_name": "test_DynamicBufferLib_pUint16_88",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint160",
+          "visibility": "internal",
+          "full_signature": "function pUint160(DynamicBuffer memory buffer, uint160 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint160_buffer_32_30",
+              "test_name": "test_DynamicBufferLib_property_pUint160_buffer_32_30",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint160",
+          "visibility": "internal",
+          "full_signature": "function pUint160(uint160 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint160_106",
+              "test_name": "test_DynamicBufferLib_pUint160_106",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint168",
+          "visibility": "internal",
+          "full_signature": "function pUint168(DynamicBuffer memory buffer, uint168 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint168_buffer_33_31",
+              "test_name": "test_DynamicBufferLib_property_pUint168_buffer_33_31",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint168",
+          "visibility": "internal",
+          "full_signature": "function pUint168(uint168 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint168_107",
+              "test_name": "test_DynamicBufferLib_pUint168_107",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint176",
+          "visibility": "internal",
+          "full_signature": "function pUint176(DynamicBuffer memory buffer, uint176 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint176_buffer_34_32",
+              "test_name": "test_DynamicBufferLib_property_pUint176_buffer_34_32",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint176",
+          "visibility": "internal",
+          "full_signature": "function pUint176(uint176 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint176_108",
+              "test_name": "test_DynamicBufferLib_pUint176_108",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint184",
+          "visibility": "internal",
+          "full_signature": "function pUint184(DynamicBuffer memory buffer, uint184 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint184_buffer_35_33",
+              "test_name": "test_DynamicBufferLib_property_pUint184_buffer_35_33",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint184",
+          "visibility": "internal",
+          "full_signature": "function pUint184(uint184 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint184_109",
+              "test_name": "test_DynamicBufferLib_pUint184_109",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint192",
+          "visibility": "internal",
+          "full_signature": "function pUint192(DynamicBuffer memory buffer, uint192 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint192_buffer_36_34",
+              "test_name": "test_DynamicBufferLib_property_pUint192_buffer_36_34",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint192",
+          "visibility": "internal",
+          "full_signature": "function pUint192(uint192 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint192_110",
+              "test_name": "test_DynamicBufferLib_pUint192_110",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint200",
+          "visibility": "internal",
+          "full_signature": "function pUint200(DynamicBuffer memory buffer, uint200 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint200_buffer_37_35",
+              "test_name": "test_DynamicBufferLib_property_pUint200_buffer_37_35",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint200",
+          "visibility": "internal",
+          "full_signature": "function pUint200(uint200 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint200_111",
+              "test_name": "test_DynamicBufferLib_pUint200_111",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint208",
+          "visibility": "internal",
+          "full_signature": "function pUint208(DynamicBuffer memory buffer, uint208 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint208_buffer_38_36",
+              "test_name": "test_DynamicBufferLib_property_pUint208_buffer_38_36",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint208",
+          "visibility": "internal",
+          "full_signature": "function pUint208(uint208 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint208_112",
+              "test_name": "test_DynamicBufferLib_pUint208_112",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint216",
+          "visibility": "internal",
+          "full_signature": "function pUint216(DynamicBuffer memory buffer, uint216 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint216_buffer_39_37",
+              "test_name": "test_DynamicBufferLib_property_pUint216_buffer_39_37",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint216",
+          "visibility": "internal",
+          "full_signature": "function pUint216(uint216 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint216_113",
+              "test_name": "test_DynamicBufferLib_pUint216_113",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint224",
+          "visibility": "internal",
+          "full_signature": "function pUint224(DynamicBuffer memory buffer, uint224 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint224_buffer_40_38",
+              "test_name": "test_DynamicBufferLib_property_pUint224_buffer_40_38",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint224",
+          "visibility": "internal",
+          "full_signature": "function pUint224(uint224 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint224_114",
+              "test_name": "test_DynamicBufferLib_pUint224_114",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint232",
+          "visibility": "internal",
+          "full_signature": "function pUint232(DynamicBuffer memory buffer, uint232 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint232_buffer_41_39",
+              "test_name": "test_DynamicBufferLib_property_pUint232_buffer_41_39",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint232",
+          "visibility": "internal",
+          "full_signature": "function pUint232(uint232 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint232_115",
+              "test_name": "test_DynamicBufferLib_pUint232_115",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint24",
+          "visibility": "internal",
+          "full_signature": "function pUint24(DynamicBuffer memory buffer, uint24 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint24_buffer_15_13",
+              "test_name": "test_DynamicBufferLib_property_pUint24_buffer_15_13",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint24",
+          "visibility": "internal",
+          "full_signature": "function pUint24(uint24 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint24_89",
+              "test_name": "test_DynamicBufferLib_pUint24_89",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint240",
+          "visibility": "internal",
+          "full_signature": "function pUint240(DynamicBuffer memory buffer, uint240 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint240_buffer_42_40",
+              "test_name": "test_DynamicBufferLib_property_pUint240_buffer_42_40",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint240",
+          "visibility": "internal",
+          "full_signature": "function pUint240(uint240 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint240_116",
+              "test_name": "test_DynamicBufferLib_pUint240_116",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint248",
+          "visibility": "internal",
+          "full_signature": "function pUint248(DynamicBuffer memory buffer, uint248 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint248_buffer_43_41",
+              "test_name": "test_DynamicBufferLib_property_pUint248_buffer_43_41",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint248",
+          "visibility": "internal",
+          "full_signature": "function pUint248(uint248 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint248_117",
+              "test_name": "test_DynamicBufferLib_pUint248_117",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint256",
+          "visibility": "internal",
+          "full_signature": "function pUint256(DynamicBuffer memory buffer, uint256 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint256_buffer_44_42",
+              "test_name": "test_DynamicBufferLib_property_pUint256_buffer_44_42",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint256",
+          "visibility": "internal",
+          "full_signature": "function pUint256(uint256 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint256_118",
+              "test_name": "test_DynamicBufferLib_pUint256_118",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint32",
+          "visibility": "internal",
+          "full_signature": "function pUint32(DynamicBuffer memory buffer, uint32 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint32_buffer_16_14",
+              "test_name": "test_DynamicBufferLib_property_pUint32_buffer_16_14",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint32",
+          "visibility": "internal",
+          "full_signature": "function pUint32(uint32 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint32_90",
+              "test_name": "test_DynamicBufferLib_pUint32_90",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint40",
+          "visibility": "internal",
+          "full_signature": "function pUint40(DynamicBuffer memory buffer, uint40 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint40_buffer_17_15",
+              "test_name": "test_DynamicBufferLib_property_pUint40_buffer_17_15",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint40",
+          "visibility": "internal",
+          "full_signature": "function pUint40(uint40 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint40_91",
+              "test_name": "test_DynamicBufferLib_pUint40_91",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint48",
+          "visibility": "internal",
+          "full_signature": "function pUint48(DynamicBuffer memory buffer, uint48 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint48_buffer_18_16",
+              "test_name": "test_DynamicBufferLib_property_pUint48_buffer_18_16",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint48",
+          "visibility": "internal",
+          "full_signature": "function pUint48(uint48 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint48_92",
+              "test_name": "test_DynamicBufferLib_pUint48_92",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint56",
+          "visibility": "internal",
+          "full_signature": "function pUint56(DynamicBuffer memory buffer, uint56 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint56_buffer_19_17",
+              "test_name": "test_DynamicBufferLib_property_pUint56_buffer_19_17",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint56",
+          "visibility": "internal",
+          "full_signature": "function pUint56(uint56 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint56_93",
+              "test_name": "test_DynamicBufferLib_pUint56_93",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint64",
+          "visibility": "internal",
+          "full_signature": "function pUint64(DynamicBuffer memory buffer, uint64 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint64_buffer_20_18",
+              "test_name": "test_DynamicBufferLib_property_pUint64_buffer_20_18",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint64",
+          "visibility": "internal",
+          "full_signature": "function pUint64(uint64 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint64_94",
+              "test_name": "test_DynamicBufferLib_pUint64_94",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint72",
+          "visibility": "internal",
+          "full_signature": "function pUint72(DynamicBuffer memory buffer, uint72 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint72_buffer_21_19",
+              "test_name": "test_DynamicBufferLib_property_pUint72_buffer_21_19",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint72",
+          "visibility": "internal",
+          "full_signature": "function pUint72(uint72 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint72_95",
+              "test_name": "test_DynamicBufferLib_pUint72_95",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint8",
+          "visibility": "internal",
+          "full_signature": "function pUint8(DynamicBuffer memory buffer, uint8 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint8_buffer_13_11",
+              "test_name": "test_DynamicBufferLib_property_pUint8_buffer_13_11",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint8",
+          "visibility": "internal",
+          "full_signature": "function pUint8(uint8 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint8_87",
+              "test_name": "test_DynamicBufferLib_pUint8_87",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint80",
+          "visibility": "internal",
+          "full_signature": "function pUint80(DynamicBuffer memory buffer, uint80 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint80_buffer_22_20",
+              "test_name": "test_DynamicBufferLib_property_pUint80_buffer_22_20",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint80",
+          "visibility": "internal",
+          "full_signature": "function pUint80(uint80 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint80_96",
+              "test_name": "test_DynamicBufferLib_pUint80_96",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint88",
+          "visibility": "internal",
+          "full_signature": "function pUint88(DynamicBuffer memory buffer, uint88 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint88_buffer_23_21",
+              "test_name": "test_DynamicBufferLib_property_pUint88_buffer_23_21",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint88",
+          "visibility": "internal",
+          "full_signature": "function pUint88(uint88 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint88_97",
+              "test_name": "test_DynamicBufferLib_pUint88_97",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint96",
+          "visibility": "internal",
+          "full_signature": "function pUint96(DynamicBuffer memory buffer, uint96 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_pUint96_buffer_24_22",
+              "test_name": "test_DynamicBufferLib_property_pUint96_buffer_24_22",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "pUint96",
+          "visibility": "internal",
+          "full_signature": "function pUint96(uint96 data) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_pUint96_98",
+              "test_name": "test_DynamicBufferLib_pUint96_98",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "reserve",
+          "visibility": "internal",
+          "full_signature": "function reserve(DynamicBuffer memory buffer, uint256 minimum) internal pure returns (DynamicBuffer memory result)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_reserve_1_0",
+              "test_name": "test_DynamicBufferLib_property_reserve_1_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+          "class_name": "DynamicBufferLib",
+          "class_kind": "library",
+          "method_name": "s",
+          "visibility": "internal",
+          "full_signature": "function s(DynamicBuffer memory buffer) internal pure returns (string memory)",
+          "checks": [
+            {
+              "check_name": "check_DynamicBufferLib_property_s_3_1",
+              "test_name": "test_DynamicBufferLib_property_s_3_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 151,
+        "passed_methods": 151,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 151
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_DynamicBufferLib_length_0(?:\\(.*\\))?|check_DynamicBufferLib_clear_2(?:\\(.*\\))?|check_DynamicBufferLib_p_77(?:\\(.*\\))?|check_DynamicBufferLib_p_78(?:\\(.*\\))?|check_DynamicBufferLib_p_79(?:\\(.*\\))?|check_DynamicBufferLib_p_80(?:\\(.*\\))?|check_DynamicBufferLib_p_81(?:\\(.*\\))?|check_DynamicBufferLib_p_82(?:\\(.*\\))?|check_DynamicBufferLib_pBool_85(?:\\(.*\\))?|check_DynamicBufferLib_pAddress_86(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/16 ---\nCompiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 2.77s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n --> test/DynamicBufferLib.t.sol:9:5:\n  |\n9 |     function ref_call_length_0(bytes memory buffer) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:14:5:\n   |\n14 |     function ref_call_reserve_1(bytes memory buffer, uint256 minimum) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:19:5:\n   |\n19 |     function ref_call_clear_2(bytes memory buffer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:24:5:\n   |\n24 |     function ref_call_s_3(bytes memory buffer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:29:5:\n   |\n29 |     function ref_call_p_4(bytes memory buffer, bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:34:5:\n   |\n34 |     function ref_call_p_5(bytes memory buffer, bytes memory data0, bytes memory data1) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:39:5:\n   |\n39 |     function ref_call_p_6(bytes memory buffer, bytes memory data0, bytes memory data1, bytes memory data2) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:44:5:\n   |\n44 |     function ref_call_p_7(bytes memory  ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:49:5:\n   |\n49 |     function ref_call_p_8(bytes memory  ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:54:5:\n   |\n54 |     function ref_call_p_9(bytes memory  ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:59:5:\n   |\n59 |     function ref_call_p_10(bytes memory ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:64:5:\n   |\n64 |     function ref_call_pBool_11(bytes memory buffer, bool data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:69:5:\n   |\n69 |     function ref_call_pAddress_12(bytes memory buffer, address data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:74:5:\n   |\n74 |     function ref_call_pUint8_13(bytes memory buffer, uint8 data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:79:5:\n   |\n79 |     function ref_call_pUint16_14(bytes memory buffer, uint16 data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:84:5:\n   |\n84 |     function ref_call_pUint24_15(bytes memory buffer, uint24 data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:89:5:\n   |\n89 |     function ref_call_pUint32_16(bytes memory buffer, uint32 data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:94:5:\n   |\n94 |     function ref_call_pUint40_17(bytes memory buffer, uint40 data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/DynamicBufferLib.t.sol:99:5:\n   |\n99 |     function ref_call_pUint48_18(bytes memory buffer, uint48 data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:104:5:\n    |\n104 |     function ref_call_pUint56_19(bytes memory buffer, uint56 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:109:5:\n    |\n109 |     function ref_call_pUint64_20(bytes memory buffer, uint64 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:114:5:\n    |\n114 |     function ref_call_pUint72_21(bytes memory buffer, uint72 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:119:5:\n    |\n119 |     function ref_call_pUint80_22(bytes memory buffer, uint80 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:124:5:\n    |\n124 |     function ref_call_pUint88_23(bytes memory buffer, uint88 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:129:5:\n    |\n129 |     function ref_call_pUint96_24(bytes memory buffer, uint96 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:134:5:\n    |\n134 |     function ref_call_pUint104_25(bytes memory buffer, uint104 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:139:5:\n    |\n139 |     function ref_call_pUint112_26(bytes memory buffer, uint112 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:144:5:\n    |\n144 |     function ref_call_pUint120_27(bytes memory buffer, uint120 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:149:5:\n    |\n149 |     function ref_call_pUint128_28(bytes memory buffer, uint128 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:154:5:\n    |\n154 |     function ref_call_pUint136_29(bytes memory buffer, uint136 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:159:5:\n    |\n159 |     function ref_call_pUint144_30(bytes memory buffer, uint144 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:164:5:\n    |\n164 |     function ref_call_pUint152_31(bytes memory buffer, uint152 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:169:5:\n    |\n169 |     function ref_call_pUint160_32(bytes memory buffer, uint160 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:174:5:\n    |\n174 |     function ref_call_pUint168_33(bytes memory buffer, uint168 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:179:5:\n    |\n179 |     function ref_call_pUint176_34(bytes memory buffer, uint176 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:184:5:\n    |\n184 |     function ref_call_pUint184_35(bytes memory buffer, uint184 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:189:5:\n    |\n189 |     function ref_call_pUint192_36(bytes memory buffer, uint192 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:194:5:\n    |\n194 |     function ref_call_pUint200_37(bytes memory buffer, uint200 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:199:5:\n    |\n199 |     function ref_call_pUint208_38(bytes memory buffer, uint208 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:204:5:\n    |\n204 |     function ref_call_pUint216_39(bytes memory buffer, uint216 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:209:5:\n    |\n209 |     function ref_call_pUint224_40(bytes memory buffer, uint224 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:214:5:\n    |\n214 |     function ref_call_pUint232_41(bytes memory buffer, uint232 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:219:5:\n    |\n219 |     function ref_call_pUint240_42(bytes memory buffer, uint240 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:224:5:\n    |\n224 |     function ref_call_pUint248_43(bytes memory buffer, uint248 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:229:5:\n    |\n229 |     function ref_call_pUint256_44(bytes memory buffer, uint256 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:234:5:\n    |\n234 |     function ref_call_pBytes1_45(bytes memory buffer, bytes1 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:239:5:\n    |\n239 |     function ref_call_pBytes2_46(bytes memory buffer, bytes2 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:244:5:\n    |\n244 |     function ref_call_pBytes3_47(bytes memory buffer, bytes3 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:249:5:\n    |\n249 |     function ref_call_pBytes4_48(bytes memory buffer, bytes4 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:254:5:\n    |\n254 |     function ref_call_pBytes5_49(bytes memory buffer, bytes5 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:259:5:\n    |\n259 |     function ref_call_pBytes6_50(bytes memory buffer, bytes6 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:264:5:\n    |\n264 |     function ref_call_pBytes7_51(bytes memory buffer, bytes7 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:269:5:\n    |\n269 |     function ref_call_pBytes8_52(bytes memory buffer, bytes8 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:274:5:\n    |\n274 |     function ref_call_pBytes9_53(bytes memory buffer, bytes9 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:279:5:\n    |\n279 |     function ref_call_pBytes10_54(bytes memory buffer, bytes10 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:284:5:\n    |\n284 |     function ref_call_pBytes11_55(bytes memory buffer, bytes11 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:289:5:\n    |\n289 |     function ref_call_pBytes12_56(bytes memory buffer, bytes12 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:294:5:\n    |\n294 |     function ref_call_pBytes13_57(bytes memory buffer, bytes13 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:299:5:\n    |\n299 |     function ref_call_pBytes14_58(bytes memory buffer, bytes14 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:304:5:\n    |\n304 |     function ref_call_pBytes15_59(bytes memory buffer, bytes15 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:309:5:\n    |\n309 |     function ref_call_pBytes16_60(bytes memory buffer, bytes16 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:314:5:\n    |\n314 |     function ref_call_pBytes17_61(bytes memory buffer, bytes17 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:319:5:\n    |\n319 |     function ref_call_pBytes18_62(bytes memory buffer, bytes18 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:324:5:\n    |\n324 |     function ref_call_pBytes19_63(bytes memory buffer, bytes19 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:329:5:\n    |\n329 |     function ref_call_pBytes20_64(bytes memory buffer, bytes20 data) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/DynamicBufferLib.t.sol:334:5:\n    |\n334 |     function ref_call_pBytes21_65(bytes memory buffer, bytes21 data) external returns (bytes memory) {\n\n...[truncated 75369 chars]",
+      "halmos_stderr": "--- halmos chunk 1/16 ---\n\n\n--- halmos chunk 2/16 ---\n\n\n--- halmos chunk 3/16 ---\n\n\n--- halmos chunk 4/16 ---\n\n\n--- halmos chunk 5/16 ---\n\n\n--- halmos chunk 6/16 ---\n\n\n--- halmos chunk 7/16 ---\n\n\n--- halmos chunk 8/16 ---\n\n\n--- halmos chunk 9/16 ---\n\n\n--- halmos chunk 10/16 ---\n\n\n--- halmos chunk 11/16 ---\n\n\n--- halmos chunk 12/16 ---\n\n\n--- halmos chunk 13/16 ---\n\n\n--- halmos chunk 14/16 ---\n\n\n--- halmos chunk 15/16 ---\n\n\n--- halmos chunk 16/16 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 16,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_length_0(?:\\(.*\\))?|check_DynamicBufferLib_clear_2(?:\\(.*\\))?|check_DynamicBufferLib_p_77(?:\\(.*\\))?|check_DynamicBufferLib_p_78(?:\\(.*\\))?|check_DynamicBufferLib_p_79(?:\\(.*\\))?|check_DynamicBufferLib_p_80(?:\\(.*\\))?|check_DynamicBufferLib_p_81(?:\\(.*\\))?|check_DynamicBufferLib_p_82(?:\\(.*\\))?|check_DynamicBufferLib_pBool_85(?:\\(.*\\))?|check_DynamicBufferLib_pAddress_86(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_pUint8_87(?:\\(.*\\))?|check_DynamicBufferLib_pUint16_88(?:\\(.*\\))?|check_DynamicBufferLib_pUint24_89(?:\\(.*\\))?|check_DynamicBufferLib_pUint32_90(?:\\(.*\\))?|check_DynamicBufferLib_pUint40_91(?:\\(.*\\))?|check_DynamicBufferLib_pUint48_92(?:\\(.*\\))?|check_DynamicBufferLib_pUint56_93(?:\\(.*\\))?|check_DynamicBufferLib_pUint64_94(?:\\(.*\\))?|check_DynamicBufferLib_pUint72_95(?:\\(.*\\))?|check_DynamicBufferLib_pUint80_96(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_pUint88_97(?:\\(.*\\))?|check_DynamicBufferLib_pUint96_98(?:\\(.*\\))?|check_DynamicBufferLib_pUint104_99(?:\\(.*\\))?|check_DynamicBufferLib_pUint112_100(?:\\(.*\\))?|check_DynamicBufferLib_pUint120_101(?:\\(.*\\))?|check_DynamicBufferLib_pUint128_102(?:\\(.*\\))?|check_DynamicBufferLib_pUint136_103(?:\\(.*\\))?|check_DynamicBufferLib_pUint144_104(?:\\(.*\\))?|check_DynamicBufferLib_pUint152_105(?:\\(.*\\))?|check_DynamicBufferLib_pUint160_106(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_pUint168_107(?:\\(.*\\))?|check_DynamicBufferLib_pUint176_108(?:\\(.*\\))?|check_DynamicBufferLib_pUint184_109(?:\\(.*\\))?|check_DynamicBufferLib_pUint192_110(?:\\(.*\\))?|check_DynamicBufferLib_pUint200_111(?:\\(.*\\))?|check_DynamicBufferLib_pUint208_112(?:\\(.*\\))?|check_DynamicBufferLib_pUint216_113(?:\\(.*\\))?|check_DynamicBufferLib_pUint224_114(?:\\(.*\\))?|check_DynamicBufferLib_pUint232_115(?:\\(.*\\))?|check_DynamicBufferLib_pUint240_116(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_pUint248_117(?:\\(.*\\))?|check_DynamicBufferLib_pUint256_118(?:\\(.*\\))?|check_DynamicBufferLib_pBytes1_119(?:\\(.*\\))?|check_DynamicBufferLib_pBytes2_120(?:\\(.*\\))?|check_DynamicBufferLib_pBytes3_121(?:\\(.*\\))?|check_DynamicBufferLib_pBytes4_122(?:\\(.*\\))?|check_DynamicBufferLib_pBytes5_123(?:\\(.*\\))?|check_DynamicBufferLib_pBytes6_124(?:\\(.*\\))?|check_DynamicBufferLib_pBytes7_125(?:\\(.*\\))?|check_DynamicBufferLib_pBytes8_126(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_pBytes9_127(?:\\(.*\\))?|check_DynamicBufferLib_pBytes10_128(?:\\(.*\\))?|check_DynamicBufferLib_pBytes11_129(?:\\(.*\\))?|check_DynamicBufferLib_pBytes12_130(?:\\(.*\\))?|check_DynamicBufferLib_pBytes13_131(?:\\(.*\\))?|check_DynamicBufferLib_pBytes14_132(?:\\(.*\\))?|check_DynamicBufferLib_pBytes15_133(?:\\(.*\\))?|check_DynamicBufferLib_pBytes16_134(?:\\(.*\\))?|check_DynamicBufferLib_pBytes17_135(?:\\(.*\\))?|check_DynamicBufferLib_pBytes18_136(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_pBytes19_137(?:\\(.*\\))?|check_DynamicBufferLib_pBytes20_138(?:\\(.*\\))?|check_DynamicBufferLib_pBytes21_139(?:\\(.*\\))?|check_DynamicBufferLib_pBytes22_140(?:\\(.*\\))?|check_DynamicBufferLib_pBytes23_141(?:\\(.*\\))?|check_DynamicBufferLib_pBytes24_142(?:\\(.*\\))?|check_DynamicBufferLib_pBytes25_143(?:\\(.*\\))?|check_DynamicBufferLib_pBytes26_144(?:\\(.*\\))?|check_DynamicBufferLib_pBytes27_145(?:\\(.*\\))?|check_DynamicBufferLib_pBytes28_146(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_pBytes29_147(?:\\(.*\\))?|check_DynamicBufferLib_pBytes30_148(?:\\(.*\\))?|check_DynamicBufferLib_pBytes31_149(?:\\(.*\\))?|check_DynamicBufferLib_pBytes32_150(?:\\(.*\\))?|check_DynamicBufferLib_property_reserve_1_0(?:\\(.*\\))?|check_DynamicBufferLib_property_s_3_1(?:\\(.*\\))?|check_DynamicBufferLib_property_p_buffer_bytes_4_2(?:\\(.*\\))?|check_DynamicBufferLib_property_p_buffer_bytes_5_3(?:\\(.*\\))?|check_DynamicBufferLib_property_p_buffer_bytes_6_4(?:\\(.*\\))?|check_DynamicBufferLib_property_p_buffer_bytes_7_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_p_buffer_bytes_8_6(?:\\(.*\\))?|check_DynamicBufferLib_property_p_buffer_bytes_9_7(?:\\(.*\\))?|check_DynamicBufferLib_property_p_buffer_bytes_10_8(?:\\(.*\\))?|check_DynamicBufferLib_property_pBool_buffer_11_9(?:\\(.*\\))?|check_DynamicBufferLib_property_pAddress_buffer_12_10(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint8_buffer_13_11(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint16_buffer_14_12(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint24_buffer_15_13(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint32_buffer_16_14(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint40_buffer_17_15(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_pUint48_buffer_18_16(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint56_buffer_19_17(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint64_buffer_20_18(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint72_buffer_21_19(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint80_buffer_22_20(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint88_buffer_23_21(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint96_buffer_24_22(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint104_buffer_25_23(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint112_buffer_26_24(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint120_buffer_27_25(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_pUint128_buffer_28_26(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint136_buffer_29_27(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint144_buffer_30_28(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint152_buffer_31_29(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint160_buffer_32_30(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint168_buffer_33_31(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint176_buffer_34_32(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint184_buffer_35_33(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint192_buffer_36_34(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint200_buffer_37_35(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_pUint208_buffer_38_36(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint216_buffer_39_37(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint224_buffer_40_38(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint232_buffer_41_39(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint240_buffer_42_40(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint248_buffer_43_41(?:\\(.*\\))?|check_DynamicBufferLib_property_pUint256_buffer_44_42(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes1_buffer_45_43(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes2_buffer_46_44(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes3_buffer_47_45(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_pBytes4_buffer_48_46(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes5_buffer_49_47(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes6_buffer_50_48(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes7_buffer_51_49(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes8_buffer_52_50(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes9_buffer_53_51(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes10_buffer_54_52(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes11_buffer_55_53(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes12_buffer_56_54(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes13_buffer_57_55(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_pBytes14_buffer_58_56(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes15_buffer_59_57(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes16_buffer_60_58(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes17_buffer_61_59(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes18_buffer_62_60(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes19_buffer_63_61(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes20_buffer_64_62(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes21_buffer_65_63(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes22_buffer_66_64(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes23_buffer_67_65(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_pBytes24_buffer_68_66(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes25_buffer_69_67(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes26_buffer_70_68(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes27_buffer_71_69(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes28_buffer_72_70(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes29_buffer_73_71(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes30_buffer_74_72(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes31_buffer_75_73(?:\\(.*\\))?|check_DynamicBufferLib_property_pBytes32_buffer_76_74(?:\\(.*\\))?|check_DynamicBufferLib_property_p_shorthand_bytes_83_81(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_DynamicBufferLib_property_p_shorthand_bytes_84_82(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

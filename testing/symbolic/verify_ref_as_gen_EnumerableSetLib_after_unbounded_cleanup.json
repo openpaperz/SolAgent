@@ -1,0 +1,1378 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 33,
+      "proved_checks": 33,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 33,
+        "proved_checks": 33,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 29,
+        "passed_methods": 29,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 29
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 29,
+          "passed_methods": 29,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 29
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/EnumerableSetLib.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/EnumerableSetLib.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol"
+      ],
+      "test_names": [
+        "test_EnumerableSetLib_property_uint8_add_contains_0",
+        "test_EnumerableSetLib_property_uint8_duplicate_add_1",
+        "test_EnumerableSetLib_property_uint8_remove_2",
+        "test_EnumerableSetLib_property_uint256_add_contains_3",
+        "test_EnumerableSetLib_property_uint256_duplicate_add_4",
+        "test_EnumerableSetLib_property_uint256_remove_5",
+        "test_EnumerableSetLib_property_uint256_values_at_6",
+        "test_EnumerableSetLib_property_address_add_remove_8",
+        "test_EnumerableSetLib_property_address_values_at_9",
+        "test_EnumerableSetLib_property_bytes32_add_remove_10",
+        "test_EnumerableSetLib_property_bytes32_values_at_11",
+        "test_EnumerableSetLib_property_int256_add_remove_12",
+        "test_EnumerableSetLib_property_int256_values_at_13",
+        "test_EnumerableSetLib_property_uint256_lifecycle_14",
+        "test_EnumerableSetLib_property_address_lifecycle_15",
+        "test_EnumerableSetLib_property_bytes32_lifecycle_16",
+        "test_EnumerableSetLib_property_int256_lifecycle_17",
+        "test_EnumerableSetLib_property_address_add_direct_18",
+        "test_EnumerableSetLib_property_bytes32_add_direct_19",
+        "test_EnumerableSetLib_property_int256_add_direct_20",
+        "test_EnumerableSetLib_property_address_contains_direct_21",
+        "test_EnumerableSetLib_property_bytes32_contains_direct_22",
+        "test_EnumerableSetLib_property_int256_contains_direct_23",
+        "test_EnumerableSetLib_property_address_at_direct_24",
+        "test_EnumerableSetLib_property_bytes32_at_direct_25",
+        "test_EnumerableSetLib_property_uint256_at_direct_26",
+        "test_EnumerableSetLib_property_int256_at_direct_27",
+        "test_EnumerableSetLib_property_uint8_at_direct_28",
+        "test_EnumerableSetLib_property_address_length_direct_29",
+        "test_EnumerableSetLib_property_bytes32_length_direct_30",
+        "test_EnumerableSetLib_property_uint256_length_direct_31",
+        "test_EnumerableSetLib_property_int256_length_direct_32",
+        "test_EnumerableSetLib_property_uint8_length_direct_33"
+      ],
+      "check_names": [
+        "check_EnumerableSetLib_property_uint8_add_contains_0",
+        "check_EnumerableSetLib_property_uint8_duplicate_add_1",
+        "check_EnumerableSetLib_property_uint8_remove_2",
+        "check_EnumerableSetLib_property_uint256_add_contains_3",
+        "check_EnumerableSetLib_property_uint256_duplicate_add_4",
+        "check_EnumerableSetLib_property_uint256_remove_5",
+        "check_EnumerableSetLib_property_uint256_values_at_6",
+        "check_EnumerableSetLib_property_address_add_remove_8",
+        "check_EnumerableSetLib_property_address_values_at_9",
+        "check_EnumerableSetLib_property_bytes32_add_remove_10",
+        "check_EnumerableSetLib_property_bytes32_values_at_11",
+        "check_EnumerableSetLib_property_int256_add_remove_12",
+        "check_EnumerableSetLib_property_int256_values_at_13",
+        "check_EnumerableSetLib_property_uint256_lifecycle_14",
+        "check_EnumerableSetLib_property_address_lifecycle_15",
+        "check_EnumerableSetLib_property_bytes32_lifecycle_16",
+        "check_EnumerableSetLib_property_int256_lifecycle_17",
+        "check_EnumerableSetLib_property_address_add_direct_18",
+        "check_EnumerableSetLib_property_bytes32_add_direct_19",
+        "check_EnumerableSetLib_property_int256_add_direct_20",
+        "check_EnumerableSetLib_property_address_contains_direct_21",
+        "check_EnumerableSetLib_property_bytes32_contains_direct_22",
+        "check_EnumerableSetLib_property_int256_contains_direct_23",
+        "check_EnumerableSetLib_property_address_at_direct_24",
+        "check_EnumerableSetLib_property_bytes32_at_direct_25",
+        "check_EnumerableSetLib_property_uint256_at_direct_26",
+        "check_EnumerableSetLib_property_int256_at_direct_27",
+        "check_EnumerableSetLib_property_uint8_at_direct_28",
+        "check_EnumerableSetLib_property_address_length_direct_29",
+        "check_EnumerableSetLib_property_bytes32_length_direct_30",
+        "check_EnumerableSetLib_property_uint256_length_direct_31",
+        "check_EnumerableSetLib_property_int256_length_direct_32",
+        "check_EnumerableSetLib_property_uint8_length_direct_33"
+      ],
+      "methods_count": 33,
+      "manifest_skipped_checks": 31,
+      "skipped_checks": 0,
+      "expected_checks": 33,
+      "expected_tests": 33,
+      "proved_checks": 33,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_EnumerableSetLib_property_uint8_add_contains_0": "PASS",
+        "check_EnumerableSetLib_property_uint8_duplicate_add_1": "PASS",
+        "check_EnumerableSetLib_property_uint8_remove_2": "PASS",
+        "check_EnumerableSetLib_property_uint256_add_contains_3": "PASS",
+        "check_EnumerableSetLib_property_uint256_duplicate_add_4": "PASS",
+        "check_EnumerableSetLib_property_uint256_remove_5": "PASS",
+        "check_EnumerableSetLib_property_uint256_values_at_6": "PASS",
+        "check_EnumerableSetLib_property_address_add_remove_8": "PASS",
+        "check_EnumerableSetLib_property_address_values_at_9": "PASS",
+        "check_EnumerableSetLib_property_bytes32_add_remove_10": "PASS",
+        "check_EnumerableSetLib_property_bytes32_values_at_11": "PASS",
+        "check_EnumerableSetLib_property_int256_add_remove_12": "PASS",
+        "check_EnumerableSetLib_property_int256_values_at_13": "PASS",
+        "check_EnumerableSetLib_property_uint256_lifecycle_14": "PASS",
+        "check_EnumerableSetLib_property_address_lifecycle_15": "PASS",
+        "check_EnumerableSetLib_property_bytes32_lifecycle_16": "PASS",
+        "check_EnumerableSetLib_property_int256_lifecycle_17": "PASS",
+        "check_EnumerableSetLib_property_address_add_direct_18": "PASS",
+        "check_EnumerableSetLib_property_bytes32_add_direct_19": "PASS",
+        "check_EnumerableSetLib_property_int256_add_direct_20": "PASS",
+        "check_EnumerableSetLib_property_address_contains_direct_21": "PASS",
+        "check_EnumerableSetLib_property_bytes32_contains_direct_22": "PASS",
+        "check_EnumerableSetLib_property_int256_contains_direct_23": "PASS",
+        "check_EnumerableSetLib_property_address_at_direct_24": "PASS",
+        "check_EnumerableSetLib_property_bytes32_at_direct_25": "PASS",
+        "check_EnumerableSetLib_property_uint256_at_direct_26": "PASS",
+        "check_EnumerableSetLib_property_int256_at_direct_27": "PASS",
+        "check_EnumerableSetLib_property_uint8_at_direct_28": "PASS",
+        "check_EnumerableSetLib_property_address_length_direct_29": "PASS",
+        "check_EnumerableSetLib_property_bytes32_length_direct_30": "PASS",
+        "check_EnumerableSetLib_property_uint256_length_direct_31": "PASS",
+        "check_EnumerableSetLib_property_int256_length_direct_32": "PASS",
+        "check_EnumerableSetLib_property_uint8_length_direct_33": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": "not been fully explored due to the loop unrolling bound: 2\nhave not been fully explored due to the loop unrolling bound: 2",
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "add",
+          "visibility": "internal",
+          "full_signature": "function add(AddressSet storage set, address value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_address_add_direct_18",
+              "test_name": "test_EnumerableSetLib_property_address_add_direct_18",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "add",
+          "visibility": "internal",
+          "full_signature": "function add(Bytes32Set storage set, bytes32 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_bytes32_add_direct_19",
+              "test_name": "test_EnumerableSetLib_property_bytes32_add_direct_19",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "add",
+          "visibility": "internal",
+          "full_signature": "function add(Int256Set storage set, int256 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_int256_add_direct_20",
+              "test_name": "test_EnumerableSetLib_property_int256_add_direct_20",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "add",
+          "visibility": "internal",
+          "full_signature": "function add(Uint256Set storage set, uint256 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint256_duplicate_add_4",
+              "test_name": "test_EnumerableSetLib_property_uint256_duplicate_add_4",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "add",
+          "visibility": "internal",
+          "full_signature": "function add(Uint8Set storage set, uint8 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint8_duplicate_add_1",
+              "test_name": "test_EnumerableSetLib_property_uint8_duplicate_add_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "at",
+          "visibility": "internal",
+          "full_signature": "function at(AddressSet storage set, uint256 i) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_address_at_direct_24",
+              "test_name": "test_EnumerableSetLib_property_address_at_direct_24",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "at",
+          "visibility": "internal",
+          "full_signature": "function at(Bytes32Set storage set, uint256 i) internal view returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_bytes32_at_direct_25",
+              "test_name": "test_EnumerableSetLib_property_bytes32_at_direct_25",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "at",
+          "visibility": "internal",
+          "full_signature": "function at(Int256Set storage set, uint256 i) internal view returns (int256 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_int256_at_direct_27",
+              "test_name": "test_EnumerableSetLib_property_int256_at_direct_27",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "at",
+          "visibility": "internal",
+          "full_signature": "function at(Uint256Set storage set, uint256 i) internal view returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint256_at_direct_26",
+              "test_name": "test_EnumerableSetLib_property_uint256_at_direct_26",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "at",
+          "visibility": "internal",
+          "full_signature": "function at(Uint8Set storage set, uint256 i) internal view returns (uint8 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint8_at_direct_28",
+              "test_name": "test_EnumerableSetLib_property_uint8_at_direct_28",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "contains",
+          "visibility": "internal",
+          "full_signature": "function contains(AddressSet storage set, address value) internal view returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_address_contains_direct_21",
+              "test_name": "test_EnumerableSetLib_property_address_contains_direct_21",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "contains",
+          "visibility": "internal",
+          "full_signature": "function contains(Bytes32Set storage set, bytes32 value) internal view returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_bytes32_contains_direct_22",
+              "test_name": "test_EnumerableSetLib_property_bytes32_contains_direct_22",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "contains",
+          "visibility": "internal",
+          "full_signature": "function contains(Int256Set storage set, int256 value) internal view returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_int256_contains_direct_23",
+              "test_name": "test_EnumerableSetLib_property_int256_contains_direct_23",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "contains",
+          "visibility": "internal",
+          "full_signature": "function contains(Uint256Set storage set, uint256 value) internal view returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint256_add_contains_3",
+              "test_name": "test_EnumerableSetLib_property_uint256_add_contains_3",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "contains",
+          "visibility": "internal",
+          "full_signature": "function contains(Uint8Set storage set, uint8 value) internal view returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint8_add_contains_0",
+              "test_name": "test_EnumerableSetLib_property_uint8_add_contains_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "length",
+          "visibility": "internal",
+          "full_signature": "function length(AddressSet storage set) internal view returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_address_length_direct_29",
+              "test_name": "test_EnumerableSetLib_property_address_length_direct_29",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "length",
+          "visibility": "internal",
+          "full_signature": "function length(Bytes32Set storage set) internal view returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_bytes32_length_direct_30",
+              "test_name": "test_EnumerableSetLib_property_bytes32_length_direct_30",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "length",
+          "visibility": "internal",
+          "full_signature": "function length(Int256Set storage set) internal view returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_int256_length_direct_32",
+              "test_name": "test_EnumerableSetLib_property_int256_length_direct_32",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "length",
+          "visibility": "internal",
+          "full_signature": "function length(Uint256Set storage set) internal view returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint256_length_direct_31",
+              "test_name": "test_EnumerableSetLib_property_uint256_length_direct_31",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "length",
+          "visibility": "internal",
+          "full_signature": "function length(Uint8Set storage set) internal view returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint8_length_direct_33",
+              "test_name": "test_EnumerableSetLib_property_uint8_length_direct_33",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "remove",
+          "visibility": "internal",
+          "full_signature": "function remove(AddressSet storage set, address value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_address_add_remove_8",
+              "test_name": "test_EnumerableSetLib_property_address_add_remove_8",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "remove",
+          "visibility": "internal",
+          "full_signature": "function remove(Bytes32Set storage set, bytes32 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_bytes32_add_remove_10",
+              "test_name": "test_EnumerableSetLib_property_bytes32_add_remove_10",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "remove",
+          "visibility": "internal",
+          "full_signature": "function remove(Int256Set storage set, int256 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_int256_add_remove_12",
+              "test_name": "test_EnumerableSetLib_property_int256_add_remove_12",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "remove",
+          "visibility": "internal",
+          "full_signature": "function remove(Uint256Set storage set, uint256 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint256_remove_5",
+              "test_name": "test_EnumerableSetLib_property_uint256_remove_5",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "remove",
+          "visibility": "internal",
+          "full_signature": "function remove(Uint8Set storage set, uint8 value) internal returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint8_remove_2",
+              "test_name": "test_EnumerableSetLib_property_uint8_remove_2",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "values",
+          "visibility": "internal",
+          "full_signature": "function values(AddressSet storage set) internal view returns (address[] memory result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_address_values_at_9",
+              "test_name": "test_EnumerableSetLib_property_address_values_at_9",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_EnumerableSetLib_property_address_lifecycle_15",
+              "test_name": "test_EnumerableSetLib_property_address_lifecycle_15",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "values",
+          "visibility": "internal",
+          "full_signature": "function values(Bytes32Set storage set) internal view returns (bytes32[] memory result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_bytes32_values_at_11",
+              "test_name": "test_EnumerableSetLib_property_bytes32_values_at_11",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_EnumerableSetLib_property_bytes32_lifecycle_16",
+              "test_name": "test_EnumerableSetLib_property_bytes32_lifecycle_16",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "values",
+          "visibility": "internal",
+          "full_signature": "function values(Int256Set storage set) internal view returns (int256[] memory result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_int256_values_at_13",
+              "test_name": "test_EnumerableSetLib_property_int256_values_at_13",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_EnumerableSetLib_property_int256_lifecycle_17",
+              "test_name": "test_EnumerableSetLib_property_int256_lifecycle_17",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "values",
+          "visibility": "internal",
+          "full_signature": "function values(Uint256Set storage set) internal view returns (uint256[] memory result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint256_values_at_6",
+              "test_name": "test_EnumerableSetLib_property_uint256_values_at_6",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_EnumerableSetLib_property_uint256_lifecycle_14",
+              "test_name": "test_EnumerableSetLib_property_uint256_lifecycle_14",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 29,
+        "passed_methods": 29,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 29
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_EnumerableSetLib_property_uint8_add_contains_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output",
+        "--storage-layout",
+        "generic"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/33 ---\nCompiling 3 files with Solc 0.8.28\nSolc 0.8.28 finished in 846.97ms\nCompiler run successful with warnings:\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:483:9:\n    |\n483 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:484:9:\n    |\n484 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:497:9:\n    |\n497 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:498:9:\n    |\n498 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:531:9:\n    |\n531 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:532:9:\n    |\n532 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:545:9:\n    |\n545 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:546:9:\n    |\n546 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:559:9:\n    |\n559 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:560:9:\n    |\n560 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:596:9:\n    |\n596 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_remove_15.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:597:9:\n    |\n597 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_remove_15.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:602:9:\n    |\n602 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:603:9:\n    |\n603 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:640:9:\n    |\n640 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_remove_16.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:641:9:\n    |\n641 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_remove_16.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:646:9:\n    |\n646 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:647:9:\n    |\n647 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:685:9:\n    |\n685 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_remove_18.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:686:9:\n    |\n686 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_remove_18.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:692:9:\n    |\n692 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_13.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:693:9:\n    |\n693 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_13.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:851:9:\n    |\n851 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:852:9:\n    |\n852 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:860:9:\n    |\n860 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:861:9:\n    |\n861 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:870:9:\n    |\n870 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:871:9:\n    |\n871 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:879:9:\n    |\n879 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:880:9:\n    |\n880 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:888:9:\n    |\n888 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:889:9:\n    |\n889 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:897:9:\n    |\n897 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:898:9:\n    |\n898 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:907:9:\n    |\n907 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:908:9:\n    |\n908 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:916:9:\n    |\n916 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:917:9:\n    |\n917 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:24:5:\n   |\n24 |     function ref_call_length_0() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:27:5:\n   |\n27 |     function ref_call_length_0_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:30:5:\n   |\n30 |     function ref_call_length_1() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:33:5:\n   |\n33 |     function ref_call_length_1_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:36:5:\n   |\n36 |     function ref_call_length_2() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:39:5:\n   |\n39 |     function ref_call_length_2_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:42:5:\n   |\n42 |     function ref_call_length_3() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:45:5:\n   |\n45 |     function ref_call_length_3_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:48:5:\n   |\n48 |     function ref_call_length_4() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:51:5:\n   |\n51 |     function ref_call_length_4_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:54:5:\n   |\n54 |     function ref_call_contains_5(address value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:57:5:\n   |\n57 |     function ref_call_contains_5_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:60:5:\n   |\n60 |     function ref_call_contains_6(bytes32 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:63:5:\n   |\n63 |     function ref_call_contains_6_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:66:5:\n   |\n66 |     function ref_call_contains_7(uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:69:5:\n   |\n69 |     function ref_call_contains_7_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:72:5:\n   |\n72 |     function ref_call_contains_8(int256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:75:5:\n   |\n75 |     function ref_call_contains_8_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:78:5:\n   |\n78 |     function ref_call_contains_9(uint8 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:81:5:\n   |\n81 |     function ref_call_contains_9_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:87:5:\n   |\n87 |     function ref_call_add_10_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:93:5:\n   |\n93 |     function ref_call_add_11_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:99:5:\n   |\n99 |     function ref_call_add_12_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:105:5:\n    |\n105 |     function ref_call_add_13_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:111:5:\n    |\n111 |     function ref_call_add_14_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:117:5:\n    |\n117 |     function ref_call_remove_15_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:123:5:\n    |\n123 |     function ref_call_remove_16_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:129:5:\n    |\n129 |     function ref_call_remove_17_state() external returns (bytes memory) {\n    |     ^ (Relevant source par\n...[truncated 40354 chars]",
+      "halmos_stderr": "--- halmos chunk 1/33 ---\n\n\n--- halmos chunk 2/33 ---\n\n\n--- halmos chunk 3/33 ---\n\n\n--- halmos chunk 4/33 ---\n\n\n--- halmos chunk 5/33 ---\n\n\n--- halmos chunk 6/33 ---\n\n\n--- halmos chunk 7/33 ---\n\n\n--- halmos chunk 8/33 ---\n\n\n--- halmos chunk 9/33 ---\n\n\n--- halmos chunk 10/33 ---\n\n\n--- halmos chunk 11/33 ---\n\n\n--- halmos chunk 12/33 ---\n\n\n--- halmos chunk 13/33 ---\n\n\n--- halmos chunk 14/33 ---\n\n\n--- halmos chunk 15/33 ---\n\n\n--- halmos chunk 16/33 ---\n\n\n--- halmos chunk 17/33 ---\n\n\n--- halmos chunk 18/33 ---\n\n\n--- halmos chunk 19/33 ---\n\n\n--- halmos chunk 20/33 ---\n\n\n--- halmos chunk 21/33 ---\n\n\n--- halmos chunk 22/33 ---\n\n\n--- halmos chunk 23/33 ---\n\n\n--- halmos chunk 24/33 ---\n\n\n--- halmos chunk 25/33 ---\n\n\n--- halmos chunk 26/33 ---\n\n\n--- halmos chunk 27/33 ---\n\n\n--- halmos chunk 28/33 ---\n\n\n--- halmos chunk 29/33 ---\n\n\n--- halmos chunk 30/33 ---\n\n\n--- halmos chunk 31/33 ---\n\n\n--- halmos chunk 32/33 ---\n\n\n--- halmos chunk 33/33 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 33,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint8_add_contains_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint8_duplicate_add_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint8_remove_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint256_add_contains_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint256_duplicate_add_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint256_remove_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint256_values_at_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_address_add_remove_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_address_values_at_9(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_bytes32_add_remove_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_bytes32_values_at_11(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_int256_add_remove_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_int256_values_at_13(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint256_lifecycle_14(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_address_lifecycle_15(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_bytes32_lifecycle_16(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_int256_lifecycle_17(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_address_add_direct_18(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_bytes32_add_direct_19(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_int256_add_direct_20(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_address_contains_direct_21(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_bytes32_contains_direct_22(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_int256_contains_direct_23(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_address_at_direct_24(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_bytes32_at_direct_25(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint256_at_direct_26(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_int256_at_direct_27(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint8_at_direct_28(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_address_length_direct_29(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_bytes32_length_direct_30(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint256_length_direct_31(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_int256_length_direct_32(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_EnumerableSetLib_property_uint8_length_direct_33(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output",
+          "--storage-layout",
+          "generic"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

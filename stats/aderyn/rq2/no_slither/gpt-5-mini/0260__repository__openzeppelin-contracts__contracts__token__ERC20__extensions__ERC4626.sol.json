@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 18859,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "3e565ae0afd8424f9255143bd1f71653c74cddcc541f6235b382b684a13a553b",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 149,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:46.718076+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (3881): Documented parameter \"address\" not found in the parameter list of the function.\n   --> contracts/token/ERC20/extensions/ERC4626.solagent_gen.sol:136:5:\n    |\n136 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"address\" not found in the parameter list of the function.\n   --> contracts/token/ERC20/extensions/ERC4626.solagent_gen.sol:146:5:\n    |\n146 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (2353): Invalid contract specified in override list: \"IERC20Metadata\".\n  --> contracts/token/ERC20/extensions/ERC4626.solagent_gen.sol:92:45:\n   |\n92 |     function decimals() public virtual view override(IERC20Metadata, ERC20) returns (uint8) {\n   |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNote: This contract: \n  --> contracts/token/ERC20/extensions/IERC20Metadata.sol:11:1:\n   |\n11 | interface IERC20Metadata is IERC20 {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3364): Base constructor arguments given twice.\n   --> test/token/ERC20/extensions/ERC4626.t.sol:141:82:\n    |\n141 |     constructor(address asset_, uint8 offset_) GenERC4626_0(GenIERC20_0(asset_)) GenERC20_0(\"EvalVault\", \"EVLT\") {\n    |                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNote: Second constructor call is here:\n  --> contracts/token/ERC20/extensions/ERC4626.solagent_gen.sol:53:33:\n   |\n53 |     constructor (IERC20 asset_) ERC20(\"ERC4626\", \"ERC4626\") {\n   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (9582): Member \"Down\" not found or not visible after argument-dependent lookup in type(enum Math.Rounding).\n   --> contracts/token/ERC20/extensions/ERC4626.solagent_gen.sol:123:41:\n    |\n123 |         return _convertToShares(assets, Math.Rounding.Down);\n    |                                         ^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/token/ERC20/extensions/ERC4626.t.sol",
+    "expected_tests": 22,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 260,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+  "id": 260,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:13.956093+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "skipped",
+  "table": "process_tracking_ablation",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

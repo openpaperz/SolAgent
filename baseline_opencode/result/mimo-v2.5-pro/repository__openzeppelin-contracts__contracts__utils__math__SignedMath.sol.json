@@ -1,0 +1,573 @@
+{
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+  "methods": 5,
+  "total_files": 81,
+  "status": 1,
+  "model_coding": "mimo-v2.5-pro",
+  "model_summary": null,
+  "agent_type": "opencode",
+  "coding_messages": [
+    {
+      "role": "user",
+      "content": "You are a professional Solidity engineer. Your responsibility is to generate a complete Solidity smart contract file based on the provided query.\n\nRequirements:\n1. The query will contain:\n  * The Solidity version pragma to use.\n  * The full contract or library name.\n  * All function signatures that should be implemented.\n  * Comments/annotations for each function, usually placed above the function signature.\n  * Any specific dependencies or imported contracts (if not explicitly given, you can search the provided repository for references or imports to resolve them).\n\n2. Your task is to generate a complete and compilable Solidity contract file, including:\n  * The pragma statement.\n  * All necessary imports.\n  * The artifact definition (`contract` or `library`) with the given name.\n  * Implementation of all provided function signatures.\n  * Any additional internal/private helper functions needed to complete the implementation.\n  * Proper handling of dependencies and referenced contracts/interfaces. Necessary import statements for external contracts, interfaces, or libraries. You must analyze the function signatures, return types, and usage to decide which imports are required. Do not rely on any import list provided externally.\n\n3. Constraints:\n  * You must generate exactly one Solidity file.\n  * Do not modify the provided function signatures.\n  * Preserve the function visibility, mutability (`pure`, `view`, `payable`), and return types.\n  * Organize the code clearly, with proper indentation and Solidity style.\n  * If multiple functions reference the same library or interface, import or define it only once at the top of the file. You may use the `file_system` tool to explore the given repository folder to find these definitions if they are not in the query. Do not attempt to read the output file itself or any temporary file you are about to create.\n  * Do not generate tests, deployment scripts, or any files other than the single Solidity source file.\n\n4. Output formatting rules:\n  * You must output your code strictly using the following format:\n   ```solidity: filename\n   text\n   ```\n  * The `filename` should exactly match the Solidity artifact name (e.g., `Create2.sol`).\n  * The output should contain **only** the Solidity source code - no explanations, commentary, or other text.\n  * Output must start with the three characters: backtick backtick backtick.\n\n  Example format:\n  ```solidity: Create2.sol\n  // SPDX-License-Identifier: MIT\n  pragma solidity ^0.8.20;\n\n  library Create2 {\n    /// @notice Example function\n    function example() internal pure returns (uint256) {\n      return 1;\n    }\n  }\n  ```\n\n5. Additional instructions:\n  * Present all content concisely and completely.\n  * Maintain the order of functions as in the query.\n  * Never include additional commentary outside the Solidity code block.\n\nNow Begin:\n\n\ngiven repo: /Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\nfile name: SignedMath.sol\n\npragma solidity ^0.8.20;\n\nlibrary SignedMath\n\n/**\n * @notice Implements a branchless ternary operation to return one of two values based on a condition.\n *\n * @param condition The boolean condition to evaluate.\n * @param a The value to return if the condition is true.\n * @param b The value to return if the condition is false.\n * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\n *\n * Details:\n * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\n * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\n * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\n * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\n */\nfunction ternary(bool condition, int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Returns the maximum of two integers `a` and `b`.\n *\n * @param a The first integer to compare.\n * @param b The second integer to compare.\n * @return The larger of the two integers.\n *\n * Steps:\n * 1. Use the `ternary` function to compare `a` and `b`.\n * 2. Return the larger value between `a` and `b`.\n */\nfunction max(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Returns the minimum of two integers.\n *\n * @param a The first integer to compare.\n * @param b The second integer to compare.\n * @return The smaller of the two integers.\n *\n * Steps:\n * 1. Compare `a` and `b` using the ternary operator.\n * 2. Return the smaller value.\n */\nfunction min(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Calculates the average of two signed integers using a formula from \"Hacker's Delight\".\n *\n * @param a The first signed integer.\n * @param b The second signed integer.\n * @return The average of the two integers, rounded towards zero.\n *\n * Steps:\n * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\n * 2. Adjust the result to handle overflow or underflow by adding a correction term:\n *    - The correction term is derived from the sign bit of the intermediate result.\n *    - It ensures the result is accurate even when the sum of a and b overflows.\n */\nfunction average(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\n *\n * @param n The signed integer for which the absolute value is to be computed.\n * @return The absolute value of `n` as an unsigned integer.\n *\n * Steps:\n * 1. Calculate the mask using the formula from \"Bit Twiddling Hacks\" by Sean Eron Anderson.\n *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\n * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\n *    - If `n` is positive, the mask is `0`, so the result is `n`.\n *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\n * 3. Return the result as an unsigned integer.\n *\n * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\n */\nfunction abs(int256 n) internal pure returns (uint256)\n"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"type\":\"step_start\",\"timestamp\":1782219934793,\"sessionID\":\"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\"part\":{\"id\":\"prt_ef4960c3f001Ufc1qLd7F8g6l2\",\"messageID\":\"msg_ef49601f9001x7Gh8qrDpLEx0d\",\"sessionID\":\"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\"type\":\"step-start\"}}\n{\"type\":\"text\",\"timestamp\":1782219955033,\"sessionID\":\"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\"part\":{\"id\":\"prt_ef49616b3001CwBpk77F19rR9G\",\"messageID\":\"msg_ef49601f9001x7Gh8qrDpLEx0d\",\"sessionID\":\"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\"type\":\"text\",\"text\":\"```solidity: SignedMath.sol\\n// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.20;\\n\\nlibrary SignedMath {\\n    /**\\n     * @notice Implements a branchless ternary operation to return one of two values based on a condition.\\n     *\\n     * @param condition The boolean condition to evaluate.\\n     * @param a The value to return if the condition is true.\\n     * @param b The value to return if the condition is false.\\n     * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\\n     *\\n     * Details:\\n     * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\\n     * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\\n     * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\\n     * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\\n     */\\n    function ternary(bool condition, int256 a, int256 b) internal pure returns (int256) {\\n        unchecked {\\n            return b ^ ((a ^ b) * int256(condition));\\n        }\\n    }\\n\\n    /**\\n     * @notice Returns the maximum of two integers `a` and `b`.\\n     *\\n     * @param a The first integer to compare.\\n     * @param b The second integer to compare.\\n     * @return The larger of the two integers.\\n     *\\n     * Steps:\\n     * 1. Use the `ternary` function to compare `a` and `b`.\\n     * 2. Return the larger value between `a` and `b`.\\n     */\\n    function max(int256 a, int256 b) internal pure returns (int256) {\\n        return ternary(a > b, a, b);\\n    }\\n\\n    /**\\n     * @notice Returns the minimum of two integers.\\n     *\\n     * @param a The first integer to compare.\\n     * @param b The second integer to compare.\\n     * @return The smaller of the two integers.\\n     *\\n     * Steps:\\n     * 1. Compare `a` and `b` using the ternary operator.\\n     * 2. Return the smaller value.\\n     */\\n    function min(int256 a, int256 b) internal pure returns (int256) {\\n        return ternary(a < b, a, b);\\n    }\\n\\n    /**\\n     * @notice Calculates the average of two signed integers using a formula from \\\"Hacker's Delight\\\".\\n     *\\n     * @param a The first signed integer.\\n     * @param b The second signed integer.\\n     * @return The average of the two integers, rounded towards zero.\\n     *\\n     * Steps:\\n     * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\\n     * 2. Adjust the result to handle overflow or underflow by adding a correction term:\\n     *    - The correction term is derived from the sign bit of the intermediate result.\\n     *    - It ensures the result is accurate even when the sum of a and b overflows.\\n     */\\n    function average(int256 a, int256 b) internal pure returns (int256) {\\n        unchecked {\\n            int256 mid = (a & b) + (a ^ b) / 2;\\n            int256 sign = mid >> 255;\\n            return mid + (a < 0 && b < 0 ? sign : ~sign) & 1;\\n        }\\n    }\\n\\n    /**\\n     * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\\n     *\\n     * @param n The signed integer for which the absolute value is to be computed.\\n     * @return The absolute value of `n` as an unsigned integer.\\n     *\\n     * Steps:\\n     * 1. Calculate the mask using the formula from \\\"Bit Twiddling Hacks\\\" by Sean Eron Anderson.\\n     *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\\n     * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\\n     *    - If `n` is positive, the mask is `0`, so the result is `n`.\\n     *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\\n     * 3. Return the result as an unsigned integer.\\n     *\\n     * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\\n     */\\n    function abs(int256 n) internal pure returns (uint256) {\\n        unchecked {\\n            int256 mask = n >> 255;\\n            return uint256((n + mask) ^ mask);\\n        }\\n    }\\n}\\n```\",\"time\":{\"start\":1782219937459,\"end\":1782219955028}}}\n",
+      "stderr": "",
+      "events": [
+        {
+          "type": "step_start",
+          "timestamp": 1782219934793,
+          "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+          "part": {
+            "id": "prt_ef4960c3f001Ufc1qLd7F8g6l2",
+            "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d",
+            "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+            "type": "step-start"
+          }
+        },
+        {
+          "type": "text",
+          "timestamp": 1782219955033,
+          "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+          "part": {
+            "id": "prt_ef49616b3001CwBpk77F19rR9G",
+            "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d",
+            "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+            "type": "text",
+            "text": "```solidity: SignedMath.sol\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\nlibrary SignedMath {\n    /**\n     * @notice Implements a branchless ternary operation to return one of two values based on a condition.\n     *\n     * @param condition The boolean condition to evaluate.\n     * @param a The value to return if the condition is true.\n     * @param b The value to return if the condition is false.\n     * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\n     *\n     * Details:\n     * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\n     * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\n     * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\n     * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\n     */\n    function ternary(bool condition, int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            return b ^ ((a ^ b) * int256(condition));\n        }\n    }\n\n    /**\n     * @notice Returns the maximum of two integers `a` and `b`.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The larger of the two integers.\n     *\n     * Steps:\n     * 1. Use the `ternary` function to compare `a` and `b`.\n     * 2. Return the larger value between `a` and `b`.\n     */\n    function max(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a > b, a, b);\n    }\n\n    /**\n     * @notice Returns the minimum of two integers.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The smaller of the two integers.\n     *\n     * Steps:\n     * 1. Compare `a` and `b` using the ternary operator.\n     * 2. Return the smaller value.\n     */\n    function min(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a < b, a, b);\n    }\n\n    /**\n     * @notice Calculates the average of two signed integers using a formula from \"Hacker's Delight\".\n     *\n     * @param a The first signed integer.\n     * @param b The second signed integer.\n     * @return The average of the two integers, rounded towards zero.\n     *\n     * Steps:\n     * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\n     * 2. Adjust the result to handle overflow or underflow by adding a correction term:\n     *    - The correction term is derived from the sign bit of the intermediate result.\n     *    - It ensures the result is accurate even when the sum of a and b overflows.\n     */\n    function average(int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            int256 mid = (a & b) + (a ^ b) / 2;\n            int256 sign = mid >> 255;\n            return mid + (a < 0 && b < 0 ? sign : ~sign) & 1;\n        }\n    }\n\n    /**\n     * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\n     *\n     * @param n The signed integer for which the absolute value is to be computed.\n     * @return The absolute value of `n` as an unsigned integer.\n     *\n     * Steps:\n     * 1. Calculate the mask using the formula from \"Bit Twiddling Hacks\" by Sean Eron Anderson.\n     *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\n     * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\n     *    - If `n` is positive, the mask is `0`, so the result is `n`.\n     *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\n     * 3. Return the result as an unsigned integer.\n     *\n     * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\n     */\n    function abs(int256 n) internal pure returns (uint256) {\n        unchecked {\n            int256 mask = n >> 255;\n            return uint256((n + mask) ^ mask);\n        }\n    }\n}\n```",
+            "time": {
+              "start": 1782219937459,
+              "end": 1782219955028
+            }
+          }
+        }
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "session_id": "ses_10b6a01ffffeen1bQ5zLDcJsA2"
+    },
+    {
+      "role": "tool",
+      "name": "opencode_export",
+      "content": {
+        "session_id": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+        "returncode": 0,
+        "stdout": "{\n  \"info\": {\n    \"id\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n    \"slug\": \"nimble-engine\",\n    \"projectID\": \"7665378f90f5c7bc826c66615edb1c38e4b7eeae\",\n    \"directory\": \"/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\",\n    \"path\": \".opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\",\n    \"title\": \"opencode-baseline-SignedMath.sol\",\n    \"agent\": \"build\",\n    \"model\": {\n      \"id\": \"mimo-v2.5-pro\",\n      \"providerID\": \"xiaomi-token-plan-cn\",\n      \"variant\": \"default\"\n    },\n    \"version\": \"1.15.10\",\n    \"summary\": {\n      \"additions\": 0,\n      \"deletions\": 0,\n      \"files\": 0\n    },\n    \"cost\": 0,\n    \"tokens\": {\n      \"input\": 14772,\n      \"output\": 1134,\n      \"reasoning\": 139,\n      \"cache\": {\n        \"read\": 1024,\n        \"write\": 0\n      }\n    },\n    \"permission\": [\n      {\n        \"permission\": \"question\",\n        \"pattern\": \"*\",\n        \"action\": \"deny\"\n      },\n      {\n        \"permission\": \"plan_enter\",\n        \"pattern\": \"*\",\n        \"action\": \"deny\"\n      },\n      {\n        \"permission\": \"plan_exit\",\n        \"pattern\": \"*\",\n        \"action\": \"deny\"\n      }\n    ],\n    \"time\": {\n      \"created\": 1782219931136,\n      \"updated\": 1782219955081\n    }\n  },\n  \"messages\": [\n    {\n      \"info\": {\n        \"role\": \"user\",\n        \"time\": {\n          \"created\": 1782219931186\n        },\n        \"agent\": \"build\",\n        \"model\": {\n          \"providerID\": \"xiaomi-token-plan-cn\",\n          \"modelID\": \"mimo-v2.5-pro\"\n        },\n        \"summary\": {\n          \"diffs\": []\n        },\n        \"id\": \"msg_ef495fe32001oTeise8lay44Vh\",\n        \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\"\n      },\n      \"parts\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"\\\"You are a professional Solidity engineer. Your responsibility is to generate a complete Solidity smart contract file based on the provided query.\\n\\nRequirements:\\n1. The query will contain:\\n  * The Solidity version pragma to use.\\n  * The full contract or library name.\\n  * All function signatures that should be implemented.\\n  * Comments/annotations for each function, usually placed above the function signature.\\n  * Any specific dependencies or imported contracts (if not explicitly given, you can search the provided repository for references or imports to resolve them).\\n\\n2. Your task is to generate a complete and compilable Solidity contract file, including:\\n  * The pragma statement.\\n  * All necessary imports.\\n  * The artifact definition (`contract` or `library`) with the given name.\\n  * Implementation of all provided function signatures.\\n  * Any additional internal/private helper functions needed to complete the implementation.\\n  * Proper handling of dependencies and referenced contracts/interfaces. Necessary import statements for external contracts, interfaces, or libraries. You must analyze the function signatures, return types, and usage to decide which imports are required. Do not rely on any import list provided externally.\\n\\n3. Constraints:\\n  * You must generate exactly one Solidity file.\\n  * Do not modify the provided function signatures.\\n  * Preserve the function visibility, mutability (`pure`, `view`, `payable`), and return types.\\n  * Organize the code clearly, with proper indentation and Solidity style.\\n  * If multiple functions reference the same library or interface, import or define it only once at the top of the file. You may use the `file_system` tool to explore the given repository folder to find these definitions if they are not in the query. Do not attempt to read the output file itself or any temporary file you are about to create.\\n  * Do not generate tests, deployment scripts, or any files other than the single Solidity source file.\\n\\n4. Output formatting rules:\\n  * You must output your code strictly using the following format:\\n   ```solidity: filename\\n   text\\n   ```\\n  * The `filename` should exactly match the Solidity artifact name (e.g., `Create2.sol`).\\n  * The output should contain **only** the Solidity source code - no explanations, commentary, or other text.\\n  * Output must start with the three characters: backtick backtick backtick.\\n\\n  Example format:\\n  ```solidity: Create2.sol\\n  // SPDX-License-Identifier: MIT\\n  pragma solidity ^0.8.20;\\n\\n  library Create2 {\\n    /// @notice Example function\\n    function example() internal pure returns (uint256) {\\n      return 1;\\n    }\\n  }\\n  ```\\n\\n5. Additional instructions:\\n  * Present all content concisely and completely.\\n  * Maintain the order of functions as in the query.\\n  * Never include additional commentary outside the Solidity code block.\\n\\nNow Begin:\\n\\n\\ngiven repo: /Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\\nfile name: SignedMath.sol\\n\\npragma solidity ^0.8.20;\\n\\nlibrary SignedMath\\n\\n/**\\n * @notice Implements a branchless ternary operation to return one of two values based on a condition.\\n *\\n * @param condition The boolean condition to evaluate.\\n * @param a The value to return if the condition is true.\\n * @param b The value to return if the condition is false.\\n * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\\n *\\n * Details:\\n * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\\n * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\\n * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\\n * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\\n */\\nfunction ternary(bool condition, int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Returns the maximum of two integers `a` and `b`.\\n *\\n * @param a The first integer to compare.\\n * @param b The second integer to compare.\\n * @return The larger of the two integers.\\n *\\n * Steps:\\n * 1. Use the `ternary` function to compare `a` and `b`.\\n * 2. Return the larger value between `a` and `b`.\\n */\\nfunction max(int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Returns the minimum of two integers.\\n *\\n * @param a The first integer to compare.\\n * @param b The second integer to compare.\\n * @return The smaller of the two integers.\\n *\\n * Steps:\\n * 1. Compare `a` and `b` using the ternary operator.\\n * 2. Return the smaller value.\\n */\\nfunction min(int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Calculates the average of two signed integers using a formula from \\\\\\\"Hacker's Delight\\\\\\\".\\n *\\n * @param a The first signed integer.\\n * @param b The second signed integer.\\n * @return The average of the two integers, rounded towards zero.\\n *\\n * Steps:\\n * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\\n * 2. Adjust the result to handle overflow or underflow by adding a correction term:\\n *    - The correction term is derived from the sign bit of the intermediate result.\\n *    - It ensures the result is accurate even when the sum of a and b overflows.\\n */\\nfunction average(int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\\n *\\n * @param n The signed integer for which the absolute value is to be computed.\\n * @return The absolute value of `n` as an unsigned integer.\\n *\\n * Steps:\\n * 1. Calculate the mask using the formula from \\\\\\\"Bit Twiddling Hacks\\\\\\\" by Sean Eron Anderson.\\n *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\\n * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\\n *    - If `n` is positive, the mask is `0`, so the result is `n`.\\n *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\\n * 3. Return the result as an unsigned integer.\\n *\\n * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\\n */\\nfunction abs(int256 n) internal pure returns (uint256)\\n\\\"\",\n          \"id\": \"prt_ef495fe39001s2VNWLozmkacLI\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef495fe32001oTeise8lay44Vh\"\n        }\n      ]\n    },\n    {\n      \"info\": {\n        \"parentID\": \"msg_ef495fe32001oTeise8lay44Vh\",\n        \"role\": \"assistant\",\n        \"mode\": \"build\",\n        \"agent\": \"build\",\n        \"path\": {\n          \"cwd\": \"/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\",\n          \"root\": \"/Users/chenwei/GolandProjects/solagent/agent-smart\"\n        },\n        \"cost\": 0,\n        \"tokens\": {\n          \"total\": 17069,\n          \"input\": 14772,\n          \"output\": 1134,\n          \"reasoning\": 139,\n          \"cache\": {\n            \"write\": 0,\n            \"read\": 1024\n          }\n        },\n        \"modelID\": \"mimo-v2.5-pro\",\n        \"providerID\": \"xiaomi-token-plan-cn\",\n        \"time\": {\n          \"created\": 1782219932153,\n          \"completed\": 1782219955045\n        },\n        \"finish\": \"stop\",\n        \"id\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\",\n        \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\"\n      },\n      \"parts\": [\n        {\n          \"type\": \"step-start\",\n          \"id\": \"prt_ef4960c3f001Ufc1qLd7F8g6l2\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        },\n        {\n          \"type\": \"reasoning\",\n          \"text\": \"The user wants me to generate a complete Solidity file for the `SignedMath` library based on the provided function signatures and comments. Let me create this file with the proper implementations.\\n\\nLooking at the functions:\\n1. `ternary` - branchless ternary operation using XOR and multiplication\\n2. `max` - returns max of two integers using ternary\\n3. `min` - returns min of two integers using ternary\\n4. `average` - calculates average using Hacker's Delight formula\\n5. `abs` - computes absolute value using bit twiddling\\n\\nThese are all pure math functions that don't require any imports. Let me write the complete implementation.\",\n          \"time\": {\n            \"start\": 1782219934794,\n            \"end\": 1782219937455\n          },\n          \"id\": \"prt_ef4960c4a001qr8iYshp1qyPef\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        },\n        {\n          \"type\": \"text\",\n          \"text\": \"```solidity: SignedMath.sol\\n// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.20;\\n\\nlibrary SignedMath {\\n    /**\\n     * @notice Implements a branchless ternary operation to return one of two values based on a condition.\\n     *\\n     * @param condition The boolean condition to evaluate.\\n     * @param a The value to return if the condition is true.\\n     * @param b The value to return if the condition is false.\\n     * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\\n     *\\n     * Details:\\n     * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\\n     * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\\n     * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\\n     * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\\n     */\\n    function ternary(bool condition, int256 a, int256 b) internal pure returns (int256) {\\n        unchecked {\\n            return b ^ ((a ^ b) * int256(condition));\\n        }\\n    }\\n\\n    /**\\n     * @notice Returns the maximum of two integers `a` and `b`.\\n     *\\n     * @param a The first integer to compare.\\n     * @param b The second integer to compare.\\n     * @return The larger of the two integers.\\n     *\\n     * Steps:\\n     * 1. Use the `ternary` function to compare `a` and `b`.\\n     * 2. Return the larger value between `a` and `b`.\\n     */\\n    function max(int256 a, int256 b) internal pure returns (int256) {\\n        return ternary(a > b, a, b);\\n    }\\n\\n    /**\\n     * @notice Returns the minimum of two integers.\\n     *\\n     * @param a The first integer to compare.\\n     * @param b The second integer to compare.\\n     * @return The smaller of the two integers.\\n     *\\n     * Steps:\\n     * 1. Compare `a` and `b` using the ternary operator.\\n     * 2. Return the smaller value.\\n     */\\n    function min(int256 a, int256 b) internal pure returns (int256) {\\n        return ternary(a < b, a, b);\\n    }\\n\\n    /**\\n     * @notice Calculates the average of two signed integers using a formula from \\\"Hacker's Delight\\\".\\n     *\\n     * @param a The first signed integer.\\n     * @param b The second signed integer.\\n     * @return The average of the two integers, rounded towards zero.\\n     *\\n     * Steps:\\n     * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\\n     * 2. Adjust the result to handle overflow or underflow by adding a correction term:\\n     *    - The correction term is derived from the sign bit of the intermediate result.\\n     *    - It ensures the result is accurate even when the sum of a and b overflows.\\n     */\\n    function average(int256 a, int256 b) internal pure returns (int256) {\\n        unchecked {\\n            int256 mid = (a & b) + (a ^ b) / 2;\\n            int256 sign = mid >> 255;\\n            return mid + (a < 0 && b < 0 ? sign : ~sign) & 1;\\n        }\\n    }\\n\\n    /**\\n     * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\\n     *\\n     * @param n The signed integer for which the absolute value is to be computed.\\n     * @return The absolute value of `n` as an unsigned integer.\\n     *\\n     * Steps:\\n     * 1. Calculate the mask using the formula from \\\"Bit Twiddling Hacks\\\" by Sean Eron Anderson.\\n     *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\\n     * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\\n     *    - If `n` is positive, the mask is `0`, so the result is `n`.\\n     *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\\n     * 3. Return the result as an unsigned integer.\\n     *\\n     * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\\n     */\\n    function abs(int256 n) internal pure returns (uint256) {\\n        unchecked {\\n            int256 mask = n >> 255;\\n            return uint256((n + mask) ^ mask);\\n        }\\n    }\\n}\\n```\",\n          \"time\": {\n            \"start\": 1782219937459,\n            \"end\": 1782219955028\n          },\n          \"id\": \"prt_ef49616b3001CwBpk77F19rR9G\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        },\n        {\n          \"reason\": \"stop\",\n          \"type\": \"step-finish\",\n          \"tokens\": {\n            \"total\": 17069,\n            \"input\": 14772,\n            \"output\": 1134,\n            \"reasoning\": 139,\n            \"cache\": {\n              \"write\": 0,\n              \"read\": 1024\n            }\n          },\n          \"cost\": 0,\n          \"id\": \"prt_ef4965b5b001V6qPOsbDAej4Hm\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        }\n      ]\n    }\n  ]\n}\n",
+        "stderr": "Exporting session: ses_10b6a01ffffeen1bQ5zLDcJsA2\n",
+        "json": {
+          "info": {
+            "id": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+            "slug": "nimble-engine",
+            "projectID": "7665378f90f5c7bc826c66615edb1c38e4b7eeae",
+            "directory": "/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+            "path": ".opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+            "title": "opencode-baseline-SignedMath.sol",
+            "agent": "build",
+            "model": {
+              "id": "mimo-v2.5-pro",
+              "providerID": "xiaomi-token-plan-cn",
+              "variant": "default"
+            },
+            "version": "1.15.10",
+            "summary": {
+              "additions": 0,
+              "deletions": 0,
+              "files": 0
+            },
+            "cost": 0,
+            "tokens": {
+              "input": 14772,
+              "output": 1134,
+              "reasoning": 139,
+              "cache": {
+                "read": 1024,
+                "write": 0
+              }
+            },
+            "permission": [
+              {
+                "permission": "question",
+                "pattern": "*",
+                "action": "deny"
+              },
+              {
+                "permission": "plan_enter",
+                "pattern": "*",
+                "action": "deny"
+              },
+              {
+                "permission": "plan_exit",
+                "pattern": "*",
+                "action": "deny"
+              }
+            ],
+            "time": {
+              "created": 1782219931136,
+              "updated": 1782219955081
+            }
+          },
+          "messages": [
+            {
+              "info": {
+                "role": "user",
+                "time": {
+                  "created": 1782219931186
+                },
+                "agent": "build",
+                "model": {
+                  "providerID": "xiaomi-token-plan-cn",
+                  "modelID": "mimo-v2.5-pro"
+                },
+                "summary": {
+                  "diffs": []
+                },
+                "id": "msg_ef495fe32001oTeise8lay44Vh",
+                "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2"
+              },
+              "parts": [
+                {
+                  "type": "text",
+                  "text": "\"You are a professional Solidity engineer. Your responsibility is to generate a complete Solidity smart contract file based on the provided query.\n\nRequirements:\n1. The query will contain:\n  * The Solidity version pragma to use.\n  * The full contract or library name.\n  * All function signatures that should be implemented.\n  * Comments/annotations for each function, usually placed above the function signature.\n  * Any specific dependencies or imported contracts (if not explicitly given, you can search the provided repository for references or imports to resolve them).\n\n2. Your task is to generate a complete and compilable Solidity contract file, including:\n  * The pragma statement.\n  * All necessary imports.\n  * The artifact definition (`contract` or `library`) with the given name.\n  * Implementation of all provided function signatures.\n  * Any additional internal/private helper functions needed to complete the implementation.\n  * Proper handling of dependencies and referenced contracts/interfaces. Necessary import statements for external contracts, interfaces, or libraries. You must analyze the function signatures, return types, and usage to decide which imports are required. Do not rely on any import list provided externally.\n\n3. Constraints:\n  * You must generate exactly one Solidity file.\n  * Do not modify the provided function signatures.\n  * Preserve the function visibility, mutability (`pure`, `view`, `payable`), and return types.\n  * Organize the code clearly, with proper indentation and Solidity style.\n  * If multiple functions reference the same library or interface, import or define it only once at the top of the file. You may use the `file_system` tool to explore the given repository folder to find these definitions if they are not in the query. Do not attempt to read the output file itself or any temporary file you are about to create.\n  * Do not generate tests, deployment scripts, or any files other than the single Solidity source file.\n\n4. Output formatting rules:\n  * You must output your code strictly using the following format:\n   ```solidity: filename\n   text\n   ```\n  * The `filename` should exactly match the Solidity artifact name (e.g., `Create2.sol`).\n  * The output should contain **only** the Solidity source code - no explanations, commentary, or other text.\n  * Output must start with the three characters: backtick backtick backtick.\n\n  Example format:\n  ```solidity: Create2.sol\n  // SPDX-License-Identifier: MIT\n  pragma solidity ^0.8.20;\n\n  library Create2 {\n    /// @notice Example function\n    function example() internal pure returns (uint256) {\n      return 1;\n    }\n  }\n  ```\n\n5. Additional instructions:\n  * Present all content concisely and completely.\n  * Maintain the order of functions as in the query.\n  * Never include additional commentary outside the Solidity code block.\n\nNow Begin:\n\n\ngiven repo: /Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\nfile name: SignedMath.sol\n\npragma solidity ^0.8.20;\n\nlibrary SignedMath\n\n/**\n * @notice Implements a branchless ternary operation to return one of two values based on a condition.\n *\n * @param condition The boolean condition to evaluate.\n * @param a The value to return if the condition is true.\n * @param b The value to return if the condition is false.\n * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\n *\n * Details:\n * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\n * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\n * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\n * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\n */\nfunction ternary(bool condition, int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Returns the maximum of two integers `a` and `b`.\n *\n * @param a The first integer to compare.\n * @param b The second integer to compare.\n * @return The larger of the two integers.\n *\n * Steps:\n * 1. Use the `ternary` function to compare `a` and `b`.\n * 2. Return the larger value between `a` and `b`.\n */\nfunction max(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Returns the minimum of two integers.\n *\n * @param a The first integer to compare.\n * @param b The second integer to compare.\n * @return The smaller of the two integers.\n *\n * Steps:\n * 1. Compare `a` and `b` using the ternary operator.\n * 2. Return the smaller value.\n */\nfunction min(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Calculates the average of two signed integers using a formula from \\\"Hacker's Delight\\\".\n *\n * @param a The first signed integer.\n * @param b The second signed integer.\n * @return The average of the two integers, rounded towards zero.\n *\n * Steps:\n * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\n * 2. Adjust the result to handle overflow or underflow by adding a correction term:\n *    - The correction term is derived from the sign bit of the intermediate result.\n *    - It ensures the result is accurate even when the sum of a and b overflows.\n */\nfunction average(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\n *\n * @param n The signed integer for which the absolute value is to be computed.\n * @return The absolute value of `n` as an unsigned integer.\n *\n * Steps:\n * 1. Calculate the mask using the formula from \\\"Bit Twiddling Hacks\\\" by Sean Eron Anderson.\n *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\n * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\n *    - If `n` is positive, the mask is `0`, so the result is `n`.\n *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\n * 3. Return the result as an unsigned integer.\n *\n * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\n */\nfunction abs(int256 n) internal pure returns (uint256)\n\"",
+                  "id": "prt_ef495fe39001s2VNWLozmkacLI",
+                  "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+                  "messageID": "msg_ef495fe32001oTeise8lay44Vh"
+                }
+              ]
+            },
+            {
+              "info": {
+                "parentID": "msg_ef495fe32001oTeise8lay44Vh",
+                "role": "assistant",
+                "mode": "build",
+                "agent": "build",
+                "path": {
+                  "cwd": "/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+                  "root": "/Users/chenwei/GolandProjects/solagent/agent-smart"
+                },
+                "cost": 0,
+                "tokens": {
+                  "total": 17069,
+                  "input": 14772,
+                  "output": 1134,
+                  "reasoning": 139,
+                  "cache": {
+                    "write": 0,
+                    "read": 1024
+                  }
+                },
+                "modelID": "mimo-v2.5-pro",
+                "providerID": "xiaomi-token-plan-cn",
+                "time": {
+                  "created": 1782219932153,
+                  "completed": 1782219955045
+                },
+                "finish": "stop",
+                "id": "msg_ef49601f9001x7Gh8qrDpLEx0d",
+                "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2"
+              },
+              "parts": [
+                {
+                  "type": "step-start",
+                  "id": "prt_ef4960c3f001Ufc1qLd7F8g6l2",
+                  "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+                  "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+                },
+                {
+                  "type": "reasoning",
+                  "text": "The user wants me to generate a complete Solidity file for the `SignedMath` library based on the provided function signatures and comments. Let me create this file with the proper implementations.\n\nLooking at the functions:\n1. `ternary` - branchless ternary operation using XOR and multiplication\n2. `max` - returns max of two integers using ternary\n3. `min` - returns min of two integers using ternary\n4. `average` - calculates average using Hacker's Delight formula\n5. `abs` - computes absolute value using bit twiddling\n\nThese are all pure math functions that don't require any imports. Let me write the complete implementation.",
+                  "time": {
+                    "start": 1782219934794,
+                    "end": 1782219937455
+                  },
+                  "id": "prt_ef4960c4a001qr8iYshp1qyPef",
+                  "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+                  "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+                },
+                {
+                  "type": "text",
+                  "text": "```solidity: SignedMath.sol\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\nlibrary SignedMath {\n    /**\n     * @notice Implements a branchless ternary operation to return one of two values based on a condition.\n     *\n     * @param condition The boolean condition to evaluate.\n     * @param a The value to return if the condition is true.\n     * @param b The value to return if the condition is false.\n     * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\n     *\n     * Details:\n     * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\n     * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\n     * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\n     * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\n     */\n    function ternary(bool condition, int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            return b ^ ((a ^ b) * int256(condition));\n        }\n    }\n\n    /**\n     * @notice Returns the maximum of two integers `a` and `b`.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The larger of the two integers.\n     *\n     * Steps:\n     * 1. Use the `ternary` function to compare `a` and `b`.\n     * 2. Return the larger value between `a` and `b`.\n     */\n    function max(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a > b, a, b);\n    }\n\n    /**\n     * @notice Returns the minimum of two integers.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The smaller of the two integers.\n     *\n     * Steps:\n     * 1. Compare `a` and `b` using the ternary operator.\n     * 2. Return the smaller value.\n     */\n    function min(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a < b, a, b);\n    }\n\n    /**\n     * @notice Calculates the average of two signed integers using a formula from \"Hacker's Delight\".\n     *\n     * @param a The first signed integer.\n     * @param b The second signed integer.\n     * @return The average of the two integers, rounded towards zero.\n     *\n     * Steps:\n     * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\n     * 2. Adjust the result to handle overflow or underflow by adding a correction term:\n     *    - The correction term is derived from the sign bit of the intermediate result.\n     *    - It ensures the result is accurate even when the sum of a and b overflows.\n     */\n    function average(int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            int256 mid = (a & b) + (a ^ b) / 2;\n            int256 sign = mid >> 255;\n            return mid + (a < 0 && b < 0 ? sign : ~sign) & 1;\n        }\n    }\n\n    /**\n     * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\n     *\n     * @param n The signed integer for which the absolute value is to be computed.\n     * @return The absolute value of `n` as an unsigned integer.\n     *\n     * Steps:\n     * 1. Calculate the mask using the formula from \"Bit Twiddling Hacks\" by Sean Eron Anderson.\n     *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\n     * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\n     *    - If `n` is positive, the mask is `0`, so the result is `n`.\n     *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\n     * 3. Return the result as an unsigned integer.\n     *\n     * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\n     */\n    function abs(int256 n) internal pure returns (uint256) {\n        unchecked {\n            int256 mask = n >> 255;\n            return uint256((n + mask) ^ mask);\n        }\n    }\n}\n```",
+                  "time": {
+                    "start": 1782219937459,
+                    "end": 1782219955028
+                  },
+                  "id": "prt_ef49616b3001CwBpk77F19rR9G",
+                  "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+                  "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+                },
+                {
+                  "reason": "stop",
+                  "type": "step-finish",
+                  "tokens": {
+                    "total": 17069,
+                    "input": 14772,
+                    "output": 1134,
+                    "reasoning": 139,
+                    "cache": {
+                      "write": 0,
+                      "read": 1024
+                    }
+                  },
+                  "cost": 0,
+                  "id": "prt_ef4965b5b001V6qPOsbDAej4Hm",
+                  "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+                  "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "```solidity\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\nlibrary SignedMath {\n    /**\n     * @notice Implements a branchless ternary operation to return one of two values based on a condition.\n     *\n     * @param condition The boolean condition to evaluate.\n     * @param a The value to return if the condition is true.\n     * @param b The value to return if the condition is false.\n     * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\n     *\n     * Details:\n     * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\n     * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\n     * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\n     * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\n     */\n    function ternary(bool condition, int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            return b ^ ((a ^ b) * int256(condition));\n        }\n    }\n\n    /**\n     * @notice Returns the maximum of two integers `a` and `b`.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The larger of the two integers.\n     *\n     * Steps:\n     * 1. Use the `ternary` function to compare `a` and `b`.\n     * 2. Return the larger value between `a` and `b`.\n     */\n    function max(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a > b, a, b);\n    }\n\n    /**\n     * @notice Returns the minimum of two integers.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The smaller of the two integers.\n     *\n     * Steps:\n     * 1. Compare `a` and `b` using the ternary operator.\n     * 2. Return the smaller value.\n     */\n    function min(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a < b, a, b);\n    }\n\n    /**\n     * @notice Calculates the average of two signed integers using a formula from \"Hacker's Delight\".\n     *\n     * @param a The first signed integer.\n     * @param b The second signed integer.\n     * @return The average of the two integers, rounded towards zero.\n     *\n     * Steps:\n     * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\n     * 2. Adjust the result to handle overflow or underflow by adding a correction term:\n     *    - The correction term is derived from the sign bit of the intermediate result.\n     *    - It ensures the result is accurate even when the sum of a and b overflows.\n     */\n    function average(int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            int256 mid = (a & b) + (a ^ b) / 2;\n            int256 sign = mid >> 255;\n            return mid + (a < 0 && b < 0 ? sign : ~sign) & 1;\n        }\n    }\n\n    /**\n     * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\n     *\n     * @param n The signed integer for which the absolute value is to be computed.\n     * @return The absolute value of `n` as an unsigned integer.\n     *\n     * Steps:\n     * 1. Calculate the mask using the formula from \"Bit Twiddling Hacks\" by Sean Eron Anderson.\n     *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\n     * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\n     *    - If `n` is positive, the mask is `0`, so the result is `n`.\n     *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\n     * 3. Return the result as an unsigned integer.\n     *\n     * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\n     */\n    function abs(int256 n) internal pure returns (uint256) {\n        unchecked {\n            int256 mask = n >> 255;\n            return uint256((n + mask) ^ mask);\n        }\n    }\n}\n```",
+      "generated_file": "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+      "generated_source": "isolated:/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts/contracts/utils/math/SignedMath.sol"
+    }
+  ],
+  "test_pass": 0,
+  "test_fail": 0,
+  "test_total": 0,
+  "gas_fee_json": {},
+  "slither_raw": null,
+  "vuln_count": -1,
+  "prompt_tokens": 15796,
+  "completion_tokens": 1273,
+  "opencode_input_tokens": 14772,
+  "opencode_output_tokens": 1134,
+  "opencode_reasoning_tokens": 139,
+  "opencode_cache_read_tokens": 1024,
+  "opencode_cache_write_tokens": 0,
+  "opencode_total_tokens": 17069,
+  "summary_prompt_tokens": 0,
+  "summary_completion_tokens": 0,
+  "total_cost": 0.0,
+  "start_time": "2026-06-23T21:05:28.962548",
+  "end_time": "2026-06-23T21:06:03.141276",
+  "duration": 34.178728,
+  "create_time": "2026-06-23T21:05:28.962755",
+  "update_time": "2026-06-23T21:06:03.141276",
+  "artifact_schema": "opencode_baseline_artifact_v1",
+  "index": 8,
+  "orig_sol": "/Users/chenwei/GolandProjects/solagent/repository/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+  "cur_sol": "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+  "cur_t_sol": "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/test/utils/math/SignedMath.t.sol",
+  "project_root": "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+  "opencode_project_root": "/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+  "opencode_project_isolated": true,
+  "opencode_copied_node_modules": true,
+  "opencode_restricted_read_dirs": [
+    "node_modules"
+  ],
+  "opencode_restricted_read_file_suffixes": [
+    ".t.sol"
+  ],
+  "target_name": "SignedMath.sol",
+  "opencode_model": "xiaomi-token-plan-cn/mimo-v2.5-pro",
+  "opencode_network_guard": {
+    "opencode_config_content": {
+      "permission": {
+        "webfetch": "deny",
+        "websearch": "deny",
+        "codesearch": "deny",
+        "repo_clone": "deny",
+        "task": "deny",
+        "read": {
+          "*node_modules*": "deny",
+          "**/node_modules/**": "deny",
+          "*.t.sol": "deny",
+          "**/*.t.sol": "deny",
+          "**/*.t.sol:*": "deny"
+        },
+        "glob": {
+          "*node_modules*": "deny",
+          "**/node_modules/**": "deny",
+          "*.t.sol": "deny",
+          "**/*.t.sol": "deny",
+          "**/*.t.sol:*": "deny"
+        },
+        "bash": {
+          "*curl*": "deny",
+          "*wget*": "deny",
+          "*raw.githubusercontent.com*": "deny",
+          "*github.com*": "deny",
+          "*git *": "deny",
+          "*git clone*": "deny",
+          "*git fetch*": "deny",
+          "*git pull*": "deny",
+          "*git push*": "deny",
+          "*git submodule*": "deny",
+          "*git ls-remote*": "deny",
+          "*gh *": "deny",
+          "*npx*": "deny",
+          "*bunx*": "deny",
+          "*npm install*": "deny",
+          "*npm i *": "deny",
+          "*npm add*": "deny",
+          "*npm exec*": "deny",
+          "*npm update*": "deny",
+          "*npm upgrade*": "deny",
+          "*pnpm install*": "deny",
+          "*pnpm add*": "deny",
+          "*pnpm dlx*": "deny",
+          "*yarn install*": "deny",
+          "*yarn add*": "deny",
+          "*bun install*": "deny",
+          "*bun add*": "deny",
+          "*pip install*": "deny",
+          "*python* -m pip*": "deny",
+          "*uv pip*": "deny",
+          "*uvx*": "deny",
+          "*go get*": "deny",
+          "*go install*": "deny",
+          "*cargo install*": "deny",
+          "*forge install*": "deny"
+        }
+      }
+    },
+    "path_wrappers": {
+      "curl": "/usr/bin/curl",
+      "wget": "/opt/homebrew/bin/wget",
+      "gh": null,
+      "npx": "/opt/homebrew/bin/npx",
+      "npm": "/opt/homebrew/bin/npm",
+      "pnpm": "/opt/homebrew/bin/pnpm",
+      "yarn": null,
+      "bun": "/Users/chenwei/.bun/bin/bun",
+      "bunx": "/Users/chenwei/.bun/bin/bunx",
+      "git": "/usr/bin/git",
+      "pip": "/opt/homebrew/Caskroom/miniforge/base/envs/agent/bin/pip",
+      "pip3": "/opt/homebrew/Caskroom/miniforge/base/envs/agent/bin/pip3",
+      "python": "/opt/homebrew/Caskroom/miniforge/base/envs/agent/bin/python",
+      "python3": "/opt/homebrew/Caskroom/miniforge/base/envs/agent/bin/python3",
+      "uv": "/opt/homebrew/bin/uv",
+      "uvx": "/opt/homebrew/bin/uvx",
+      "go": "/opt/homebrew/bin/go",
+      "cargo": "/Users/chenwei/.cargo/bin/cargo",
+      "forge": "/Users/chenwei/.foundry/bin/forge",
+      "find": "/usr/bin/find",
+      "rg": "/opt/homebrew/bin/rg",
+      "grep": "/usr/bin/grep",
+      "cat": "/bin/cat",
+      "ls": "/bin/ls",
+      "sed": "/usr/bin/sed",
+      "awk": "/usr/bin/awk",
+      "head": "/usr/bin/head",
+      "tail": "/usr/bin/tail",
+      "less": "/usr/bin/less",
+      "more": "/usr/bin/more"
+    },
+    "env": {
+      "OPENCODE_DISABLE_MODELS_FETCH": "1",
+      "OPENCODE_DISABLE_LSP_DOWNLOAD": "1",
+      "OPENCODE_ALLOWED_ROOT": "/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+      "OPENCODE_FORBIDDEN_ROOTS": [
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository"
+      ],
+      "OPENCODE_RESTRICTED_READ_DIRS": [
+        "node_modules"
+      ],
+      "OPENCODE_RESTRICTED_READ_FILE_SUFFIXES": [
+        ".t.sol"
+      ]
+    }
+  },
+  "artifact_path": "/Users/chenwei/GolandProjects/solagent/agent-smart/baseline_opencode/result/mimo-v2.5-pro/repository__openzeppelin-contracts__contracts__utils__math__SignedMath.sol.json",
+  "generation_error": null,
+  "opencode_session_id": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+  "opencode_export": {
+    "session_id": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+    "returncode": 0,
+    "stdout": "{\n  \"info\": {\n    \"id\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n    \"slug\": \"nimble-engine\",\n    \"projectID\": \"7665378f90f5c7bc826c66615edb1c38e4b7eeae\",\n    \"directory\": \"/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\",\n    \"path\": \".opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\",\n    \"title\": \"opencode-baseline-SignedMath.sol\",\n    \"agent\": \"build\",\n    \"model\": {\n      \"id\": \"mimo-v2.5-pro\",\n      \"providerID\": \"xiaomi-token-plan-cn\",\n      \"variant\": \"default\"\n    },\n    \"version\": \"1.15.10\",\n    \"summary\": {\n      \"additions\": 0,\n      \"deletions\": 0,\n      \"files\": 0\n    },\n    \"cost\": 0,\n    \"tokens\": {\n      \"input\": 14772,\n      \"output\": 1134,\n      \"reasoning\": 139,\n      \"cache\": {\n        \"read\": 1024,\n        \"write\": 0\n      }\n    },\n    \"permission\": [\n      {\n        \"permission\": \"question\",\n        \"pattern\": \"*\",\n        \"action\": \"deny\"\n      },\n      {\n        \"permission\": \"plan_enter\",\n        \"pattern\": \"*\",\n        \"action\": \"deny\"\n      },\n      {\n        \"permission\": \"plan_exit\",\n        \"pattern\": \"*\",\n        \"action\": \"deny\"\n      }\n    ],\n    \"time\": {\n      \"created\": 1782219931136,\n      \"updated\": 1782219955081\n    }\n  },\n  \"messages\": [\n    {\n      \"info\": {\n        \"role\": \"user\",\n        \"time\": {\n          \"created\": 1782219931186\n        },\n        \"agent\": \"build\",\n        \"model\": {\n          \"providerID\": \"xiaomi-token-plan-cn\",\n          \"modelID\": \"mimo-v2.5-pro\"\n        },\n        \"summary\": {\n          \"diffs\": []\n        },\n        \"id\": \"msg_ef495fe32001oTeise8lay44Vh\",\n        \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\"\n      },\n      \"parts\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"\\\"You are a professional Solidity engineer. Your responsibility is to generate a complete Solidity smart contract file based on the provided query.\\n\\nRequirements:\\n1. The query will contain:\\n  * The Solidity version pragma to use.\\n  * The full contract or library name.\\n  * All function signatures that should be implemented.\\n  * Comments/annotations for each function, usually placed above the function signature.\\n  * Any specific dependencies or imported contracts (if not explicitly given, you can search the provided repository for references or imports to resolve them).\\n\\n2. Your task is to generate a complete and compilable Solidity contract file, including:\\n  * The pragma statement.\\n  * All necessary imports.\\n  * The artifact definition (`contract` or `library`) with the given name.\\n  * Implementation of all provided function signatures.\\n  * Any additional internal/private helper functions needed to complete the implementation.\\n  * Proper handling of dependencies and referenced contracts/interfaces. Necessary import statements for external contracts, interfaces, or libraries. You must analyze the function signatures, return types, and usage to decide which imports are required. Do not rely on any import list provided externally.\\n\\n3. Constraints:\\n  * You must generate exactly one Solidity file.\\n  * Do not modify the provided function signatures.\\n  * Preserve the function visibility, mutability (`pure`, `view`, `payable`), and return types.\\n  * Organize the code clearly, with proper indentation and Solidity style.\\n  * If multiple functions reference the same library or interface, import or define it only once at the top of the file. You may use the `file_system` tool to explore the given repository folder to find these definitions if they are not in the query. Do not attempt to read the output file itself or any temporary file you are about to create.\\n  * Do not generate tests, deployment scripts, or any files other than the single Solidity source file.\\n\\n4. Output formatting rules:\\n  * You must output your code strictly using the following format:\\n   ```solidity: filename\\n   text\\n   ```\\n  * The `filename` should exactly match the Solidity artifact name (e.g., `Create2.sol`).\\n  * The output should contain **only** the Solidity source code - no explanations, commentary, or other text.\\n  * Output must start with the three characters: backtick backtick backtick.\\n\\n  Example format:\\n  ```solidity: Create2.sol\\n  // SPDX-License-Identifier: MIT\\n  pragma solidity ^0.8.20;\\n\\n  library Create2 {\\n    /// @notice Example function\\n    function example() internal pure returns (uint256) {\\n      return 1;\\n    }\\n  }\\n  ```\\n\\n5. Additional instructions:\\n  * Present all content concisely and completely.\\n  * Maintain the order of functions as in the query.\\n  * Never include additional commentary outside the Solidity code block.\\n\\nNow Begin:\\n\\n\\ngiven repo: /Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\\nfile name: SignedMath.sol\\n\\npragma solidity ^0.8.20;\\n\\nlibrary SignedMath\\n\\n/**\\n * @notice Implements a branchless ternary operation to return one of two values based on a condition.\\n *\\n * @param condition The boolean condition to evaluate.\\n * @param a The value to return if the condition is true.\\n * @param b The value to return if the condition is false.\\n * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\\n *\\n * Details:\\n * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\\n * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\\n * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\\n * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\\n */\\nfunction ternary(bool condition, int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Returns the maximum of two integers `a` and `b`.\\n *\\n * @param a The first integer to compare.\\n * @param b The second integer to compare.\\n * @return The larger of the two integers.\\n *\\n * Steps:\\n * 1. Use the `ternary` function to compare `a` and `b`.\\n * 2. Return the larger value between `a` and `b`.\\n */\\nfunction max(int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Returns the minimum of two integers.\\n *\\n * @param a The first integer to compare.\\n * @param b The second integer to compare.\\n * @return The smaller of the two integers.\\n *\\n * Steps:\\n * 1. Compare `a` and `b` using the ternary operator.\\n * 2. Return the smaller value.\\n */\\nfunction min(int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Calculates the average of two signed integers using a formula from \\\\\\\"Hacker's Delight\\\\\\\".\\n *\\n * @param a The first signed integer.\\n * @param b The second signed integer.\\n * @return The average of the two integers, rounded towards zero.\\n *\\n * Steps:\\n * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\\n * 2. Adjust the result to handle overflow or underflow by adding a correction term:\\n *    - The correction term is derived from the sign bit of the intermediate result.\\n *    - It ensures the result is accurate even when the sum of a and b overflows.\\n */\\nfunction average(int256 a, int256 b) internal pure returns (int256)\\n\\n/**\\n * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\\n *\\n * @param n The signed integer for which the absolute value is to be computed.\\n * @return The absolute value of `n` as an unsigned integer.\\n *\\n * Steps:\\n * 1. Calculate the mask using the formula from \\\\\\\"Bit Twiddling Hacks\\\\\\\" by Sean Eron Anderson.\\n *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\\n * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\\n *    - If `n` is positive, the mask is `0`, so the result is `n`.\\n *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\\n * 3. Return the result as an unsigned integer.\\n *\\n * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\\n */\\nfunction abs(int256 n) internal pure returns (uint256)\\n\\\"\",\n          \"id\": \"prt_ef495fe39001s2VNWLozmkacLI\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef495fe32001oTeise8lay44Vh\"\n        }\n      ]\n    },\n    {\n      \"info\": {\n        \"parentID\": \"msg_ef495fe32001oTeise8lay44Vh\",\n        \"role\": \"assistant\",\n        \"mode\": \"build\",\n        \"agent\": \"build\",\n        \"path\": {\n          \"cwd\": \"/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\",\n          \"root\": \"/Users/chenwei/GolandProjects/solagent/agent-smart\"\n        },\n        \"cost\": 0,\n        \"tokens\": {\n          \"total\": 17069,\n          \"input\": 14772,\n          \"output\": 1134,\n          \"reasoning\": 139,\n          \"cache\": {\n            \"write\": 0,\n            \"read\": 1024\n          }\n        },\n        \"modelID\": \"mimo-v2.5-pro\",\n        \"providerID\": \"xiaomi-token-plan-cn\",\n        \"time\": {\n          \"created\": 1782219932153,\n          \"completed\": 1782219955045\n        },\n        \"finish\": \"stop\",\n        \"id\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\",\n        \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\"\n      },\n      \"parts\": [\n        {\n          \"type\": \"step-start\",\n          \"id\": \"prt_ef4960c3f001Ufc1qLd7F8g6l2\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        },\n        {\n          \"type\": \"reasoning\",\n          \"text\": \"The user wants me to generate a complete Solidity file for the `SignedMath` library based on the provided function signatures and comments. Let me create this file with the proper implementations.\\n\\nLooking at the functions:\\n1. `ternary` - branchless ternary operation using XOR and multiplication\\n2. `max` - returns max of two integers using ternary\\n3. `min` - returns min of two integers using ternary\\n4. `average` - calculates average using Hacker's Delight formula\\n5. `abs` - computes absolute value using bit twiddling\\n\\nThese are all pure math functions that don't require any imports. Let me write the complete implementation.\",\n          \"time\": {\n            \"start\": 1782219934794,\n            \"end\": 1782219937455\n          },\n          \"id\": \"prt_ef4960c4a001qr8iYshp1qyPef\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        },\n        {\n          \"type\": \"text\",\n          \"text\": \"```solidity: SignedMath.sol\\n// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.20;\\n\\nlibrary SignedMath {\\n    /**\\n     * @notice Implements a branchless ternary operation to return one of two values based on a condition.\\n     *\\n     * @param condition The boolean condition to evaluate.\\n     * @param a The value to return if the condition is true.\\n     * @param b The value to return if the condition is false.\\n     * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\\n     *\\n     * Details:\\n     * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\\n     * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\\n     * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\\n     * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\\n     */\\n    function ternary(bool condition, int256 a, int256 b) internal pure returns (int256) {\\n        unchecked {\\n            return b ^ ((a ^ b) * int256(condition));\\n        }\\n    }\\n\\n    /**\\n     * @notice Returns the maximum of two integers `a` and `b`.\\n     *\\n     * @param a The first integer to compare.\\n     * @param b The second integer to compare.\\n     * @return The larger of the two integers.\\n     *\\n     * Steps:\\n     * 1. Use the `ternary` function to compare `a` and `b`.\\n     * 2. Return the larger value between `a` and `b`.\\n     */\\n    function max(int256 a, int256 b) internal pure returns (int256) {\\n        return ternary(a > b, a, b);\\n    }\\n\\n    /**\\n     * @notice Returns the minimum of two integers.\\n     *\\n     * @param a The first integer to compare.\\n     * @param b The second integer to compare.\\n     * @return The smaller of the two integers.\\n     *\\n     * Steps:\\n     * 1. Compare `a` and `b` using the ternary operator.\\n     * 2. Return the smaller value.\\n     */\\n    function min(int256 a, int256 b) internal pure returns (int256) {\\n        return ternary(a < b, a, b);\\n    }\\n\\n    /**\\n     * @notice Calculates the average of two signed integers using a formula from \\\"Hacker's Delight\\\".\\n     *\\n     * @param a The first signed integer.\\n     * @param b The second signed integer.\\n     * @return The average of the two integers, rounded towards zero.\\n     *\\n     * Steps:\\n     * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\\n     * 2. Adjust the result to handle overflow or underflow by adding a correction term:\\n     *    - The correction term is derived from the sign bit of the intermediate result.\\n     *    - It ensures the result is accurate even when the sum of a and b overflows.\\n     */\\n    function average(int256 a, int256 b) internal pure returns (int256) {\\n        unchecked {\\n            int256 mid = (a & b) + (a ^ b) / 2;\\n            int256 sign = mid >> 255;\\n            return mid + (a < 0 && b < 0 ? sign : ~sign) & 1;\\n        }\\n    }\\n\\n    /**\\n     * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\\n     *\\n     * @param n The signed integer for which the absolute value is to be computed.\\n     * @return The absolute value of `n` as an unsigned integer.\\n     *\\n     * Steps:\\n     * 1. Calculate the mask using the formula from \\\"Bit Twiddling Hacks\\\" by Sean Eron Anderson.\\n     *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\\n     * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\\n     *    - If `n` is positive, the mask is `0`, so the result is `n`.\\n     *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\\n     * 3. Return the result as an unsigned integer.\\n     *\\n     * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\\n     */\\n    function abs(int256 n) internal pure returns (uint256) {\\n        unchecked {\\n            int256 mask = n >> 255;\\n            return uint256((n + mask) ^ mask);\\n        }\\n    }\\n}\\n```\",\n          \"time\": {\n            \"start\": 1782219937459,\n            \"end\": 1782219955028\n          },\n          \"id\": \"prt_ef49616b3001CwBpk77F19rR9G\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        },\n        {\n          \"reason\": \"stop\",\n          \"type\": \"step-finish\",\n          \"tokens\": {\n            \"total\": 17069,\n            \"input\": 14772,\n            \"output\": 1134,\n            \"reasoning\": 139,\n            \"cache\": {\n              \"write\": 0,\n              \"read\": 1024\n            }\n          },\n          \"cost\": 0,\n          \"id\": \"prt_ef4965b5b001V6qPOsbDAej4Hm\",\n          \"sessionID\": \"ses_10b6a01ffffeen1bQ5zLDcJsA2\",\n          \"messageID\": \"msg_ef49601f9001x7Gh8qrDpLEx0d\"\n        }\n      ]\n    }\n  ]\n}\n",
+    "stderr": "Exporting session: ses_10b6a01ffffeen1bQ5zLDcJsA2\n",
+    "json": {
+      "info": {
+        "id": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+        "slug": "nimble-engine",
+        "projectID": "7665378f90f5c7bc826c66615edb1c38e4b7eeae",
+        "directory": "/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+        "path": ".opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+        "title": "opencode-baseline-SignedMath.sol",
+        "agent": "build",
+        "model": {
+          "id": "mimo-v2.5-pro",
+          "providerID": "xiaomi-token-plan-cn",
+          "variant": "default"
+        },
+        "version": "1.15.10",
+        "summary": {
+          "additions": 0,
+          "deletions": 0,
+          "files": 0
+        },
+        "cost": 0,
+        "tokens": {
+          "input": 14772,
+          "output": 1134,
+          "reasoning": 139,
+          "cache": {
+            "read": 1024,
+            "write": 0
+          }
+        },
+        "permission": [
+          {
+            "permission": "question",
+            "pattern": "*",
+            "action": "deny"
+          },
+          {
+            "permission": "plan_enter",
+            "pattern": "*",
+            "action": "deny"
+          },
+          {
+            "permission": "plan_exit",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ],
+        "time": {
+          "created": 1782219931136,
+          "updated": 1782219955081
+        }
+      },
+      "messages": [
+        {
+          "info": {
+            "role": "user",
+            "time": {
+              "created": 1782219931186
+            },
+            "agent": "build",
+            "model": {
+              "providerID": "xiaomi-token-plan-cn",
+              "modelID": "mimo-v2.5-pro"
+            },
+            "summary": {
+              "diffs": []
+            },
+            "id": "msg_ef495fe32001oTeise8lay44Vh",
+            "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2"
+          },
+          "parts": [
+            {
+              "type": "text",
+              "text": "\"You are a professional Solidity engineer. Your responsibility is to generate a complete Solidity smart contract file based on the provided query.\n\nRequirements:\n1. The query will contain:\n  * The Solidity version pragma to use.\n  * The full contract or library name.\n  * All function signatures that should be implemented.\n  * Comments/annotations for each function, usually placed above the function signature.\n  * Any specific dependencies or imported contracts (if not explicitly given, you can search the provided repository for references or imports to resolve them).\n\n2. Your task is to generate a complete and compilable Solidity contract file, including:\n  * The pragma statement.\n  * All necessary imports.\n  * The artifact definition (`contract` or `library`) with the given name.\n  * Implementation of all provided function signatures.\n  * Any additional internal/private helper functions needed to complete the implementation.\n  * Proper handling of dependencies and referenced contracts/interfaces. Necessary import statements for external contracts, interfaces, or libraries. You must analyze the function signatures, return types, and usage to decide which imports are required. Do not rely on any import list provided externally.\n\n3. Constraints:\n  * You must generate exactly one Solidity file.\n  * Do not modify the provided function signatures.\n  * Preserve the function visibility, mutability (`pure`, `view`, `payable`), and return types.\n  * Organize the code clearly, with proper indentation and Solidity style.\n  * If multiple functions reference the same library or interface, import or define it only once at the top of the file. You may use the `file_system` tool to explore the given repository folder to find these definitions if they are not in the query. Do not attempt to read the output file itself or any temporary file you are about to create.\n  * Do not generate tests, deployment scripts, or any files other than the single Solidity source file.\n\n4. Output formatting rules:\n  * You must output your code strictly using the following format:\n   ```solidity: filename\n   text\n   ```\n  * The `filename` should exactly match the Solidity artifact name (e.g., `Create2.sol`).\n  * The output should contain **only** the Solidity source code - no explanations, commentary, or other text.\n  * Output must start with the three characters: backtick backtick backtick.\n\n  Example format:\n  ```solidity: Create2.sol\n  // SPDX-License-Identifier: MIT\n  pragma solidity ^0.8.20;\n\n  library Create2 {\n    /// @notice Example function\n    function example() internal pure returns (uint256) {\n      return 1;\n    }\n  }\n  ```\n\n5. Additional instructions:\n  * Present all content concisely and completely.\n  * Maintain the order of functions as in the query.\n  * Never include additional commentary outside the Solidity code block.\n\nNow Begin:\n\n\ngiven repo: /Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts\nfile name: SignedMath.sol\n\npragma solidity ^0.8.20;\n\nlibrary SignedMath\n\n/**\n * @notice Implements a branchless ternary operation to return one of two values based on a condition.\n *\n * @param condition The boolean condition to evaluate.\n * @param a The value to return if the condition is true.\n * @param b The value to return if the condition is false.\n * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\n *\n * Details:\n * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\n * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\n * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\n * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\n */\nfunction ternary(bool condition, int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Returns the maximum of two integers `a` and `b`.\n *\n * @param a The first integer to compare.\n * @param b The second integer to compare.\n * @return The larger of the two integers.\n *\n * Steps:\n * 1. Use the `ternary` function to compare `a` and `b`.\n * 2. Return the larger value between `a` and `b`.\n */\nfunction max(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Returns the minimum of two integers.\n *\n * @param a The first integer to compare.\n * @param b The second integer to compare.\n * @return The smaller of the two integers.\n *\n * Steps:\n * 1. Compare `a` and `b` using the ternary operator.\n * 2. Return the smaller value.\n */\nfunction min(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Calculates the average of two signed integers using a formula from \\\"Hacker's Delight\\\".\n *\n * @param a The first signed integer.\n * @param b The second signed integer.\n * @return The average of the two integers, rounded towards zero.\n *\n * Steps:\n * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\n * 2. Adjust the result to handle overflow or underflow by adding a correction term:\n *    - The correction term is derived from the sign bit of the intermediate result.\n *    - It ensures the result is accurate even when the sum of a and b overflows.\n */\nfunction average(int256 a, int256 b) internal pure returns (int256)\n\n/**\n * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\n *\n * @param n The signed integer for which the absolute value is to be computed.\n * @return The absolute value of `n` as an unsigned integer.\n *\n * Steps:\n * 1. Calculate the mask using the formula from \\\"Bit Twiddling Hacks\\\" by Sean Eron Anderson.\n *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\n * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\n *    - If `n` is positive, the mask is `0`, so the result is `n`.\n *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\n * 3. Return the result as an unsigned integer.\n *\n * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\n */\nfunction abs(int256 n) internal pure returns (uint256)\n\"",
+              "id": "prt_ef495fe39001s2VNWLozmkacLI",
+              "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+              "messageID": "msg_ef495fe32001oTeise8lay44Vh"
+            }
+          ]
+        },
+        {
+          "info": {
+            "parentID": "msg_ef495fe32001oTeise8lay44Vh",
+            "role": "assistant",
+            "mode": "build",
+            "agent": "build",
+            "path": {
+              "cwd": "/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts",
+              "root": "/Users/chenwei/GolandProjects/solagent/agent-smart"
+            },
+            "cost": 0,
+            "tokens": {
+              "total": 17069,
+              "input": 14772,
+              "output": 1134,
+              "reasoning": 139,
+              "cache": {
+                "write": 0,
+                "read": 1024
+              }
+            },
+            "modelID": "mimo-v2.5-pro",
+            "providerID": "xiaomi-token-plan-cn",
+            "time": {
+              "created": 1782219932153,
+              "completed": 1782219955045
+            },
+            "finish": "stop",
+            "id": "msg_ef49601f9001x7Gh8qrDpLEx0d",
+            "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2"
+          },
+          "parts": [
+            {
+              "type": "step-start",
+              "id": "prt_ef4960c3f001Ufc1qLd7F8g6l2",
+              "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+              "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+            },
+            {
+              "type": "reasoning",
+              "text": "The user wants me to generate a complete Solidity file for the `SignedMath` library based on the provided function signatures and comments. Let me create this file with the proper implementations.\n\nLooking at the functions:\n1. `ternary` - branchless ternary operation using XOR and multiplication\n2. `max` - returns max of two integers using ternary\n3. `min` - returns min of two integers using ternary\n4. `average` - calculates average using Hacker's Delight formula\n5. `abs` - computes absolute value using bit twiddling\n\nThese are all pure math functions that don't require any imports. Let me write the complete implementation.",
+              "time": {
+                "start": 1782219934794,
+                "end": 1782219937455
+              },
+              "id": "prt_ef4960c4a001qr8iYshp1qyPef",
+              "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+              "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+            },
+            {
+              "type": "text",
+              "text": "```solidity: SignedMath.sol\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\nlibrary SignedMath {\n    /**\n     * @notice Implements a branchless ternary operation to return one of two values based on a condition.\n     *\n     * @param condition The boolean condition to evaluate.\n     * @param a The value to return if the condition is true.\n     * @param b The value to return if the condition is false.\n     * @return The result of the ternary operation, which is either `a` or `b` based on the condition.\n     *\n     * Details:\n     * - The function uses bitwise XOR (`^`) and multiplication to achieve a branchless ternary operation.\n     * - If `condition` is true, the result is `a` because `b ^ ((a ^ b) * 1) = a`.\n     * - If `condition` is false, the result is `b` because `b ^ ((a ^ b) * 0) = b`.\n     * - The `unchecked` block is used to avoid overflow checks, as the operation is safe within the given context.\n     */\n    function ternary(bool condition, int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            return b ^ ((a ^ b) * int256(condition));\n        }\n    }\n\n    /**\n     * @notice Returns the maximum of two integers `a` and `b`.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The larger of the two integers.\n     *\n     * Steps:\n     * 1. Use the `ternary` function to compare `a` and `b`.\n     * 2. Return the larger value between `a` and `b`.\n     */\n    function max(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a > b, a, b);\n    }\n\n    /**\n     * @notice Returns the minimum of two integers.\n     *\n     * @param a The first integer to compare.\n     * @param b The second integer to compare.\n     * @return The smaller of the two integers.\n     *\n     * Steps:\n     * 1. Compare `a` and `b` using the ternary operator.\n     * 2. Return the smaller value.\n     */\n    function min(int256 a, int256 b) internal pure returns (int256) {\n        return ternary(a < b, a, b);\n    }\n\n    /**\n     * @notice Calculates the average of two signed integers using a formula from \"Hacker's Delight\".\n     *\n     * @param a The first signed integer.\n     * @param b The second signed integer.\n     * @return The average of the two integers, rounded towards zero.\n     *\n     * Steps:\n     * 1. Compute the average using the formula: (a & b) + ((a ^ b) >> 1).\n     * 2. Adjust the result to handle overflow or underflow by adding a correction term:\n     *    - The correction term is derived from the sign bit of the intermediate result.\n     *    - It ensures the result is accurate even when the sum of a and b overflows.\n     */\n    function average(int256 a, int256 b) internal pure returns (int256) {\n        unchecked {\n            int256 mid = (a & b) + (a ^ b) / 2;\n            int256 sign = mid >> 255;\n            return mid + (a < 0 && b < 0 ? sign : ~sign) & 1;\n        }\n    }\n\n    /**\n     * @notice Computes the absolute value of a signed integer `n` and returns it as an unsigned integer.\n     *\n     * @param n The signed integer for which the absolute value is to be computed.\n     * @return The absolute value of `n` as an unsigned integer.\n     *\n     * Steps:\n     * 1. Calculate the mask using the formula from \"Bit Twiddling Hacks\" by Sean Eron Anderson.\n     *    - The mask is computed by shifting `n` right by 255 bits, which results in either `0` (if `n` is positive) or `~0` (if `n` is negative).\n     * 2. Compute the absolute value using the formula `(n + mask) ^ mask`.\n     *    - If `n` is positive, the mask is `0`, so the result is `n`.\n     *    - If `n` is negative, the mask is `~0`, which effectively flips the bits of `n` and adds 1 to get the absolute value.\n     * 3. Return the result as an unsigned integer.\n     *\n     * Note: The function uses `unchecked` to avoid overflow checks, assuming that the input `n` is within the valid range for the operation.\n     */\n    function abs(int256 n) internal pure returns (uint256) {\n        unchecked {\n            int256 mask = n >> 255;\n            return uint256((n + mask) ^ mask);\n        }\n    }\n}\n```",
+              "time": {
+                "start": 1782219937459,
+                "end": 1782219955028
+              },
+              "id": "prt_ef49616b3001CwBpk77F19rR9G",
+              "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+              "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+            },
+            {
+              "reason": "stop",
+              "type": "step-finish",
+              "tokens": {
+                "total": 17069,
+                "input": 14772,
+                "output": 1134,
+                "reasoning": 139,
+                "cache": {
+                  "write": 0,
+                  "read": 1024
+                }
+              },
+              "cost": 0,
+              "id": "prt_ef4965b5b001V6qPOsbDAej4Hm",
+              "sessionID": "ses_10b6a01ffffeen1bQ5zLDcJsA2",
+              "messageID": "msg_ef49601f9001x7Gh8qrDpLEx0d"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "generated_candidates": [],
+  "selected_generated_file": "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+  "selected_generated_source": "isolated:/Users/chenwei/GolandProjects/solagent/agent-smart/.opencode-isolated/run-3c2nnmxt/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+  "deleted_bak_paths": [],
+  "deleted_build_dirs": [],
+  "deleted_generator_paths": [],
+  "deleted_same_name_paths": [
+    "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+    "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/contracts-exposed/utils/math/SignedMath.sol",
+    "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol"
+  ],
+  "restore_result": {
+    "restored_paths": [
+      "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/contracts/utils/math/SignedMath.sol",
+      "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/contracts-exposed/utils/math/SignedMath.sol",
+      "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol"
+    ],
+    "removed_extra_paths": [],
+    "restored_generator_paths": []
+  },
+  "usage_source": "opencode_export_info",
+  "forge_result": {
+    "compile_error": "Compiler run failed:\nError (9640): Explicit type conversion not allowed from \"bool\" to \"int256\".\n  --> contracts/utils/math/SignedMath.sol:21:35:\n   |\n21 |             return b ^ ((a ^ b) * int256(condition));\n   |                                   ^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "gas_fees": {}
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/MinHeapLib.sol",
+        "-o",
+        "/tmp/aderyn_report_l88oax0d/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/MinHeapLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/MinHeapLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_l88oax0d/report.json\n\n✔ Aderyn did its job. Solidity's a bit safer now.\n💫 Like the tool? A star on GitHub goes a long way:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/MinHeapLib.sol",
+              "n_sloc": 352
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 352,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 113,
+                  "src": "3513:1",
+                  "src_char": "3513:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 117,
+                  "src": "3639:1",
+                  "src_char": "3639:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 129,
+                  "src": "4032:1",
+                  "src_char": "4032:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 133,
+                  "src": "4183:1",
+                  "src_char": "4183:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 151,
+                  "src": "4781:1",
+                  "src_char": "4781:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 162,
+                  "src": "5124:1",
+                  "src_char": "5124:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 292,
+                  "src": "9008:1",
+                  "src_char": "9008:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 307,
+                  "src": "9381:1",
+                  "src_char": "9381:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 311,
+                  "src": "9452:1",
+                  "src_char": "9452:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 319,
+                  "src": "9716:1",
+                  "src_char": "9716:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 337,
+                  "src": "10101:1",
+                  "src_char": "10101:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 350,
+                  "src": "10416:1",
+                  "src_char": "10416:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 369,
+                  "src": "10944:1",
+                  "src_char": "10944:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 373,
+                  "src": "11015:1",
+                  "src_char": "11015:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 383,
+                  "src": "11352:1",
+                  "src_char": "11352:1"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 403,
+                  "src": "11817:1",
+                  "src_char": "11817:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Function returns a value but it is ignored. Consider checking the return value.",
+              "detector_name": "unchecked-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 113,
+                  "src": "3476:39",
+                  "src_char": "3476:39"
+                },
+                {
+                  "contract_path": "src/utils/MinHeapLib.sol",
+                  "line_no": 117,
+                  "src": "3602:39",
+                  "src_char": "3602:39"
+                }
+              ],
+              "title": "Unchecked Return"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 352,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 24,
+    "best_round": 2,
+    "best_total": 29,
+    "best_vuln": 2,
+    "code_bytes": 11860,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "7ae05af2144846d2e682a9019815e3608f83493f581e2b86fd8a24d720b10af8",
+    "skip_reason": null,
+    "sloc": 352,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:07:07.486701+00:00",
+  "eval": {
+    "best_round": 2,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/MinHeapLib.t.sol",
+    "expected_tests": 18,
+    "extract_error": null,
+    "forge_total": 18,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 11,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 371,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/MinHeapLib.sol",
+  "id": 371,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:15.539150+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 2,
+    "summary": {
+      "High": 0,
+      "Low": 2,
+      "Medium": 0
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 7,
+  "test_pass": 11,
+  "test_source": "rq2_eval",
+  "test_total": 18
+}

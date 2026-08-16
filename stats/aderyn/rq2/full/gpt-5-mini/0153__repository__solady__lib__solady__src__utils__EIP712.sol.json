@@ -1,0 +1,268 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/EIP712.sol",
+        "-o",
+        "/tmp/aderyn_report_duf1cvue/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/EIP712.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/EIP712.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_duf1cvue/report.json\n\n🐦 Aderyn finds bugs. You write safer code.\n⭐ Star us on GitHub if that sounds fair:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/EIP712.sol",
+              "n_sloc": 91
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 91,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Functions that are not used. Consider removing them.",
+              "detector_name": "dead-code",
+              "instances": [
+                {
+                  "contract_path": "src/utils/EIP712.sol",
+                  "line_no": 118,
+                  "src": "5347:14",
+                  "src_char": "5347:14"
+                }
+              ],
+              "title": "Dead Code"
+            },
+            {
+              "description": "State variables that are only changed in the constructor should be declared immutable to save gas. Add the `immutable` attribute to state variables that are only changed in the constructor",
+              "detector_name": "state-variable-could-be-immutable",
+              "instances": [
+                {
+                  "contract_path": "src/utils/EIP712.sol",
+                  "line_no": 6,
+                  "src": "174:24",
+                  "src_char": "174:24"
+                },
+                {
+                  "contract_path": "src/utils/EIP712.sol",
+                  "line_no": 7,
+                  "src": "220:16",
+                  "src_char": "220:16"
+                },
+                {
+                  "contract_path": "src/utils/EIP712.sol",
+                  "line_no": 8,
+                  "src": "258:16",
+                  "src_char": "258:16"
+                },
+                {
+                  "contract_path": "src/utils/EIP712.sol",
+                  "line_no": 9,
+                  "src": "296:17",
+                  "src_char": "296:17"
+                },
+                {
+                  "contract_path": "src/utils/EIP712.sol",
+                  "line_no": 10,
+                  "src": "335:20",
+                  "src_char": "335:20"
+                }
+              ],
+              "title": "State Variable Could Be Immutable"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "src/utils/EIP712.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 91,
+    "summary": {
+      "High": 0,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": 16,
+    "best_round": 3,
+    "best_total": 16,
+    "best_vuln": 0,
+    "code_bytes": 10087,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "b00729b1a8753930277769084a0cdbe90368b8dcdb34bd0ac3715fb01cb95fd7",
+    "skip_reason": null,
+    "sloc": 91,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:19.732669+00:00",
+  "eval": {
+    "best_round": 3,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/EIP712.t.sol",
+    "expected_tests": 5,
+    "extract_error": null,
+    "forge_total": 5,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": true,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 5,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 153,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/EIP712.sol",
+  "id": 153,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:08.722280+00:00",
+  "reused_from": "stats/aderyn/solagent/gpt-5-mini/0153__repository__solady__lib__solady__src__utils__EIP712.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 5,
+  "test_source": "rq2_eval",
+  "test_total": 5
+}

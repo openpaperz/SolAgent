@@ -1,0 +1,559 @@
+{
+  "aderyn": {
+    "count": 5,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/FixedPointMathLib.sol",
+        "-o",
+        "/tmp/aderyn_report_d__o5io4/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/FixedPointMathLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/FixedPointMathLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_d__o5io4/report.json\n\nAderyn saved you hours of headaches.\n☕ Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/FixedPointMathLib.sol",
+              "n_sloc": 782
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 782,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Example: `shl(shifted, 4)` will shift the right constant `4` by `a` bits. The correct order is `shl(4, shifted)`.",
+              "detector_name": "incorrect-shift-order",
+              "instances": [
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 198,
+                  "src": "7480:10",
+                  "src_char": "7255:10"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 595,
+                  "src": "20634:28",
+                  "src_char": "20334:28"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 674,
+                  "src": "23486:9",
+                  "src_char": "23186:9"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 725,
+                  "src": "25192:17",
+                  "src_char": "24892:17"
+                }
+              ],
+              "title": "Incorrect Assembly Shift Parameter Order"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 4
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 184,
+                  "src": "7052:5",
+                  "src_char": "6827:5"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 656,
+                  "src": "22736:4",
+                  "src_char": "22436:4"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 678,
+                  "src": "23531:5",
+                  "src_char": "23231:5"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 709,
+                  "src": "24554:6",
+                  "src_char": "24254:6"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 729,
+                  "src": "25245:3",
+                  "src_char": "24945:3"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Large literal values multiples of 10000 can be replaced with scientific notation.Use `e` notation, for example: `1e18`, instead of its full numeric value.",
+              "detector_name": "large-numeric-literal",
+              "instances": [
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 232,
+                  "src": "8910:19",
+                  "src_char": "8685:19"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 261,
+                  "src": "9728:20",
+                  "src_char": "9503:20"
+                }
+              ],
+              "title": "Large Numeric Literal"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 157,
+                  "src": "5909:2",
+                  "src_char": "5684:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 159,
+                  "src": "5944:2",
+                  "src_char": "5719:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 159,
+                  "src": "5950:29",
+                  "src_char": "5725:29"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 159,
+                  "src": "5992:2",
+                  "src_char": "5767:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 160,
+                  "src": "6020:29",
+                  "src_char": "5795:29"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 163,
+                  "src": "6140:2",
+                  "src_char": "5915:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 165,
+                  "src": "6273:2",
+                  "src_char": "6048:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 166,
+                  "src": "6379:2",
+                  "src_char": "6154:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 169,
+                  "src": "6473:2",
+                  "src_char": "6248:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 170,
+                  "src": "6541:2",
+                  "src_char": "6316:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 171,
+                  "src": "6610:2",
+                  "src_char": "6385:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 172,
+                  "src": "6680:2",
+                  "src_char": "6455:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 173,
+                  "src": "6751:2",
+                  "src_char": "6526:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 235,
+                  "src": "9008:1",
+                  "src_char": "8783:1"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 252,
+                  "src": "9435:2",
+                  "src_char": "9210:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 256,
+                  "src": "9580:1",
+                  "src_char": "9355:1"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 263,
+                  "src": "9799:1",
+                  "src_char": "9574:1"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 264,
+                  "src": "9828:1",
+                  "src_char": "9603:1"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 611,
+                  "src": "21295:2",
+                  "src_char": "20995:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 611,
+                  "src": "21299:2",
+                  "src_char": "20999:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 612,
+                  "src": "21334:2",
+                  "src_char": "21034:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 612,
+                  "src": "21338:2",
+                  "src_char": "21038:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 614,
+                  "src": "21394:2",
+                  "src_char": "21094:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 628,
+                  "src": "21868:2",
+                  "src_char": "21568:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 629,
+                  "src": "21907:2",
+                  "src_char": "21607:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 629,
+                  "src": "21911:2",
+                  "src_char": "21611:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 631,
+                  "src": "21967:2",
+                  "src_char": "21667:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 780,
+                  "src": "27300:1",
+                  "src_char": "27000:1"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 780,
+                  "src": "27306:2",
+                  "src_char": "27006:2"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 798,
+                  "src": "27769:3",
+                  "src_char": "27469:3"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 798,
+                  "src": "27790:3",
+                  "src_char": "27490:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 12,
+                  "src": "665:21",
+                  "src_char": "590:21"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 13,
+                  "src": "691:22",
+                  "src_char": "616:22"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 14,
+                  "src": "718:21",
+                  "src_char": "643:21"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 15,
+                  "src": "744:22",
+                  "src_char": "669:22"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 16,
+                  "src": "771:25",
+                  "src_char": "696:25"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 17,
+                  "src": "801:21",
+                  "src_char": "726:21"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 18,
+                  "src": "827:18",
+                  "src_char": "752:18"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 20,
+                  "src": "875:23",
+                  "src_char": "800:23"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 22,
+                  "src": "928:25",
+                  "src_char": "853:25"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 23,
+                  "src": "958:21",
+                  "src_char": "883:21"
+                },
+                {
+                  "contract_path": "src/utils/FixedPointMathLib.sol",
+                  "line_no": 24,
+                  "src": "984:26",
+                  "src_char": "909:26"
+                }
+              ],
+              "title": "Unused Error"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 782,
+    "summary": {
+      "High": 1,
+      "Low": 4
+    }
+  },
+  "code": {
+    "best_pass": 97,
+    "best_round": 14,
+    "best_total": 138,
+    "best_vuln": 42,
+    "code_bytes": 33479,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "59ef6cc97d84a689096971bce0b1594d6e8e83bfd644b25904abcb46d4278136",
+    "skip_reason": null,
+    "sloc": 782,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:17.507949+00:00",
+  "eval": {
+    "best_round": 14,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/FixedPointMathLib.t.sol",
+    "expected_tests": 71,
+    "extract_error": null,
+    "forge_total": 71,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 57,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 234,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/FixedPointMathLib.sol",
+  "id": 234,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:07.546110+00:00",
+  "reused_from": "stats/aderyn/solagent/claude-sonnet-4-5/0234__repository__solady__lib__solady__src__utils__FixedPointMathLib.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 42,
+    "summary": {
+      "High": 4,
+      "Low": 0,
+      "Medium": 38
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 14,
+  "test_pass": 57,
+  "test_source": "rq2_eval",
+  "test_total": 71
+}

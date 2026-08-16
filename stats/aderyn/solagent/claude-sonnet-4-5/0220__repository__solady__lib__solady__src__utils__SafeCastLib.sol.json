@@ -1,0 +1,974 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/SafeCastLib.sol",
+        "-o",
+        "/tmp/aderyn_report_y1kjetxp/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/SafeCastLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/SafeCastLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_y1kjetxp/report.json\n\nAderyn saved you hours of headaches.\n\u2615 Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/SafeCastLib.sol",
+              "n_sloc": 452
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 452,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 30,
+                  "src": "1576:1",
+                  "src_char": "1426:1"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 46,
+                  "src": "2224:2",
+                  "src_char": "2074:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 62,
+                  "src": "2881:2",
+                  "src_char": "2731:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 78,
+                  "src": "3540:2",
+                  "src_char": "3390:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 94,
+                  "src": "4147:2",
+                  "src_char": "3997:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 110,
+                  "src": "4772:2",
+                  "src_char": "4622:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 126,
+                  "src": "5370:2",
+                  "src_char": "5220:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 142,
+                  "src": "5990:2",
+                  "src_char": "5840:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 158,
+                  "src": "6629:2",
+                  "src_char": "6479:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 174,
+                  "src": "7220:2",
+                  "src_char": "7070:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 190,
+                  "src": "7781:2",
+                  "src_char": "7631:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 206,
+                  "src": "8335:2",
+                  "src_char": "8185:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 222,
+                  "src": "8982:3",
+                  "src_char": "8832:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 238,
+                  "src": "9553:3",
+                  "src_char": "9403:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 254,
+                  "src": "10193:3",
+                  "src_char": "10043:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 270,
+                  "src": "10764:3",
+                  "src_char": "10614:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 286,
+                  "src": "11324:3",
+                  "src_char": "11174:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 302,
+                  "src": "11898:3",
+                  "src_char": "11748:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 318,
+                  "src": "12504:3",
+                  "src_char": "12354:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 334,
+                  "src": "13128:3",
+                  "src_char": "12978:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 350,
+                  "src": "13718:3",
+                  "src_char": "13568:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 366,
+                  "src": "14287:3",
+                  "src_char": "14137:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 382,
+                  "src": "14850:3",
+                  "src_char": "14700:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 398,
+                  "src": "15429:3",
+                  "src_char": "15279:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 414,
+                  "src": "15987:3",
+                  "src_char": "15837:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 430,
+                  "src": "16550:3",
+                  "src_char": "16400:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 446,
+                  "src": "17113:3",
+                  "src_char": "16963:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 462,
+                  "src": "17679:3",
+                  "src_char": "17529:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 478,
+                  "src": "18258:3",
+                  "src_char": "18108:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 494,
+                  "src": "18875:3",
+                  "src_char": "18725:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 510,
+                  "src": "19433:3",
+                  "src_char": "19283:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 533,
+                  "src": "20448:1",
+                  "src_char": "20223:1"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 533,
+                  "src": "20468:1",
+                  "src_char": "20243:1"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 553,
+                  "src": "21188:2",
+                  "src_char": "20963:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 553,
+                  "src": "21209:2",
+                  "src_char": "20984:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 573,
+                  "src": "21891:2",
+                  "src_char": "21666:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 573,
+                  "src": "21912:2",
+                  "src_char": "21687:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 594,
+                  "src": "22872:2",
+                  "src_char": "22647:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 594,
+                  "src": "22893:2",
+                  "src_char": "22668:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 615,
+                  "src": "23835:2",
+                  "src_char": "23610:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 615,
+                  "src": "23856:2",
+                  "src_char": "23631:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 635,
+                  "src": "24612:2",
+                  "src_char": "24387:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 635,
+                  "src": "24633:2",
+                  "src_char": "24408:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 658,
+                  "src": "25631:2",
+                  "src_char": "25406:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 658,
+                  "src": "25652:2",
+                  "src_char": "25427:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 679,
+                  "src": "26609:2",
+                  "src_char": "26384:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 679,
+                  "src": "26630:2",
+                  "src_char": "26405:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 702,
+                  "src": "27689:2",
+                  "src_char": "27464:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 702,
+                  "src": "27710:2",
+                  "src_char": "27485:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 722,
+                  "src": "28475:2",
+                  "src_char": "28250:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 722,
+                  "src": "28496:2",
+                  "src_char": "28271:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 743,
+                  "src": "29310:2",
+                  "src_char": "29085:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 743,
+                  "src": "29331:2",
+                  "src_char": "29106:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 761,
+                  "src": "30009:2",
+                  "src_char": "29784:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 761,
+                  "src": "30030:2",
+                  "src_char": "29805:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 781,
+                  "src": "30797:3",
+                  "src_char": "30572:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 781,
+                  "src": "30819:3",
+                  "src_char": "30594:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 801,
+                  "src": "31653:3",
+                  "src_char": "31428:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 801,
+                  "src": "31675:3",
+                  "src_char": "31450:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 823,
+                  "src": "32642:3",
+                  "src_char": "32417:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 823,
+                  "src": "32664:3",
+                  "src_char": "32439:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 844,
+                  "src": "33630:3",
+                  "src_char": "33405:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 844,
+                  "src": "33652:3",
+                  "src_char": "33427:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 867,
+                  "src": "34706:3",
+                  "src_char": "34481:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 867,
+                  "src": "34728:3",
+                  "src_char": "34503:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 887,
+                  "src": "35490:3",
+                  "src_char": "35265:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 887,
+                  "src": "35512:3",
+                  "src_char": "35287:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 907,
+                  "src": "36288:3",
+                  "src_char": "36063:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 907,
+                  "src": "36310:3",
+                  "src_char": "36085:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 928,
+                  "src": "37275:3",
+                  "src_char": "37050:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 928,
+                  "src": "37297:3",
+                  "src_char": "37072:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 948,
+                  "src": "38123:3",
+                  "src_char": "37898:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 948,
+                  "src": "38145:3",
+                  "src_char": "37920:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 968,
+                  "src": "38879:3",
+                  "src_char": "38654:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 968,
+                  "src": "38901:3",
+                  "src_char": "38676:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 990,
+                  "src": "39907:3",
+                  "src_char": "39682:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 990,
+                  "src": "39929:3",
+                  "src_char": "39704:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1010,
+                  "src": "40803:3",
+                  "src_char": "40578:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1010,
+                  "src": "40825:3",
+                  "src_char": "40600:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1033,
+                  "src": "41789:3",
+                  "src_char": "41564:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1033,
+                  "src": "41811:3",
+                  "src_char": "41586:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1051,
+                  "src": "42479:3",
+                  "src_char": "42254:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1051,
+                  "src": "42501:3",
+                  "src_char": "42276:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1069,
+                  "src": "43087:3",
+                  "src_char": "42862:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1069,
+                  "src": "43109:3",
+                  "src_char": "42884:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1087,
+                  "src": "43800:3",
+                  "src_char": "43575:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1087,
+                  "src": "43822:3",
+                  "src_char": "43597:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1105,
+                  "src": "44469:3",
+                  "src_char": "44244:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1105,
+                  "src": "44491:3",
+                  "src_char": "44266:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1126,
+                  "src": "45462:3",
+                  "src_char": "45237:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1126,
+                  "src": "45484:3",
+                  "src_char": "45259:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1144,
+                  "src": "46134:3",
+                  "src_char": "45909:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1144,
+                  "src": "46156:3",
+                  "src_char": "45931:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1163,
+                  "src": "46882:1",
+                  "src_char": "46657:1"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1181,
+                  "src": "47575:2",
+                  "src_char": "47350:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1199,
+                  "src": "48230:2",
+                  "src_char": "48005:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1218,
+                  "src": "49163:2",
+                  "src_char": "48938:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1237,
+                  "src": "50078:2",
+                  "src_char": "49853:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1255,
+                  "src": "50807:2",
+                  "src_char": "50582:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1276,
+                  "src": "51778:2",
+                  "src_char": "51553:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1295,
+                  "src": "52708:2",
+                  "src_char": "52483:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1316,
+                  "src": "53740:2",
+                  "src_char": "53515:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1334,
+                  "src": "54478:2",
+                  "src_char": "54253:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1353,
+                  "src": "55265:2",
+                  "src_char": "55040:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1369,
+                  "src": "55916:2",
+                  "src_char": "55691:2"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1387,
+                  "src": "56656:3",
+                  "src_char": "56431:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1405,
+                  "src": "57463:3",
+                  "src_char": "57238:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1425,
+                  "src": "58403:3",
+                  "src_char": "58178:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1444,
+                  "src": "59342:3",
+                  "src_char": "59117:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1465,
+                  "src": "60369:3",
+                  "src_char": "60144:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1483,
+                  "src": "61104:3",
+                  "src_char": "60879:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1501,
+                  "src": "61853:3",
+                  "src_char": "61628:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1520,
+                  "src": "62791:3",
+                  "src_char": "62566:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1538,
+                  "src": "63590:3",
+                  "src_char": "63365:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1556,
+                  "src": "64297:3",
+                  "src_char": "64072:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1576,
+                  "src": "65276:3",
+                  "src_char": "65051:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1594,
+                  "src": "66123:3",
+                  "src_char": "65898:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1615,
+                  "src": "67060:3",
+                  "src_char": "66835:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1631,
+                  "src": "67701:3",
+                  "src_char": "67476:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1647,
+                  "src": "68260:3",
+                  "src_char": "68035:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1663,
+                  "src": "68924:3",
+                  "src_char": "68699:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1679,
+                  "src": "69544:3",
+                  "src_char": "69319:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1698,
+                  "src": "70488:3",
+                  "src_char": "70263:3"
+                },
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 1714,
+                  "src": "71111:3",
+                  "src_char": "70886:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SafeCastLib.sol",
+                  "line_no": 12,
+                  "src": "669:17",
+                  "src_char": "594:17"
+                }
+              ],
+              "title": "Unused Error"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 452,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 11,
+    "best_round": 1,
+    "best_total": 11,
+    "best_vuln": 0,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "selection_policy": "test-first-security-second",
+    "sha256": "04172ba3d3454dd6ff3bf3b47e5a7e17c74d53d58ce62c88410abcd3d3a067c7",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:32.886764+00:00",
+  "eval": {
+    "best_pass": 11,
+    "best_round": 1,
+    "best_total": 11,
+    "best_vuln": 0,
+    "code_bytes": 73210,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 95,
+    "extract_error": null,
+    "failed_tests": 0,
+    "forge_failed": 0,
+    "forge_total": 95,
+    "full_pass": true,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 95,
+    "report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "row_id": 220,
+    "row_status": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/SafeCastLib.sol",
+  "id": 220,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-11T07:31:18.114705+00:00",
+  "slither": {
+    "best_pass": 11,
+    "best_round": 1,
+    "best_total": 11,
+    "count": 0,
+    "min_vuln_count": 0,
+    "min_vuln_round": 1,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "summary": {}
+  },
+  "source": "solagent",
+  "source_kind": "solagent",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 95,
+  "test_source": "eval_seed1",
+  "test_total": 95
+}

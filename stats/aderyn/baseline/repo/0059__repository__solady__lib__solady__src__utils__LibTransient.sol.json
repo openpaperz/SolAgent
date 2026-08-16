@@ -1,0 +1,301 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibTransient.sol",
+        "-o",
+        "/tmp/aderyn_report_rn1skque/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibTransient.sol",
+      "profile": "post_cancun",
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - cancun\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibTransient.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_rn1skque/report.json\n\n\ud83e\udeb6 Aderyn spotted all it could. Stay secure.\nIf our little bird helped you out, give it a perch with a GitHub Star \u2b50\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibTransient.sol",
+              "n_sloc": 492
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 492,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 102,
+                  "src": "3840:5",
+                  "src_char": "3615:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 156,
+                  "src": "5934:9",
+                  "src_char": "5709:9"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 191,
+                  "src": "7302:9",
+                  "src_char": "7077:9"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 273,
+                  "src": "10374:5",
+                  "src_char": "10074:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 347,
+                  "src": "13231:3",
+                  "src_char": "12856:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 360,
+                  "src": "13700:3",
+                  "src_char": "13325:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 374,
+                  "src": "14159:5",
+                  "src_char": "13784:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 408,
+                  "src": "15378:3",
+                  "src_char": "14928:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 421,
+                  "src": "15856:3",
+                  "src_char": "15406:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 435,
+                  "src": "16333:5",
+                  "src_char": "15883:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 469,
+                  "src": "17534:3",
+                  "src_char": "17009:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 482,
+                  "src": "17987:3",
+                  "src_char": "17462:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 500,
+                  "src": "18555:5",
+                  "src_char": "18030:5"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 534,
+                  "src": "19777:6",
+                  "src_char": "19177:6"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 552,
+                  "src": "20409:3",
+                  "src_char": "19809:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 600,
+                  "src": "22366:3",
+                  "src_char": "21766:3"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 638,
+                  "src": "23888:11",
+                  "src_char": "23288:11"
+                },
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 680,
+                  "src": "25710:5",
+                  "src_char": "25110:5"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibTransient.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 492,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "skip_reason": null,
+    "strategy": "repository_file"
+  },
+  "created_at": "2026-07-11T03:47:08.263634+00:00",
+  "eval": null,
+  "file_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+  "id": 59,
+  "model": "repo",
+  "refreshed_at": "2026-07-11T07:31:15.884917+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "baseline",
+  "source_kind": "baseline",
+  "status": "analyzed",
+  "table": "baseline_test",
+  "test_fail": 0,
+  "test_pass": 13,
+  "test_source": "database",
+  "test_total": 13
+}

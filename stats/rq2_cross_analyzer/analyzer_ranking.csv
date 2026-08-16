@@ -1,0 +1,4 @@
+analyzer,analyzer_name,supports_full,complete_compiled_coverage,functionality_matched_pairs,full_findings,no_slither_findings,finding_reduction,full_lower,equal,full_higher,p_value,holm_p_across_analyzers,direction_score
+aderyn,Aderyn,True,1.0,143,531,537,0.0111731843575419,15,119,9,0.30745625495910645,0.8671875,6
+wake,Wake (Low+),True,1.0,143,63,64,0.015625,3,138,2,1.0,1.0,1
+semgrep,Semgrep + Decurity,False,0.934010152284264,134,64,54,-0.18518518518518517,2,126,6,0.2890625,0.8671875,-4

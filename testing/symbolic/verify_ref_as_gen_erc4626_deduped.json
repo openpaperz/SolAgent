@@ -1,0 +1,683 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 26,
+      "proved_checks": 26,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 26,
+        "proved_checks": 26,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 22,
+        "passed_methods": 22,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 22
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 22,
+          "passed_methods": 22,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 22
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/token/ERC20/extensions/ERC4626.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/token/ERC20/extensions/ERC4626.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol"
+      ],
+      "test_names": [
+        "test_ERC4626_decimals_0",
+        "test_ERC4626_asset_1",
+        "test_ERC4626_totalAssets_2",
+        "test_ERC4626_convertToShares_3",
+        "test_ERC4626_convertToAssets_4",
+        "test_ERC4626_maxDeposit_5",
+        "test_ERC4626_maxMint_6",
+        "test_ERC4626_maxWithdraw_7",
+        "test_ERC4626_maxRedeem_8",
+        "test_ERC4626_previewDeposit_9",
+        "test_ERC4626_previewMint_10",
+        "test_ERC4626_previewWithdraw_11",
+        "test_ERC4626_previewRedeem_12",
+        "test_ERC4626_deposit_13",
+        "test_ERC4626_mint_14",
+        "test_ERC4626__convertToShares_17",
+        "test_ERC4626__convertToAssets_18",
+        "test_ERC4626__deposit_19",
+        "test_ERC4626__withdraw_20",
+        "test_ERC4626__decimalsOffset_21",
+        "test_ERC4626_property_decimals_0",
+        "test_ERC4626_property_internal_decimals_offset_9",
+        "test_ERC4626_property_deposit_zero_10",
+        "test_ERC4626_property_mint_zero_11",
+        "test_ERC4626_property_withdraw_12",
+        "test_ERC4626_property_redeem_13"
+      ],
+      "check_names": [
+        "check_ERC4626_decimals_0",
+        "check_ERC4626_asset_1",
+        "check_ERC4626_totalAssets_2",
+        "check_ERC4626_convertToShares_3",
+        "check_ERC4626_convertToAssets_4",
+        "check_ERC4626_maxDeposit_5",
+        "check_ERC4626_maxMint_6",
+        "check_ERC4626_maxWithdraw_7",
+        "check_ERC4626_maxRedeem_8",
+        "check_ERC4626_previewDeposit_9",
+        "check_ERC4626_previewMint_10",
+        "check_ERC4626_previewWithdraw_11",
+        "check_ERC4626_previewRedeem_12",
+        "check_ERC4626_deposit_13",
+        "check_ERC4626_mint_14",
+        "check_ERC4626__convertToShares_17",
+        "check_ERC4626__convertToAssets_18",
+        "check_ERC4626__deposit_19",
+        "check_ERC4626__withdraw_20",
+        "check_ERC4626__decimalsOffset_21",
+        "check_ERC4626_property_decimals_0",
+        "check_ERC4626_property_internal_decimals_offset_9",
+        "check_ERC4626_property_deposit_zero_10",
+        "check_ERC4626_property_mint_zero_11",
+        "check_ERC4626_property_withdraw_12",
+        "check_ERC4626_property_redeem_13"
+      ],
+      "methods_count": 26,
+      "manifest_skipped_checks": 16,
+      "skipped_checks": 0,
+      "expected_checks": 26,
+      "expected_tests": 26,
+      "proved_checks": 26,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_ERC4626_decimals_0": "PASS",
+        "check_ERC4626_asset_1": "PASS",
+        "check_ERC4626_totalAssets_2": "PASS",
+        "check_ERC4626_convertToShares_3": "PASS",
+        "check_ERC4626_convertToAssets_4": "PASS",
+        "check_ERC4626_maxDeposit_5": "PASS",
+        "check_ERC4626_maxMint_6": "PASS",
+        "check_ERC4626_maxWithdraw_7": "PASS",
+        "check_ERC4626_maxRedeem_8": "PASS",
+        "check_ERC4626_previewDeposit_9": "PASS",
+        "check_ERC4626_previewMint_10": "PASS",
+        "check_ERC4626_previewWithdraw_11": "PASS",
+        "check_ERC4626_previewRedeem_12": "PASS",
+        "check_ERC4626_deposit_13": "PASS",
+        "check_ERC4626_mint_14": "PASS",
+        "check_ERC4626__convertToShares_17": "PASS",
+        "check_ERC4626__convertToAssets_18": "PASS",
+        "check_ERC4626__deposit_19": "PASS",
+        "check_ERC4626__withdraw_20": "PASS",
+        "check_ERC4626__decimalsOffset_21": "PASS",
+        "check_ERC4626_property_decimals_0": "PASS",
+        "check_ERC4626_property_internal_decimals_offset_9": "PASS",
+        "check_ERC4626_property_deposit_zero_10": "PASS",
+        "check_ERC4626_property_mint_zero_11": "PASS",
+        "check_ERC4626_property_withdraw_12": "PASS",
+        "check_ERC4626_property_redeem_13": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "_convertToAssets",
+          "visibility": "internal",
+          "full_signature": "function _convertToAssets(uint256 shares, Math.Rounding rounding) internal virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626__convertToAssets_18",
+              "test_name": "test_ERC4626__convertToAssets_18",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "_convertToShares",
+          "visibility": "internal",
+          "full_signature": "function _convertToShares(uint256 assets, Math.Rounding rounding) internal virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626__convertToShares_17",
+              "test_name": "test_ERC4626__convertToShares_17",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "_decimalsOffset",
+          "visibility": "internal",
+          "full_signature": "function _decimalsOffset() internal virtual view returns (uint8)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626__decimalsOffset_21",
+              "test_name": "test_ERC4626__decimalsOffset_21",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_ERC4626_property_internal_decimals_offset_9",
+              "test_name": "test_ERC4626_property_internal_decimals_offset_9",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "_deposit",
+          "visibility": "internal",
+          "full_signature": "function _deposit(address caller, address receiver, uint256 assets, uint256 shares) internal virtual",
+          "checks": [
+            {
+              "check_name": "check_ERC4626__deposit_19",
+              "test_name": "test_ERC4626__deposit_19",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "_withdraw",
+          "visibility": "internal",
+          "full_signature": "function _withdraw(address caller, address receiver, address owner, uint256 assets, uint256 shares) internal virtual",
+          "checks": [
+            {
+              "check_name": "check_ERC4626__withdraw_20",
+              "test_name": "test_ERC4626__withdraw_20",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "asset",
+          "visibility": "public",
+          "full_signature": "function asset() public virtual view returns (address)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_asset_1",
+              "test_name": "test_ERC4626_asset_1",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "convertToAssets",
+          "visibility": "public",
+          "full_signature": "function convertToAssets(uint256 shares) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_convertToAssets_4",
+              "test_name": "test_ERC4626_convertToAssets_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "convertToShares",
+          "visibility": "public",
+          "full_signature": "function convertToShares(uint256 assets) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_convertToShares_3",
+              "test_name": "test_ERC4626_convertToShares_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "decimals",
+          "visibility": "public",
+          "full_signature": "function decimals() public virtual override(IERC20Metadata, ERC20) returns (uint8)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_decimals_0",
+              "test_name": "test_ERC4626_decimals_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_ERC4626_property_decimals_0",
+              "test_name": "test_ERC4626_property_decimals_0",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "deposit",
+          "visibility": "public",
+          "full_signature": "function deposit(uint256 assets, address receiver) public virtual returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_deposit_13",
+              "test_name": "test_ERC4626_deposit_13",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_ERC4626_property_deposit_zero_10",
+              "test_name": "test_ERC4626_property_deposit_zero_10",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "maxDeposit",
+          "visibility": "public",
+          "full_signature": "function maxDeposit(address) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_maxDeposit_5",
+              "test_name": "test_ERC4626_maxDeposit_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "maxMint",
+          "visibility": "public",
+          "full_signature": "function maxMint(address) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_maxMint_6",
+              "test_name": "test_ERC4626_maxMint_6",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "maxRedeem",
+          "visibility": "public",
+          "full_signature": "function maxRedeem(address owner) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_maxRedeem_8",
+              "test_name": "test_ERC4626_maxRedeem_8",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "maxWithdraw",
+          "visibility": "public",
+          "full_signature": "function maxWithdraw(address owner) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_maxWithdraw_7",
+              "test_name": "test_ERC4626_maxWithdraw_7",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "mint",
+          "visibility": "public",
+          "full_signature": "function mint(uint256 shares, address receiver) public virtual returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_mint_14",
+              "test_name": "test_ERC4626_mint_14",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            },
+            {
+              "check_name": "check_ERC4626_property_mint_zero_11",
+              "test_name": "test_ERC4626_property_mint_zero_11",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "previewDeposit",
+          "visibility": "public",
+          "full_signature": "function previewDeposit(uint256 assets) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_previewDeposit_9",
+              "test_name": "test_ERC4626_previewDeposit_9",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "previewMint",
+          "visibility": "public",
+          "full_signature": "function previewMint(uint256 shares) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_previewMint_10",
+              "test_name": "test_ERC4626_previewMint_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "previewRedeem",
+          "visibility": "public",
+          "full_signature": "function previewRedeem(uint256 shares) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_previewRedeem_12",
+              "test_name": "test_ERC4626_previewRedeem_12",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "previewWithdraw",
+          "visibility": "public",
+          "full_signature": "function previewWithdraw(uint256 assets) public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_previewWithdraw_11",
+              "test_name": "test_ERC4626_previewWithdraw_11",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "redeem",
+          "visibility": "public",
+          "full_signature": "function redeem(uint256 shares, address receiver, address owner) public virtual returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_property_redeem_13",
+              "test_name": "test_ERC4626_property_redeem_13",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "totalAssets",
+          "visibility": "public",
+          "full_signature": "function totalAssets() public virtual view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_totalAssets_2",
+              "test_name": "test_ERC4626_totalAssets_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+          "class_name": "ERC4626",
+          "class_kind": "contract",
+          "method_name": "withdraw",
+          "visibility": "public",
+          "full_signature": "function withdraw(uint256 assets, address receiver, address owner) public virtual returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ERC4626_property_withdraw_12",
+              "test_name": "test_ERC4626_property_withdraw_12",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 22,
+        "passed_methods": 22,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 22
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_ERC4626_decimals_0(?:\\(.*\\))?|check_ERC4626_asset_1(?:\\(.*\\))?|check_ERC4626_totalAssets_2(?:\\(.*\\))?|check_ERC4626_convertToShares_3(?:\\(.*\\))?|check_ERC4626_convertToAssets_4(?:\\(.*\\))?|check_ERC4626_maxDeposit_5(?:\\(.*\\))?|check_ERC4626_maxMint_6(?:\\(.*\\))?|check_ERC4626_maxWithdraw_7(?:\\(.*\\))?|check_ERC4626_maxRedeem_8(?:\\(.*\\))?|check_ERC4626_previewDeposit_9(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/3 ---\nCompiling 2 files with Solc 0.8.24\nSolc 0.8.24 finished in 2.68s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to view\n  --> test/token/ERC20/extensions/ERC4626.t.sol:41:5:\n   |\n41 |     function exposed__decimalsOffset() public returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/token/ERC20/extensions/ERC4626.t.sol:44:5:\n   |\n44 |     function exposed__convertToShares(uint256 assets, uint8 roundingMode) public returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/token/ERC20/extensions/ERC4626.t.sol:49:5:\n   |\n49 |     function exposed__convertToAssets(uint256 shares, uint8 roundingMode) public returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/token/ERC20/extensions/ERC4626.t.sol:145:5:\n    |\n145 |     function exposed__decimalsOffset() public returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/token/ERC20/extensions/ERC4626.t.sol:148:5:\n    |\n148 |     function exposed__convertToShares(uint256 assets, uint8 roundingMode) public returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/token/ERC20/extensions/ERC4626.t.sol:153:5:\n    |\n153 |     function exposed__convertToAssets(uint256 shares, uint8 roundingMode) public returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 10 tests for test/token/ERC20/extensions/ERC4626.t.sol:ERC4626EquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ERC4626_asset_1(uint8) (paths: 3, time: 0.10s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_convertToAssets_4(uint8,uint256) (paths: 7, time: 0.30s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_convertToShares_3(uint8,uint256) (paths: 7, time: 0.35s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_decimals_0(uint8) (paths: 3, time: 0.08s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_maxDeposit_5(uint8,address) (paths: 4, time: 0.09s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_maxMint_6(uint8,address) (paths: 4, time: 0.09s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_maxRedeem_8(uint8,address,uint256) (paths: 6, time: 0.18s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_maxWithdraw_7(uint8,address,uint256) (paths: 10, time: 0.51s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_previewDeposit_9(uint8,uint256) (paths: 7, time: 0.90s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_totalAssets_2(uint8) (paths: 3, time: 0.10s, bounds: [])\nSymbolic test result: 10 passed; 0 failed; time: 2.73s\n\n\n--- halmos chunk 2/3 ---\nNo files changed, compilation skipped\n\nRunning 10 tests for test/token/ERC20/extensions/ERC4626.t.sol:ERC4626EquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ERC4626__convertToAssets_18(uint8,uint256,uint8) (paths: 16, time: 0.84s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626__convertToShares_17(uint8,uint256,uint8) (paths: 14, time: 0.87s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626__decimalsOffset_21(uint8) (paths: 3, time: 0.08s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626__deposit_19(uint8,address,address,uint256,uint256) (paths: 14, time: 1.16s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626__withdraw_20(uint8,address,address,address,uint256,uint256) (paths: 28, time: 1.84s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_deposit_13(uint8,uint256,address) (paths: 14, time: 1.18s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_mint_14(uint8,uint256,address) (paths: 18, time: 1.53s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_previewMint_10(uint8,uint256) (paths: 9, time: 0.48s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_previewRedeem_12(uint8,uint256) (paths: 7, time: 0.32s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_previewWithdraw_11(uint8,uint256) (paths: 7, time: 0.39s, bounds: [])\nSymbolic test result: 10 passed; 0 failed; time: 8.72s\n\n\n--- halmos chunk 3/3 ---\nNo files changed, compilation skipped\n\nRunning 6 tests for test/token/ERC20/extensions/ERC4626.t.sol:ERC4626EquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ERC4626_property_decimals_0(uint8) (paths: 3, time: 0.09s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_property_deposit_zero_10() (paths: 1, time: 0.09s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_property_internal_decimals_offset_9(uint8) (paths: 3, time: 0.09s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_property_mint_zero_11() (paths: 1, time: 0.09s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_property_redeem_13(uint8,uint256) (paths: 35, time: 4.17s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC4626_property_withdraw_12(uint8,uint256) (paths: 59, time: 6.21s, bounds: [])\nSymbolic test result: 6 passed; 0 failed; time: 10.77s\n",
+      "halmos_stderr": "--- halmos chunk 1/3 ---\n\n\n--- halmos chunk 2/3 ---\n\n\n--- halmos chunk 3/3 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 3,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_ERC4626_decimals_0(?:\\(.*\\))?|check_ERC4626_asset_1(?:\\(.*\\))?|check_ERC4626_totalAssets_2(?:\\(.*\\))?|check_ERC4626_convertToShares_3(?:\\(.*\\))?|check_ERC4626_convertToAssets_4(?:\\(.*\\))?|check_ERC4626_maxDeposit_5(?:\\(.*\\))?|check_ERC4626_maxMint_6(?:\\(.*\\))?|check_ERC4626_maxWithdraw_7(?:\\(.*\\))?|check_ERC4626_maxRedeem_8(?:\\(.*\\))?|check_ERC4626_previewDeposit_9(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_ERC4626_previewMint_10(?:\\(.*\\))?|check_ERC4626_previewWithdraw_11(?:\\(.*\\))?|check_ERC4626_previewRedeem_12(?:\\(.*\\))?|check_ERC4626_deposit_13(?:\\(.*\\))?|check_ERC4626_mint_14(?:\\(.*\\))?|check_ERC4626__convertToShares_17(?:\\(.*\\))?|check_ERC4626__convertToAssets_18(?:\\(.*\\))?|check_ERC4626__deposit_19(?:\\(.*\\))?|check_ERC4626__withdraw_20(?:\\(.*\\))?|check_ERC4626__decimalsOffset_21(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_ERC4626_property_decimals_0(?:\\(.*\\))?|check_ERC4626_property_internal_decimals_offset_9(?:\\(.*\\))?|check_ERC4626_property_deposit_zero_10(?:\\(.*\\))?|check_ERC4626_property_mint_zero_11(?:\\(.*\\))?|check_ERC4626_property_withdraw_12(?:\\(.*\\))?|check_ERC4626_property_redeem_13(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

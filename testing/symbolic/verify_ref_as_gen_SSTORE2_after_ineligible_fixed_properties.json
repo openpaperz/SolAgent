@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 2,
+        "proved_checks": 2,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 2,
+          "passed_methods": 2,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 2
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/SSTORE2.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/SSTORE2.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/SSTORE2.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/SSTORE2.sol"
+      ],
+      "test_names": [
+        "test_SSTORE2_predictDeterministicAddress_6",
+        "test_SSTORE2_predictDeterministicAddress_7"
+      ],
+      "check_names": [
+        "check_SSTORE2_predictDeterministicAddress_6",
+        "check_SSTORE2_predictDeterministicAddress_7"
+      ],
+      "methods_count": 2,
+      "manifest_skipped_checks": 19,
+      "skipped_checks": 0,
+      "expected_checks": 2,
+      "expected_tests": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_SSTORE2_predictDeterministicAddress_6": "PASS",
+        "check_SSTORE2_predictDeterministicAddress_7": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/SSTORE2.sol",
+          "class_name": "SSTORE2",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddress",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddress(bytes32 salt) internal view returns (address pointer)",
+          "checks": [
+            {
+              "check_name": "check_SSTORE2_predictDeterministicAddress_6",
+              "test_name": "test_SSTORE2_predictDeterministicAddress_6",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/SSTORE2.sol",
+          "class_name": "SSTORE2",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddress",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddress(bytes32 salt, address deployer) internal pure returns (address pointer)",
+          "checks": [
+            {
+              "check_name": "check_SSTORE2_predictDeterministicAddress_7",
+              "test_name": "test_SSTORE2_predictDeterministicAddress_7",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_SSTORE2_predictDeterministicAddress_6(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/2 ---\nCompiling 3 files with Solc 0.8.28\nSolc 0.8.28 finished in 418.16ms\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SSTORE2.t.sol:23:5:\n   |\n23 |     function ref_call_initCodeHash_3(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:26:5:\n   |\n26 |     function ref_call_predictCounterfactualAddress_4(bytes memory data, bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SSTORE2.t.sol:29:5:\n   |\n29 |     function ref_call_predictCounterfactualAddress_5(bytes memory data, bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:32:5:\n   |\n32 |     function ref_call_predictDeterministicAddress_6(bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SSTORE2.t.sol:35:5:\n   |\n35 |     function ref_call_predictDeterministicAddress_7(bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:38:5:\n   |\n38 |     function ref_call_read_8(address pointer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:41:5:\n   |\n41 |     function ref_call_read_9(address pointer, uint256 start) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:44:5:\n   |\n44 |     function ref_call_read_10(address pointer, uint256 start, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SSTORE2.t.sol:56:5:\n   |\n56 |     function gen_call_initCodeHash_3(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:59:5:\n   |\n59 |     function gen_call_predictCounterfactualAddress_4(bytes memory data, bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SSTORE2.t.sol:62:5:\n   |\n62 |     function gen_call_predictCounterfactualAddress_5(bytes memory data, bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:65:5:\n   |\n65 |     function gen_call_predictDeterministicAddress_6(bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SSTORE2.t.sol:68:5:\n   |\n68 |     function gen_call_predictDeterministicAddress_7(bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:71:5:\n   |\n71 |     function gen_call_read_8(address pointer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:74:5:\n   |\n74 |     function gen_call_read_9(address pointer, uint256 start) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SSTORE2.t.sol:77:5:\n   |\n77 |     function gen_call_read_10(address pointer, uint256 start, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/SSTORE2.t.sol:SSTORE2EquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_SSTORE2_predictDeterministicAddress_6(bytes32) (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 2/2 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/SSTORE2.t.sol:SSTORE2EquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_SSTORE2_predictDeterministicAddress_7(bytes32,address) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n",
+      "halmos_stderr": "--- halmos chunk 1/2 ---\n\n\n--- halmos chunk 2/2 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 2,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_SSTORE2_predictDeterministicAddress_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_SSTORE2_predictDeterministicAddress_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

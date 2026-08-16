@@ -1,0 +1,263 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibBytes.sol",
+        "-o",
+        "/tmp/aderyn_report_3unrtleo/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibBytes.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibBytes.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_3unrtleo/report.json\n\n🪶 Aderyn spotted all it could. Stay secure.\nIf our little bird helped you out, give it a perch with a GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibBytes.sol",
+              "n_sloc": 638
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 638,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "This causes the transaction execution to halt, and nothing after that call will execute including code following the assembly block.",
+              "detector_name": "yul-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBytes.sol",
+                  "line_no": 850,
+                  "src": "32029:23",
+                  "src_char": "30754:23"
+                },
+                {
+                  "contract_path": "src/utils/LibBytes.sol",
+                  "line_no": 874,
+                  "src": "32902:23",
+                  "src_char": "31627:23"
+                }
+              ],
+              "title": "Yul block contains `return`"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBytes.sol",
+                  "line_no": 253,
+                  "src": "9272:7",
+                  "src_char": "8972:7"
+                },
+                {
+                  "contract_path": "src/utils/LibBytes.sol",
+                  "line_no": 312,
+                  "src": "11523:7",
+                  "src_char": "11223:7"
+                },
+                {
+                  "contract_path": "src/utils/LibBytes.sol",
+                  "line_no": 323,
+                  "src": "12069:11",
+                  "src_char": "11694:11"
+                },
+                {
+                  "contract_path": "src/utils/LibBytes.sol",
+                  "line_no": 474,
+                  "src": "18293:5",
+                  "src_char": "17543:5"
+                },
+                {
+                  "contract_path": "src/utils/LibBytes.sol",
+                  "line_no": 606,
+                  "src": "22881:9",
+                  "src_char": "21981:9"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            }
+          ]
+        }
+      },
+      "return_code": 0,
+      "source_dir": null
+    },
+    "reported_sloc": 638,
+    "sloc": 638,
+    "summary": {
+      "High": 1,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 5,
+    "best_round": 5,
+    "best_total": 11,
+    "best_vuln": 1,
+    "code_bytes": 34292,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "43b2da65df675397f756369ff753b8f853481d348a0bd159112ef8dc76e500fd",
+    "skip_reason": null,
+    "sloc": 638,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:37.511339+00:00",
+  "eval": {
+    "best_round": 5,
+    "compile_error": "Error: Compiler run failed:\nError: Compiler error (/solidity/libsolidity/codegen/ContractCompiler.cpp:850):Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables.\nCompilerError: Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables.\n   --> src/utils/LibBytes.solagent_gen.sol:676:9:\n    |\n676 |         assembly (\"memory-safe\") {\n    |         ^ (Relevant source part starts here and spans across multiple lines).\n\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibBytes.t.sol",
+    "expected_tests": 32,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 216,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+  "id": 216,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:06.547750+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 1,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 1
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

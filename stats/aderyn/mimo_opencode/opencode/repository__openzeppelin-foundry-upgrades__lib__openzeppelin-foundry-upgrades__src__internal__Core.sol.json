@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Core.sol",
+  "eval_full_pass": false,
+  "code_sha256": "4c31b410c01cdb8fccfbeee8257566a441e5e35a5524105c6d88cf87accf0071",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:59.707265+00:00",
+  "skip_reason": "not eval FullPass"
+}

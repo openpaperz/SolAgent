@@ -1,0 +1,529 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/DateTimeLib.sol",
+        "-o",
+        "/tmp/aderyn_report_s_zgev_9/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/DateTimeLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/DateTimeLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_s_zgev_9/report.json\n\n\u2714  Done! Fast, clean, effective.\n\u2b50 Support the project with a star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/DateTimeLib.sol",
+              "n_sloc": 291
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 291,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 107,
+                  "src": "4406:10",
+                  "src_char": "4406:10"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 150,
+                  "src": "6093:15",
+                  "src_char": "6093:15"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 28,
+                  "src": "1105:2",
+                  "src_char": "1105:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 30,
+                  "src": "1153:3",
+                  "src_char": "1153:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 31,
+                  "src": "1236:3",
+                  "src_char": "1236:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 32,
+                  "src": "1283:3",
+                  "src_char": "1283:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 32,
+                  "src": "1294:1",
+                  "src_char": "1294:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 32,
+                  "src": "1304:1",
+                  "src_char": "1304:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 33,
+                  "src": "1349:3",
+                  "src_char": "1349:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 33,
+                  "src": "1361:1",
+                  "src_char": "1361:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 33,
+                  "src": "1371:3",
+                  "src_char": "1371:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 35,
+                  "src": "1485:6",
+                  "src_char": "1485:6"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 35,
+                  "src": "1500:6",
+                  "src_char": "1500:6"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 45,
+                  "src": "1883:6",
+                  "src_char": "1883:6"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 46,
+                  "src": "1921:6",
+                  "src_char": "1921:6"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 47,
+                  "src": "1965:6",
+                  "src_char": "1965:6"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 48,
+                  "src": "2064:3",
+                  "src_char": "2064:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 49,
+                  "src": "2117:3",
+                  "src_char": "2117:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 50,
+                  "src": "2155:3",
+                  "src_char": "2155:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 50,
+                  "src": "2173:1",
+                  "src_char": "2173:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 50,
+                  "src": "2183:3",
+                  "src_char": "2183:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 51,
+                  "src": "2227:1",
+                  "src_char": "2227:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 51,
+                  "src": "2242:3",
+                  "src_char": "2242:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 52,
+                  "src": "2289:3",
+                  "src_char": "2289:3"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 52,
+                  "src": "2305:1",
+                  "src_char": "2305:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 53,
+                  "src": "2352:1",
+                  "src_char": "2352:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 54,
+                  "src": "2388:2",
+                  "src_char": "2388:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 55,
+                  "src": "2419:1",
+                  "src_char": "2419:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 122,
+                  "src": "5050:2",
+                  "src_char": "5050:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 124,
+                  "src": "5131:1",
+                  "src_char": "5131:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 124,
+                  "src": "5145:1",
+                  "src_char": "5145:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 124,
+                  "src": "5159:1",
+                  "src_char": "5159:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 124,
+                  "src": "5187:2",
+                  "src_char": "5187:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 124,
+                  "src": "5202:2",
+                  "src_char": "5202:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 126,
+                  "src": "5269:1",
+                  "src_char": "5269:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 126,
+                  "src": "5297:1",
+                  "src_char": "5297:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 143,
+                  "src": "5944:1",
+                  "src_char": "5944:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 143,
+                  "src": "5949:1",
+                  "src_char": "5949:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 153,
+                  "src": "6318:2",
+                  "src_char": "6318:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 167,
+                  "src": "6885:2",
+                  "src_char": "6885:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 168,
+                  "src": "6929:2",
+                  "src_char": "6929:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 201,
+                  "src": "8164:1",
+                  "src_char": "8164:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 203,
+                  "src": "8292:1",
+                  "src_char": "8292:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 203,
+                  "src": "8308:1",
+                  "src_char": "8308:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 204,
+                  "src": "8365:1",
+                  "src_char": "8365:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 218,
+                  "src": "8991:1",
+                  "src_char": "8991:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 218,
+                  "src": "8996:1",
+                  "src_char": "8996:1"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 254,
+                  "src": "10441:2",
+                  "src_char": "10441:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 255,
+                  "src": "10491:2",
+                  "src_char": "10491:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 309,
+                  "src": "12622:2",
+                  "src_char": "12622:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 310,
+                  "src": "12669:2",
+                  "src_char": "12669:2"
+                },
+                {
+                  "contract_path": "src/utils/DateTimeLib.sol",
+                  "line_no": 429,
+                  "src": "17308:2",
+                  "src_char": "17308:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 291,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "1d3abe5276d1cc9ea6680af086c055c76734c41722659aa7de8a2c4928aa843a",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:14.346447+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 18288,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 34,
+    "extract_error": null,
+    "failed_tests": 26,
+    "forge_failed": 26,
+    "forge_total": 34,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 8,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3246,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/DateTimeLib.sol",
+  "id": 3246,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:20.800922+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "deepcode",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 26,
+  "test_pass": 8,
+  "test_source": "eval_seed1",
+  "test_total": 34
+}

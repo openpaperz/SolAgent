@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/solady/lib/solady/src/utils/LibBitmap.sol",
+  "eval_full_pass": false,
+  "code_sha256": "78eb20fe9f65c9a13519bbf4be85494929561a5e0b124e72f2429448fb3280fa",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:59.793788+00:00",
+  "skip_reason": "not eval FullPass"
+}

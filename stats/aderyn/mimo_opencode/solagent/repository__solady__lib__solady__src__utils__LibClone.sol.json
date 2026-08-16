@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+  "eval_full_pass": false,
+  "code_sha256": null,
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:57.395385+00:00",
+  "skip_reason": "not eval FullPass"
+}

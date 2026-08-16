@@ -1,0 +1,309 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibBitmap.sol",
+        "-o",
+        "/tmp/aderyn_report_bjwbewbs/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibBitmap.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibBitmap.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_bjwbewbs/report.json\n\n\u2714 Aderyn did its job. Solidity's a bit safer now.\n\ud83d\udcab Like the tool? A star on GitHub goes a long way:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibBitmap.sol",
+              "n_sloc": 164
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 164,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Example: `shl(shifted, 4)` will shift the right constant `4` by `a` bits. The correct order is `shl(4, shifted)`.",
+              "detector_name": "incorrect-shift-order",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 69,
+                  "src": "3372:24",
+                  "src_char": "3147:24"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 87,
+                  "src": "4163:24",
+                  "src_char": "3938:24"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 115,
+                  "src": "5522:9",
+                  "src_char": "5297:9"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 143,
+                  "src": "6941:9",
+                  "src_char": "6716:9"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 295,
+                  "src": "14047:11",
+                  "src_char": "13822:11"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 302,
+                  "src": "14387:11",
+                  "src_char": "14162:11"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 355,
+                  "src": "16831:11",
+                  "src_char": "16606:11"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 356,
+                  "src": "16932:11",
+                  "src_char": "16707:11"
+                }
+              ],
+              "title": "Incorrect Assembly Shift Parameter Order"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 252,
+                  "src": "12102:1",
+                  "src_char": "11877:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 253,
+                  "src": "12141:4",
+                  "src_char": "11916:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 254,
+                  "src": "12180:3",
+                  "src_char": "11955:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 256,
+                  "src": "12308:1",
+                  "src_char": "12083:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 260,
+                  "src": "12497:4",
+                  "src_char": "12272:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 263,
+                  "src": "12609:3",
+                  "src_char": "12384:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 164,
+    "summary": {
+      "High": 1,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 16,
+    "best_round": 1,
+    "best_total": 30,
+    "best_vuln": 6,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "selection_policy": "test-first-security-second",
+    "sha256": "d919c804649aa940863d903c1a3f6f9b91c74d66796530cab069308c3cd1ed24",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:36.091919+00:00",
+  "eval": {
+    "best_pass": 16,
+    "best_round": 1,
+    "best_total": 30,
+    "best_vuln": 6,
+    "code_bytes": 18127,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 10,
+    "extract_error": null,
+    "failed_tests": 5,
+    "forge_failed": 5,
+    "forge_total": 10,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 5,
+    "report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "row_id": 239,
+    "row_status": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibBitmap.sol",
+  "id": 239,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-11T07:31:18.310156+00:00",
+  "slither": {
+    "best_pass": 16,
+    "best_round": 1,
+    "best_total": 30,
+    "count": 6,
+    "min_vuln_count": 4,
+    "min_vuln_round": 2,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 6,
+    "rq1_source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "summary": {}
+  },
+  "source": "solagent",
+  "source_kind": "solagent",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 5,
+  "test_pass": 5,
+  "test_source": "eval_seed1",
+  "test_total": 10
+}

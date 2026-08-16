@@ -61,14 +61,14 @@ def api_gpt5_model(agent_config, model_name: str = "qwen3-coder_30b", platform="
         set_api_key(agent_config, api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
     elif platform == "api2d":
         set_api_key(agent_config, api_key=API2D_OPENAI_API_KEY, base_url=API2D_OPENAI_BASE_URL)
-    
+
     agent_config.llm.service = "openai"
     agent_config.llm.model = model_name
     agent_config["generation_config"] = {
         "max_completion_tokens": 50000,
         "stream": True,
     }
-    
+
     return agent_config
 
 def vllm_qwen3_model(agent_config, model_name: str = "qwen3-coder_30b"):
@@ -85,7 +85,7 @@ def vllm_qwen3_model(agent_config, model_name: str = "qwen3-coder_30b"):
         },
         # "stream": True,
     }
-    
+
     return agent_config
 
 def vllm_qwen3_model_instruct(agent_config, model_name: str = "qwen3-coder_30b"):
@@ -102,7 +102,7 @@ def vllm_qwen3_model_instruct(agent_config, model_name: str = "qwen3-coder_30b")
         # },
         # "stream": True,
     }
-    
+
     return agent_config
 
 def api_qwen3_model(agent_config, model_name: str = "qwen3-coder_30b"):
@@ -120,7 +120,7 @@ def api_qwen3_model(agent_config, model_name: str = "qwen3-coder_30b"):
         },
         "stream": True,
     }
-    
+
     return agent_config
 
 
@@ -134,7 +134,7 @@ def claude_openai_model(agent_config, model_name: str = "qwen3-coder_30b"):
         "temperature": 1.0,
         # "top_p": 0.6,
     }
-    
+
     return agent_config
 
 def api_claude_model(agent_config, model_name: str = "qwen3-coder_30b", platform="anthropic"):
@@ -156,7 +156,7 @@ def api_claude_model(agent_config, model_name: str = "qwen3-coder_30b", platform
 
     agent_config.llm.service = platform
     agent_config.llm.model = model_name
-    
+
     return agent_config
 
 def claude_model(agent_config):
@@ -240,7 +240,7 @@ def vllm_qwen3coder_model(agent_config, model_name: str = "qwen3-coder_30b"):
         "temperature": 1.0,
         "top_p": 0.6,
     }
-    
+
     return agent_config
 
 # def api_qwen3_model(agent_config, model_name: str = "qwen3-coder_30b"):
@@ -253,7 +253,7 @@ def vllm_qwen3coder_model(agent_config, model_name: str = "qwen3-coder_30b"):
 #         "temperature": 1.0,
 #         "top_p": 0.6,
 #     }
-    
+
 #     return agent_config
 
 def api_deepseek_model(agent_config, model_name: str = "qwen3-coder_30b", max_tokens: int = None):
@@ -266,7 +266,7 @@ def api_deepseek_model(agent_config, model_name: str = "qwen3-coder_30b", max_to
         "temperature": 1.0,
         "top_p": 0.6,
     }
-    
+
     return agent_config
 
 def gptoss_model(agent_config):
@@ -325,21 +325,21 @@ def phi_model(agent_config):
 def choose_model(model_name: str, agent_config, platform: str = "openai"):
     """
     Unified model selection function.
-    
+
     Args:
         model_name: Name of the model to use. Supported values:
                     'gpt5', 'gpt4o', 'claude', 'qwen3', 'qwen3-coder_30b', 'gptoss', 'phi'
         agent_config: Agent configuration object to modify
         platform: Platform to use for gpt5 (default: 'openai')
-    
+
     Returns:
         Modified agent_config with the selected model settings
-        
+
     Raises:
         ValueError: If model_name is not recognized
     """
     # model_name_lower = model_name.lower()
-    
+
     # if model_name_lower.startswith('qwen') and model_name_lower not in ['qwen3-coder_30b']:
     #     model_name_lower = 'qwen'
 
@@ -347,6 +347,7 @@ def choose_model(model_name: str, agent_config, platform: str = "openai"):
         'gpt-5-mini': lambda cfg: api_gpt5_model(cfg, model_name=model_name, platform=platform),
         'gpt-5.1': lambda cfg: api_gpt5_model(cfg, model_name=model_name, platform=platform),
         'gpt-5.2': lambda cfg: api_gpt5_model(cfg, model_name=model_name, platform=platform),
+        'mimo-v2.5-pro': lambda cfg: api_gpt5_model(cfg, model_name=model_name, platform=platform),
         # 'qwen': lambda cfg: qwen3_model(cfg, model_name=model_name),
         'qwen3-coder_30b': lambda cfg: vllm_qwen3coder_model(cfg, model_name=model_name),
         'Qwen/Qwen3-30B-A3B-Instruct-2507': lambda cfg: api_qwen3_model(cfg, model_name=model_name),
@@ -390,7 +391,7 @@ def choose_model(model_name: str, agent_config, platform: str = "openai"):
                 agent_config.generation_config["timeout"] = 3600
                 if agent_config.generation_config.get('stream', False):
                     agent_config.generation_config['stream_options'] = {'include_usage': True}
-    
+
         except Exception:
             # Be resilient if agent_config structure differs
             pass
@@ -408,10 +409,10 @@ def choose_model(model_name: str, agent_config, platform: str = "openai"):
 def get_model_display_name(agent_config) -> str:
     """
     Extract a human-readable model name from the agent config.
-    
+
     Args:
         agent_config: Agent configuration object
-        
+
     Returns:
         Model display name string
     """

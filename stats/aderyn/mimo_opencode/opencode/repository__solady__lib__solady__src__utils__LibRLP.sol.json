@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+  "eval_full_pass": false,
+  "code_sha256": "bca4aab41b38ad514095c8dd4b10cadcf099ac96692669b8efd525b36128cd0b",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:59.757754+00:00",
+  "skip_reason": "not eval FullPass"
+}

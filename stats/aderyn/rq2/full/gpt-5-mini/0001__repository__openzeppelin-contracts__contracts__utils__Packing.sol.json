@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 37431,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "e25f6009005f1c24433d9217e61e7ae707aa3048ac02c1f2910cc560e4a9422e",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 556,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:38.706636+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (1686): Function with same name and parameter types defined twice.\n   --> contracts/utils/Packing.solagent_gen.sol:632:5:\n    |\n632 |     function extract_16_1(bytes16 self, uint8 offset) internal pure returns (bytes1 result) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\nNote: Other declaration is here:\n   --> contracts/utils/Packing.solagent_gen.sol:730:5:\n    |\n730 |     function extract_16_1(bytes16 self, uint8 offset) internal pure returns (bytes1) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (9582): Member \"pack_20_2\" not found or not visible after argument-dependent lookup in type(library Packing).\n   --> test/utils/Packing.t.sol:784:24:\n    |\n784 |         bytes22 ret0 = GenPacking_0.pack_20_2(left, right); return abi.encode(ret0);\n    |                        ^^^^^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/utils/Packing.t.sol",
+    "expected_tests": 212,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/Packing.sol",
+  "id": 1,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:07.775839+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "skipped",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

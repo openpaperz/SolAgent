@@ -1,0 +1,290 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/ext/ithaca/BLS.sol",
+        "-o",
+        "/tmp/aderyn_report_ty249_0c/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/ext/ithaca/BLS.sol",
+      "profile": "ithaca",
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - cancun\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/ext/ithaca/BLS.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_ty249_0c/report.json\n\n\ud83d\udca1 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star \u2b50\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/ext/ithaca/BLS.sol",
+              "n_sloc": 297
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 297,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 10,
+                  "src": "414:20",
+                  "src_char": "339:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 11,
+                  "src": "439:20",
+                  "src_char": "364:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 12,
+                  "src": "464:20",
+                  "src_char": "389:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 13,
+                  "src": "489:20",
+                  "src_char": "414:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 14,
+                  "src": "514:20",
+                  "src_char": "439:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 15,
+                  "src": "539:20",
+                  "src_char": "464:20"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 16,
+                  "src": "564:22",
+                  "src_char": "489:22"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 17,
+                  "src": "591:24",
+                  "src_char": "516:24"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 18,
+                  "src": "620:25",
+                  "src_char": "545:25"
+                },
+                {
+                  "contract_path": "src/utils/ext/ithaca/BLS.sol",
+                  "line_no": 19,
+                  "src": "650:23",
+                  "src_char": "575:23"
+                }
+              ],
+              "title": "Unused Error"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 297,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 3,
+    "best_round": 2,
+    "best_total": 5,
+    "best_vuln": 0,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "selection_policy": "test-first-security-second",
+    "sha256": "1cfe72eff664f56cac4532872c79a3138a2299495157144e0ad9cdd28472816d",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:36.452669+00:00",
+  "eval": {
+    "best_pass": 3,
+    "best_round": 2,
+    "best_total": 5,
+    "best_vuln": 0,
+    "code_bytes": 26910,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 10,
+    "extract_error": null,
+    "failed_tests": 3,
+    "forge_failed": 3,
+    "forge_total": 10,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 7,
+    "report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "row_id": 244,
+    "row_status": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/ext/ithaca/BLS.sol",
+  "id": 244,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-11T07:31:18.334363+00:00",
+  "slither": {
+    "best_pass": 3,
+    "best_round": 2,
+    "best_total": 5,
+    "count": 0,
+    "min_vuln_count": 0,
+    "min_vuln_round": 2,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "summary": {}
+  },
+  "source": "solagent",
+  "source_kind": "solagent",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 3,
+  "test_pass": 7,
+  "test_source": "eval_seed1",
+  "test_total": 10
+}

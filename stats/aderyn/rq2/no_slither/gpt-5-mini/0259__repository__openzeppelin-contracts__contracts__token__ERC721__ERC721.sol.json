@@ -1,0 +1,329 @@
+{
+  "aderyn": {
+    "count": 7,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/token/ERC721/ERC721.sol",
+        "-o",
+        "/tmp/aderyn_report_zsnlshl1/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/token/ERC721/ERC721.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n--------------------------------------------------------------------------------\n# Configuration\n--------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n--------------------------------------------------------------------------------\n# Source Scope\n--------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/token/ERC721/ERC721.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n--------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n--------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n--------------------------------------------------------------------------------\n# Scanning Contracts\n--------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_zsnlshl1/report.json\n\n🛡️ Together we make Solidity safer.\n✨ Support open-source security — star Aderyn:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/token/ERC721/ERC721.sol",
+              "n_sloc": 239
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 239,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 173,
+                  "src": "6274:16",
+                  "src_char": "6274:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 6
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Functions that are not used. Consider removing them.",
+              "detector_name": "dead-code",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 444,
+                  "src": "17480:9",
+                  "src_char": "17480:9"
+                },
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 474,
+                  "src": "18713:5",
+                  "src_char": "18713:5"
+                },
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 507,
+                  "src": "20328:13",
+                  "src_char": "20328:13"
+                },
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 585,
+                  "src": "23765:13",
+                  "src_char": "23765:13"
+                }
+              ],
+              "title": "Dead Code"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 613,
+                  "src": "24744:2",
+                  "src_char": "24744:2"
+                },
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 618,
+                  "src": "24924:2",
+                  "src_char": "24924:2"
+                },
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 619,
+                  "src": "24952:2",
+                  "src_char": "24952:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "State variables that are only changed in the constructor should be declared immutable to save gas. Add the `immutable` attribute to state variables that are only changed in the constructor",
+              "detector_name": "state-variable-could-be-immutable",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 60,
+                  "src": "2071:5",
+                  "src_char": "2071:5"
+                },
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 61,
+                  "src": "2098:7",
+                  "src_char": "2098:7"
+                }
+              ],
+              "title": "State Variable Could Be Immutable"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+              "detector_name": "unused-public-function",
+              "instances": [
+                {
+                  "contract_path": "contracts/token/ERC721/ERC721.sol",
+                  "line_no": 270,
+                  "src": "10341:16",
+                  "src_char": "10341:16"
+                }
+              ],
+              "title": "Public Function Not Used Internally"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "reported_sloc": 239,
+    "sloc": 239,
+    "summary": {
+      "High": 1,
+      "Low": 6
+    }
+  },
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 25004,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "992de503a545edab04a116fb7046dadee326dfde7b4e3697b4ab6dbc505c384c",
+    "skip_reason": null,
+    "sloc": 239,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T15:19:00.369853+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/token/ERC721/extensions/ERC721Consecutive.t.sol",
+    "expected_tests": 31,
+    "extract_error": null,
+    "forge_total": 31,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": true,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 31,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 259,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+  "id": 259,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:13.946546+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 0,
+  "test_pass": 31,
+  "test_source": "rq2_eval",
+  "test_total": 31
+}

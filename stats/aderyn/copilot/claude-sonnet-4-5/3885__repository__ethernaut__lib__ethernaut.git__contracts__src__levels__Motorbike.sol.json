@@ -1,0 +1,281 @@
+{
+  "aderyn": {
+    "count": 5,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts",
+        "-i",
+        "src/levels/Motorbike.sol",
+        "-o",
+        "/tmp/aderyn_report_h94zl8p7/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/levels/Motorbike.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n-----------------------------------------------------------------------------------------\n# Configuration\n-----------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts\nSource - /home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts/src\nRemappings - [\n    \"forge-std/=lib/forge-std/src/\",\n    \"openzeppelin-contracts-06/=lib/openzeppelin-contracts-06/contracts/\",\n    \"openzeppelin-contracts-08/=lib/openzeppelin-contracts-08/contracts/\",\n    \"openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\n    \"openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n]\nEVM version - shanghai\n-----------------------------------------------------------------------------------------\n# Source Scope\n-----------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/levels/Motorbike.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-----------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-----------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.6.12]\n-----------------------------------------------------------------------------------------\n# Scanning Contracts\n-----------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_h94zl8p7/report.json\n\nAderyn saved you hours of headaches.\n\u2615 Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/levels/Motorbike.sol",
+              "n_sloc": 87
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 87,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "It appears that the contract includes a payable function to accept Ether but lacks a corresponding function to withdraw it, which leads to the Ether being locked in the contract. To resolve this issue, please implement a public or external function that allows for the withdrawal of Ether from the contract.",
+              "detector_name": "contract-locks-ether",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Motorbike.sol",
+                  "line_no": 4,
+                  "src": "57:3341",
+                  "src_char": "57:3341"
+                },
+                {
+                  "contract_path": "src/levels/Motorbike.sol",
+                  "line_no": 91,
+                  "src": "3400:3599",
+                  "src_char": "3400:3599"
+                }
+              ],
+              "title": "Contract locks Ether without a withdraw function"
+            },
+            {
+              "description": "This causes the transaction execution to halt, and nothing after that call will execute including code following the assembly block.",
+              "detector_name": "yul-return",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Motorbike.sol",
+                  "line_no": 62,
+                  "src": "2601:27",
+                  "src_char": "2601:27"
+                }
+              ],
+              "title": "Yul block contains `return`"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 2,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Consider removing the modifier or inlining the logic into the calling function.",
+              "detector_name": "modifier-used-only-once",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Motorbike.sol",
+                  "line_no": 109,
+                  "src": "3933:150",
+                  "src_char": "3933:150"
+                }
+              ],
+              "title": "Modifier Invoked Only Once"
+            },
+            {
+              "description": "There are state variable changes in this function but no event is emitted. Consider emitting an event to enable offchain indexers to track the changes.",
+              "detector_name": "state-change-without-event",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Motorbike.sol",
+                  "line_no": 120,
+                  "src": "4257:108",
+                  "src_char": "4257:108"
+                },
+                {
+                  "contract_path": "src/levels/Motorbike.sol",
+                  "line_no": 135,
+                  "src": "4865:177",
+                  "src_char": "4865:177"
+                }
+              ],
+              "title": "State Change Without Event"
+            },
+            {
+              "description": "State variable appears to be unused. No analysis has been performed to see if any inline assembly references it. Consider removing this unused variable.",
+              "detector_name": "unused-state-variable",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Motorbike.sol",
+                  "line_no": 101,
+                  "src": "3685:115",
+                  "src_char": "3685:115"
+                }
+              ],
+              "title": "Unused State Variable"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 87,
+    "summary": {
+      "High": 2,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "b7871c5e298644dbc40301b40daeda9f9e65546d40cef510a49c7474b5a8e117",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:20.679298+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 7215,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 5,
+    "extract_error": null,
+    "failed_tests": 0,
+    "forge_failed": 0,
+    "forge_total": 5,
+    "full_pass": true,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 5,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3885,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+  "id": 3885,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-11T07:31:21.872780+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "copilot",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 0,
+  "test_pass": 5,
+  "test_source": "eval_seed1",
+  "test_total": 5
+}

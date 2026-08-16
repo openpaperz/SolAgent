@@ -1,0 +1,346 @@
+{
+  "aderyn": {
+    "count": 8,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts",
+        "-i",
+        "src/levels/Preservation.sol",
+        "-o",
+        "/tmp/aderyn_report_m502gj1i/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/levels/Preservation.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts/src\nRemappings - [\n    \"forge-std/=lib/forge-std/src/\",\n    \"openzeppelin-contracts-06/=lib/openzeppelin-contracts-06/contracts/\",\n    \"openzeppelin-contracts-08/=lib/openzeppelin-contracts-08/contracts/\",\n    \"openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\n    \"openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n]\nEVM version - shanghai\n---------------------------------------------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/levels/Preservation.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_m502gj1i/report.json\n\n💡 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/levels/Preservation.sol",
+              "n_sloc": 25
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 25,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "The return value of the low-level call is not checked, so if the call fails, the Ether will be locked in the contract. If the low level is used to prevent blocking operations, consider logging failed calls. Ensure that the return value of a low-level call is checked or logged.",
+              "detector_name": "unchecked-low-level-call",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 40,
+                  "src": "1720:77",
+                  "src_char": "1720:77"
+                },
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 51,
+                  "src": "2241:77",
+                  "src_char": "2241:77"
+                }
+              ],
+              "title": "Unchecked Low level calls"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 7
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "There are state variable changes in this function but no event is emitted. Consider emitting an event to enable offchain indexers to track the changes.",
+              "detector_name": "state-change-without-event",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 64,
+                  "src": "2552:7",
+                  "src_char": "2552:7"
+                }
+              ],
+              "title": "State Change Without Event"
+            },
+            {
+              "description": "Check for `address(0)` when assigning values to address state variables.",
+              "detector_name": "state-no-address-check",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 25,
+                  "src": "1067:43",
+                  "src_char": "1067:43"
+                },
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 26,
+                  "src": "1120:43",
+                  "src_char": "1120:43"
+                }
+              ],
+              "title": "Address State Variable Set Without Checks"
+            },
+            {
+              "description": "State variables that are only changed in the constructor should be declared immutable to save gas. Add the `immutable` attribute to state variables that are only changed in the constructor",
+              "detector_name": "state-variable-could-be-immutable",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 6,
+                  "src": "133:16",
+                  "src_char": "133:16"
+                },
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 7,
+                  "src": "170:16",
+                  "src_char": "170:16"
+                },
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 8,
+                  "src": "207:5",
+                  "src_char": "207:5"
+                }
+              ],
+              "title": "State Variable Could Be Immutable"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+              "detector_name": "unused-public-function",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 39,
+                  "src": "1670:12",
+                  "src_char": "1670:12"
+                },
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 50,
+                  "src": "2190:13",
+                  "src_char": "2190:13"
+                },
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 64,
+                  "src": "2552:7",
+                  "src_char": "2552:7"
+                }
+              ],
+              "title": "Public Function Not Used Internally"
+            },
+            {
+              "description": "State variable appears to be unused. No analysis has been performed to see if any inline assembly references it. Consider removing this unused variable.",
+              "detector_name": "unused-state-variable",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Preservation.sol",
+                  "line_no": 9,
+                  "src": "227:10",
+                  "src_char": "227:10"
+                }
+              ],
+              "title": "Unused State Variable"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 25,
+    "summary": {
+      "High": 1,
+      "Low": 7
+    }
+  },
+  "code": {
+    "best_pass": 2,
+    "best_round": 1,
+    "best_total": 2,
+    "best_vuln": 6,
+    "code_bytes": 2619,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "3dbdf0c34583740fcc5c7242b998437b9cf82076e1482a66d90fd89076e7de6f",
+    "skip_reason": null,
+    "sloc": 25,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:16.000750+00:00",
+  "eval": {
+    "best_round": 1,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/ethernaut/lib/ethernaut.git/contracts/test/levels/Preservation.t.sol",
+    "expected_tests": 3,
+    "extract_error": null,
+    "forge_total": 3,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": true,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 3,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 188,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Preservation.sol",
+  "id": 188,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:06.290003+00:00",
+  "reused_from": "stats/aderyn/solagent/claude-sonnet-4-5/0188__repository__ethernaut__lib__ethernaut.git__contracts__src__levels__Preservation.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 6,
+    "summary": {
+      "High": 2,
+      "Low": 2,
+      "Medium": 2
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 3,
+  "test_source": "rq2_eval",
+  "test_total": 3
+}

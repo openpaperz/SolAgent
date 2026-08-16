@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/solady/lib/solady/src/utils/SSTORE2.sol",
+  "eval_full_pass": false,
+  "code_sha256": "b0bda0916e68419c068294992a85c8a38d177772bf1ca2441ecaf5f12559d95f",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:59.751761+00:00",
+  "skip_reason": "not eval FullPass"
+}

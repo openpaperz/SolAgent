@@ -1,0 +1,312 @@
+{
+  "summary": {
+    "global": {
+      "sols": 2,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 1,
+      "expected_checks": 4,
+      "proved_checks": 4,
+      "failed_checks": 0,
+      "skipped_checks": 10,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 2,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 1,
+        "expected_checks": 4,
+        "proved_checks": 4,
+        "failed_checks": 0,
+        "skipped_checks": 10,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 4,
+        "passed_methods": 4,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 4
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 4,
+          "passed_methods": 4,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 4
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+      "feedback_test_path": "repository/ethernaut/lib/ethernaut.git/contracts/test/levels/Motorbike.t.sol",
+      "symbolic_test_path": "repository/ethernaut/lib/ethernaut.git/contracts/test/levels/Motorbike.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol"
+      ],
+      "test_names": [
+        "test_Engine_initialize_1",
+        "test_Engine_upgradeToAndCall_2",
+        "test_Engine__authorizeUpgrade_3",
+        "test_Motorbike_property_upgrade_to_and_call_internal_2"
+      ],
+      "check_names": [
+        "check_Engine_initialize_1",
+        "check_Engine_upgradeToAndCall_2",
+        "check_Engine__authorizeUpgrade_3",
+        "check_Motorbike_property_upgrade_to_and_call_internal_2"
+      ],
+      "methods_count": 4,
+      "manifest_skipped_checks": 3,
+      "skipped_checks": 0,
+      "expected_checks": 4,
+      "expected_tests": 4,
+      "proved_checks": 4,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_Engine_initialize_1": "PASS",
+        "check_Engine_upgradeToAndCall_2": "PASS",
+        "check_Engine__authorizeUpgrade_3": "PASS",
+        "check_Motorbike_property_upgrade_to_and_call_internal_2": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+          "class_name": "Engine",
+          "class_kind": "contract",
+          "method_name": "_authorizeUpgrade",
+          "visibility": "internal",
+          "full_signature": "function _authorizeUpgrade() internal view",
+          "checks": [
+            {
+              "check_name": "check_Engine__authorizeUpgrade_3",
+              "test_name": "test_Engine__authorizeUpgrade_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+          "class_name": "Engine",
+          "class_kind": "contract",
+          "method_name": "_upgradeToAndCall",
+          "visibility": "internal",
+          "full_signature": "function _upgradeToAndCall(address newImplementation, bytes memory data) internal",
+          "checks": [
+            {
+              "check_name": "check_Motorbike_property_upgrade_to_and_call_internal_2",
+              "test_name": "test_Motorbike_property_upgrade_to_and_call_internal_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+          "class_name": "Engine",
+          "class_kind": "contract",
+          "method_name": "initialize",
+          "visibility": "external",
+          "full_signature": "function initialize() external initializer",
+          "checks": [
+            {
+              "check_name": "check_Engine_initialize_1",
+              "test_name": "test_Engine_initialize_1",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+          "class_name": "Engine",
+          "class_kind": "contract",
+          "method_name": "upgradeToAndCall",
+          "visibility": "external",
+          "full_signature": "function upgradeToAndCall(address newImplementation, bytes memory data) external payable",
+          "checks": [
+            {
+              "check_name": "check_Engine_upgradeToAndCall_2",
+              "test_name": "test_Engine_upgradeToAndCall_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 4,
+        "passed_methods": 4,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 4
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts",
+        "--match-test",
+        "^(?:check_Engine_initialize_1(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/4 ---\nCompiling 1 files with Solc 0.8.28\nCompiling 2 files with Solc 0.6.12\nSolc 0.6.12 finished in 519.33ms\nSolc 0.8.28 finished in 1.09s\nCompiler run successful with warnings:\nWarning (3628): This contract has a payable fallback function, but no receive ether function. Consider adding a receive ether function.\ntest/levels/Motorbike.t.sol:10:1: Warning: This contract has a payable fallback function, but no receive ether function. Consider adding a receive ether function.\ncontract RefMotorbike_0 is RefMotorbikeBase_0 {\n^ (Relevant source part starts here and spans across multiple lines).\nsrc/levels/Motorbike.sol:39:5: The payable fallback function is defined here.\n    fallback() external payable virtual {\n    ^ (Relevant source part starts here and spans across multiple lines).\nWarning (3628): This contract has a payable fallback function, but no receive ether function. Consider adding a receive ether function.\ntest/levels/Motorbike.t.sol:17:1: Warning: This contract has a payable fallback function, but no receive ether function. Consider adding a receive ether function.\ncontract GenMotorbike_0 is GenMotorbikeBase_0 {\n^ (Relevant source part starts here and spans across multiple lines).\nsrc/levels/Motorbike.solagent_gen.sol:39:5: The payable fallback function is defined here.\n    fallback() external payable virtual {\n    ^ (Relevant source part starts here and spans across multiple lines).\nWarning (2018): Function state mutability can be restricted to view\ntest/levels/Motorbike.t.sol:36:5: Warning: Function state mutability can be restricted to view\n    function exposed__authorizeUpgrade_0() public returns (bytes memory) {\n    ^ (Relevant source part starts here and spans across multiple lines).\nWarning (2018): Function state mutability can be restricted to view\ntest/levels/Motorbike.t.sol:48:5: Warning: Function state mutability can be restricted to view\n    function exposed__authorizeUpgrade_0() public returns (bytes memory) {\n    ^ (Relevant source part starts here and spans across multiple lines).\n\nRunning 1 tests for test/levels/Motorbike.t.sol:MotorbikeEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Engine_initialize_1() (paths: 1, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n\n\n--- halmos chunk 2/4 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/levels/Motorbike.t.sol:MotorbikeEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Engine_upgradeToAndCall_2(address,bytes) (paths: 3, time: 0.11s, bounds: [data=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.13s\n\n\n--- halmos chunk 3/4 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/levels/Motorbike.t.sol:MotorbikeEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Engine__authorizeUpgrade_3() (paths: 1, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n\n\n--- halmos chunk 4/4 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/levels/Motorbike.t.sol:MotorbikeEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Motorbike_property_upgrade_to_and_call_internal_2() (paths: 1, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n",
+      "halmos_stderr": "--- halmos chunk 1/4 ---\n\n\n--- halmos chunk 2/4 ---\n\n\n--- halmos chunk 3/4 ---\n\n\n--- halmos chunk 4/4 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 4,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts",
+          "--match-test",
+          "^(?:check_Engine_initialize_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts",
+          "--match-test",
+          "^(?:check_Engine_upgradeToAndCall_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts",
+          "--match-test",
+          "^(?:check_Engine__authorizeUpgrade_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts",
+          "--match-test",
+          "^(?:check_Motorbike_property_upgrade_to_and_call_internal_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/ethernaut/lib/ethernaut.git/contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    },
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Utils.sol",
+      "feedback_test_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/test/internal/Utils.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/test/internal/Utils.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Utils.sol"
+      ],
+      "test_names": [],
+      "check_names": [],
+      "methods_count": 0,
+      "manifest_skipped_checks": 10,
+      "skipped_checks": 10,
+      "expected_checks": 0,
+      "expected_tests": 0,
+      "proved_checks": 0,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": false,
+      "ok": false,
+      "skipped": true,
+      "skip_reason": "no Halmos-eligible symbolic methods for sol_path"
+    }
+  ]
+}

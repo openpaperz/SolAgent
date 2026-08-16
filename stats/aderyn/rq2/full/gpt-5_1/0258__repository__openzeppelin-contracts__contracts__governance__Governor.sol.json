@@ -1,0 +1,351 @@
+{
+  "aderyn": {
+    "count": 7,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/governance/Governor.sol",
+        "-o",
+        "/tmp/aderyn_report_posajs1j/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/governance/Governor.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n--------------------------------------------------------------------------------\n# Configuration\n--------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n--------------------------------------------------------------------------------\n# Source Scope\n--------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/governance/Governor.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n--------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n--------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n--------------------------------------------------------------------------------\n# Scanning Contracts\n--------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_posajs1j/report.json\n\n🐦 Aderyn finds bugs. You write safer code.\n⭐ Star us on GitHub if that sounds fair:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/governance/Governor.sol",
+              "n_sloc": 731
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 731,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 7
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Consider removing empty blocks.",
+              "detector_name": "empty-block",
+              "instances": [
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 387,
+                  "src": "10722:13",
+                  "src_char": "10722:13"
+                }
+              ],
+              "title": "Empty Block"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 795,
+                  "src": "23274:2",
+                  "src_char": "23274:2"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 800,
+                  "src": "23370:2",
+                  "src_char": "23370:2"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 819,
+                  "src": "24007:2",
+                  "src_char": "24007:2"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 833,
+                  "src": "24419:2",
+                  "src_char": "24419:2"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 841,
+                  "src": "24707:2",
+                  "src_char": "24707:2"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 842,
+                  "src": "24757:2",
+                  "src_char": "24757:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Consider removing the modifier or inlining the logic into the calling function.",
+              "detector_name": "modifier-used-only-once",
+              "instances": [
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 211,
+                  "src": "6184:14",
+                  "src_char": "6184:14"
+                }
+              ],
+              "title": "Modifier Invoked Only Once"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "Function returns a value but it is ignored. Consider checking the return value.",
+              "detector_name": "unchecked-return",
+              "instances": [
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 545,
+                  "src": "15710:45",
+                  "src_char": "15710:45"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 724,
+                  "src": "21220:45",
+                  "src_char": "21220:45"
+                }
+              ],
+              "title": "Unchecked Return"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 161,
+                  "src": "4698:45",
+                  "src_char": "4698:45"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 162,
+                  "src": "4748:32",
+                  "src_char": "4748:32"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 163,
+                  "src": "4785:34",
+                  "src_char": "4785:34"
+                },
+                {
+                  "contract_path": "contracts/governance/Governor.sol",
+                  "line_no": 164,
+                  "src": "4824:59",
+                  "src_char": "4824:59"
+                }
+              ],
+              "title": "Unused Error"
+            }
+          ]
+        }
+      },
+      "return_code": 0,
+      "source_dir": null
+    },
+    "reported_sloc": 731,
+    "sloc": 731,
+    "summary": {
+      "High": 0,
+      "Low": 7
+    }
+  },
+  "code": {
+    "best_pass": 1,
+    "best_round": 57,
+    "best_total": 2,
+    "best_vuln": 18,
+    "code_bytes": 26143,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "a196de23c01a4573438b0dda215987fb5dae5e0021867a7709de55ea0438a3a8",
+    "skip_reason": null,
+    "sloc": 731,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:41.903476+00:00",
+  "eval": {
+    "best_round": 57,
+    "compile_error": "Compiler run failed:\nError (9582): Member \"BALLOT_TYPEHASH\" not found or not visible after argument-dependent lookup in contract GenGovernor_0.\n   --> test/governance/Governor.t.sol:280:27:\n    |\n280 |         return abi.encode(genInstance_Governor_0.BALLOT_TYPEHASH(), genInstance_Governor_0.EXTENDED_BALLOT_TYPEHASH());\n    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/governance/Governor.t.sol",
+    "expected_tests": 39,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 258,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+  "id": 258,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:09.543262+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 18,
+    "summary": {
+      "High": 5,
+      "Low": 2,
+      "Medium": 11
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

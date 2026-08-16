@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 48040,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "4d5eb8ba2d8419acb2d1520368ed4d770d55a37521ef1b19523ea012faf9359f",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 376,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:39.689786+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (3881): Documented parameter \"proposalId\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:287:5:\n    |\n287 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"proposalId\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:301:5:\n    |\n301 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"account\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:315:5:\n    |\n315 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"timepoint\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:315:5:\n    |\n315 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"params\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:315:5:\n    |\n315 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"account\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:332:5:\n    |\n332 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"support\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:332:5:\n    |\n332 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"params\" not found in the parameter list of the function.\n   --> contracts/governance/Governor.solagent_gen.sol:332:5:\n    |\n332 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"timepoint\" not found in the parameter list of the function.\n    --> contracts/governance/Governor.solagent_gen.sol:1027:5:\n     |\n1027 |     /**\n     |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (5005): Linearization of inheritance graph impossible\n  --> contracts/governance/Governor.solagent_gen.sol:69:1:\n   |\n69 | contract Governor is EIP712, ERC165, IERC165 {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/governance/Governor.t.sol",
+    "expected_tests": 39,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 94,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+  "id": 94,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:07.935948+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "skipped",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

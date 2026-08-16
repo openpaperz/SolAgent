@@ -1,0 +1,427 @@
+{
+  "aderyn": {
+    "count": 6,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts",
+        "-i",
+        "src/metrics/Statistics.sol",
+        "-o",
+        "/tmp/aderyn_report_nokk57jt/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/metrics/Statistics.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/ethernaut/lib/ethernaut.git/contracts/src\nRemappings - [\n    \"forge-std/=lib/forge-std/src/\",\n    \"openzeppelin-contracts-06/=lib/openzeppelin-contracts-06/contracts/\",\n    \"openzeppelin-contracts-08/=lib/openzeppelin-contracts-08/contracts/\",\n    \"openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\n    \"openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n]\nEVM version - shanghai\n---------------------------------------------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/metrics/Statistics.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_nokk57jt/report.json\n\nAderyn saved you hours of headaches.\n\u2615 Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/metrics/Statistics.sol",
+              "n_sloc": 220
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 220,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 6
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Consider removing the modifier or inlining the logic into the calling function.",
+              "detector_name": "modifier-used-only-once",
+              "instances": [
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 63,
+                  "src": "2269:11",
+                  "src_char": "2269:11"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 69,
+                  "src": "2400:13",
+                  "src_char": "2400:13"
+                }
+              ],
+              "title": "Modifier Invoked Only Once"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "There are state variable changes in this function but no event is emitted. Consider emitting an event to enable offchain indexers to track the changes.",
+              "detector_name": "state-change-without-event",
+              "instances": [
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 94,
+                  "src": "3101:10",
+                  "src_char": "3101:10"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 101,
+                  "src": "3323:17",
+                  "src_char": "3323:17"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 176,
+                  "src": "6526:13",
+                  "src_char": "6526:13"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 198,
+                  "src": "7427:12",
+                  "src_char": "7427:12"
+                }
+              ],
+              "title": "State Change Without Event"
+            },
+            {
+              "description": "Check for `address(0)` when assigning values to address state variables.",
+              "detector_name": "state-no-address-check",
+              "instances": [
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 95,
+                  "src": "3168:29",
+                  "src_char": "3168:29"
+                }
+              ],
+              "title": "Address State Variable Set Without Checks"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+              "detector_name": "unused-public-function",
+              "instances": [
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 94,
+                  "src": "3101:10",
+                  "src_char": "3101:10"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 207,
+                  "src": "7742:41",
+                  "src_char": "7742:41"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 214,
+                  "src": "8034:43",
+                  "src_char": "8034:43"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 221,
+                  "src": "8323:37",
+                  "src_char": "8323:37"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 228,
+                  "src": "8598:35",
+                  "src_char": "8598:35"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 235,
+                  "src": "8872:37",
+                  "src_char": "8872:37"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 245,
+                  "src": "9237:16",
+                  "src_char": "9237:16"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 255,
+                  "src": "9629:34",
+                  "src_char": "9629:34"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 266,
+                  "src": "10184:30",
+                  "src_char": "10184:30"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 276,
+                  "src": "10670:30",
+                  "src_char": "10670:30"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 315,
+                  "src": "12270:33",
+                  "src_char": "12270:33"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 322,
+                  "src": "12515:35",
+                  "src_char": "12515:35"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 329,
+                  "src": "12733:29",
+                  "src_char": "12733:29"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 336,
+                  "src": "12964:19",
+                  "src_char": "12964:19"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 343,
+                  "src": "13165:32",
+                  "src_char": "13165:32"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 350,
+                  "src": "13436:24",
+                  "src_char": "13436:24"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 357,
+                  "src": "13702:35",
+                  "src_char": "13702:35"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 364,
+                  "src": "13969:14",
+                  "src_char": "13969:14"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 371,
+                  "src": "14158:15",
+                  "src_char": "14158:15"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 378,
+                  "src": "14366:27",
+                  "src_char": "14366:27"
+                },
+                {
+                  "contract_path": "src/metrics/Statistics.sol",
+                  "line_no": 385,
+                  "src": "14583:35",
+                  "src_char": "14583:35"
+                }
+              ],
+              "title": "Public Function Not Used Internally"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 220,
+    "summary": {
+      "High": 0,
+      "Low": 6
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "fdea8223f7dcbacada1d7b164f547d1462e53562958d287025b34c96fa61618f",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:13.561252+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 14731,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 25,
+    "extract_error": null,
+    "failed_tests": 0,
+    "forge_failed": 0,
+    "forge_total": 25,
+    "full_pass": true,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 25,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3219,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/metrics/Statistics.sol",
+  "id": 3219,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:20.782090+00:00",
+  "slither": {
+    "count": 4,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 4,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "deepcode",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 0,
+  "test_pass": 25,
+  "test_source": "eval_seed1",
+  "test_total": 25
+}

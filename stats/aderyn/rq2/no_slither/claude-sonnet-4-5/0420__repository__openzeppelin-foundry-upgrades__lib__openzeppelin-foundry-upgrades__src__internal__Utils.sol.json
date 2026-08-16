@@ -1,0 +1,310 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades",
+        "-i",
+        "src/internal/Utils.sol",
+        "-o",
+        "/tmp/aderyn_report_mc_5bqxe/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/internal/Utils.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades\nSource - /home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src\nRemappings - [\n    \"openzeppelin-foundry-upgrades/=src/\",\n    \"@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/\",\n    \"@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/solidity-stringutils/lib/ds-test/src/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/\",\n    \"solidity-stringutils/=lib/solidity-stringutils/\",\n]\nEVM version - prague\n-------------------------------------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/internal/Utils.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_mc_5bqxe/report.json\n\n💡 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/internal/Utils.sol",
+              "n_sloc": 212
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 212,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 42,
+                  "src": "1434:16",
+                  "src_char": "1434:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 78,
+                  "src": "3249:16",
+                  "src_char": "3249:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 99,
+                  "src": "4169:16",
+                  "src_char": "4169:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 127,
+                  "src": "5483:16",
+                  "src_char": "5483:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 151,
+                  "src": "6337:16",
+                  "src_char": "6337:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 254,
+                  "src": "10322:16",
+                  "src_char": "10322:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 306,
+                  "src": "12616:16",
+                  "src_char": "12616:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 342,
+                  "src": "14079:16",
+                  "src_char": "14079:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 344,
+                  "src": "14167:16",
+                  "src_char": "14167:16"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 384,
+                  "src": "15950:16",
+                  "src_char": "15950:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 65,
+                  "src": "2826:15",
+                  "src_char": "2826:15"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 333,
+                  "src": "13786:13",
+                  "src_char": "13786:13"
+                },
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 368,
+                  "src": "15270:16",
+                  "src_char": "15270:16"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Function returns a value but it is ignored. Consider checking the return value.",
+              "detector_name": "unchecked-return",
+              "instances": [
+                {
+                  "contract_path": "src/internal/Utils.sol",
+                  "line_no": 291,
+                  "src": "12129:22",
+                  "src_char": "12129:22"
+                }
+              ],
+              "title": "Unchecked Return"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 212,
+    "summary": {
+      "High": 1,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 6,
+    "best_round": 4,
+    "best_total": 14,
+    "best_vuln": 3,
+    "code_bytes": 16408,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "500f72bee7cc3a75dd4052b9a43d7023ff45a541637ddd07e15af3c57daae34f",
+    "skip_reason": null,
+    "sloc": 212,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:33.592795+00:00",
+  "eval": {
+    "best_round": 4,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/test/internal/Utils.t.sol",
+    "expected_tests": 5,
+    "extract_error": null,
+    "forge_total": 5,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 2,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 420,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Utils.sol",
+  "id": 420,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:11.109277+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 3,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 3
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 3,
+  "test_pass": 2,
+  "test_source": "rq2_eval",
+  "test_total": 5
+}

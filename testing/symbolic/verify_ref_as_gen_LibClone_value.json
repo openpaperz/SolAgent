@@ -1,0 +1,1284 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 31,
+      "proved_checks": 31,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 31,
+        "proved_checks": 31,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 31,
+        "passed_methods": 31,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 31
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 31,
+          "passed_methods": 31,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 31
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibClone.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibClone.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibClone.sol"
+      ],
+      "test_names": [
+        "test_LibClone_property_minimal_clone_value_68",
+        "test_LibClone_property_push0_clone_value_70",
+        "test_LibClone_property_minimal_clone_deterministic_value_72",
+        "test_LibClone_property_push0_clone_deterministic_value_74",
+        "test_LibClone_property_immutable_args_clone_value_76",
+        "test_LibClone_property_immutable_args_clone_deterministic_value_78",
+        "test_LibClone_property_create_deterministic_clone_value_80",
+        "test_LibClone_property_erc1967_deploy_value_82",
+        "test_LibClone_property_erc1967_deploy_deterministic_value_84",
+        "test_LibClone_property_erc1967_create_deterministic_value_86",
+        "test_LibClone_property_erc1967_deploy_args_value_88",
+        "test_LibClone_property_erc1967_deploy_deterministic_args_value_90",
+        "test_LibClone_property_erc1967_create_deterministic_args_value_92",
+        "test_LibClone_property_erc1967i_deploy_value_94",
+        "test_LibClone_property_erc1967i_deploy_deterministic_value_96",
+        "test_LibClone_property_erc1967i_create_deterministic_value_98",
+        "test_LibClone_property_erc1967i_deploy_args_value_100",
+        "test_LibClone_property_erc1967i_deploy_deterministic_args_value_102",
+        "test_LibClone_property_erc1967i_create_deterministic_args_value_104",
+        "test_LibClone_property_beacon_proxy_deploy_value_106",
+        "test_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+        "test_LibClone_property_beacon_proxy_create_deterministic_value_110",
+        "test_LibClone_property_beacon_proxy_deploy_args_value_112",
+        "test_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+        "test_LibClone_property_beacon_proxy_create_deterministic_args_value_116",
+        "test_LibClone_property_ibeacon_proxy_deploy_value_118",
+        "test_LibClone_property_ibeacon_proxy_deploy_deterministic_value_120",
+        "test_LibClone_property_ibeacon_proxy_create_deterministic_value_122",
+        "test_LibClone_property_ibeacon_proxy_deploy_args_value_124",
+        "test_LibClone_property_ibeacon_proxy_deploy_deterministic_args_value_126",
+        "test_LibClone_property_ibeacon_proxy_create_deterministic_args_value_128"
+      ],
+      "check_names": [
+        "check_LibClone_property_minimal_clone_value_68",
+        "check_LibClone_property_push0_clone_value_70",
+        "check_LibClone_property_minimal_clone_deterministic_value_72",
+        "check_LibClone_property_push0_clone_deterministic_value_74",
+        "check_LibClone_property_immutable_args_clone_value_76",
+        "check_LibClone_property_immutable_args_clone_deterministic_value_78",
+        "check_LibClone_property_create_deterministic_clone_value_80",
+        "check_LibClone_property_erc1967_deploy_value_82",
+        "check_LibClone_property_erc1967_deploy_deterministic_value_84",
+        "check_LibClone_property_erc1967_create_deterministic_value_86",
+        "check_LibClone_property_erc1967_deploy_args_value_88",
+        "check_LibClone_property_erc1967_deploy_deterministic_args_value_90",
+        "check_LibClone_property_erc1967_create_deterministic_args_value_92",
+        "check_LibClone_property_erc1967i_deploy_value_94",
+        "check_LibClone_property_erc1967i_deploy_deterministic_value_96",
+        "check_LibClone_property_erc1967i_create_deterministic_value_98",
+        "check_LibClone_property_erc1967i_deploy_args_value_100",
+        "check_LibClone_property_erc1967i_deploy_deterministic_args_value_102",
+        "check_LibClone_property_erc1967i_create_deterministic_args_value_104",
+        "check_LibClone_property_beacon_proxy_deploy_value_106",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+        "check_LibClone_property_beacon_proxy_create_deterministic_value_110",
+        "check_LibClone_property_beacon_proxy_deploy_args_value_112",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+        "check_LibClone_property_beacon_proxy_create_deterministic_args_value_116",
+        "check_LibClone_property_ibeacon_proxy_deploy_value_118",
+        "check_LibClone_property_ibeacon_proxy_deploy_deterministic_value_120",
+        "check_LibClone_property_ibeacon_proxy_create_deterministic_value_122",
+        "check_LibClone_property_ibeacon_proxy_deploy_args_value_124",
+        "check_LibClone_property_ibeacon_proxy_deploy_deterministic_args_value_126",
+        "check_LibClone_property_ibeacon_proxy_create_deterministic_args_value_128"
+      ],
+      "methods_count": 31,
+      "manifest_skipped_checks": 123,
+      "skipped_checks": 0,
+      "expected_checks": 31,
+      "expected_tests": 31,
+      "proved_checks": 31,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_LibClone_property_minimal_clone_value_68": "PASS",
+        "check_LibClone_property_push0_clone_value_70": "PASS",
+        "check_LibClone_property_minimal_clone_deterministic_value_72": "PASS",
+        "check_LibClone_property_push0_clone_deterministic_value_74": "PASS",
+        "check_LibClone_property_immutable_args_clone_value_76": "PASS",
+        "check_LibClone_property_immutable_args_clone_deterministic_value_78": "PASS",
+        "check_LibClone_property_create_deterministic_clone_value_80": "PASS",
+        "check_LibClone_property_erc1967_deploy_value_82": "PASS",
+        "check_LibClone_property_erc1967_deploy_deterministic_value_84": "PASS",
+        "check_LibClone_property_erc1967_create_deterministic_value_86": "PASS",
+        "check_LibClone_property_erc1967_deploy_args_value_88": "PASS",
+        "check_LibClone_property_erc1967_deploy_deterministic_args_value_90": "PASS",
+        "check_LibClone_property_erc1967_create_deterministic_args_value_92": "PASS",
+        "check_LibClone_property_erc1967i_deploy_value_94": "PASS",
+        "check_LibClone_property_erc1967i_deploy_deterministic_value_96": "PASS",
+        "check_LibClone_property_erc1967i_create_deterministic_value_98": "PASS",
+        "check_LibClone_property_erc1967i_deploy_args_value_100": "PASS",
+        "check_LibClone_property_erc1967i_deploy_deterministic_args_value_102": "PASS",
+        "check_LibClone_property_erc1967i_create_deterministic_args_value_104": "PASS",
+        "check_LibClone_property_beacon_proxy_deploy_value_106": "PASS",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_value_108": "PASS",
+        "check_LibClone_property_beacon_proxy_create_deterministic_value_110": "PASS",
+        "check_LibClone_property_beacon_proxy_deploy_args_value_112": "PASS",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114": "PASS",
+        "check_LibClone_property_beacon_proxy_create_deterministic_args_value_116": "PASS",
+        "check_LibClone_property_ibeacon_proxy_deploy_value_118": "PASS",
+        "check_LibClone_property_ibeacon_proxy_deploy_deterministic_value_120": "PASS",
+        "check_LibClone_property_ibeacon_proxy_create_deterministic_value_122": "PASS",
+        "check_LibClone_property_ibeacon_proxy_deploy_args_value_124": "PASS",
+        "check_LibClone_property_ibeacon_proxy_deploy_deterministic_args_value_126": "PASS",
+        "check_LibClone_property_ibeacon_proxy_create_deterministic_args_value_128": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "clone",
+          "visibility": "internal",
+          "full_signature": "function clone(uint256 value, address implementation) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_minimal_clone_value_68",
+              "test_name": "test_LibClone_property_minimal_clone_value_68",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "clone",
+          "visibility": "internal",
+          "full_signature": "function clone(uint256 value, address implementation, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_immutable_args_clone_value_76",
+              "test_name": "test_LibClone_property_immutable_args_clone_value_76",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "cloneDeterministic",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministic(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_immutable_args_clone_deterministic_value_78",
+              "test_name": "test_LibClone_property_immutable_args_clone_deterministic_value_78",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "cloneDeterministic",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministic(uint256 value, address implementation, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_minimal_clone_deterministic_value_72",
+              "test_name": "test_LibClone_property_minimal_clone_deterministic_value_72",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "cloneDeterministic_PUSH0",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministic_PUSH0(uint256 value, address implementation, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_push0_clone_deterministic_value_74",
+              "test_name": "test_LibClone_property_push0_clone_deterministic_value_74",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "clone_PUSH0",
+          "visibility": "internal",
+          "full_signature": "function clone_PUSH0(uint256 value, address implementation) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_push0_clone_value_70",
+              "test_name": "test_LibClone_property_push0_clone_value_70",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicClone",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicClone(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_create_deterministic_clone_value_80",
+              "test_name": "test_LibClone_property_create_deterministic_clone_value_80",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967_create_deterministic_args_value_92",
+              "test_name": "test_LibClone_property_erc1967_create_deterministic_args_value_92",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967(uint256 value, address implementation, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967_create_deterministic_value_86",
+              "test_name": "test_LibClone_property_erc1967_create_deterministic_value_86",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes memory args, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_create_deterministic_args_value_116",
+              "test_name": "test_LibClone_property_beacon_proxy_create_deterministic_args_value_116",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_create_deterministic_value_110",
+              "test_name": "test_LibClone_property_beacon_proxy_create_deterministic_value_110",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967I",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967I(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967i_create_deterministic_args_value_104",
+              "test_name": "test_LibClone_property_erc1967i_create_deterministic_args_value_104",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967I",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967I(uint256 value, address implementation, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967i_create_deterministic_value_98",
+              "test_name": "test_LibClone_property_erc1967i_create_deterministic_value_98",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967IBeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967IBeaconProxy(uint256 value, address beacon, bytes memory args, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_ibeacon_proxy_create_deterministic_args_value_128",
+              "test_name": "test_LibClone_property_ibeacon_proxy_create_deterministic_args_value_128",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967IBeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967IBeaconProxy(uint256 value, address beacon, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_ibeacon_proxy_create_deterministic_value_122",
+              "test_name": "test_LibClone_property_ibeacon_proxy_create_deterministic_value_122",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967_deploy_deterministic_args_value_90",
+              "test_name": "test_LibClone_property_erc1967_deploy_deterministic_args_value_90",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967(uint256 value, address implementation, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967_deploy_deterministic_value_84",
+              "test_name": "test_LibClone_property_erc1967_deploy_deterministic_value_84",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967I",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967I(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967i_deploy_deterministic_args_value_102",
+              "test_name": "test_LibClone_property_erc1967i_deploy_deterministic_args_value_102",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967I",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967I(uint256 value, address implementation, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967i_deploy_deterministic_value_96",
+              "test_name": "test_LibClone_property_erc1967i_deploy_deterministic_value_96",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967IBeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967IBeaconProxy(uint256 value, address beacon, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_ibeacon_proxy_deploy_deterministic_args_value_126",
+              "test_name": "test_LibClone_property_ibeacon_proxy_deploy_deterministic_args_value_126",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967IBeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967IBeaconProxy(uint256 value, address beacon, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_ibeacon_proxy_deploy_deterministic_value_120",
+              "test_name": "test_LibClone_property_ibeacon_proxy_deploy_deterministic_value_120",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967(uint256 value, address implementation) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967_deploy_value_82",
+              "test_name": "test_LibClone_property_erc1967_deploy_value_82",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967(uint256 value, address implementation, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967_deploy_args_value_88",
+              "test_name": "test_LibClone_property_erc1967_deploy_args_value_88",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967BeaconProxy(uint256 value, address beacon) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_value_106",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_value_106",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967BeaconProxy(uint256 value, address beacon, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_args_value_112",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_args_value_112",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967I",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967I(uint256 value, address implementation) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967i_deploy_value_94",
+              "test_name": "test_LibClone_property_erc1967i_deploy_value_94",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967I",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967I(uint256 value, address implementation, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_erc1967i_deploy_args_value_100",
+              "test_name": "test_LibClone_property_erc1967i_deploy_args_value_100",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967IBeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967IBeaconProxy(uint256 value, address beacon) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_ibeacon_proxy_deploy_value_118",
+              "test_name": "test_LibClone_property_ibeacon_proxy_deploy_value_118",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967IBeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967IBeaconProxy(uint256 value, address beacon, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_ibeacon_proxy_deploy_args_value_124",
+              "test_name": "test_LibClone_property_ibeacon_proxy_deploy_args_value_124",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 31,
+        "passed_methods": 31,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 31
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibClone_property_minimal_clone_value_68(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/31 ---\nCompiling 3 files with Solc 0.8.28\nSolc 0.8.28 finished in 2.65s\nCompiler run successful with warnings:\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1789:52:\n     |\n1789 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployArgsClonePair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1797:52:\n     |\n1797 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployArgsClonePair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1805:52:\n     |\n1805 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployArgsClonePair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1813:52:\n     |\n1813 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployERC1967ArgsPair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1821:52:\n     |\n1821 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployERC1967ArgsPair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1829:52:\n     |\n1829 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployERC1967ArgsPair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1837:52:\n     |\n1837 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployERC1967IArgsPair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1845:52:\n     |\n1845 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployERC1967IArgsPair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1853:52:\n     |\n1853 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployERC1967IArgsPair(implementation, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1861:52:\n     |\n1861 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployBeaconArgsPair(beacon, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1869:52:\n     |\n1869 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployBeaconArgsPair(beacon, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1877:52:\n     |\n1877 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployBeaconArgsPair(beacon, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1885:52:\n     |\n1885 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployIBeaconArgsPair(beacon, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2072): Unused local variable.\n    --> test/LibClone.t.sol:1893:52:\n     |\n1893 |         (address refInstance, address genInstance, bytes memory args) = _libCloneDeployIBeaconArgsPair(beacon, salt);\n     |                                                    ^^^^^^^^^^^^^^^^^\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:27:5:\n   |\n27 |     function ref_call_initCode_4(address implementation) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:30:5:\n   |\n30 |     function ref_call_initCodeHash_5(address implementation) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:33:5:\n   |\n33 |     function ref_call_predictDeterministicAddress_6(address implementation, bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:48:5:\n   |\n48 |     function ref_call_initCode_PUSH0_11(address implementation) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:51:5:\n   |\n51 |     function ref_call_initCodeHash_PUSH0_12(address implementation) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:54:5:\n   |\n54 |     function ref_call_predictDeterministicAddress_PUSH0_13(address implementation, bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:75:5:\n   |\n75 |     function ref_call_initCode_20(address implementation, bytes memory args) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:78:5:\n   |\n78 |     function ref_call_initCodeHash_21(address implementation, bytes memory args) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibClone.t.sol:81:5:\n   |\n81 |     function ref_call_predictDeterminis ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibClone.t.sol:84:5:\n   |\n84 |     function ref_call_argsOnClone_23(address instance) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibClone.t.sol:87:5:\n   |\n87 |     function ref_call_argsOnClone_24(address instance, uint256 start) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibClone.t.sol:90:5:\n   |\n90 |     function ref_call_argsOnClone_25(address instance, uint256 start, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:111:5:\n    |\n111 |     function ref_call_initCodeERC1967_32(address implementation) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:114:5:\n    |\n114 |     function ref_call_initCodeHashERC1967_33(address implementation) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:117:5:\n    |\n117 |     function ref_call_predictDeterministicAddressERC1967_34(address implementation, bytes32 salt, address deployer) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:138:5:\n    |\n138 |     function ref_call_initCodeERC1967_41(address implementation, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:141:5:\n    |\n141 |     function ref_call_initCodeHashERC1967_42(address implementation, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:144:5:\n    |\n144 |     function ref_call_predictDeterminis ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:147:5:\n    |\n147 |     function ref_call_argsOnERC1967_44(address instance) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:150:5:\n    |\n150 |     function ref_call_argsOnERC1967_45(address instance, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:153:5:\n    |\n153 |     function ref_call_argsOnERC1967_46(address instance, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:174:5:\n    |\n174 |     function ref_call_initCodeERC1967I_53(address implementation) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:177:5:\n    |\n177 |     function ref_call_initCodeHashERC1967I_54(address implementation) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:180:5:\n    |\n180 |     function ref_call_predictDeterministicAddressERC1967I_55(address implementation, bytes32 salt, address deployer) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:201:5:\n    |\n201 |     function ref_call_initCodeERC1967I_62(address implementation, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:204:5:\n    |\n204 |     function ref_call_initCodeHashERC1967I_63(address implementation, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:207:5:\n    |\n207 |     function ref_call_predictDeterminis ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:210:5:\n    |\n210 |     function ref_call_argsOnERC1967I_65(address instance) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:213:5:\n    |\n213 |     function ref_call_argsOnERC1967I_66(address instance, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:216:5:\n    |\n216 |     function ref_call_argsOnERC1967I_67(address instance, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:231:5:\n    |\n231 |     function ref_call_predictDeterministicAddressERC1967Bootstrap_72() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:234:5:\n    |\n234 |     function ref_call_predictDeterministicAddressERC1967Bootstrap_73(address authorizedUpgrader, address deployer) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:237:5:\n    |\n237 |     function ref_call_initCodeERC1967Bootstrap_74(address authorizedUpgrader) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:240:5:\n    |\n240 |     function ref_call_initCodeHashERC1967Bootstrap_75(address authorizedUpgrader) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:261:5:\n    |\n261 |     function ref_call_initCodeERC1967BeaconProxy_82(address beacon) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:264:5:\n    |\n264 |     function ref_call_initCodeHashERC1967BeaconProxy_83(address beacon) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:267:5:\n    |\n267 |     function ref_call_predictDeterministicAddressERC1967BeaconProxy_84(address beacon, bytes32 salt, address deployer) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:288:5:\n    |\n288 |     function ref_call_initCodeERC1967BeaconProxy_91(address beacon, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:291:5:\n    |\n291 |     function ref_call_initCodeHashERC1967BeaconProxy_92(address beacon, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:294:5:\n    |\n294 |     function ref_call_predictDeterminis ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:297:5:\n    |\n297 |     function ref_call_argsOnERC1967BeaconProxy_94(address instance) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:300:5:\n    |\n300 |     function ref_call_argsOnERC1967BeaconProxy_95(address instance, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:303:5:\n    |\n303 |     function ref_call_argsOnERC1967BeaconProxy_96(address instance, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:324:5:\n    |\n324 |     function ref_call_initCodeERC1967IBeaconProxy_103(address beacon) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:327:5:\n    |\n327 |     function ref_call_initCodeHashERC1967IBeaconProxy_104(address beacon) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:330:5:\n    |\n330 |     function ref_call_predictDeterministicAddressERC1967IBeaconProxy_105(address beacon, bytes32 salt, address deployer) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:351:5:\n    |\n351 |     function ref_call_initCodeERC1967IBeaconProxy_112(address beacon, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:354:5:\n    |\n354 |     function ref_call_initCodeHashERC1967IBeaconProxy_113(address beacon, bytes memory args) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibClone.t.sol:357:5:\n    |\n357 |     function ref_call_predictDeterminis ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:360:5:\n    |\n360 |     function ref_call_argsOnERC1967IBeaconProxy_115(address instance) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:363:5:\n    |\n363 |     function ref_call_argsOnERC1967IBeaconProxy_116(address instance, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibClone.t.sol:366:5:\n    |\n366 |     function ref_call_argsOnERC1967IBeaconProxy_117(address instance, uint256 start, uint256 end) ex\n...[truncated 46448 chars]",
+      "halmos_stderr": "--- halmos chunk 1/31 ---\n\n\n--- halmos chunk 2/31 ---\n\n\n--- halmos chunk 3/31 ---\n\n\n--- halmos chunk 4/31 ---\n\n\n--- halmos chunk 5/31 ---\n\n\n--- halmos chunk 6/31 ---\n\n\n--- halmos chunk 7/31 ---\n\n\n--- halmos chunk 8/31 ---\n\n\n--- halmos chunk 9/31 ---\n\n\n--- halmos chunk 10/31 ---\n\n\n--- halmos chunk 11/31 ---\n\n\n--- halmos chunk 12/31 ---\n\n\n--- halmos chunk 13/31 ---\n\n\n--- halmos chunk 14/31 ---\n\n\n--- halmos chunk 15/31 ---\n\n\n--- halmos chunk 16/31 ---\n\n\n--- halmos chunk 17/31 ---\n\n\n--- halmos chunk 18/31 ---\n\n\n--- halmos chunk 19/31 ---\n\n\n--- halmos chunk 20/31 ---\n\n\n--- halmos chunk 21/31 ---\n\n\n--- halmos chunk 22/31 ---\n\n\n--- halmos chunk 23/31 ---\n\n\n--- halmos chunk 24/31 ---\n\n\n--- halmos chunk 25/31 ---\n\n\n--- halmos chunk 26/31 ---\n\n\n--- halmos chunk 27/31 ---\n\n\n--- halmos chunk 28/31 ---\n\n\n--- halmos chunk 29/31 ---\n\n\n--- halmos chunk 30/31 ---\n\n\n--- halmos chunk 31/31 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 31,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_minimal_clone_value_68(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_push0_clone_value_70(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_minimal_clone_deterministic_value_72(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_push0_clone_deterministic_value_74(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_immutable_args_clone_value_76(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_immutable_args_clone_deterministic_value_78(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_create_deterministic_clone_value_80(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967_deploy_value_82(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967_deploy_deterministic_value_84(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967_create_deterministic_value_86(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967_deploy_args_value_88(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967_deploy_deterministic_args_value_90(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967_create_deterministic_args_value_92(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967i_deploy_value_94(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967i_deploy_deterministic_value_96(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967i_create_deterministic_value_98(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967i_deploy_args_value_100(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967i_deploy_deterministic_args_value_102(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_erc1967i_create_deterministic_args_value_104(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_value_106(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_deterministic_value_108(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_create_deterministic_value_110(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_args_value_112(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_create_deterministic_args_value_116(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_ibeacon_proxy_deploy_value_118(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_ibeacon_proxy_deploy_deterministic_value_120(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_ibeacon_proxy_create_deterministic_value_122(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_ibeacon_proxy_deploy_args_value_124(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_ibeacon_proxy_deploy_deterministic_args_value_126(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_ibeacon_proxy_create_deterministic_args_value_128(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

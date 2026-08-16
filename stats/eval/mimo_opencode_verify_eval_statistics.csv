@@ -1,0 +1,3 @@
+model,method,attempted,compiled,compile_rate,passed_tests,expected_tests,test_pass_rate,pass_at_1_count,pass_at_1
+mimo-v2.5-pro,SolAgent,81,48,0.5925925925925926,502,1708,0.2939110070257611,26,0.32098765432098764
+mimo-v2.5-pro,OpenCode,81,35,0.43209876543209874,370,1708,0.21662763466042154,17,0.20987654320987653

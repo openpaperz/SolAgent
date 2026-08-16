@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 0,
+      "failed_sols": 1,
+      "skipped_sols": 0,
+      "expected_checks": 17,
+      "proved_checks": 14,
+      "failed_checks": 3,
+      "skipped_checks": 0,
+      "timeouts": 1,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {
+        "timeout": 1
+      }
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 0,
+        "failed_sols": 1,
+        "skipped_sols": 0,
+        "expected_checks": 17,
+        "proved_checks": 14,
+        "failed_checks": 3,
+        "skipped_checks": 0,
+        "timeouts": 1,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {
+          "timeout": 1
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibRLP.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibRLP.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibRLP.sol"
+      ],
+      "test_names": [
+        "test_LibRLP_computeAddress_0",
+        "test_LibRLP_property_p_empty_0",
+        "test_LibRLP_property_p_uint256_1",
+        "test_LibRLP_property_p_address_2",
+        "test_LibRLP_property_p_bool_3",
+        "test_LibRLP_property_p_bytes_4",
+        "test_LibRLP_property_p_list_5",
+        "test_LibRLP_property_p_list_uint256_6",
+        "test_LibRLP_property_p_list_address_7",
+        "test_LibRLP_property_p_list_bool_8",
+        "test_LibRLP_property_p_list_bytes_9",
+        "test_LibRLP_property_p_list_list_10",
+        "test_LibRLP_property_encode_list_fixed_11",
+        "test_LibRLP_property_encode_uint256_12",
+        "test_LibRLP_property_encode_address_13",
+        "test_LibRLP_property_encode_bool_14",
+        "test_LibRLP_property_encode_bytes_15"
+      ],
+      "check_names": [
+        "check_LibRLP_computeAddress_0",
+        "check_LibRLP_property_p_empty_0",
+        "check_LibRLP_property_p_uint256_1",
+        "check_LibRLP_property_p_address_2",
+        "check_LibRLP_property_p_bool_3",
+        "check_LibRLP_property_p_bytes_4",
+        "check_LibRLP_property_p_list_5",
+        "check_LibRLP_property_p_list_uint256_6",
+        "check_LibRLP_property_p_list_address_7",
+        "check_LibRLP_property_p_list_bool_8",
+        "check_LibRLP_property_p_list_bytes_9",
+        "check_LibRLP_property_p_list_list_10",
+        "check_LibRLP_property_encode_list_fixed_11",
+        "check_LibRLP_property_encode_uint256_12",
+        "check_LibRLP_property_encode_address_13",
+        "check_LibRLP_property_encode_bool_14",
+        "check_LibRLP_property_encode_bytes_15"
+      ],
+      "methods_count": 17,
+      "manifest_skipped_checks": 16,
+      "skipped_checks": 0,
+      "expected_checks": 17,
+      "expected_tests": 17,
+      "proved_checks": 14,
+      "failed_checks": 3,
+      "timeouts": 1,
+      "proved": false,
+      "ok": false,
+      "failed_check_names": [
+        "check_LibRLP_property_p_uint256_1",
+        "check_LibRLP_property_p_list_uint256_6",
+        "check_LibRLP_property_p_list_list_10"
+      ],
+      "check_statuses": {
+        "check_LibRLP_computeAddress_0": "PASS",
+        "check_LibRLP_property_p_empty_0": "PASS",
+        "check_LibRLP_property_p_uint256_1": "TIMEOUT",
+        "check_LibRLP_property_p_address_2": "PASS",
+        "check_LibRLP_property_p_bool_3": "PASS",
+        "check_LibRLP_property_p_bytes_4": "PASS",
+        "check_LibRLP_property_p_list_5": "PASS",
+        "check_LibRLP_property_p_list_uint256_6": "TIMEOUT",
+        "check_LibRLP_property_p_list_address_7": "PASS",
+        "check_LibRLP_property_p_list_bool_8": "PASS",
+        "check_LibRLP_property_p_list_bytes_9": "PASS",
+        "check_LibRLP_property_p_list_list_10": "TIMEOUT",
+        "check_LibRLP_property_encode_list_fixed_11": "PASS",
+        "check_LibRLP_property_encode_uint256_12": "PASS",
+        "check_LibRLP_property_encode_address_13": "PASS",
+        "check_LibRLP_property_encode_bool_14": "PASS",
+        "check_LibRLP_property_encode_bytes_15": "PASS"
+      },
+      "timeout_error": "halmos timeout after 120s",
+      "counterexamples": [],
+      "unsupported_error": "fully explored due to the loop unrolling bound: 2",
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibRLP_computeAddress_0(?:\\(.*\\))?|check_LibRLP_property_p_empty_0(?:\\(.*\\))?|check_LibRLP_property_p_uint256_1(?:\\(.*\\))?|check_LibRLP_property_p_address_2(?:\\(.*\\))?|check_LibRLP_property_p_bool_3(?:\\(.*\\))?|check_LibRLP_property_p_bytes_4(?:\\(.*\\))?|check_LibRLP_property_p_list_5(?:\\(.*\\))?|check_LibRLP_property_p_list_uint256_6(?:\\(.*\\))?|check_LibRLP_property_p_list_address_7(?:\\(.*\\))?|check_LibRLP_property_p_list_bool_8(?:\\(.*\\))?|check_LibRLP_property_p_list_bytes_9(?:\\(.*\\))?|check_LibRLP_property_p_list_list_10(?:\\(.*\\))?|check_LibRLP_property_encode_list_fixed_11(?:\\(.*\\))?|check_LibRLP_property_encode_uint256_12(?:\\(.*\\))?|check_LibRLP_property_encode_address_13(?:\\(.*\\))?|check_LibRLP_property_encode_bool_14(?:\\(.*\\))?|check_LibRLP_property_encode_bytes_15(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "30000",
+        "--solver-timeout-branching",
+        "30000",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": null,
+      "halmos_stdout": "Compiling 1 files with Solc 0.8.28\nSolc 0.8.28 finished in 293.91ms\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n --> test/LibRLP.t.sol:9:5:\n  |\n9 |     function ref_call_computeAddress_0(address deployer, uint256 nonce) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:12:5:\n   |\n12 |     function ref_call_p_1() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:15:5:\n   |\n15 |     function ref_call_p_2(uint256 x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:18:5:\n   |\n18 |     function ref_call_p_3(address x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:21:5:\n   |\n21 |     function ref_call_p_4(bool x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:24:5:\n   |\n24 |     function ref_call_p_5(bytes memory x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:27:5:\n   |\n27 |     function ref_call_p_6(bytes[] memory seedItems) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:34:5:\n   |\n34 |     function ref_call_p_7(bytes[] memory seedItems, uint256 x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:41:5:\n   |\n41 |     function ref_call_p_8(bytes[] memory seedItems, address x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:48:5:\n   |\n48 |     function ref_call_p_9(bytes[] memory seedItems, bool x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:55:5:\n   |\n55 |     function ref_call_p_10(bytes[] memory seedItems, bytes memory x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:62:5:\n   |\n62 |     function ref_call_p_11(bytes[] memory seedItems) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:69:5:\n   |\n69 |     function ref_call_encode_12(bytes[] memory seedItems) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:76:5:\n   |\n76 |     function ref_call_encode_13(uint256 x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:79:5:\n   |\n79 |     function ref_call_encode_14(address x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:82:5:\n   |\n82 |     function ref_call_encode_15(bool x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:85:5:\n   |\n85 |     function ref_call_encode_16(bytes memory x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:88:5:\n   |\n88 |     function gen_call_computeAddress_0(address deployer, uint256 nonce) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:91:5:\n   |\n91 |     function gen_call_p_1() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:94:5:\n   |\n94 |     function gen_call_p_2(uint256 x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibRLP.t.sol:97:5:\n   |\n97 |     function gen_call_p_3(address x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:100:5:\n    |\n100 |     function gen_call_p_4(bool x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:103:5:\n    |\n103 |     function gen_call_p_5(bytes memory x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:106:5:\n    |\n106 |     function gen_call_p_6(bytes[] memory seedItems) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:113:5:\n    |\n113 |     function gen_call_p_7(bytes[] memory seedItems, uint256 x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:120:5:\n    |\n120 |     function gen_call_p_8(bytes[] memory seedItems, address x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:127:5:\n    |\n127 |     function gen_call_p_9(bytes[] memory seedItems, bool x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:134:5:\n    |\n134 |     function gen_call_p_10(bytes[] memory seedItems, bytes memory x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:141:5:\n    |\n141 |     function gen_call_p_11(bytes[] memory seedItems) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:148:5:\n    |\n148 |     function gen_call_encode_12(bytes[] memory seedItems) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:155:5:\n    |\n155 |     function gen_call_encode_13(uint256 x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:158:5:\n    |\n158 |     function gen_call_encode_14(address x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:161:5:\n    |\n161 |     function gen_call_encode_15(bool x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibRLP.t.sol:164:5:\n    |\n164 |     function gen_call_encode_16(bytes memory x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 17 tests for test/LibRLP.t.sol:LibRLPEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_LibRLP_computeAddress_0(address,uint256) (paths: 6, time: 0.09s, bounds: [])\nWARNING  check_LibRLP_computeAddress_0(address,uint256): paths have not been    \n         fully explored due to the loop unrolling bound: 2                      \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_encode_address_13(address) (paths: 2, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_encode_bool_14(bool) (paths: 2, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_encode_bytes_15(bytes32) (paths: 1, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_encode_list_fixed_11(bytes32,bytes32) (paths: 1, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_encode_uint256_12() (paths: 1, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_address_2(address) (paths: 2, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_bool_3(bool) (paths: 2, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_bytes_4(bytes32) (paths: 1, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_empty_0() (paths: 1, time: 0.00s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_list_5(bytes32,bytes32) (paths: 1, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_list_address_7(address,bytes32,bytes32) (paths: 2, time: 0.02s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_list_bool_8(bool,bytes32,bytes32) (paths: 2, time: 0.02s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_LibRLP_property_p_list_bytes_9(bytes32,bytes32) (paths: 1, time: 0.02s, bounds: [])\n",
+      "halmos_stderr": "",
+      "halmos_json_error": null,
+      "failure_category": "timeout"
+    }
+  ]
+}

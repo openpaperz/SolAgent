@@ -1,0 +1,1093 @@
+{
+  "summary": {
+    "dataset_functions": 1827,
+    "eval_methods": 1708,
+    "direct_covered": 1705,
+    "direct_missing": 122,
+    "transitive_covered": 1817,
+    "transitive_missing": 10,
+    "direct_missing_visibility": {
+      "external": 1,
+      "internal": 13,
+      "private": 103,
+      "public": 5
+    },
+    "transitive_missing_visibility": {
+      "external": 1,
+      "internal": 7,
+      "public": 2
+    },
+    "transitive_missing_category": {
+      "abstract_hook_harness_override": 2,
+      "ffi_cli_wrapper": 3,
+      "ffi_validation_path": 4,
+      "interface_callback": 1
+    },
+    "transitive_missing_by_sol": {
+      "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol": 4,
+      "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol": 3,
+      "repository/openzeppelin-contracts/contracts/governance/Governor.sol": 2,
+      "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/GoodSamaritan.sol": 1
+    }
+  },
+  "direct_missing": [
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_quickSort",
+      "full_signature": "function _quickSort(uint256 begin, uint256 end, function(uint256, uint256) pure returns (bool) comp) private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_begin",
+      "full_signature": "function _begin(uint256[] memory array) private pure returns (uint256 ptr)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_end",
+      "full_signature": "function _end(uint256[] memory array) private pure returns (uint256 ptr)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_mload",
+      "full_signature": "function _mload(uint256 ptr) private pure returns (uint256 value)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_swap",
+      "full_signature": "function _swap(uint256 ptr1, uint256 ptr2) private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_castToUint256Array",
+      "full_signature": "function _castToUint256Array(address[] memory input) private pure returns (uint256[] memory output)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_castToUint256Array",
+      "full_signature": "function _castToUint256Array(bytes32[] memory input) private pure returns (uint256[] memory output)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_castToUint256Comp",
+      "full_signature": "function _castToUint256Comp(function(address, address) pure returns (bool) input) private pure returns (function(uint256, uint256) pure returns (bool) output)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "class_name": "Arrays",
+      "method_name": "_castToUint256Comp",
+      "full_signature": "function _castToUint256Comp(function(bytes32, bytes32) pure returns (bool) input) private pure returns (function(uint256, uint256) pure returns (bool) output)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+      "class_name": "Strings",
+      "method_name": "_tryParseUintUncheckedBounds",
+      "full_signature": "function _tryParseUintUncheckedBounds(string memory input, uint256 begin, uint256 end) private pure returns (bool success, uint256 value)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+      "class_name": "Strings",
+      "method_name": "_tryParseIntUncheckedBounds",
+      "full_signature": "function _tryParseIntUncheckedBounds(string memory input, uint256 begin, uint256 end) private pure returns (bool success, int256 value)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+      "class_name": "Strings",
+      "method_name": "_tryParseHexUintUncheckedBounds",
+      "full_signature": "function _tryParseHexUintUncheckedBounds(string memory input, uint256 begin, uint256 end) private pure returns (bool success, uint256 value)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+      "class_name": "Strings",
+      "method_name": "_tryParseChr",
+      "full_signature": "function _tryParseChr(bytes1 chr) private pure returns (uint8)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+      "class_name": "Strings",
+      "method_name": "_unsafeReadBytesOffset",
+      "full_signature": "function _unsafeReadBytesOffset(bytes memory buffer, uint256 offset) private pure returns (bytes32 value)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_tryVerifyNative",
+      "full_signature": "function _tryVerifyNative(bytes32 h, bytes32 r, bytes32 s, bytes32 qx, bytes32 qy) private view returns (bool valid, bool supported)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_isProperSignature",
+      "full_signature": "function _isProperSignature(bytes32 r, bytes32 s) private pure returns (bool)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_affineFromJacobian",
+      "full_signature": "function _affineFromJacobian(uint256 jx, uint256 jy, uint256 jz) private view returns (uint256 ax, uint256 ay)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_jAdd",
+      "full_signature": "function _jAdd(JPoint memory p1, uint256 x2, uint256 y2, uint256 z2) private pure returns (uint256 rx, uint256 ry, uint256 rz)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_jDouble",
+      "full_signature": "function _jDouble(uint256 x, uint256 y, uint256 z) private pure returns (uint256 rx, uint256 ry, uint256 rz)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_jMultShamir",
+      "full_signature": "function _jMultShamir(JPoint[16] memory points, uint256 u1, uint256 u2) private view returns (uint256 rx, uint256 ry)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_preComputeJacobianPoints",
+      "full_signature": "function _preComputeJacobianPoints(uint256 px, uint256 py) private pure returns (JPoint[16] memory points)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_jAddPoint",
+      "full_signature": "function _jAddPoint(JPoint memory p1, JPoint memory p2) private pure returns (JPoint memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/cryptography/P256.sol",
+      "class_name": "P256",
+      "method_name": "_jDoublePoint",
+      "full_signature": "function _jDoublePoint(JPoint memory p) private pure returns (JPoint memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "class_name": "Math",
+      "method_name": "_zeroBytes",
+      "full_signature": "function _zeroBytes(bytes memory byteArray) private pure returns (bool)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_insert",
+      "full_signature": "function _insert(Checkpoint224[] storage self, uint32 key, uint224 value) private returns (uint224 oldValue, uint224 newValue)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_upperBinaryLookup",
+      "full_signature": "function _upperBinaryLookup(Checkpoint224[] storage self, uint32 key, uint256 low, uint256 high) private view returns (uint256)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_lowerBinaryLookup",
+      "full_signature": "function _lowerBinaryLookup(Checkpoint224[] storage self, uint32 key, uint256 low, uint256 high) private view returns (uint256)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_unsafeAccess",
+      "full_signature": "function _unsafeAccess(Checkpoint224[] storage self, uint256 pos) private pure returns (Checkpoint224 storage result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_insert",
+      "full_signature": "function _insert(Checkpoint208[] storage self, uint48 key, uint208 value) private returns (uint208 oldValue, uint208 newValue)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_upperBinaryLookup",
+      "full_signature": "function _upperBinaryLookup(Checkpoint208[] storage self, uint48 key, uint256 low, uint256 high) private view returns (uint256)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_lowerBinaryLookup",
+      "full_signature": "function _lowerBinaryLookup(Checkpoint208[] storage self, uint48 key, uint256 low, uint256 high) private view returns (uint256)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_unsafeAccess",
+      "full_signature": "function _unsafeAccess(Checkpoint208[] storage self, uint256 pos) private pure returns (Checkpoint208 storage result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_insert",
+      "full_signature": "function _insert(Checkpoint160[] storage self, uint96 key, uint160 value) private returns (uint160 oldValue, uint160 newValue)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_upperBinaryLookup",
+      "full_signature": "function _upperBinaryLookup(Checkpoint160[] storage self, uint96 key, uint256 low, uint256 high) private view returns (uint256)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_lowerBinaryLookup",
+      "full_signature": "function _lowerBinaryLookup(Checkpoint160[] storage self, uint96 key, uint256 low, uint256 high) private view returns (uint256)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+      "class_name": "Checkpoints",
+      "method_name": "_unsafeAccess",
+      "full_signature": "function _unsafeAccess(Checkpoint160[] storage self, uint256 pos) private pure returns (Checkpoint160 storage result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Heap.sol",
+      "class_name": "Heap",
+      "method_name": "_swap",
+      "full_signature": "function _swap(Uint256Heap storage self, uint256 i, uint256 j) private",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Heap.sol",
+      "class_name": "Heap",
+      "method_name": "_siftDown",
+      "full_signature": "function _siftDown(Uint256Heap storage self, uint256 size, uint256 index, uint256 value, function(uint256, uint256) view returns (bool) comp) private",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/structs/Heap.sol",
+      "class_name": "Heap",
+      "method_name": "_siftUp",
+      "full_signature": "function _siftUp(Uint256Heap storage self, uint256 index, uint256 value, function(uint256, uint256) view returns (bool) comp) private",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/metatx/ERC2771Forwarder.sol",
+      "class_name": "ERC2771Forwarder",
+      "method_name": "_isTrustedByTarget",
+      "full_signature": "function _isTrustedByTarget(address target) private view returns (bool)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/metatx/ERC2771Forwarder.sol",
+      "class_name": "ERC2771Forwarder",
+      "method_name": "_checkForwardedGas",
+      "full_signature": "function _checkForwardedGas(uint256 gasLeft, ForwardRequestData calldata request) private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "_quorumReached",
+      "full_signature": "function _quorumReached(uint256 proposalId) internal virtual view returns (bool)",
+      "visibility": "internal",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "_voteSucceeded",
+      "full_signature": "function _voteSucceeded(uint256 proposalId) internal virtual view returns (bool)",
+      "visibility": "internal",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "_getVotes",
+      "full_signature": "function _getVotes(address account, uint256 timepoint, bytes memory params) internal virtual view returns (uint256)",
+      "visibility": "internal",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "_countVote",
+      "full_signature": "function _countVote(uint256 proposalId, address account, uint8 support, uint256 totalWeight, bytes memory params) internal virtual returns (uint256)",
+      "visibility": "internal",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "clock",
+      "full_signature": "function clock() public virtual view returns (uint48)",
+      "visibility": "public",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "CLOCK_MODE",
+      "full_signature": "function CLOCK_MODE() public virtual view returns (string memory)",
+      "visibility": "public",
+      "gap_category": "abstract_hook_harness_override"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "votingDelay",
+      "full_signature": "function votingDelay() public virtual view returns (uint256)",
+      "visibility": "public",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "votingPeriod",
+      "full_signature": "function votingPeriod() public virtual view returns (uint256)",
+      "visibility": "public",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "quorum",
+      "full_signature": "function quorum(uint256 timepoint) public virtual view returns (uint256)",
+      "visibility": "public",
+      "gap_category": "abstract_hook_harness_override"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "_unsafeReadBytesOffset",
+      "full_signature": "function _unsafeReadBytesOffset(bytes memory buffer, uint256 offset) private pure returns (bytes32 value)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol",
+      "class_name": "ERC4626",
+      "method_name": "_tryGetAssetDecimals",
+      "full_signature": "function _tryGetAssetDecimals(IERC20 asset_) private view returns (bool ok, uint8 assetDecimals)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+      "class_name": "Clones",
+      "method_name": "_cloneCodeWithImmutableArgs",
+      "full_signature": "function _cloneCodeWithImmutableArgs(address implementation, bytes memory args) private pure returns (bytes memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/metrics/Statistics.sol",
+      "class_name": "Statistics",
+      "method_name": "updateAverageTimeTakenToCompleteLevelsByPlayer",
+      "full_signature": "function updateAverageTimeTakenToCompleteLevelsByPlayer(address player, address level, uint256 totalNoOfLevelsCompletedByPlayer) private returns (uint256)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/GoodSamaritan.sol",
+      "class_name": "INotifyable",
+      "method_name": "notify",
+      "full_signature": "function notify(uint256 amount) external",
+      "visibility": "external",
+      "gap_category": "interface_callback"
+    },
+    {
+      "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+      "class_name": "Engine",
+      "method_name": "_upgradeToAndCall",
+      "full_signature": "function _upgradeToAndCall(address newImplementation, bytes memory data) internal",
+      "visibility": "internal",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Motorbike.sol",
+      "class_name": "Engine",
+      "method_name": "_setImplementation",
+      "full_signature": "function _setImplementation(address newImplementation) private",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeProxy",
+      "full_signature": "function upgradeProxy(address proxy, string memory contractName, bytes memory data) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeProxy",
+      "full_signature": "function upgradeProxy(address proxy, string memory contractName, bytes memory data, address tryCaller) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeBeacon",
+      "full_signature": "function upgradeBeacon(address beacon, string memory contractName) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeBeacon",
+      "full_signature": "function upgradeBeacon(address beacon, string memory contractName, address tryCaller) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Utils.sol",
+      "class_name": "Utils",
+      "method_name": "_split",
+      "full_signature": "function _split(strings.slice memory inputSlice, strings.slice memory delimSlice) private pure returns (string[] memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Utils.sol",
+      "class_name": "Utils",
+      "method_name": "_toFileName",
+      "full_signature": "function _toFileName(string memory contractName) private pure returns (string memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Utils.sol",
+      "class_name": "Utils",
+      "method_name": "_toShortName",
+      "full_signature": "function _toShortName(string memory contractName) private pure returns (string memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Utils.sol",
+      "class_name": "Utils",
+      "method_name": "runAsBashCommand",
+      "full_signature": "function runAsBashCommand(string[] memory inputs) internal returns (Vm.FfiResult memory)",
+      "visibility": "internal",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "deploy",
+      "full_signature": "function deploy(string memory contractName, bytes memory constructorData, DefenderOptions memory defenderOpts) internal returns (address)",
+      "visibility": "internal",
+      "gap_category": "ffi_cli_wrapper"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "_toLicenseType",
+      "full_signature": "function _toLicenseType(ContractInfo memory contractInfo) private pure returns (string memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "proposeUpgrade",
+      "full_signature": "function proposeUpgrade(address proxyAddress, address proxyAdminAddress, address newImplementationAddress, string memory newImplementationContractName, Options memory opts) internal returns (ProposeUpgradeResponse memory)",
+      "visibility": "internal",
+      "gap_category": "ffi_cli_wrapper"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "_parseLine",
+      "full_signature": "function _parseLine(string memory expectedPrefix, string memory stdout, bool required) private pure returns (string memory)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "getApprovalProcess",
+      "full_signature": "function getApprovalProcess(string memory command) internal returns (ApprovalProcessResponse memory)",
+      "visibility": "internal",
+      "gap_category": "ffi_cli_wrapper"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Core.sol",
+      "class_name": "Core",
+      "method_name": "_hasOwner",
+      "full_signature": "function _hasOwner(address addr) private view returns (bool)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Core.sol",
+      "class_name": "Core",
+      "method_name": "_validate",
+      "full_signature": "function _validate(string memory contractName, Options memory opts, bool requireReference) private",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Core.sol",
+      "class_name": "Core",
+      "method_name": "_deploy",
+      "full_signature": "function _deploy(string memory contractName, bytes memory constructorData) private returns (address)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/Core.sol",
+      "class_name": "Core",
+      "method_name": "_deployFromBytecode",
+      "full_signature": "function _deployFromBytecode(bytes memory bytecode) private returns (address)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DateTimeLib.sol",
+      "class_name": "DateTimeLib",
+      "method_name": "_totalMonths",
+      "full_signature": "function _totalMonths(uint256 numYears, uint256 numMonths) private pure returns (uint256 total)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DateTimeLib.sol",
+      "class_name": "DateTimeLib",
+      "method_name": "_add",
+      "full_signature": "function _add(uint256 a, uint256 b) private pure returns (uint256 c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DateTimeLib.sol",
+      "class_name": "DateTimeLib",
+      "method_name": "_sub",
+      "full_signature": "function _sub(uint256 a, uint256 b) private pure returns (uint256 c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DateTimeLib.sol",
+      "class_name": "DateTimeLib",
+      "method_name": "_offsetted",
+      "full_signature": "function _offsetted(uint256 year, uint256 month, uint256 day, uint256 timestamp) private pure returns (uint256 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibMap.sol",
+      "class_name": "LibMap",
+      "method_name": "_rawDiv",
+      "full_signature": "function _rawDiv(uint256 x, uint256 y) private pure returns (uint256 z)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibMap.sol",
+      "class_name": "LibMap",
+      "method_name": "_rawMod",
+      "full_signature": "function _rawMod(uint256 x, uint256 y) private pure returns (uint256 z)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/MetadataReaderLib.sol",
+      "class_name": "MetadataReaderLib",
+      "method_name": "_string",
+      "full_signature": "function _string(address target, bytes32 ptr, uint256 limit, uint256 gasStipend) private view returns (string memory result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/MetadataReaderLib.sol",
+      "class_name": "MetadataReaderLib",
+      "method_name": "_uint",
+      "full_signature": "function _uint(address target, bytes32 ptr, uint256 gasStipend) private view returns (uint256 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/MetadataReaderLib.sol",
+      "class_name": "MetadataReaderLib",
+      "method_name": "_ptr",
+      "full_signature": "function _ptr(uint256 s) private pure returns (bytes32 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/MetadataReaderLib.sol",
+      "class_name": "MetadataReaderLib",
+      "method_name": "_ptr",
+      "full_signature": "function _ptr(bytes memory data) private pure returns (bytes32 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/MinHeapLib.sol",
+      "class_name": "MinHeapLib",
+      "method_name": "_set",
+      "full_signature": "function _set(Heap storage heap, uint256 value, uint256 maxLength, uint256 mode) private returns (uint256 status, uint256 popped)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/MinHeapLib.sol",
+      "class_name": "MinHeapLib",
+      "method_name": "_set",
+      "full_signature": "function _set(MemHeap memory heap, uint256 value, uint256 maxLength, uint256 mode) private pure returns (uint256 status, uint256 popped)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/SafeCastLib.sol",
+      "class_name": "SafeCastLib",
+      "method_name": "_revertOverflow",
+      "full_signature": "function _revertOverflow() private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "class_name": "EnumerableSetLib",
+      "method_name": "_rootSlot",
+      "full_signature": "function _rootSlot(AddressSet storage s) private pure returns (bytes32 r)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "class_name": "EnumerableSetLib",
+      "method_name": "_rootSlot",
+      "full_signature": "function _rootSlot(Bytes32Set storage s) private pure returns (bytes32 r)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "class_name": "EnumerableSetLib",
+      "method_name": "_toBytes32Set",
+      "full_signature": "function _toBytes32Set(Uint256Set storage s) private pure returns (Bytes32Set storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "class_name": "EnumerableSetLib",
+      "method_name": "_toBytes32Set",
+      "full_signature": "function _toBytes32Set(Int256Set storage s) private pure returns (Bytes32Set storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "class_name": "EnumerableSetLib",
+      "method_name": "_toUints",
+      "full_signature": "function _toUints(bytes32[] memory a) private pure returns (uint256[] memory c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "class_name": "EnumerableSetLib",
+      "method_name": "_toInts",
+      "full_signature": "function _toInts(bytes32[] memory a) private pure returns (int256[] memory c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+      "class_name": "LibTransient",
+      "method_name": "_compat",
+      "full_signature": "function _compat(TUint256 storage ptr) private pure returns (TUint256 storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+      "class_name": "LibTransient",
+      "method_name": "_compat",
+      "full_signature": "function _compat(TInt256 storage ptr) private pure returns (TInt256 storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+      "class_name": "LibTransient",
+      "method_name": "_compat",
+      "full_signature": "function _compat(TBytes32 storage ptr) private pure returns (TBytes32 storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+      "class_name": "LibTransient",
+      "method_name": "_compat",
+      "full_signature": "function _compat(TAddress storage ptr) private pure returns (TAddress storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+      "class_name": "LibTransient",
+      "method_name": "_compat",
+      "full_signature": "function _compat(TBool storage ptr) private pure returns (TBool storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibTransient.sol",
+      "class_name": "LibTransient",
+      "method_name": "_compat",
+      "full_signature": "function _compat(TBytes storage ptr) private pure returns (TBytes storage c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/JSONParserLib.sol",
+      "class_name": "JSONParserLib",
+      "method_name": "_query",
+      "full_signature": "function _query(bytes32 input, uint256 mode) private pure returns (bytes32 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/JSONParserLib.sol",
+      "class_name": "JSONParserLib",
+      "method_name": "_toInput",
+      "full_signature": "function _toInput(string memory input) private pure returns (bytes32 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/JSONParserLib.sol",
+      "class_name": "JSONParserLib",
+      "method_name": "_toInput",
+      "full_signature": "function _toInput(Item memory input) private pure returns (bytes32 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_toUints",
+      "full_signature": "function _toUints(int256[] memory a) private pure returns (uint256[] memory casted)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_toUints",
+      "full_signature": "function _toUints(address[] memory a) private pure returns (uint256[] memory casted)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_toUints",
+      "full_signature": "function _toUints(bytes32[] memory a) private pure returns (uint256[] memory casted)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_toInts",
+      "full_signature": "function _toInts(uint256[] memory a) private pure returns (int256[] memory casted)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_toAddresses",
+      "full_signature": "function _toAddresses(uint256[] memory a) private pure returns (address[] memory casted)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_toBytes32s",
+      "full_signature": "function _toBytes32s(uint256[] memory a) private pure returns (bytes32[] memory casted)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_flipSign",
+      "full_signature": "function _flipSign(int256[] memory a) private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_searchSorted",
+      "full_signature": "function _searchSorted(uint256[] memory a, uint256 needle, uint256 signed) private pure returns (bool found, uint256 index)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_difference",
+      "full_signature": "function _difference(uint256[] memory a, uint256[] memory b, uint256 signed) private pure returns (uint256[] memory c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_intersection",
+      "full_signature": "function _intersection(uint256[] memory a, uint256[] memory b, uint256 signed) private pure returns (uint256[] memory c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+      "class_name": "LibSort",
+      "method_name": "_union",
+      "full_signature": "function _union(uint256[] memory a, uint256[] memory b, uint256 signed) private pure returns (uint256[] memory c)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DynamicArrayLib.sol",
+      "class_name": "DynamicArrayLib",
+      "method_name": "_deallocate",
+      "full_signature": "function _deallocate(DynamicArray memory result) private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DynamicArrayLib.sol",
+      "class_name": "DynamicArrayLib",
+      "method_name": "_toUint",
+      "full_signature": "function _toUint(bool b) private pure returns (uint256 result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+      "class_name": "DynamicBufferLib",
+      "method_name": "_deallocate",
+      "full_signature": "function _deallocate(DynamicBuffer memory result) private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+      "class_name": "DynamicBufferLib",
+      "method_name": "_single",
+      "full_signature": "function _single(uint256 data, uint256 n) private pure returns (bytes memory result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+      "class_name": "DynamicBufferLib",
+      "method_name": "_single",
+      "full_signature": "function _single(bytes32 data, uint256 n) private pure returns (bytes memory result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+      "class_name": "LibRLP",
+      "method_name": "_updateTail",
+      "full_signature": "function _updateTail(List memory list, List memory result) private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableMapLib.sol",
+      "class_name": "EnumerableMapLib",
+      "method_name": "_revertNotFound",
+      "full_signature": "function _revertNotFound() private pure",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EIP712.sol",
+      "class_name": "EIP712",
+      "method_name": "_buildDomainSeparator",
+      "full_signature": "function _buildDomainSeparator() private view returns (bytes32 separator)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    },
+    {
+      "sol_path": "repository/solady/lib/solady/src/utils/EIP712.sol",
+      "class_name": "EIP712",
+      "method_name": "_cachedDomainSeparatorInvalidated",
+      "full_signature": "function _cachedDomainSeparatorInvalidated() private view returns (bool result)",
+      "visibility": "private",
+      "gap_category": "needs_eval_coverage"
+    }
+  ],
+  "transitive_missing": [
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "CLOCK_MODE",
+      "full_signature": "function CLOCK_MODE() public virtual view returns (string memory)",
+      "visibility": "public",
+      "gap_category": "abstract_hook_harness_override"
+    },
+    {
+      "sol_path": "repository/openzeppelin-contracts/contracts/governance/Governor.sol",
+      "class_name": "Governor",
+      "method_name": "quorum",
+      "full_signature": "function quorum(uint256 timepoint) public virtual view returns (uint256)",
+      "visibility": "public",
+      "gap_category": "abstract_hook_harness_override"
+    },
+    {
+      "sol_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/GoodSamaritan.sol",
+      "class_name": "INotifyable",
+      "method_name": "notify",
+      "full_signature": "function notify(uint256 amount) external",
+      "visibility": "external",
+      "gap_category": "interface_callback"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeProxy",
+      "full_signature": "function upgradeProxy(address proxy, string memory contractName, bytes memory data) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeProxy",
+      "full_signature": "function upgradeProxy(address proxy, string memory contractName, bytes memory data, address tryCaller) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeBeacon",
+      "full_signature": "function upgradeBeacon(address beacon, string memory contractName) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/LegacyUpgrades.sol",
+      "class_name": "Upgrades",
+      "method_name": "upgradeBeacon",
+      "full_signature": "function upgradeBeacon(address beacon, string memory contractName, address tryCaller) internal",
+      "visibility": "internal",
+      "gap_category": "ffi_validation_path"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "deploy",
+      "full_signature": "function deploy(string memory contractName, bytes memory constructorData, DefenderOptions memory defenderOpts) internal returns (address)",
+      "visibility": "internal",
+      "gap_category": "ffi_cli_wrapper"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "proposeUpgrade",
+      "full_signature": "function proposeUpgrade(address proxyAddress, address proxyAdminAddress, address newImplementationAddress, string memory newImplementationContractName, Options memory opts) internal returns (ProposeUpgradeResponse memory)",
+      "visibility": "internal",
+      "gap_category": "ffi_cli_wrapper"
+    },
+    {
+      "sol_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+      "class_name": "DefenderDeploy",
+      "method_name": "getApprovalProcess",
+      "full_signature": "function getApprovalProcess(string memory command) internal returns (ApprovalProcessResponse memory)",
+      "visibility": "internal",
+      "gap_category": "ffi_cli_wrapper"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+  "eval_full_pass": false,
+  "code_sha256": "eba9e6085f54d3d908568fab91f28d5df62a015174fdb25fc3b5abac3545236b",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:56.963070+00:00",
+  "skip_reason": "not eval FullPass"
+}

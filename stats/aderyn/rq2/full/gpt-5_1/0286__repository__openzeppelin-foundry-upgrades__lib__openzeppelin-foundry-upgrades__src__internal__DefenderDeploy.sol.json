@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 17964,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "4c935313d63df7a5e2cb5254fed6d61653de0464711d364429d3215549f2b3f9",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 420,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:43.532346+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (9553): Invalid type for argument in function call. Invalid implicit conversion from struct ContractInfo memory to struct DefenderDeploy.ContractInfo memory requested.\n  --> test/internal/DefenderDeploy.t.sol:36:1041:\n   |\n36 |  ... efenderDeploy_0.buildDeployCommand(info, buildInfoFile, constructorData, o ...\n   |                                         ^^^^\n\nError (9553): Invalid type for argument in function call. Invalid implicit conversion from struct DefenderOptions memory to struct DefenderDeploy.DefenderOptions memory requested.\n  --> test/internal/DefenderDeploy.t.sol:36:1079:\n   |\n36 |  ... o, buildInfoFile, constructorData, opts); string memory joined; for (uint2 ...\n   |                                         ^^^^\n\nError (9574): Type struct DefenderDeploy.ProposeUpgradeResponse memory is not implicitly convertible to expected type struct ProposeUpgradeResponse memory.\n  --> test/internal/DefenderDeploy.t.sol:39:179:\n   |\n39 |  ... posal created.\\nProposal ID: 123\"; GenProposeUpgradeResponseExtra_0 memory response = GenDefenderDeploy_0.parseProposeUpgradeResponse(output); return abi.encode(response.propos ...\n   |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError (9553): Invalid type for argument in function call. Invalid implicit conversion from struct ContractInfo memory to struct DefenderDeploy.ContractInfo memory requested.\n  --> test/internal/DefenderDeploy.t.sol:42:492:\n   |\n42 |  ... 00000000000000000000000000000222), info, opts); string memory joined; for  ...\n   |                                         ^^^^\n\nError (9553): Invalid type for argument in function call. Invalid implicit conversion from struct Options memory to struct DefenderDeploy.Options memory requested.\n  --> test/internal/DefenderDeploy.t.sol:42:498:\n   |\n42 |  ... 00000000000000000000000222), info, opts); string memory joined; for (uint2 ...\n   |                                         ^^^^\n\nError (9574): Type struct DefenderDeploy.ApprovalProcessResponse memory is not implicitly convertible to expected type struct ApprovalProcessResponse memory.\n  --> test/internal/DefenderDeploy.t.sol:45:173:\n   |\n45 |  ... yer\" : \"Approval process ID: abc\"; GenApprovalProcessResponseExtra_0 memory response = GenDefenderDeploy_0.parseApprovalProcessResponse(output); return abi.encode(response.approv ...\n   |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/test/internal/DefenderDeploy.t.sol",
+    "expected_tests": 5,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 286,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+  "id": 286,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:09.708761+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "skipped",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

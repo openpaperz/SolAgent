@@ -1,0 +1,307 @@
+{
+  "aderyn": {
+    "count": 5,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts",
+        "-i",
+        "src/levels/MagicAnimalCarousel.sol",
+        "-o",
+        "/tmp/aderyn_report_3gnu27vi/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/levels/MagicAnimalCarousel.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n-----------------------------------------------------------------------------------------\n# Configuration\n-----------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts\nSource - /home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts/src\nRemappings - [\n    \"forge-std/=lib/forge-std/src/\",\n    \"openzeppelin-contracts-06/=lib/openzeppelin-contracts-06/contracts/\",\n    \"openzeppelin-contracts-08/=lib/openzeppelin-contracts-08/contracts/\",\n    \"openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\n    \"openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n]\nEVM version - shanghai\n-----------------------------------------------------------------------------------------\n# Source Scope\n-----------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/levels/MagicAnimalCarousel.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-----------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-----------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-----------------------------------------------------------------------------------------\n# Scanning Contracts\n-----------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_3gnu27vi/report.json\n\n🌱 Aderyn is growing with community support.\nHelp others discover it — drop a star on GitHub:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/levels/MagicAnimalCarousel.sol",
+              "n_sloc": 47
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 47,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 5
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 28,
+                  "src": "1078:3",
+                  "src_char": "1078:3"
+                },
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 56,
+                  "src": "2350:3",
+                  "src_char": "2350:3"
+                },
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 65,
+                  "src": "2733:3",
+                  "src_char": "2733:3"
+                },
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 71,
+                  "src": "3052:3",
+                  "src_char": "3052:3"
+                },
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 108,
+                  "src": "4951:3",
+                  "src_char": "4951:3"
+                },
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 135,
+                  "src": "6085:3",
+                  "src_char": "6085:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "There are state variable changes in this function but no event is emitted. Consider emitting an event to enable offchain indexers to track the changes.",
+              "detector_name": "state-change-without-event",
+              "instances": [
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 51,
+                  "src": "2013:16",
+                  "src_char": "2013:16"
+                },
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 92,
+                  "src": "4175:12",
+                  "src_char": "4175:12"
+                }
+              ],
+              "title": "State Change Without Event"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "State variable appears to be unused. No analysis has been performed to see if any inline assembly references it. Consider removing this unused variable.",
+              "detector_name": "unused-state-variable",
+              "instances": [
+                {
+                  "contract_path": "src/levels/MagicAnimalCarousel.sol",
+                  "line_no": 6,
+                  "src": "156:11",
+                  "src_char": "156:11"
+                }
+              ],
+              "title": "Unused State Variable"
+            }
+          ]
+        }
+      },
+      "return_code": 0,
+      "source_dir": null
+    },
+    "reported_sloc": 47,
+    "sloc": 47,
+    "summary": {
+      "High": 0,
+      "Low": 5
+    }
+  },
+  "code": {
+    "best_pass": 1,
+    "best_round": 1,
+    "best_total": 6,
+    "best_vuln": 0,
+    "code_bytes": 6167,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "9e15a31f47f12bd6bc6bd1aa3fd5cd1d6062499499e823b1ad92a7de9161f585",
+    "skip_reason": null,
+    "sloc": 47,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:45.160768+00:00",
+  "eval": {
+    "best_round": 1,
+    "compile_error": "Compiler run failed:\nError (9582): Member \"MAX_CAPACITY\" not found or not visible after argument-dependent lookup in contract MagicAnimalCarousel.\n  --> test/levels/MagicAnimalCarousel.t.sol:15:27:\n   |\n15 |         return abi.encode(genInstance_MagicAnimalCarousel_0.MAX_CAPACITY(), genInstance_MagicAnimalCarousel_0.currentCrateId());\n   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/ethernaut/lib/ethernaut.git/contracts/test/levels/MagicAnimalCarousel.t.sol",
+    "expected_tests": 3,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 415,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/MagicAnimalCarousel.sol",
+  "id": 415,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:11.039301+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

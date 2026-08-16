@@ -1,0 +1,900 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 0,
+      "failed_sols": 1,
+      "skipped_sols": 0,
+      "expected_checks": 20,
+      "proved_checks": 13,
+      "failed_checks": 7,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {
+        "not_concrete_symbolic_memory": 1
+      }
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 0,
+        "failed_sols": 1,
+        "skipped_sols": 0,
+        "expected_checks": 20,
+        "proved_checks": 13,
+        "failed_checks": 7,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {
+          "not_concrete_symbolic_memory": 1
+        }
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 20,
+        "passed_methods": 13,
+        "failed_methods": 7,
+        "status_counts": {
+          "PASS": 13,
+          "FAIL": 7
+        },
+        "pass_rate": 0.65
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 20,
+          "passed_methods": 13,
+          "failed_methods": 7,
+          "status_counts": {
+            "PASS": 13,
+            "FAIL": 7
+          },
+          "pass_rate": 0.65
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/utils/Arrays.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/utils/Arrays.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/utils/Arrays.sol"
+      ],
+      "test_names": [
+        "test_Arrays_sort_0",
+        "test_Arrays_sort_1",
+        "test_Arrays_sort_2",
+        "test_Arrays_sort_3",
+        "test_Arrays_sort_4",
+        "test_Arrays_sort_5",
+        "test_Arrays_findUpperBound_6",
+        "test_Arrays_lowerBound_7",
+        "test_Arrays_upperBound_8",
+        "test_Arrays_lowerBoundMemory_9",
+        "test_Arrays_upperBoundMemory_10",
+        "test_Arrays_property_unsafe_memory_access_address_0",
+        "test_Arrays_property_unsafe_memory_access_bytes32_1",
+        "test_Arrays_property_unsafe_memory_access_uint256_2",
+        "test_Arrays_property_unsafe_access_address_3",
+        "test_Arrays_property_unsafe_access_bytes32_4",
+        "test_Arrays_property_unsafe_access_uint256_5",
+        "test_Arrays_property_unsafe_set_length_address_6",
+        "test_Arrays_property_unsafe_set_length_bytes32_7",
+        "test_Arrays_property_unsafe_set_length_uint256_8"
+      ],
+      "check_names": [
+        "check_Arrays_sort_0",
+        "check_Arrays_sort_1",
+        "check_Arrays_sort_2",
+        "check_Arrays_sort_3",
+        "check_Arrays_sort_4",
+        "check_Arrays_sort_5",
+        "check_Arrays_findUpperBound_6",
+        "check_Arrays_lowerBound_7",
+        "check_Arrays_upperBound_8",
+        "check_Arrays_lowerBoundMemory_9",
+        "check_Arrays_upperBoundMemory_10",
+        "check_Arrays_property_unsafe_memory_access_address_0",
+        "check_Arrays_property_unsafe_memory_access_bytes32_1",
+        "check_Arrays_property_unsafe_memory_access_uint256_2",
+        "check_Arrays_property_unsafe_access_address_3",
+        "check_Arrays_property_unsafe_access_bytes32_4",
+        "check_Arrays_property_unsafe_access_uint256_5",
+        "check_Arrays_property_unsafe_set_length_address_6",
+        "check_Arrays_property_unsafe_set_length_bytes32_7",
+        "check_Arrays_property_unsafe_set_length_uint256_8"
+      ],
+      "methods_count": 20,
+      "manifest_skipped_checks": 9,
+      "skipped_checks": 0,
+      "expected_checks": 20,
+      "expected_tests": 20,
+      "proved_checks": 13,
+      "failed_checks": 7,
+      "timeouts": 0,
+      "proved": false,
+      "ok": false,
+      "failed_check_names": [
+        "check_Arrays_property_unsafe_memory_access_address_0",
+        "check_Arrays_property_unsafe_memory_access_bytes32_1",
+        "check_Arrays_property_unsafe_memory_access_uint256_2",
+        "check_Arrays_property_unsafe_access_bytes32_4",
+        "check_Arrays_property_unsafe_set_length_address_6",
+        "check_Arrays_property_unsafe_set_length_bytes32_7",
+        "check_Arrays_property_unsafe_set_length_uint256_8"
+      ],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_Arrays_sort_0": "PASS",
+        "check_Arrays_sort_1": "PASS",
+        "check_Arrays_sort_2": "PASS",
+        "check_Arrays_sort_3": "PASS",
+        "check_Arrays_sort_4": "PASS",
+        "check_Arrays_sort_5": "PASS",
+        "check_Arrays_findUpperBound_6": "PASS",
+        "check_Arrays_lowerBound_7": "PASS",
+        "check_Arrays_upperBound_8": "PASS",
+        "check_Arrays_lowerBoundMemory_9": "PASS",
+        "check_Arrays_upperBoundMemory_10": "PASS",
+        "check_Arrays_property_unsafe_memory_access_address_0": "FAIL",
+        "check_Arrays_property_unsafe_memory_access_bytes32_1": "FAIL",
+        "check_Arrays_property_unsafe_memory_access_uint256_2": "FAIL",
+        "check_Arrays_property_unsafe_access_address_3": "PASS",
+        "check_Arrays_property_unsafe_access_bytes32_4": "FAIL",
+        "check_Arrays_property_unsafe_access_uint256_5": "PASS",
+        "check_Arrays_property_unsafe_set_length_address_6": "FAIL",
+        "check_Arrays_property_unsafe_set_length_bytes32_7": "FAIL",
+        "check_Arrays_property_unsafe_set_length_uint256_8": "FAIL"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [
+        "[ERROR] check_Arrays_property_unsafe_memory_access_address_0(address,address,address,uint256) (paths: 4, time: 0.06s, bounds: [])",
+        "[ERROR] check_Arrays_property_unsafe_memory_access_bytes32_1(bytes32,bytes32,bytes32,uint256) (paths: 1, time: 0.02s, bounds: [])",
+        "[ERROR] check_Arrays_property_unsafe_memory_access_uint256_2(uint256,uint256,uint256,uint256) (paths: 1, time: 0.02s, bounds: [])",
+        "[ERROR] check_Arrays_property_unsafe_access_bytes32_4(uint256,bytes32) (paths: 1, time: 0.07s, bounds: [])",
+        "[ERROR] check_Arrays_property_unsafe_set_length_address_6(uint256) (paths: 1, time: 0.06s, bounds: [])",
+        "[ERROR] check_Arrays_property_unsafe_set_length_bytes32_7(uint256) (paths: 1, time: 0.10s, bounds: [])",
+        "[ERROR] check_Arrays_property_unsafe_set_length_uint256_8(uint256) (paths: 1, time: 0.06s, bounds: [])"
+      ],
+      "unsupported_error": "explored due to the loop unrolling bound: 2\ndue to the loop unrolling bound: 2\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic storage base slot:\nWARNING  Encountered NotConcreteError: symbolic CALLDATACOPY size:\nnot been fully explored due to the loop unrolling bound: 2",
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "findUpperBound",
+          "visibility": "internal",
+          "full_signature": "function findUpperBound(uint256[] storage array, uint256 element) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_findUpperBound_6",
+              "test_name": "test_Arrays_findUpperBound_6",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "lowerBound",
+          "visibility": "internal",
+          "full_signature": "function lowerBound(uint256[] storage array, uint256 element) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_lowerBound_7",
+              "test_name": "test_Arrays_lowerBound_7",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "lowerBoundMemory",
+          "visibility": "internal",
+          "full_signature": "function lowerBoundMemory(uint256[] memory array, uint256 element) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_lowerBoundMemory_9",
+              "test_name": "test_Arrays_lowerBoundMemory_9",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "sort",
+          "visibility": "internal",
+          "full_signature": "function sort(address[] memory array) internal pure returns (address[] memory)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_sort_3",
+              "test_name": "test_Arrays_sort_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "sort",
+          "visibility": "internal",
+          "full_signature": "function sort(address[] memory array, function(address, address) pure returns (bool) comp) internal pure returns (address[] memory)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_sort_2",
+              "test_name": "test_Arrays_sort_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "sort",
+          "visibility": "internal",
+          "full_signature": "function sort(bytes32[] memory array) internal pure returns (bytes32[] memory)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_sort_5",
+              "test_name": "test_Arrays_sort_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "sort",
+          "visibility": "internal",
+          "full_signature": "function sort(bytes32[] memory array, function(bytes32, bytes32) pure returns (bool) comp) internal pure returns (bytes32[] memory)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_sort_4",
+              "test_name": "test_Arrays_sort_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "sort",
+          "visibility": "internal",
+          "full_signature": "function sort(uint256[] memory array) internal pure returns (uint256[] memory)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_sort_1",
+              "test_name": "test_Arrays_sort_1",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "sort",
+          "visibility": "internal",
+          "full_signature": "function sort(uint256[] memory array, function(uint256, uint256) pure returns (bool) comp) internal pure returns (uint256[] memory)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_sort_0",
+              "test_name": "test_Arrays_sort_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeAccess",
+          "visibility": "internal",
+          "full_signature": "function unsafeAccess(address[] storage arr, uint256 pos) internal pure returns (StorageSlot.AddressSlot storage)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_access_address_3",
+              "test_name": "test_Arrays_property_unsafe_access_address_3",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeAccess",
+          "visibility": "internal",
+          "full_signature": "function unsafeAccess(bytes32[] storage arr, uint256 pos) internal pure returns (StorageSlot.Bytes32Slot storage)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_access_bytes32_4",
+              "test_name": "test_Arrays_property_unsafe_access_bytes32_4",
+              "attribution": "single_wrapper_selector",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeAccess",
+          "visibility": "internal",
+          "full_signature": "function unsafeAccess(uint256[] storage arr, uint256 pos) internal pure returns (StorageSlot.Uint256Slot storage)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_access_uint256_5",
+              "test_name": "test_Arrays_property_unsafe_access_uint256_5",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeMemoryAccess",
+          "visibility": "internal",
+          "full_signature": "function unsafeMemoryAccess(address[] memory arr, uint256 pos) internal pure returns (address res)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_memory_access_address_0",
+              "test_name": "test_Arrays_property_unsafe_memory_access_address_0",
+              "attribution": "single_wrapper_selector",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeMemoryAccess",
+          "visibility": "internal",
+          "full_signature": "function unsafeMemoryAccess(bytes32[] memory arr, uint256 pos) internal pure returns (bytes32 res)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_memory_access_bytes32_1",
+              "test_name": "test_Arrays_property_unsafe_memory_access_bytes32_1",
+              "attribution": "single_wrapper_selector",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeMemoryAccess",
+          "visibility": "internal",
+          "full_signature": "function unsafeMemoryAccess(uint256[] memory arr, uint256 pos) internal pure returns (uint256 res)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_memory_access_uint256_2",
+              "test_name": "test_Arrays_property_unsafe_memory_access_uint256_2",
+              "attribution": "single_wrapper_selector",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeSetLength",
+          "visibility": "internal",
+          "full_signature": "function unsafeSetLength(address[] storage array, uint256 len) internal",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_set_length_address_6",
+              "test_name": "test_Arrays_property_unsafe_set_length_address_6",
+              "attribution": "single_wrapper_selector",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeSetLength",
+          "visibility": "internal",
+          "full_signature": "function unsafeSetLength(bytes32[] storage array, uint256 len) internal",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_set_length_bytes32_7",
+              "test_name": "test_Arrays_property_unsafe_set_length_bytes32_7",
+              "attribution": "single_wrapper_selector",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "unsafeSetLength",
+          "visibility": "internal",
+          "full_signature": "function unsafeSetLength(uint256[] storage array, uint256 len) internal",
+          "checks": [
+            {
+              "check_name": "check_Arrays_property_unsafe_set_length_uint256_8",
+              "test_name": "test_Arrays_property_unsafe_set_length_uint256_8",
+              "attribution": "single_wrapper_selector",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "upperBound",
+          "visibility": "internal",
+          "full_signature": "function upperBound(uint256[] storage array, uint256 element) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_upperBound_8",
+              "test_name": "test_Arrays_upperBound_8",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Arrays.sol",
+          "class_name": "Arrays",
+          "class_kind": "library",
+          "method_name": "upperBoundMemory",
+          "visibility": "internal",
+          "full_signature": "function upperBoundMemory(uint256[] memory array, uint256 element) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Arrays_upperBoundMemory_10",
+              "test_name": "test_Arrays_upperBoundMemory_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 20,
+        "passed_methods": 13,
+        "failed_methods": 7,
+        "status_counts": {
+          "PASS": 13,
+          "FAIL": 7
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_Arrays_sort_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 1,
+      "halmos_stdout": "--- halmos chunk 1/20 ---\nCompiling 3 files with Solc 0.8.24\nSolc 0.8.24 finished in 1.87s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:104:5:\n    |\n104 |     function ref_call_sort_0(uint256[] memory array, bool descending) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:107:5:\n    |\n107 |     function ref_call_sort_1(uint256[] memory array) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:110:5:\n    |\n110 |     function ref_call_sort_2(address[] memory array, bool descending) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:113:5:\n    |\n113 |     function ref_call_sort_3(address[] memory array) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:116:5:\n    |\n116 |     function ref_call_sort_4(bytes32[] memory array, bool descending) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:119:5:\n    |\n119 |     function ref_call_sort_5(bytes32[] memory array) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:131:5:\n    |\n131 |     function ref_call_lowerBoundMemory_9(uint256[] memory array, uint256 element) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:134:5:\n    |\n134 |     function ref_call_upperBoundMemory_10(uint256[] memory array, uint256 element) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:146:5:\n    |\n146 |     function ref_call_unsafeMemoryAccess_14(address[] memory arr, uint256 pos) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:149:5:\n    |\n149 |     function ref_call_unsafeMemoryAccess_15(bytes32[] memory arr, uint256 pos) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:152:5:\n    |\n152 |     function ref_call_unsafeMemoryAccess_16(uint256[] memory arr, uint256 pos) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:164:5:\n    |\n164 |     function gen_call_sort_0(uint256[] memory array, bool descending) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:167:5:\n    |\n167 |     function gen_call_sort_1(uint256[] memory array) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:170:5:\n    |\n170 |     function gen_call_sort_2(address[] memory array, bool descending) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:173:5:\n    |\n173 |     function gen_call_sort_3(address[] memory array) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:176:5:\n    |\n176 |     function gen_call_sort_4(bytes32[] memory array, bool descending) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:179:5:\n    |\n179 |     function gen_call_sort_5(bytes32[] memory array) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:191:5:\n    |\n191 |     function gen_call_lowerBoundMemory_9(uint256[] memory array, uint256 element) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:194:5:\n    |\n194 |     function gen_call_upperBoundMemory_10(uint256[] memory array, uint256 element) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:206:5:\n    |\n206 |     function gen_call_unsafeMemoryAccess_14(address[] memory arr, uint256 pos) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:209:5:\n    |\n209 |     function gen_call_unsafeMemoryAccess_15(bytes32[] memory arr, uint256 pos) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Arrays.t.sol:212:5:\n    |\n212 |     function gen_call_unsafeMemoryAccess_16(uint256[] memory arr, uint256 pos) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_sort_0(uint256[],bool) (paths: 11, time: 0.10s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.11s\n\n\n--- halmos chunk 2/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_sort_1(uint256[]) (paths: 4, time: 0.04s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 3/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_sort_2(address[],bool) (paths: 14, time: 0.11s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.12s\n\n\n--- halmos chunk 4/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_sort_3(address[]) (paths: 7, time: 0.05s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n\n\n--- halmos chunk 5/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_sort_4(bytes32[],bool) (paths: 11, time: 0.10s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.11s\n\n\n--- halmos chunk 6/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_sort_5(bytes32[]) (paths: 4, time: 0.04s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 7/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_findUpperBound_6(uint256) (paths: 8, time: 0.37s, bounds: [])\nWARNING  check_Arrays_findUpperBound_6(uint256): paths have not been fully      \n         explored due to the loop unrolling bound: 2                            \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.39s\n\n\n--- halmos chunk 8/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_lowerBound_7(uint256) (paths: 4, time: 0.18s, bounds: [])\nWARNING  check_Arrays_lowerBound_7(uint256): paths have not been fully explored \n         due to the loop unrolling bound: 2                                     \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.19s\n\n\n--- halmos chunk 9/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_upperBound_8(uint256) (paths: 4, time: 0.18s, bounds: [])\nWARNING  check_Arrays_upperBound_8(uint256): paths have not been fully explored \n         due to the loop unrolling bound: 2                                     \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.19s\n\n\n--- halmos chunk 10/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_lowerBoundMemory_9(uint256[],uint256) (paths: 7, time: 0.06s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.08s\n\n\n--- halmos chunk 11/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_upperBoundMemory_10(uint256[],uint256) (paths: 7, time: 0.06s, bounds: [array=[0, 1, 2]])\nSymbolic test result: 1 passed; 0 failed; time: 0.07s\n\n\n--- halmos chunk 12/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[31m[ERROR]\u001b[0m check_Arrays_property_unsafe_memory_access_address_0(address,address,address,uint256) (paths: 4, time: 0.06s, bounds: [])\nWARNING  Encountered NotConcreteError: symbolic memory offset:                  \n         +(0x00000000000000000000000000000000000000000000000000000000000000a0,  \n         Concat(Extract(0xfa, 0x00, p_pos_uint256_b5f3c2a_00), 0x00))           \n         (see https://github.com/a16z/halmos/wiki/warnings#internal-error)      \nSymbolic test result: 0 passed; 1 failed; time: 0.08s\n\n\n--- halmos chunk 13/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[31m[ERROR]\u001b[0m check_Arrays_property_unsafe_memory_access_bytes32_1(bytes32,bytes32,bytes32,uint256) (paths: 1, time: 0.02s, bounds: [])\nWARNING  Encountered NotConcreteError: symbolic memory offset:                  \n         +(0x00000000000000000000000000000000000000000000000000000000000000a0,  \n         Concat(Extract(0xfa, 0x00, p_pos_uint256_f7c7424_00), 0x00))           \n         (see https://github.com/a16z/halmos/wiki/warnings#internal-error)      \nSymbolic test result: 0 passed; 1 failed; time: 0.03s\n\n\n--- halmos chunk 14/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[31m[ERROR]\u001b[0m check_Arrays_property_unsafe_memory_access_uint256_2(uint256,uint256,uint256,uint256) (paths: 1, time: 0.02s, bounds: [])\nWARNING  Encountered NotConcreteError: symbolic memory offset:                  \n         +(0x00000000000000000000000000000000000000000000000000000000000000a0,  \n         Concat(Extract(0xfa, 0x00, p_pos_uint256_80d02e0_00), 0x00))           \n         (see https://github.com/a16z/halmos/wiki/warnings#internal-error)      \nSymbolic test result: 0 passed; 1 failed; time: 0.04s\n\n\n--- halmos chunk 15/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_property_unsafe_access_address_3(uint256,address) (paths: 3, time: 0.25s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.26s\n\n\n--- halmos chunk 16/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[31m[ERROR]\u001b[0m check_Arrays_property_unsafe_access_bytes32_4(uint256,bytes32) (paths: 1, time: 0.07s, bounds: [])\nWARNING  Encountered NotConcreteError: symbolic storage base slot:              \n         Concat(0x00dad8e12d7b29e47189d8454b431e6ec1813041297edbd3ac1c0fcc552ecf\n         6c, Extract(0x01, 0x00, p_pos_uint256_2aaf447_00))                     \n         (see https://github.com/a16z/halmos/wiki/warnings#internal-error)      \nSymbolic test result: 0 passed; 1 failed; time: 0.09s\n\n\n--- halmos chunk 17/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Arrays_property_unsafe_access_uint256_5(uint256,uint256) (paths: 2, time: 0.35s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.36s\n\n\n--- halmos chunk 18/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[31m[ERROR]\u001b[0m check_Arrays_property_unsafe_set_length_address_6(uint256) (paths: 1, time: 0.06s, bounds: [])\nWARNING  Encountered NotConcreteError: symbolic CALLDATACOPY size:              \n         Concat(0x00000000000000000000000000000000000000000000000000000000000000\n         , Extract(0x02, 0x00, p_len_uint256_57e3533_00), 0x00)                 \n         (see https://github.com/a16z/halmos/wiki/warnings#internal-error)      \nWARNING  check_Arrays_property_unsafe_set_length_address_6(uint256): paths have \n         not been fully explored due to the loop unrolling bound: 2             \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 0 passed; 1 failed; time: 0.08s\n\n\n--- halmos chunk 19/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[31m[ERROR]\u001b[0m check_Arrays_property_unsafe_set_length_bytes32_7(uint256) (paths: 1, time: 0.10s, bounds: [])\nWARNING  Encountered NotConcreteError: symbolic CALLDATACOPY size:              \n         Concat(0x00000000000000000000000000000000000000000000000000000000000000\n         , Extract(0x02, 0x00, p_len_uint256_c1b7d44_00), 0x00)                 \n         (see https://github.com/a16z/halmos/wiki/warnings#internal-error)      \nWARNING  check_Arrays_property_unsafe_set_length_bytes32_7(uint256): paths have \n         not been fully explored due to the loop unrolling bound: 2             \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 0 passed; 1 failed; time: 0.12s\n\n\n--- halmos chunk 20/20 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/Arrays.t.sol:ArraysEquivalenceCheck\n\u001b[31m[ERROR]\u001b[0m check_Arrays_property_unsafe_set_length_uint256_8(uint256) (paths: 1, time: 0.06s, bounds: [])\nWARNING  Encountered NotConcreteError: symbolic CALLDATACOPY size:              \n         Concat(0x00000000000000000000000000000000000000000000000000000000000000\n         , Extract(0x02, 0x00, p_len_uint256_07e3385_00), 0x00)                 \n         (see https://github.com/a16z/halmos/wiki/warnings#internal-error)      \nWARNING  check_Arrays_property_unsafe_set_length_uint256_8(uint256): paths have \n         not been fully explored due to the loop unrolling bound: 2             \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 0 passed; 1 failed; time: 0.07s\n",
+      "halmos_stderr": "--- halmos chunk 1/20 ---\n\n\n--- halmos chunk 2/20 ---\n\n\n--- halmos chunk 3/20 ---\n\n\n--- halmos chunk 4/20 ---\n\n\n--- halmos chunk 5/20 ---\n\n\n--- halmos chunk 6/20 ---\n\n\n--- halmos chunk 7/20 ---\n\n\n--- halmos chunk 8/20 ---\n\n\n--- halmos chunk 9/20 ---\n\n\n--- halmos chunk 10/20 ---\n\n\n--- halmos chunk 11/20 ---\n\n\n--- halmos chunk 12/20 ---\n\n\n--- halmos chunk 13/20 ---\n\n\n--- halmos chunk 14/20 ---\n\n\n--- halmos chunk 15/20 ---\n\n\n--- halmos chunk 16/20 ---\n\n\n--- halmos chunk 17/20 ---\n\n\n--- halmos chunk 18/20 ---\n\n\n--- halmos chunk 19/20 ---\n\n\n--- halmos chunk 20/20 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 20,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_sort_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_sort_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_sort_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_sort_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_sort_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_sort_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_findUpperBound_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_lowerBound_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_upperBound_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_lowerBoundMemory_9(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_upperBoundMemory_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_memory_access_address_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_memory_access_bytes32_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_memory_access_uint256_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_access_address_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_access_bytes32_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_access_uint256_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_set_length_address_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_set_length_bytes32_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Arrays_property_unsafe_set_length_uint256_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": "not_concrete_symbolic_memory"
+    }
+  ]
+}

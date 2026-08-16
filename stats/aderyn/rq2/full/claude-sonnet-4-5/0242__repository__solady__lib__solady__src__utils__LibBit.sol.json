@@ -1,0 +1,341 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibBit.sol",
+        "-o",
+        "/tmp/aderyn_report_4ruqf67l/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibBit.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibBit.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_4ruqf67l/report.json\n\n💡 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibBit.sol",
+              "n_sloc": 104
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 104,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Example: `shl(shifted, 4)` will shift the right constant `4` by `a` bits. The correct order is `shl(4, shifted)`.",
+              "detector_name": "incorrect-shift-order",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 36,
+                  "src": "1868:50",
+                  "src_char": "1793:50"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 64,
+                  "src": "3101:50",
+                  "src_char": "3026:50"
+                }
+              ],
+              "title": "Incorrect Assembly Shift Parameter Order"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 193,
+                  "src": "9038:12",
+                  "src_char": "8963:12"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 330,
+                  "src": "14565:6",
+                  "src_char": "14415:6"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 175,
+                  "src": "8271:1",
+                  "src_char": "8196:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 175,
+                  "src": "8295:1",
+                  "src_char": "8220:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 197,
+                  "src": "9328:2",
+                  "src_char": "9253:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 198,
+                  "src": "9370:2",
+                  "src_char": "9295:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 199,
+                  "src": "9412:1",
+                  "src_char": "9337:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 200,
+                  "src": "9439:1",
+                  "src_char": "9364:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 200,
+                  "src": "9463:1",
+                  "src_char": "9388:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 201,
+                  "src": "9490:2",
+                  "src_char": "9415:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 201,
+                  "src": "9515:2",
+                  "src_char": "9440:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 202,
+                  "src": "9543:2",
+                  "src_char": "9468:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 202,
+                  "src": "9568:2",
+                  "src_char": "9493:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 203,
+                  "src": "9596:2",
+                  "src_char": "9521:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 203,
+                  "src": "9621:2",
+                  "src_char": "9546:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 204,
+                  "src": "9648:3",
+                  "src_char": "9573:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 204,
+                  "src": "9661:3",
+                  "src_char": "9586:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 104,
+    "summary": {
+      "High": 1,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 20,
+    "best_round": 7,
+    "best_total": 21,
+    "best_vuln": 3,
+    "code_bytes": 14730,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "19f4bd09401f658f63837ab6cd2ff4f995daacb82affb33a82f05bd04f0b5527",
+    "skip_reason": null,
+    "sloc": 104,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:17.586648+00:00",
+  "eval": {
+    "best_round": 7,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibBit.t.sol",
+    "expected_tests": 13,
+    "extract_error": null,
+    "forge_total": 13,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 12,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 242,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibBit.sol",
+  "id": 242,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:07.714020+00:00",
+  "reused_from": "stats/aderyn/solagent/claude-sonnet-4-5/0242__repository__solady__lib__solady__src__utils__LibBit.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 3,
+    "summary": {
+      "High": 2,
+      "Low": 0,
+      "Medium": 1
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 1,
+  "test_pass": 12,
+  "test_source": "rq2_eval",
+  "test_total": 13
+}

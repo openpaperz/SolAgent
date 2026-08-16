@@ -1,0 +1,505 @@
+{
+  "aderyn": {
+    "count": 1,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibBit.sol",
+        "-o",
+        "/tmp/aderyn_report_vbqjzwfk/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibBit.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibBit.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_vbqjzwfk/report.json\n\n🐦 Aderyn finds bugs. You write safer code.\n⭐ Star us on GitHub if that sounds fair:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibBit.sol",
+              "n_sloc": 182
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 182,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 83,
+                  "src": "2716:66",
+                  "src_char": "2716:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 86,
+                  "src": "2842:66",
+                  "src_char": "2842:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 88,
+                  "src": "2960:66",
+                  "src_char": "2960:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 91,
+                  "src": "3092:1",
+                  "src_char": "3092:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 92,
+                  "src": "3114:66",
+                  "src_char": "3114:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 111,
+                  "src": "3775:66",
+                  "src_char": "3775:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 113,
+                  "src": "3887:66",
+                  "src_char": "3887:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 116,
+                  "src": "4026:66",
+                  "src_char": "4026:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 118,
+                  "src": "4138:66",
+                  "src_char": "4138:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 120,
+                  "src": "4252:1",
+                  "src_char": "4252:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 121,
+                  "src": "4277:66",
+                  "src_char": "4277:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 123,
+                  "src": "4389:66",
+                  "src_char": "4389:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 123,
+                  "src": "4460:1",
+                  "src_char": "4460:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 125,
+                  "src": "4503:1",
+                  "src_char": "4503:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 126,
+                  "src": "4528:66",
+                  "src_char": "4528:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 128,
+                  "src": "4640:66",
+                  "src_char": "4640:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 128,
+                  "src": "4711:1",
+                  "src_char": "4711:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 130,
+                  "src": "4754:2",
+                  "src_char": "4754:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 131,
+                  "src": "4780:66",
+                  "src_char": "4780:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 133,
+                  "src": "4892:66",
+                  "src_char": "4892:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 134,
+                  "src": "4983:2",
+                  "src_char": "4983:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 136,
+                  "src": "5027:2",
+                  "src_char": "5027:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 137,
+                  "src": "5053:66",
+                  "src_char": "5053:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 139,
+                  "src": "5165:66",
+                  "src_char": "5165:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 140,
+                  "src": "5256:2",
+                  "src_char": "5256:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 142,
+                  "src": "5300:2",
+                  "src_char": "5300:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 143,
+                  "src": "5326:66",
+                  "src_char": "5326:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 145,
+                  "src": "5438:66",
+                  "src_char": "5438:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 146,
+                  "src": "5529:2",
+                  "src_char": "5529:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 147,
+                  "src": "5556:3",
+                  "src_char": "5556:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 147,
+                  "src": "5569:3",
+                  "src_char": "5569:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 154,
+                  "src": "5724:1",
+                  "src_char": "5724:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 155,
+                  "src": "5749:66",
+                  "src_char": "5749:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 157,
+                  "src": "5861:66",
+                  "src_char": "5861:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 157,
+                  "src": "5932:1",
+                  "src_char": "5932:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 159,
+                  "src": "5975:2",
+                  "src_char": "5975:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 160,
+                  "src": "6001:66",
+                  "src_char": "6001:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 162,
+                  "src": "6113:66",
+                  "src_char": "6113:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 163,
+                  "src": "6204:2",
+                  "src_char": "6204:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 165,
+                  "src": "6248:2",
+                  "src_char": "6248:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 166,
+                  "src": "6274:66",
+                  "src_char": "6274:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 168,
+                  "src": "6386:66",
+                  "src_char": "6386:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 169,
+                  "src": "6477:2",
+                  "src_char": "6477:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 171,
+                  "src": "6521:2",
+                  "src_char": "6521:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 172,
+                  "src": "6547:66",
+                  "src_char": "6547:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 174,
+                  "src": "6659:66",
+                  "src_char": "6659:66"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 175,
+                  "src": "6750:2",
+                  "src_char": "6750:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 176,
+                  "src": "6777:3",
+                  "src_char": "6777:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBit.sol",
+                  "line_no": 176,
+                  "src": "6790:3",
+                  "src_char": "6790:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 182,
+    "summary": {
+      "High": 0,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 18,
+    "best_round": 7,
+    "best_total": 21,
+    "best_vuln": 0,
+    "code_bytes": 7910,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "ca35f5d082c5e0df01bb18ccbbcefb80f24799af8601ca6bce903d9c6a6fcf97",
+    "skip_reason": null,
+    "sloc": 182,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:07:11.840332+00:00",
+  "eval": {
+    "best_round": 7,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibBit.t.sol",
+    "expected_tests": 13,
+    "extract_error": null,
+    "forge_total": 13,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 10,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 394,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibBit.sol",
+  "id": 394,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:16.024305+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 3,
+  "test_pass": 10,
+  "test_source": "rq2_eval",
+  "test_total": 13
+}

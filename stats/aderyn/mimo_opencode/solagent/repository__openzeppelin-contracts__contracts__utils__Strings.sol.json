@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+  "eval_full_pass": false,
+  "code_sha256": "cfdfa1ba3f44418b85b65a5650af7020f027b6f9481620977aaeda525d5ec54f",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:53.205031+00:00",
+  "skip_reason": "not eval FullPass"
+}

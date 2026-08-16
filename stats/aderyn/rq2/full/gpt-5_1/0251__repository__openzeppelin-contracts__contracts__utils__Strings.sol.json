@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 32937,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "87aa5216d114547f4b6b61637a965b3c25493fe3fb57ba5d12cf58fc70dc19d1",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 317,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:41.776346+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (3881): Documented parameter \"value\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:120:5:\n    |\n120 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:202:5:\n    |\n202 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:202:5:\n    |\n202 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:242:5:\n    |\n242 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:242:5:\n    |\n242 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:329:5:\n    |\n329 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:329:5:\n    |\n329 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:367:5:\n    |\n367 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:367:5:\n    |\n367 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:481:5:\n    |\n481 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:481:5:\n    |\n481 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:519:5:\n    |\n519 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:519:5:\n    |\n519 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:611:5:\n    |\n611 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:611:5:\n    |\n611 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"begin\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:655:5:\n    |\n655 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError (3881): Documented parameter \"end\" not found in the parameter list of the function.\n   --> contracts/utils/Strings.solagent_gen.sol:655:5:\n    |\n655 |     /**\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/utils/Strings.t.sol",
+    "expected_tests": 23,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 251,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+  "id": 251,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:09.392628+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "skipped",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

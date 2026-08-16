@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 1,
+      "proved_checks": 1,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 1,
+        "proved_checks": 1,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 1,
+        "passed_methods": 1,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 1
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 1,
+          "passed_methods": 1,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 1
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/CREATE3.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/CREATE3.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/CREATE3.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/CREATE3.sol"
+      ],
+      "test_names": [
+        "test_CREATE3_property_deploy_value_empty_initcode_1"
+      ],
+      "check_names": [
+        "check_CREATE3_property_deploy_value_empty_initcode_1"
+      ],
+      "methods_count": 1,
+      "manifest_skipped_checks": 2,
+      "skipped_checks": 0,
+      "expected_checks": 1,
+      "expected_tests": 1,
+      "proved_checks": 1,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_CREATE3_property_deploy_value_empty_initcode_1": "PASS"
+      },
+      "compile_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/CREATE3.sol",
+          "class_name": "CREATE3",
+          "class_kind": "library",
+          "method_name": "deployDeterministic",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministic(uint256 value, bytes memory initCode, bytes32 salt) internal returns (address deployed)",
+          "checks": [
+            {
+              "check_name": "check_CREATE3_property_deploy_value_empty_initcode_1",
+              "test_name": "test_CREATE3_property_deploy_value_empty_initcode_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 1,
+        "passed_methods": 1,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 1
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_CREATE3_property_deploy_value_empty_initcode_1(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "Compiling 3 files with Solc 0.8.28\nSolc 0.8.28 finished in 538.78ms\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to view\n  --> test/CREATE3.t.sol:20:5:\n   |\n20 |     function ref_call_predictDeterministicAddress_2(bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/CREATE3.t.sol:23:5:\n   |\n23 |     function ref_call_predictDeterministicAddress_3(bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/CREATE3.t.sol:32:5:\n   |\n32 |     function gen_call_predictDeterministicAddress_2(bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/CREATE3.t.sol:35:5:\n   |\n35 |     function gen_call_predictDeterministicAddress_3(bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/CREATE3.t.sol:CREATE3EquivalenceCheck\nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x                                          \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x                                          \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x                                          \n\u001b[32m[PASS]\u001b[0m check_CREATE3_property_deploy_value_empty_initcode_1(uint256,bytes32) (paths: 3, time: 0.06s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.09s\n",
+      "halmos_stderr": "",
+      "halmos_json_error": null,
+      "failure_category": null
+    }
+  ]
+}

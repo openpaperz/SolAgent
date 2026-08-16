@@ -1,0 +1,618 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 13,
+      "proved_checks": 13,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 13,
+        "proved_checks": 13,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 13,
+        "passed_methods": 13,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 13
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 13,
+          "passed_methods": 13,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 13
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/proxy/Clones.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/proxy/Clones.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/proxy/Clones.sol"
+      ],
+      "test_names": [
+        "test_Clones_predictDeterministicAddress_4",
+        "test_Clones_predictDeterministicAddress_5",
+        "test_Clones_predictDeterministicAddressWithImmutableArgs_10",
+        "test_Clones_predictDeterministicAddressWithImmutableArgs_11",
+        "test_Clones_property_insufficient_balance_value_overloads_0",
+        "test_Clones_property_immutable_args_too_long_1",
+        "test_Clones_property_fetch_args_empty_account_2",
+        "test_Clones_property_clone_deploy_snapshot_3",
+        "test_Clones_property_clone_deterministic_deploy_4",
+        "test_Clones_property_clone_deterministic_value_deploy_5",
+        "test_Clones_property_clone_with_immutable_args_value_deploy_6",
+        "test_Clones_property_clone_deterministic_with_immutable_args_deploy_7",
+        "test_Clones_property_clone_deterministic_with_immutable_args_value_deploy_8"
+      ],
+      "check_names": [
+        "check_Clones_predictDeterministicAddress_4",
+        "check_Clones_predictDeterministicAddress_5",
+        "check_Clones_predictDeterministicAddressWithImmutableArgs_10",
+        "check_Clones_predictDeterministicAddressWithImmutableArgs_11",
+        "check_Clones_property_insufficient_balance_value_overloads_0",
+        "check_Clones_property_immutable_args_too_long_1",
+        "check_Clones_property_fetch_args_empty_account_2",
+        "check_Clones_property_clone_deploy_snapshot_3",
+        "check_Clones_property_clone_deterministic_deploy_4",
+        "check_Clones_property_clone_deterministic_value_deploy_5",
+        "check_Clones_property_clone_with_immutable_args_value_deploy_6",
+        "check_Clones_property_clone_deterministic_with_immutable_args_deploy_7",
+        "check_Clones_property_clone_deterministic_with_immutable_args_value_deploy_8"
+      ],
+      "methods_count": 13,
+      "manifest_skipped_checks": 9,
+      "skipped_checks": 0,
+      "expected_checks": 13,
+      "expected_tests": 13,
+      "proved_checks": 13,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_Clones_predictDeterministicAddress_4": "PASS",
+        "check_Clones_predictDeterministicAddress_5": "PASS",
+        "check_Clones_predictDeterministicAddressWithImmutableArgs_10": "PASS",
+        "check_Clones_predictDeterministicAddressWithImmutableArgs_11": "PASS",
+        "check_Clones_property_insufficient_balance_value_overloads_0": "PASS",
+        "check_Clones_property_immutable_args_too_long_1": "PASS",
+        "check_Clones_property_fetch_args_empty_account_2": "PASS",
+        "check_Clones_property_clone_deploy_snapshot_3": "PASS",
+        "check_Clones_property_clone_deterministic_deploy_4": "PASS",
+        "check_Clones_property_clone_deterministic_value_deploy_5": "PASS",
+        "check_Clones_property_clone_with_immutable_args_value_deploy_6": "PASS",
+        "check_Clones_property_clone_deterministic_with_immutable_args_deploy_7": "PASS",
+        "check_Clones_property_clone_deterministic_with_immutable_args_value_deploy_8": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "clone",
+          "visibility": "internal",
+          "full_signature": "function clone(address implementation) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_clone_deploy_snapshot_3",
+              "test_name": "test_Clones_property_clone_deploy_snapshot_3",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "clone",
+          "visibility": "internal",
+          "full_signature": "function clone(address implementation, uint256 value) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_insufficient_balance_value_overloads_0",
+              "test_name": "test_Clones_property_insufficient_balance_value_overloads_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "cloneDeterministic",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministic(address implementation, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_clone_deterministic_deploy_4",
+              "test_name": "test_Clones_property_clone_deterministic_deploy_4",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "cloneDeterministic",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministic(address implementation, bytes32 salt, uint256 value) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_clone_deterministic_value_deploy_5",
+              "test_name": "test_Clones_property_clone_deterministic_value_deploy_5",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "cloneDeterministicWithImmutableArgs",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministicWithImmutableArgs(address implementation, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_clone_deterministic_with_immutable_args_deploy_7",
+              "test_name": "test_Clones_property_clone_deterministic_with_immutable_args_deploy_7",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "cloneDeterministicWithImmutableArgs",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministicWithImmutableArgs(address implementation, bytes memory args, bytes32 salt, uint256 value) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_clone_deterministic_with_immutable_args_value_deploy_8",
+              "test_name": "test_Clones_property_clone_deterministic_with_immutable_args_value_deploy_8",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "cloneWithImmutableArgs",
+          "visibility": "internal",
+          "full_signature": "function cloneWithImmutableArgs(address implementation, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_immutable_args_too_long_1",
+              "test_name": "test_Clones_property_immutable_args_too_long_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "cloneWithImmutableArgs",
+          "visibility": "internal",
+          "full_signature": "function cloneWithImmutableArgs(address implementation, bytes memory args, uint256 value) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_clone_with_immutable_args_value_deploy_6",
+              "test_name": "test_Clones_property_clone_with_immutable_args_value_deploy_6",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "fetchCloneArgs",
+          "visibility": "internal",
+          "full_signature": "function fetchCloneArgs(address instance) internal view returns (bytes memory)",
+          "checks": [
+            {
+              "check_name": "check_Clones_property_fetch_args_empty_account_2",
+              "test_name": "test_Clones_property_fetch_args_empty_account_2",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddress",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddress(address implementation, bytes32 salt) internal view returns (address predicted)",
+          "checks": [
+            {
+              "check_name": "check_Clones_predictDeterministicAddress_5",
+              "test_name": "test_Clones_predictDeterministicAddress_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddress",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddress(address implementation, bytes32 salt, address deployer) internal pure returns (address predicted)",
+          "checks": [
+            {
+              "check_name": "check_Clones_predictDeterministicAddress_4",
+              "test_name": "test_Clones_predictDeterministicAddress_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddressWithImmutableArgs",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddressWithImmutableArgs(address implementation, bytes memory args, bytes32 salt) internal view returns (address predicted)",
+          "checks": [
+            {
+              "check_name": "check_Clones_predictDeterministicAddressWithImmutableArgs_11",
+              "test_name": "test_Clones_predictDeterministicAddressWithImmutableArgs_11",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+          "class_name": "Clones",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddressWithImmutableArgs",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddressWithImmutableArgs(address implementation, bytes memory args, bytes32 salt, address deployer) internal pure returns (address predicted)",
+          "checks": [
+            {
+              "check_name": "check_Clones_predictDeterministicAddressWithImmutableArgs_10",
+              "test_name": "test_Clones_predictDeterministicAddressWithImmutableArgs_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 13,
+        "passed_methods": 13,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 13
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_Clones_predictDeterministicAddress_4(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/13 ---\nCompiling 3 files with Solc 0.8.24\nSolc 0.8.24 finished in 1.77s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/proxy/Clones.t.sol:27:5:\n   |\n27 |     function ref_call_predictDeterministicAddress_4(address implementation, bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/proxy/Clones.t.sol:30:5:\n   |\n30 |     function ref_call_predictDeterministicAddress_5(address implementation, bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/proxy/Clones.t.sol:45:5:\n   |\n45 |     function ref_call_predictDeterminis ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/proxy/Clones.t.sol:48:5:\n   |\n48 |     function ref_call_predictDeterminis ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/proxy/Clones.t.sol:51:5:\n   |\n51 |     function ref_call_fetchCloneArgs_12(address instance) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/proxy/Clones.t.sol:66:5:\n   |\n66 |     function gen_call_predictDeterministicAddress_4(address implementation, bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/proxy/Clones.t.sol:69:5:\n   |\n69 |     function gen_call_predictDeterministicAddress_5(address implementation, bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/proxy/Clones.t.sol:84:5:\n   |\n84 |     function gen_call_predictDeterminis ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/proxy/Clones.t.sol:87:5:\n   |\n87 |     function gen_call_predictDeterminis ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/proxy/Clones.t.sol:90:5:\n   |\n90 |     function gen_call_fetchCloneArgs_12(address instance) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Clones_predictDeterministicAddress_4(address,bytes32,address) (paths: 3, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.07s\n\n\n--- halmos chunk 2/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Clones_predictDeterministicAddress_5(address,bytes32) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 3/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Clones_predictDeterministicAddressWithImmutableArgs_10(address,bytes,bytes32,address) (paths: 7, time: 0.10s, bounds: [args=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.11s\n\n\n--- halmos chunk 4/13 ---\nCompiling 1 files with Solc 0.8.24\nSolc 0.8.24 finished in 1.04s\nCompiler run successful!\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Clones_predictDeterministicAddressWithImmutableArgs_11(address,bytes,bytes32) (paths: 4, time: 0.08s, bounds: [args=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.09s\n\n\n--- halmos chunk 5/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Clones_property_insufficient_balance_value_overloads_0(address,bytes32) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 6/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Clones_property_immutable_args_too_long_1(address,bytes32) (paths: 2, time: 0.65s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.66s\n\n\n--- halmos chunk 7/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Clones_property_fetch_args_empty_account_2() (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 8/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\nWARNING  unknown deployed bytecode: Concat(0x363d3d373d3d3d363d73, Extract(0x9f,\n         0x00, p_implementation_address_23a6a3d_00),                            \n         0x5af43d82803e903d91602b57fd5bf3)                                      \nWARNING  unknown deployed bytecode: Concat(0x363d3d373d3d3d363d73, Extract(0x9f,\n         0x00, p_implementation_address_23a6a3d_00),                            \n         0x5af43d82803e903d91602b57fd5bf3)                                      \nWARNING  unknown deployed bytecode: Concat(0x363d3d373d3d3d363d73, Extract(0x9f,\n         0x00, p_implementation_address_23a6a3d_00),                            \n         0x5af43d82803e903d91602b57fd5bf3)                                      \nWARNING  unknown deployed bytecode: Concat(0x363d3d373d3d3d363d73, Extract(0x9f,\n         0x00, p_implementation_address_23a6a3d_00),                            \n         0x5af43d82803e903d91602b57fd5bf3)                                      \n\u001b[32m[PASS]\u001b[0m check_Clones_property_clone_deploy_snapshot_3(address,bytes32) (paths: 3, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 9/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf3                                                  \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf3                                                  \n\u001b[32m[PASS]\u001b[0m check_Clones_property_clone_deterministic_deploy_4(address,bytes32) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 10/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf3                                                  \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf3                                                  \n\u001b[32m[PASS]\u001b[0m check_Clones_property_clone_deterministic_value_deploy_5(address,bytes32,uint256) (paths: 2, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 11/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf301020304                                          \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf301020304                                          \n\u001b[32m[PASS]\u001b[0m check_Clones_property_clone_with_immutable_args_value_deploy_6(address,uint256) (paths: 2, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n\n\n--- halmos chunk 12/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf301020304                                          \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf301020304                                          \n\u001b[32m[PASS]\u001b[0m check_Clones_property_clone_deterministic_with_immutable_args_deploy_7(address,bytes32) (paths: 2, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n\n\n--- halmos chunk 13/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/proxy/Clones.t.sol:ClonesEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf301020304                                          \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf301020304                                          \n\u001b[32m[PASS]\u001b[0m check_Clones_property_clone_deterministic_with_immutable_args_value_deploy_8(address,bytes32,uint256) (paths: 2, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n",
+      "halmos_stderr": "--- halmos chunk 1/13 ---\n\n\n--- halmos chunk 2/13 ---\n\n\n--- halmos chunk 3/13 ---\n\n\n--- halmos chunk 4/13 ---\n\n\n--- halmos chunk 5/13 ---\n\n\n--- halmos chunk 6/13 ---\n\n\n--- halmos chunk 7/13 ---\n\n\n--- halmos chunk 8/13 ---\n\n\n--- halmos chunk 9/13 ---\n\n\n--- halmos chunk 10/13 ---\n\n\n--- halmos chunk 11/13 ---\n\n\n--- halmos chunk 12/13 ---\n\n\n--- halmos chunk 13/13 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 13,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_predictDeterministicAddress_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_predictDeterministicAddress_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_predictDeterministicAddressWithImmutableArgs_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_predictDeterministicAddressWithImmutableArgs_11(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_insufficient_balance_value_overloads_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_immutable_args_too_long_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_fetch_args_empty_account_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_clone_deploy_snapshot_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_clone_deterministic_deploy_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_clone_deterministic_value_deploy_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_clone_with_immutable_args_value_deploy_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_clone_deterministic_with_immutable_args_deploy_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Clones_property_clone_deterministic_with_immutable_args_value_deploy_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

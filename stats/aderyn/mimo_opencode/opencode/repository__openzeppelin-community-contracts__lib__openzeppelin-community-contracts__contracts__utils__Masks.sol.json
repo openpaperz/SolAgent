@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/openzeppelin-community-contracts/lib/openzeppelin-community-contracts/contracts/utils/Masks.sol",
+  "eval_full_pass": false,
+  "code_sha256": "21e941d25b43d179a930abcd4cf3fee903641dc6cc7bbb31498fd4f296afb7f0",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:58.228549+00:00",
+  "skip_reason": "not eval FullPass"
+}

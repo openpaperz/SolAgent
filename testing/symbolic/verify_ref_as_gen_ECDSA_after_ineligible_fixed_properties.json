@@ -1,0 +1,618 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 13,
+      "proved_checks": 13,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 13,
+        "proved_checks": 13,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 13,
+        "passed_methods": 13,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 13
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 13,
+          "passed_methods": 13,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 13
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/ECDSA.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/ECDSA.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/ECDSA.sol"
+      ],
+      "test_names": [
+        "test_ECDSA_recover_0",
+        "test_ECDSA_recoverCalldata_1",
+        "test_ECDSA_recover_2",
+        "test_ECDSA_recover_3",
+        "test_ECDSA_tryRecover_4",
+        "test_ECDSA_tryRecoverCalldata_5",
+        "test_ECDSA_tryRecover_6",
+        "test_ECDSA_tryRecover_7",
+        "test_ECDSA_canonicalHash_10",
+        "test_ECDSA_canonicalHashCalldata_11",
+        "test_ECDSA_canonicalHash_12",
+        "test_ECDSA_canonicalHash_13",
+        "test_ECDSA_emptySignature_14"
+      ],
+      "check_names": [
+        "check_ECDSA_recover_0",
+        "check_ECDSA_recoverCalldata_1",
+        "check_ECDSA_recover_2",
+        "check_ECDSA_recover_3",
+        "check_ECDSA_tryRecover_4",
+        "check_ECDSA_tryRecoverCalldata_5",
+        "check_ECDSA_tryRecover_6",
+        "check_ECDSA_tryRecover_7",
+        "check_ECDSA_canonicalHash_10",
+        "check_ECDSA_canonicalHashCalldata_11",
+        "check_ECDSA_canonicalHash_12",
+        "check_ECDSA_canonicalHash_13",
+        "check_ECDSA_emptySignature_14"
+      ],
+      "methods_count": 13,
+      "manifest_skipped_checks": 4,
+      "skipped_checks": 0,
+      "expected_checks": 13,
+      "expected_tests": 13,
+      "proved_checks": 13,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_ECDSA_recover_0": "PASS",
+        "check_ECDSA_recoverCalldata_1": "PASS",
+        "check_ECDSA_recover_2": "PASS",
+        "check_ECDSA_recover_3": "PASS",
+        "check_ECDSA_tryRecover_4": "PASS",
+        "check_ECDSA_tryRecoverCalldata_5": "PASS",
+        "check_ECDSA_tryRecover_6": "PASS",
+        "check_ECDSA_tryRecover_7": "PASS",
+        "check_ECDSA_canonicalHash_10": "PASS",
+        "check_ECDSA_canonicalHashCalldata_11": "PASS",
+        "check_ECDSA_canonicalHash_12": "PASS",
+        "check_ECDSA_canonicalHash_13": "PASS",
+        "check_ECDSA_emptySignature_14": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "canonicalHash",
+          "visibility": "internal",
+          "full_signature": "function canonicalHash(bytes memory signature) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_canonicalHash_10",
+              "test_name": "test_ECDSA_canonicalHash_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "canonicalHash",
+          "visibility": "internal",
+          "full_signature": "function canonicalHash(bytes32 r, bytes32 vs) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_canonicalHash_12",
+              "test_name": "test_ECDSA_canonicalHash_12",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "canonicalHash",
+          "visibility": "internal",
+          "full_signature": "function canonicalHash(uint8 v, bytes32 r, bytes32 s) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_canonicalHash_13",
+              "test_name": "test_ECDSA_canonicalHash_13",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "canonicalHashCalldata",
+          "visibility": "internal",
+          "full_signature": "function canonicalHashCalldata(bytes calldata signature) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_canonicalHashCalldata_11",
+              "test_name": "test_ECDSA_canonicalHashCalldata_11",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "emptySignature",
+          "visibility": "internal",
+          "full_signature": "function emptySignature() internal pure returns (bytes calldata signature)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_emptySignature_14",
+              "test_name": "test_ECDSA_emptySignature_14",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "recover",
+          "visibility": "internal",
+          "full_signature": "function recover(bytes32 hash, bytes memory signature) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_recover_0",
+              "test_name": "test_ECDSA_recover_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "recover",
+          "visibility": "internal",
+          "full_signature": "function recover(bytes32 hash, bytes32 r, bytes32 vs) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_recover_2",
+              "test_name": "test_ECDSA_recover_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "recover",
+          "visibility": "internal",
+          "full_signature": "function recover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_recover_3",
+              "test_name": "test_ECDSA_recover_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "recoverCalldata",
+          "visibility": "internal",
+          "full_signature": "function recoverCalldata(bytes32 hash, bytes calldata signature) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_recoverCalldata_1",
+              "test_name": "test_ECDSA_recoverCalldata_1",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "tryRecover",
+          "visibility": "internal",
+          "full_signature": "function tryRecover(bytes32 hash, bytes memory signature) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_tryRecover_4",
+              "test_name": "test_ECDSA_tryRecover_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "tryRecover",
+          "visibility": "internal",
+          "full_signature": "function tryRecover(bytes32 hash, bytes32 r, bytes32 vs) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_tryRecover_6",
+              "test_name": "test_ECDSA_tryRecover_6",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "tryRecover",
+          "visibility": "internal",
+          "full_signature": "function tryRecover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_tryRecover_7",
+              "test_name": "test_ECDSA_tryRecover_7",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/ECDSA.sol",
+          "class_name": "ECDSA",
+          "class_kind": "library",
+          "method_name": "tryRecoverCalldata",
+          "visibility": "internal",
+          "full_signature": "function tryRecoverCalldata(bytes32 hash, bytes calldata signature) internal view returns (address result)",
+          "checks": [
+            {
+              "check_name": "check_ECDSA_tryRecoverCalldata_5",
+              "test_name": "test_ECDSA_tryRecoverCalldata_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 13,
+        "passed_methods": 13,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 13
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_ECDSA_recover_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/13 ---\nCompiling 6 files with Solc 0.8.28\nSolc 0.8.28 finished in 1.09s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to view\n --> test/ECDSA.t.sol:9:5:\n  |\n9 |     function ref_call_recover_0(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:12:5:\n   |\n12 |     function ref_call_recoverCalldata_1(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:15:5:\n   |\n15 |     function ref_call_recover_2(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:18:5:\n   |\n18 |     function ref_call_recover_3(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:21:5:\n   |\n21 |     function ref_call_tryRecover_4(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:24:5:\n   |\n24 |     function ref_call_tryRecoverCalldata_5(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:27:5:\n   |\n27 |     function ref_call_tryRecover_6(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:30:5:\n   |\n30 |     function ref_call_tryRecover_7(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:33:5:\n   |\n33 |     function ref_call_toEthSignedMessageHash_8(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:36:5:\n   |\n36 |     function ref_call_toEthSignedMessageHash_9(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:39:5:\n   |\n39 |     function ref_call_canonicalHash_10(bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:42:5:\n   |\n42 |     function ref_call_canonicalHashCalldata_11(bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:45:5:\n   |\n45 |     function ref_call_canonicalHash_12(bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:48:5:\n   |\n48 |     function ref_call_canonicalHash_13(uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:51:5:\n   |\n51 |     function ref_call_emptySignature_14() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:54:5:\n   |\n54 |     function gen_call_recover_0(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:57:5:\n   |\n57 |     function gen_call_recoverCalldata_1(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:60:5:\n   |\n60 |     function gen_call_recover_2(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:63:5:\n   |\n63 |     function gen_call_recover_3(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:66:5:\n   |\n66 |     function gen_call_tryRecover_4(bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:69:5:\n   |\n69 |     function gen_call_tryRecoverCalldata_5(bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:72:5:\n   |\n72 |     function gen_call_tryRecover_6(bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ECDSA.t.sol:75:5:\n   |\n75 |     function gen_call_tryRecover_7(bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:78:5:\n   |\n78 |     function gen_call_toEthSignedMessageHash_8(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:81:5:\n   |\n81 |     function gen_call_toEthSignedMessageHash_9(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:84:5:\n   |\n84 |     function gen_call_canonicalHash_10(bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:87:5:\n   |\n87 |     function gen_call_canonicalHashCalldata_11(bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:90:5:\n   |\n90 |     function gen_call_canonicalHash_12(bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:93:5:\n   |\n93 |     function gen_call_canonicalHash_13(uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ECDSA.t.sol:96:5:\n   |\n96 |     function gen_call_emptySignature_14() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n --> test/SignatureCheckerLib.t.sol:9:5:\n  |\n9 |     function ref_call_isValidSignatureNow_0(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:12:5:\n   |\n12 |     function ref_call_isValidSignatureNowCalldata_1(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:15:5:\n   |\n15 |     function ref_call_isValidSignatureNow_2(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:18:5:\n   |\n18 |     function ref_call_isValidSignatureNow_3(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:21:5:\n   |\n21 |     function ref_call_isValidERC1271SignatureNow_4(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:24:5:\n   |\n24 |     function ref_call_isValidERC1271SignatureNowCalldata_5(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:27:5:\n   |\n27 |     function ref_call_isValidERC1271SignatureNow_6(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:30:5:\n   |\n30 |     function ref_call_isValidERC1271SignatureNow_7(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:39:5:\n   |\n39 |     function ref_call_toEthSignedMessageHash_10(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:42:5:\n   |\n42 |     function ref_call_toEthSignedMessageHash_11(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:45:5:\n   |\n45 |     function ref_call_emptySignature_12() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:48:5:\n   |\n48 |     function gen_call_isValidSignatureNow_0(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:51:5:\n   |\n51 |     function gen_call_isValidSignatureNowCalldata_1(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:54:5:\n   |\n54 |     function gen_call_isValidSignatureNow_2(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:57:5:\n   |\n57 |     function gen_call_isValidSignatureNow_3(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:60:5:\n   |\n60 |     function gen_call_isValidERC1271SignatureNow_4(address signer, bytes32 hash, bytes memory signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:63:5:\n   |\n63 |     function gen_call_isValidERC1271SignatureNowCalldata_5(address signer, bytes32 hash, bytes calldata signature) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:66:5:\n   |\n66 |     function gen_call_isValidERC1271SignatureNow_6(address signer, bytes32 hash, bytes32 r, bytes32 vs) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/SignatureCheckerLib.t.sol:69:5:\n   |\n69 |     function gen_call_isValidERC1271SignatureNow_7(address signer, bytes32 hash, uint8 v, bytes32 r, bytes32 s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:78:5:\n   |\n78 |     function gen_call_toEthSignedMessageHash_10(bytes32 hash) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:81:5:\n   |\n81 |     function gen_call_toEthSignedMessageHash_11(bytes memory s) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/SignatureCheckerLib.t.sol:84:5:\n   |\n84 |     function gen_call_emptySignature_12() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_recover_0(bytes32,bytes) (paths: 3, time: 0.07s, bounds: [signature=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.08s\n\n\n--- halmos chunk 2/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_recoverCalldata_1(bytes32,bytes) (paths: 3, time: 0.06s, bounds: [signature=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.08s\n\n\n--- halmos chunk 3/13 ---\nCompiling 1 files with Solc 0.8.28\nSolc 0.8.28 finished in 622.62ms\nCompiler run successful!\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_recover_2(bytes32,bytes32,bytes32) (paths: 1, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 4/13 ---\nCompiling 1 files with Solc 0.8.28\nSolc 0.8.28 finished in 361.47ms\nCompiler run successful!\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_recover_3(bytes32,uint8,bytes32,bytes32) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 5/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_tryRecover_4(bytes32,bytes) (paths: 3, time: 0.05s, bounds: [signature=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n\n\n--- halmos chunk 6/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_tryRecoverCalldata_5(bytes32,bytes) (paths: 3, time: 0.05s, bounds: [signature=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 7/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_tryRecover_6(bytes32,bytes32,bytes32) (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 8/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_tryRecover_7(bytes32,uint8,bytes32,bytes32) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 9/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_canonicalHash_10(bytes) (paths: 6, time: 0.12s, bounds: [signature=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.12s\n\n\n--- halmos chunk 10/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_canonicalHashCalldata_11(bytes) (paths: 6, time: 0.12s, bounds: [signature=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.13s\n\n\n--- halmos chunk 11/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_canonicalHash_12(bytes32,bytes32) (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 12/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_canonicalHash_13(uint8,bytes32,bytes32) (paths: 3, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 13/13 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/ECDSA.t.sol:ECDSAEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ECDSA_emptySignature_14() (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.01s\n",
+      "halmos_stderr": "--- halmos chunk 1/13 ---\n\n\n--- halmos chunk 2/13 ---\n\n\n--- halmos chunk 3/13 ---\n\n\n--- halmos chunk 4/13 ---\n\n\n--- halmos chunk 5/13 ---\n\n\n--- halmos chunk 6/13 ---\n\n\n--- halmos chunk 7/13 ---\n\n\n--- halmos chunk 8/13 ---\n\n\n--- halmos chunk 9/13 ---\n\n\n--- halmos chunk 10/13 ---\n\n\n--- halmos chunk 11/13 ---\n\n\n--- halmos chunk 12/13 ---\n\n\n--- halmos chunk 13/13 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 13,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_recover_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_recoverCalldata_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_recover_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_recover_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_tryRecover_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_tryRecoverCalldata_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_tryRecover_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_tryRecover_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_canonicalHash_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_canonicalHashCalldata_11(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_canonicalHash_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_canonicalHash_13(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_ECDSA_emptySignature_14(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

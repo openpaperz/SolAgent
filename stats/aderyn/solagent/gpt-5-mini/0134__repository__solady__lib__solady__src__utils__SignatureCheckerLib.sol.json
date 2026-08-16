@@ -1,0 +1,469 @@
+{
+  "aderyn": {
+    "count": 6,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/SignatureCheckerLib.sol",
+        "-o",
+        "/tmp/aderyn_report_yjbqlyhm/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/SignatureCheckerLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/SignatureCheckerLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_yjbqlyhm/report.json\n\n\ud83d\udee1\ufe0f Together we make Solidity safer.\n\u2728 Support open-source security \u2014 star Aderyn:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/SignatureCheckerLib.sol",
+              "n_sloc": 189
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 189,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 236,
+                  "src": "9667:16",
+                  "src_char": "9667:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            },
+            {
+              "description": "This causes the transaction execution to halt, and nothing after that call will execute including code following the assembly block.",
+              "detector_name": "yul-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 254,
+                  "src": "10483:17",
+                  "src_char": "10483:17"
+                }
+              ],
+              "title": "Yul block contains `return`"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 2,
+          "low": 4
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "The `ecrecover` function is susceptible to signature malleability. This means that the same message can be signed in multiple ways, allowing an attacker to change the message signature without invalidating it. This can lead to unexpected behavior in smart contracts, such as the loss of funds or the ability to bypass access control. Consider using OpenZeppelin's ECDSA library instead of the built-in function.",
+              "detector_name": "ecrecover",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 24,
+                  "src": "818:9",
+                  "src_char": "818:9"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 36,
+                  "src": "1311:9",
+                  "src_char": "1311:9"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 60,
+                  "src": "2389:9",
+                  "src_char": "2389:9"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 73,
+                  "src": "2972:9",
+                  "src_char": "2972:9"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 156,
+                  "src": "6747:9",
+                  "src_char": "6747:9"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 167,
+                  "src": "7200:9",
+                  "src_char": "7200:9"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 206,
+                  "src": "8592:9",
+                  "src_char": "8592:9"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 217,
+                  "src": "9045:9",
+                  "src_char": "9045:9"
+                }
+              ],
+              "title": "`ecrecover` Signature Malleability"
+            },
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 10,
+                  "src": "260:19",
+                  "src_char": "260:19"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 14,
+                  "src": "481:2",
+                  "src_char": "481:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 26,
+                  "src": "920:2",
+                  "src_char": "920:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 34,
+                  "src": "1196:3",
+                  "src_char": "1196:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 34,
+                  "src": "1203:2",
+                  "src_char": "1203:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 35,
+                  "src": "1271:3",
+                  "src_char": "1271:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 58,
+                  "src": "2282:3",
+                  "src_char": "2282:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 58,
+                  "src": "2289:2",
+                  "src_char": "2289:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 59,
+                  "src": "2353:3",
+                  "src_char": "2353:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 88,
+                  "src": "3720:1",
+                  "src_char": "3720:1"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 136,
+                  "src": "6022:1",
+                  "src_char": "6022:1"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 147,
+                  "src": "6449:2",
+                  "src_char": "6449:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 158,
+                  "src": "6852:2",
+                  "src_char": "6852:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 165,
+                  "src": "7085:3",
+                  "src_char": "7085:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 165,
+                  "src": "7092:2",
+                  "src_char": "7092:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 166,
+                  "src": "7160:3",
+                  "src_char": "7160:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 186,
+                  "src": "7932:1",
+                  "src_char": "7932:1"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 197,
+                  "src": "8294:2",
+                  "src_char": "8294:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 208,
+                  "src": "8697:2",
+                  "src_char": "8697:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 215,
+                  "src": "8930:3",
+                  "src_char": "8930:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 215,
+                  "src": "8937:2",
+                  "src_char": "8937:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 216,
+                  "src": "9005:3",
+                  "src_char": "9005:3"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 270,
+                  "src": "10970:2",
+                  "src_char": "10970:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 277,
+                  "src": "11192:2",
+                  "src_char": "11192:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 278,
+                  "src": "11218:2",
+                  "src_char": "11218:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero to improve code readability.",
+              "detector_name": "uninitialized-local-variable",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 267,
+                  "src": "10892:6",
+                  "src_char": "10892:6"
+                }
+              ],
+              "title": "Uninitialized Local Variable"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 189,
+    "summary": {
+      "High": 2,
+      "Low": 4
+    }
+  },
+  "code": {
+    "best_pass": 20,
+    "best_round": 3,
+    "best_total": 28,
+    "best_vuln": 0,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "selection_policy": "test-first-security-second",
+    "sha256": "80047b463f9981e076c31e3ec185d4e03b0cbfb303831a53aa5be80ba5a84ee3",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:41.718016+00:00",
+  "eval": {
+    "best_pass": 20,
+    "best_round": 3,
+    "best_total": 28,
+    "best_vuln": 0,
+    "code_bytes": 11270,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 13,
+    "extract_error": null,
+    "failed_tests": 1,
+    "forge_failed": 1,
+    "forge_total": 13,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 12,
+    "report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "row_id": 134,
+    "row_status": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/SignatureCheckerLib.sol",
+  "id": 134,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:18.485279+00:00",
+  "slither": {
+    "best_pass": 20,
+    "best_round": 3,
+    "best_total": 28,
+    "count": 0,
+    "min_vuln_count": 0,
+    "min_vuln_round": 3,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "summary": {}
+  },
+  "source": "solagent",
+  "source_kind": "solagent",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 1,
+  "test_pass": 12,
+  "test_source": "eval_seed1",
+  "test_total": 13
+}

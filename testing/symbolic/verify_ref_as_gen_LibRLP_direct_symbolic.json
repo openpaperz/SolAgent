@@ -1,0 +1,299 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 0,
+      "failed_sols": 1,
+      "skipped_sols": 0,
+      "expected_checks": 4,
+      "proved_checks": 0,
+      "failed_checks": 4,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 1,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {
+        "compile_error": 1
+      }
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 0,
+        "failed_sols": 1,
+        "skipped_sols": 0,
+        "expected_checks": 4,
+        "proved_checks": 0,
+        "failed_checks": 4,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 1,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {
+          "compile_error": 1
+        }
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 4,
+        "passed_methods": 0,
+        "failed_methods": 4,
+        "status_counts": {
+          "MISSING": 4
+        },
+        "pass_rate": 0.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 4,
+          "passed_methods": 0,
+          "failed_methods": 4,
+          "status_counts": {
+            "MISSING": 4
+          },
+          "pass_rate": 0.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibRLP.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibRLP.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibRLP.sol"
+      ],
+      "test_names": [
+        "test_LibRLP_property_p_uint256_1",
+        "test_LibRLP_property_p_list_uint256_6",
+        "test_LibRLP_property_p_list_list_10",
+        "test_LibRLP_property_encode_uint256_12"
+      ],
+      "check_names": [
+        "check_LibRLP_property_p_uint256_1",
+        "check_LibRLP_property_p_list_uint256_6",
+        "check_LibRLP_property_p_list_list_10",
+        "check_LibRLP_property_encode_uint256_12"
+      ],
+      "methods_count": 4,
+      "manifest_skipped_checks": 16,
+      "skipped_checks": 0,
+      "expected_checks": 4,
+      "expected_tests": 4,
+      "proved_checks": 0,
+      "failed_checks": 4,
+      "timeouts": 0,
+      "proved": false,
+      "ok": false,
+      "failed_check_names": [
+        "check_LibRLP_property_p_uint256_1",
+        "check_LibRLP_property_p_list_uint256_6",
+        "check_LibRLP_property_p_list_list_10",
+        "check_LibRLP_property_encode_uint256_12"
+      ],
+      "missing_check_names": [
+        "check_LibRLP_property_p_uint256_1",
+        "check_LibRLP_property_p_list_uint256_6",
+        "check_LibRLP_property_p_list_list_10",
+        "check_LibRLP_property_encode_uint256_12"
+      ],
+      "check_statuses": {
+        "check_LibRLP_property_p_uint256_1": "MISSING",
+        "check_LibRLP_property_p_list_uint256_6": "MISSING",
+        "check_LibRLP_property_p_list_list_10": "MISSING",
+        "check_LibRLP_property_encode_uint256_12": "MISSING"
+      },
+      "compile_error": "Error: Compiler run failed:\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:282:9:\n    |\n282 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:325:9:\n    |\n325 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:371:9:\n    |\n371 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:383:9:\n    |\n383 |         _assertRlpBytesSame(RefLibRLP_0.encode(value), GenLibRLP_0.encode(value));\n    |         ^^^^^^^^^^^^^^^^^^^\n\n",
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "encode",
+          "visibility": "internal",
+          "full_signature": "function encode(uint256 x) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_encode_uint256_12",
+              "test_name": "test_LibRLP_property_encode_uint256_12",
+              "attribution": "target_wrapper_name",
+              "status": "MISSING"
+            }
+          ],
+          "status": "MISSING",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory list, List memory x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_list_10",
+              "test_name": "test_LibRLP_property_p_list_list_10",
+              "attribution": "target_wrapper_name",
+              "status": "MISSING"
+            }
+          ],
+          "status": "MISSING",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory list, uint256 x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_uint256_6",
+              "test_name": "test_LibRLP_property_p_list_uint256_6",
+              "attribution": "target_wrapper_name",
+              "status": "MISSING"
+            }
+          ],
+          "status": "MISSING",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(uint256 x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_uint256_1",
+              "test_name": "test_LibRLP_property_p_uint256_1",
+              "attribution": "target_wrapper_name",
+              "status": "MISSING"
+            }
+          ],
+          "status": "MISSING",
+          "passed": false
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 4,
+        "passed_methods": 0,
+        "failed_methods": 4,
+        "status_counts": {
+          "MISSING": 4
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibRLP_property_p_uint256_1(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 1,
+      "halmos_stdout": "--- halmos chunk 1/4 ---\nCompiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 16.68ms\nERROR    Build failed: ['forge', 'build', '--ast', '--root',                    \n         '/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/l\n         ib/solady', '--extra-output', 'storageLayout', 'metadata']             \n\n\n--- halmos chunk 2/4 ---\nCompiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 22.82ms\nERROR    Build failed: ['forge', 'build', '--ast', '--root',                    \n         '/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/l\n         ib/solady', '--extra-output', 'storageLayout', 'metadata']             \n\n\n--- halmos chunk 3/4 ---\nCompiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 18.10ms\nERROR    Build failed: ['forge', 'build', '--ast', '--root',                    \n         '/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/l\n         ib/solady', '--extra-output', 'storageLayout', 'metadata']             \n\n\n--- halmos chunk 4/4 ---\nCompiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 16.78ms\nERROR    Build failed: ['forge', 'build', '--ast', '--root',                    \n         '/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/l\n         ib/solady', '--extra-output', 'storageLayout', 'metadata']             \n",
+      "halmos_stderr": "--- halmos chunk 1/4 ---\nError: Compiler run failed:\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:282:9:\n    |\n282 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:325:9:\n    |\n325 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:371:9:\n    |\n371 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:383:9:\n    |\n383 |         _assertRlpBytesSame(RefLibRLP_0.encode(value), GenLibRLP_0.encode(value));\n    |         ^^^^^^^^^^^^^^^^^^^\n\n\n\n--- halmos chunk 2/4 ---\nError: Compiler run failed:\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:282:9:\n    |\n282 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:325:9:\n    |\n325 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:371:9:\n    |\n371 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:383:9:\n    |\n383 |         _assertRlpBytesSame(RefLibRLP_0.encode(value), GenLibRLP_0.encode(value));\n    |         ^^^^^^^^^^^^^^^^^^^\n\n\n\n--- halmos chunk 3/4 ---\nError: Compiler run failed:\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:282:9:\n    |\n282 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:325:9:\n    |\n325 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:371:9:\n    |\n371 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:383:9:\n    |\n383 |         _assertRlpBytesSame(RefLibRLP_0.encode(value), GenLibRLP_0.encode(value));\n    |         ^^^^^^^^^^^^^^^^^^^\n\n\n\n--- halmos chunk 4/4 ---\nError: Compiler run failed:\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:282:9:\n    |\n282 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:325:9:\n    |\n325 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:371:9:\n    |\n371 |         _assertRlpBytesSame(RefLibRLP_0.encode(refList), GenLibRLP_0.encode(genList));\n    |         ^^^^^^^^^^^^^^^^^^^\n\nError (7576): Undeclared identifier.\n   --> test/LibRLP.t.sol:383:9:\n    |\n383 |         _assertRlpBytesSame(RefLibRLP_0.encode(value), GenLibRLP_0.encode(value));\n    |         ^^^^^^^^^^^^^^^^^^^\n\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 4,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_uint256_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_uint256_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_list_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_encode_uint256_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": "compile_error"
+    }
+  ]
+}

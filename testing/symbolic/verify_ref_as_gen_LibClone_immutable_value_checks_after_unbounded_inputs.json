@@ -1,0 +1,248 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 3,
+      "proved_checks": 3,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 3,
+        "proved_checks": 3,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 3,
+        "passed_methods": 3,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 3
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 3,
+          "passed_methods": 3,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 3
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibClone.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibClone.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibClone.sol"
+      ],
+      "test_names": [
+        "test_LibClone_property_immutable_args_clone_value_76",
+        "test_LibClone_property_immutable_args_clone_deterministic_value_78",
+        "test_LibClone_property_create_deterministic_clone_value_80"
+      ],
+      "check_names": [
+        "check_LibClone_property_immutable_args_clone_value_76",
+        "check_LibClone_property_immutable_args_clone_deterministic_value_78",
+        "check_LibClone_property_create_deterministic_clone_value_80"
+      ],
+      "methods_count": 3,
+      "manifest_skipped_checks": 123,
+      "skipped_checks": 0,
+      "expected_checks": 3,
+      "expected_tests": 3,
+      "proved_checks": 3,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_LibClone_property_immutable_args_clone_value_76": "PASS",
+        "check_LibClone_property_immutable_args_clone_deterministic_value_78": "PASS",
+        "check_LibClone_property_create_deterministic_clone_value_80": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "clone",
+          "visibility": "internal",
+          "full_signature": "function clone(uint256 value, address implementation, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_immutable_args_clone_value_76",
+              "test_name": "test_LibClone_property_immutable_args_clone_value_76",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "cloneDeterministic",
+          "visibility": "internal",
+          "full_signature": "function cloneDeterministic(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_immutable_args_clone_deterministic_value_78",
+              "test_name": "test_LibClone_property_immutable_args_clone_deterministic_value_78",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicClone",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicClone(uint256 value, address implementation, bytes memory args, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_create_deterministic_clone_value_80",
+              "test_name": "test_LibClone_property_create_deterministic_clone_value_80",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 3,
+        "passed_methods": 3,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 3
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibClone_property_immutable_args_clone_value_76(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/3 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf300112233445566778899aabbccddeeff                  \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf300112233445566778899aabbccddeeff                  \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_immutable_args_clone_value_76(address,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.08s\n\n\n--- halmos chunk 2/3 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf300112233445566778899aabbccddeeff                  \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf300112233445566778899aabbccddeeff                  \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_immutable_args_clone_deterministic_value_78(address,bytes32,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n\n\n--- halmos chunk 3/3 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf300112233445566778899aabbccddeeff                  \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d3d363d73000000000000000000000000000000000000beef5af43d828\n         03e903d91602b57fd5bf300112233445566778899aabbccddeeff                  \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_create_deterministic_clone_value_80(address,bytes32,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n",
+      "halmos_stderr": "--- halmos chunk 1/3 ---\n\n\n--- halmos chunk 2/3 ---\n\n\n--- halmos chunk 3/3 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 3,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_immutable_args_clone_value_76(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_immutable_args_clone_deterministic_value_78(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_create_deterministic_clone_value_80(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

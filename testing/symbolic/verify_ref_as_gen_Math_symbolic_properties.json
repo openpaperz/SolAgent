@@ -1,0 +1,359 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 6,
+      "proved_checks": 6,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 6,
+        "proved_checks": 6,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 6,
+        "passed_methods": 6,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 6
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 6,
+          "passed_methods": 6,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 6
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/utils/math/Math.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/utils/math/Math.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/utils/math/Math.sol"
+      ],
+      "test_names": [
+        "test_Math_property_try_modexp_0",
+        "test_Math_property_try_modexp_bytes_1",
+        "test_Math_property_modexp_2",
+        "test_Math_property_modexp_bytes_3",
+        "test_Math_property_invmodprime_4",
+        "test_Math_property_rounding_muldiv_5"
+      ],
+      "check_names": [
+        "check_Math_property_try_modexp_0",
+        "check_Math_property_try_modexp_bytes_1",
+        "check_Math_property_modexp_2",
+        "check_Math_property_modexp_bytes_3",
+        "check_Math_property_invmodprime_4",
+        "check_Math_property_rounding_muldiv_5"
+      ],
+      "methods_count": 6,
+      "manifest_skipped_checks": 6,
+      "skipped_checks": 0,
+      "expected_checks": 6,
+      "expected_tests": 6,
+      "proved_checks": 6,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_Math_property_try_modexp_0": "PASS",
+        "check_Math_property_try_modexp_bytes_1": "PASS",
+        "check_Math_property_modexp_2": "PASS",
+        "check_Math_property_modexp_bytes_3": "PASS",
+        "check_Math_property_invmodprime_4": "PASS",
+        "check_Math_property_rounding_muldiv_5": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": "have not been fully explored due to the loop unrolling bound: 2\nnot been fully explored due to the loop unrolling bound: 2",
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "invModPrime",
+          "visibility": "internal",
+          "full_signature": "function invModPrime(uint256 a, uint256 p) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_invmodprime_4",
+              "test_name": "test_Math_property_invmodprime_4",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "modExp",
+          "visibility": "internal",
+          "full_signature": "function modExp(bytes memory b, bytes memory e, bytes memory m) internal view returns (bytes memory)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_modexp_bytes_3",
+              "test_name": "test_Math_property_modexp_bytes_3",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "modExp",
+          "visibility": "internal",
+          "full_signature": "function modExp(uint256 b, uint256 e, uint256 m) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_modexp_2",
+              "test_name": "test_Math_property_modexp_2",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "mulDiv",
+          "visibility": "internal",
+          "full_signature": "function mulDiv(uint256 x, uint256 y, uint256 denominator, Rounding rounding) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_rounding_muldiv_5",
+              "test_name": "test_Math_property_rounding_muldiv_5",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryModExp",
+          "visibility": "internal",
+          "full_signature": "function tryModExp(bytes memory b, bytes memory e, bytes memory m) internal view returns (bool success, bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_try_modexp_bytes_1",
+              "test_name": "test_Math_property_try_modexp_bytes_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryModExp",
+          "visibility": "internal",
+          "full_signature": "function tryModExp(uint256 b, uint256 e, uint256 m) internal view returns (bool success, uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_try_modexp_0",
+              "test_name": "test_Math_property_try_modexp_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 6,
+        "passed_methods": 6,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 6
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_Math_property_try_modexp_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/6 ---\nCompiling 1 files with Solc 0.8.24\nSolc 0.8.24 finished in 501.14ms\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n --> test/utils/math/Math.t.sol:9:5:\n  |\n9 |     function ref_call_tryAdd_0(uint256 a, uint256 b) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:12:5:\n   |\n12 |     function ref_call_trySub_1(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:15:5:\n   |\n15 |     function ref_call_tryMul_2(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:18:5:\n   |\n18 |     function ref_call_tryDiv_3(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:21:5:\n   |\n21 |     function ref_call_tryMod_4(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:24:5:\n   |\n24 |     function ref_call_ternary_5(bool condition, uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:27:5:\n   |\n27 |     function ref_call_max_6(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:30:5:\n   |\n30 |     function ref_call_min_7(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:33:5:\n   |\n33 |     function ref_call_average_8(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:36:5:\n   |\n36 |     function ref_call_ceilDiv_9(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:39:5:\n   |\n39 |     function ref_call_mulDiv_10(uint256 x, uint256 y, uint256 denominator) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:42:5:\n   |\n42 |     function ref_call_mulDiv_11(uint256 x, uint256 y, uint256 denominator, uint8 rounding) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:45:5:\n   |\n45 |     function ref_call_invMod_12(uint256 a, uint256 n) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/utils/math/Math.t.sol:48:5:\n   |\n48 |     function ref_call_invModPrime_13(uint256 a, uint256 p) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/utils/math/Math.t.sol:51:5:\n   |\n51 |     function ref_call_modExp_14(uint256 b, uint256 e, uint256 m) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/utils/math/Math.t.sol:54:5:\n   |\n54 |     function ref_call_tryModExp_15(uint256 b, uint256 e, uint256 m) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/utils/math/Math.t.sol:57:5:\n   |\n57 |     function ref_call_modExp_16(bytes memory b, bytes memory e, bytes memory m) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/utils/math/Math.t.sol:60:5:\n   |\n60 |     function ref_call_tryModExp_17(bytes memory b, bytes memory e, bytes memory m) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:63:5:\n   |\n63 |     function ref_call_sqrt_18(uint256 a) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:66:5:\n   |\n66 |     function ref_call_sqrt_19(uint256 a, uint8 rounding) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:69:5:\n   |\n69 |     function ref_call_log2_20(uint256 x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:72:5:\n   |\n72 |     function ref_call_log2_21(uint256 value, uint8 rounding) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:75:5:\n   |\n75 |     function ref_call_log10_22(uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:78:5:\n   |\n78 |     function ref_call_log10_23(uint256 value, uint8 rounding) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:81:5:\n   |\n81 |     function ref_call_log256_24(uint256 x) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:84:5:\n   |\n84 |     function ref_call_log256_25(uint256 value, uint8 rounding) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:87:5:\n   |\n87 |     function ref_call_unsignedRoundsUp_26(uint8 rounding) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:90:5:\n   |\n90 |     function gen_call_tryAdd_0(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:93:5:\n   |\n93 |     function gen_call_trySub_1(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:96:5:\n   |\n96 |     function gen_call_tryMul_2(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/math/Math.t.sol:99:5:\n   |\n99 |     function gen_call_tryDiv_3(uint256 a, uint256 b) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:102:5:\n    |\n102 |     function gen_call_tryMod_4(uint256 a, uint256 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:105:5:\n    |\n105 |     function gen_call_ternary_5(bool condition, uint256 a, uint256 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:108:5:\n    |\n108 |     function gen_call_max_6(uint256 a, uint256 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:111:5:\n    |\n111 |     function gen_call_min_7(uint256 a, uint256 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:114:5:\n    |\n114 |     function gen_call_average_8(uint256 a, uint256 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:117:5:\n    |\n117 |     function gen_call_ceilDiv_9(uint256 a, uint256 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:120:5:\n    |\n120 |     function gen_call_mulDiv_10(uint256 x, uint256 y, uint256 denominator) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:123:5:\n    |\n123 |     function gen_call_mulDiv_11(uint256 x, uint256 y, uint256 denominator, uint8 rounding) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:126:5:\n    |\n126 |     function gen_call_invMod_12(uint256 a, uint256 n) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/utils/math/Math.t.sol:129:5:\n    |\n129 |     function gen_call_invModPrime_13(uint256 a, uint256 p) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/utils/math/Math.t.sol:132:5:\n    |\n132 |     function gen_call_modExp_14(uint256 b, uint256 e, uint256 m) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/utils/math/Math.t.sol:135:5:\n    |\n135 |     function gen_call_tryModExp_15(uint256 b, uint256 e, uint256 m) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/utils/math/Math.t.sol:138:5:\n    |\n138 |     function gen_call_modExp_16(bytes memory b, bytes memory e, bytes memory m) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/utils/math/Math.t.sol:141:5:\n    |\n141 |     function gen_call_tryModExp_17(bytes memory b, bytes memory e, bytes memory m) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:144:5:\n    |\n144 |     function gen_call_sqrt_18(uint256 a) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:147:5:\n    |\n147 |     function gen_call_sqrt_19(uint256 a, uint8 rounding) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:150:5:\n    |\n150 |     function gen_call_log2_20(uint256 x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:153:5:\n    |\n153 |     function gen_call_log2_21(uint256 value, uint8 rounding) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:156:5:\n    |\n156 |     function gen_call_log10_22(uint256 value) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:159:5:\n    |\n159 |     function gen_call_log10_23(uint256 value, uint8 rounding) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:162:5:\n    |\n162 |     function gen_call_log256_24(uint256 x) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:165:5:\n    |\n165 |     function gen_call_log256_25(uint256 value, uint8 rounding) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/math/Math.t.sol:168:5:\n    |\n168 |     function gen_call_unsignedRoundsUp_26(uint8 rounding) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_try_modexp_0(uint256,uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n\n\n--- halmos chunk 2/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_try_modexp_bytes_1(uint256,uint256,uint256) (paths: 3, time: 0.04s, bounds: [])\nWARNING  check_Math_property_try_modexp_bytes_1(uint256,uint256,uint256): paths \n         have not been fully explored due to the loop unrolling bound: 2        \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 3/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_modexp_2(uint256,uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 4/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_modexp_bytes_3(uint256,uint256,uint256) (paths: 3, time: 0.04s, bounds: [])\nWARNING  check_Math_property_modexp_bytes_3(uint256,uint256,uint256): paths have\n         not been fully explored due to the loop unrolling bound: 2             \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 5/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_invmodprime_4(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 6/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_rounding_muldiv_5(uint256,uint256,uint256,uint8) (paths: 12, time: 0.25s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.26s\n",
+      "halmos_stderr": "--- halmos chunk 1/6 ---\n\n\n--- halmos chunk 2/6 ---\n\n\n--- halmos chunk 3/6 ---\n\n\n--- halmos chunk 4/6 ---\n\n\n--- halmos chunk 5/6 ---\n\n\n--- halmos chunk 6/6 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 6,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_try_modexp_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_try_modexp_bytes_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_modexp_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_modexp_bytes_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_invmodprime_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_rounding_muldiv_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/utils/structs/Checkpoints.sol",
+        "-o",
+        "/tmp/aderyn_report_6x65u16q/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/utils/structs/Checkpoints.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n--------------------------------------------------------------------------------\n# Configuration\n--------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n--------------------------------------------------------------------------------\n# Source Scope\n--------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/utils/structs/Checkpoints.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n--------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n--------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n--------------------------------------------------------------------------------\n# Scanning Contracts\n--------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_6x65u16q/report.json\n\n🪶 Aderyn spotted all it could. Stay secure.\nIf our little bird helped you out, give it a perch with a GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/utils/structs/Checkpoints.sol",
+              "n_sloc": 372
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 372,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 57,
+                  "src": "1959:1",
+                  "src_char": "1959:1"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 223,
+                  "src": "7881:1",
+                  "src_char": "7881:1"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 362,
+                  "src": "12758:1",
+                  "src_char": "12758:1"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 470,
+                  "src": "16579:2",
+                  "src_char": "16579:2"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 471,
+                  "src": "16625:2",
+                  "src_char": "16625:2"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 471,
+                  "src": "16635:2",
+                  "src_char": "16635:2"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 472,
+                  "src": "16677:2",
+                  "src_char": "16677:2"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 472,
+                  "src": "16687:2",
+                  "src_char": "16687:2"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 473,
+                  "src": "16727:2",
+                  "src_char": "16727:2"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 473,
+                  "src": "16737:1",
+                  "src_char": "16737:1"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 474,
+                  "src": "16774:1",
+                  "src_char": "16774:1"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 474,
+                  "src": "16783:1",
+                  "src_char": "16783:1"
+                },
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 475,
+                  "src": "16819:1",
+                  "src_char": "16819:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/structs/Checkpoints.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 372,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 3,
+    "best_round": 1,
+    "best_total": 6,
+    "best_vuln": 0,
+    "code_bytes": 16988,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "d4692c5b9e942523ae0624997c5ec072e683d3c1db5b72241b3cc4b08f3d41b3",
+    "skip_reason": null,
+    "sloc": 372,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:46.036164+00:00",
+  "eval": {
+    "best_round": 1,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/utils/structs/Checkpoints.t.sol",
+    "expected_tests": 24,
+    "extract_error": null,
+    "forge_total": 24,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 21,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 255,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/structs/Checkpoints.sol",
+  "id": 255,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:13.896952+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 3,
+  "test_pass": 21,
+  "test_source": "rq2_eval",
+  "test_total": 24
+}

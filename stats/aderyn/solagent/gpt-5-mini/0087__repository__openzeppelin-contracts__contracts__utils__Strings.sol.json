@@ -1,0 +1,492 @@
+{
+  "aderyn": {
+    "count": 5,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/utils/Strings.sol",
+        "-o",
+        "/tmp/aderyn_report_5mb2s9jt/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/utils/Strings.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n------------------------------------------------------------------------------------------------\n# Configuration\n------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n------------------------------------------------------------------------------------------------\n# Source Scope\n------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/utils/Strings.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n------------------------------------------------------------------------------------------------\n# Scanning Contracts\n------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_5mb2s9jt/report.json\n\n\ud83d\udca1 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star \u2b50\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/utils/Strings.sol",
+              "n_sloc": 288
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 288,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 41,
+                  "src": "1301:16",
+                  "src_char": "1301:16"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 44,
+                  "src": "1441:16",
+                  "src_char": "1441:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            },
+            {
+              "description": "Downcasting int/uints in Solidity can be unsafe due to the potential for data loss and unintended behavior.When downcasting a larger integer type to a smaller one (e.g., uint256 to uint128), the value may exceed the range of the target type,leading to truncation and loss of significant digits. Use OpenZeppelin's SafeCast library to safely downcast integers.",
+              "detector_name": "unsafe-casting",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 388,
+                  "src": "13876:15",
+                  "src_char": "13876:15"
+                }
+              ],
+              "title": "Unsafe Casting of integers"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 2,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 85,
+                  "src": "2782:11",
+                  "src_char": "2782:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 167,
+                  "src": "5652:12",
+                  "src_char": "5652:12"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 222,
+                  "src": "7631:11",
+                  "src_char": "7631:11"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 298,
+                  "src": "10429:15",
+                  "src_char": "10429:15"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 361,
+                  "src": "12779:15",
+                  "src_char": "12779:15"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 21,
+                  "src": "572:2",
+                  "src_char": "572:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 26,
+                  "src": "731:2",
+                  "src_char": "731:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 26,
+                  "src": "752:2",
+                  "src_char": "752:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 27,
+                  "src": "780:2",
+                  "src_char": "780:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 76,
+                  "src": "2447:1",
+                  "src_char": "2447:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 97,
+                  "src": "3348:2",
+                  "src_char": "3348:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 98,
+                  "src": "3385:2",
+                  "src_char": "3385:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 106,
+                  "src": "3613:2",
+                  "src_char": "3613:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 116,
+                  "src": "4088:1",
+                  "src_char": "4088:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 116,
+                  "src": "4093:4",
+                  "src_char": "4093:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 119,
+                  "src": "4205:4",
+                  "src_char": "4205:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 191,
+                  "src": "6692:2",
+                  "src_char": "6692:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 191,
+                  "src": "6702:2",
+                  "src_char": "6702:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 195,
+                  "src": "6815:2",
+                  "src_char": "6815:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 195,
+                  "src": "6825:2",
+                  "src_char": "6825:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 321,
+                  "src": "11465:4",
+                  "src_char": "11465:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 321,
+                  "src": "11486:4",
+                  "src_char": "11486:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 321,
+                  "src": "11506:4",
+                  "src_char": "11506:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 334,
+                  "src": "11860:1",
+                  "src_char": "11860:1"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 376,
+                  "src": "13439:4",
+                  "src_char": "13439:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 376,
+                  "src": "13460:4",
+                  "src_char": "13460:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 376,
+                  "src": "13480:4",
+                  "src_char": "13480:4"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 380,
+                  "src": "13575:2",
+                  "src_char": "13575:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 397,
+                  "src": "14154:2",
+                  "src_char": "14154:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 397,
+                  "src": "14165:2",
+                  "src_char": "14165:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 398,
+                  "src": "14194:2",
+                  "src_char": "14194:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 401,
+                  "src": "14246:2",
+                  "src_char": "14246:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 402,
+                  "src": "14283:2",
+                  "src_char": "14283:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 402,
+                  "src": "14293:2",
+                  "src_char": "14293:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 405,
+                  "src": "14346:2",
+                  "src_char": "14346:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 406,
+                  "src": "14382:2",
+                  "src_char": "14382:2"
+                },
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 406,
+                  "src": "14392:2",
+                  "src_char": "14392:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/Strings.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 288,
+    "summary": {
+      "High": 2,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": 11,
+    "best_round": 1,
+    "best_total": 11,
+    "best_vuln": 0,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "selection_policy": "test-first-security-second",
+    "sha256": "305fc444efd6f8c21102536bab0258cbe80ea0e38eafeb8efd19224ed7730afb",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:37.294561+00:00",
+  "eval": {
+    "best_pass": 11,
+    "best_round": 1,
+    "best_total": 11,
+    "best_vuln": 0,
+    "code_bytes": 14759,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 23,
+    "extract_error": null,
+    "failed_tests": 8,
+    "forge_failed": 8,
+    "forge_total": 23,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 15,
+    "report_path": "testing/eval/rq1_verify_eval_models_security_selected_seed1.json",
+    "row_id": 87,
+    "row_status": 1,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/Strings.sol",
+  "id": 87,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:18.360581+00:00",
+  "slither": {
+    "best_pass": 11,
+    "best_round": 1,
+    "best_total": 11,
+    "count": 0,
+    "min_vuln_count": 0,
+    "min_vuln_round": 1,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "source": "round_vuln_count.best_pass_then_min_vuln_round",
+    "summary": {}
+  },
+  "source": "solagent",
+  "source_kind": "solagent",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 8,
+  "test_pass": 15,
+  "test_source": "eval_seed1",
+  "test_total": 23
+}

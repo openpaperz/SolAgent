@@ -1,0 +1,248 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 3,
+      "proved_checks": 3,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 3,
+        "proved_checks": 3,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 3,
+        "passed_methods": 3,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 3
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 3,
+          "passed_methods": 3,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 3
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/Packing.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/utils/Packing.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/utils/Packing.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/utils/Packing.sol"
+      ],
+      "test_names": [
+        "test_Packing_pack_1_1_0",
+        "test_Packing_extract_32_28_210",
+        "test_Packing_replace_32_28_211"
+      ],
+      "check_names": [
+        "check_Packing_pack_1_1_0",
+        "check_Packing_extract_32_28_210",
+        "check_Packing_replace_32_28_211"
+      ],
+      "methods_count": 3,
+      "manifest_skipped_checks": 0,
+      "skipped_checks": 0,
+      "expected_checks": 3,
+      "expected_tests": 3,
+      "proved_checks": 3,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_Packing_pack_1_1_0": "PASS",
+        "check_Packing_extract_32_28_210": "PASS",
+        "check_Packing_replace_32_28_211": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Packing.sol",
+          "class_name": "Packing",
+          "class_kind": "library",
+          "method_name": "extract_32_28",
+          "visibility": "internal",
+          "full_signature": "function extract_32_28(bytes32 self, uint8 offset) internal pure returns (bytes28 result)",
+          "checks": [
+            {
+              "check_name": "check_Packing_extract_32_28_210",
+              "test_name": "test_Packing_extract_32_28_210",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Packing.sol",
+          "class_name": "Packing",
+          "class_kind": "library",
+          "method_name": "pack_1_1",
+          "visibility": "internal",
+          "full_signature": "function pack_1_1(bytes1 left, bytes1 right) internal pure returns (bytes2 result)",
+          "checks": [
+            {
+              "check_name": "check_Packing_pack_1_1_0",
+              "test_name": "test_Packing_pack_1_1_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/Packing.sol",
+          "class_name": "Packing",
+          "class_kind": "library",
+          "method_name": "replace_32_28",
+          "visibility": "internal",
+          "full_signature": "function replace_32_28(bytes32 self, bytes28 value, uint8 offset) internal pure returns (bytes32 result)",
+          "checks": [
+            {
+              "check_name": "check_Packing_replace_32_28_211",
+              "test_name": "test_Packing_replace_32_28_211",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 3,
+        "passed_methods": 3,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 3
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_Packing_pack_1_1_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/3 ---\nCompiling 3 files with Solc 0.8.24\nSolc 0.8.24 finished in 4.91s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n --> test/utils/Packing.t.sol:9:5:\n  |\n9 |     function ref_call_pack_1_1_0(bytes1 left, bytes1 right) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:12:5:\n   |\n12 |     function ref_call_pack_2_2_1(bytes2 left, bytes2 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:15:5:\n   |\n15 |     function ref_call_pack_2_4_2(bytes2 left, bytes4 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:18:5:\n   |\n18 |     function ref_call_pack_2_6_3(bytes2 left, bytes6 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:21:5:\n   |\n21 |     function ref_call_pack_2_8_4(bytes2 left, bytes8 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:24:5:\n   |\n24 |     function ref_call_pack_2_10_5(bytes2 left, bytes10 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:27:5:\n   |\n27 |     function ref_call_pack_2_20_6(bytes2 left, bytes20 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:30:5:\n   |\n30 |     function ref_call_pack_2_22_7(bytes2 left, bytes22 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:33:5:\n   |\n33 |     function ref_call_pack_4_2_8(bytes4 left, bytes2 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:36:5:\n   |\n36 |     function ref_call_pack_4_4_9(bytes4 left, bytes4 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:39:5:\n   |\n39 |     function ref_call_pack_4_6_10(bytes4 left, bytes6 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:42:5:\n   |\n42 |     function ref_call_pack_4_8_11(bytes4 left, bytes8 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:45:5:\n   |\n45 |     function ref_call_pack_4_12_12(bytes4 left, bytes12 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:48:5:\n   |\n48 |     function ref_call_pack_4_16_13(bytes4 left, bytes16 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:51:5:\n   |\n51 |     function ref_call_pack_4_20_14(bytes4 left, bytes20 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:54:5:\n   |\n54 |     function ref_call_pack_4_24_15(bytes4 left, bytes24 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:57:5:\n   |\n57 |     function ref_call_pack_4_28_16(bytes4 left, bytes28 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:60:5:\n   |\n60 |     function ref_call_pack_6_2_17(bytes6 left, bytes2 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:63:5:\n   |\n63 |     function ref_call_pack_6_4_18(bytes6 left, bytes4 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:66:5:\n   |\n66 |     function ref_call_pack_6_6_19(bytes6 left, bytes6 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:69:5:\n   |\n69 |     function ref_call_pack_6_10_20(bytes6 left, bytes10 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:72:5:\n   |\n72 |     function ref_call_pack_6_16_21(bytes6 left, bytes16 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:75:5:\n   |\n75 |     function ref_call_pack_6_22_22(bytes6 left, bytes22 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:78:5:\n   |\n78 |     function ref_call_pack_8_2_23(bytes8 left, bytes2 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:81:5:\n   |\n81 |     function ref_call_pack_8_4_24(bytes8 left, bytes4 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:84:5:\n   |\n84 |     function ref_call_pack_8_8_25(bytes8 left, bytes8 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:87:5:\n   |\n87 |     function ref_call_pack_8_12_26(bytes8 left, bytes12 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:90:5:\n   |\n90 |     function ref_call_pack_8_16_27(bytes8 left, bytes16 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:93:5:\n   |\n93 |     function ref_call_pack_8_20_28(bytes8 left, bytes20 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:96:5:\n   |\n96 |     function ref_call_pack_8_24_29(bytes8 left, bytes24 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/Packing.t.sol:99:5:\n   |\n99 |     function ref_call_pack_10_2_30(bytes10 left, bytes2 right) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:102:5:\n    |\n102 |     function ref_call_pack_10_6_31(bytes10 left, bytes6 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:105:5:\n    |\n105 |     function ref_call_pack_10_10_32(bytes10 left, bytes10 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:108:5:\n    |\n108 |     function ref_call_pack_10_12_33(bytes10 left, bytes12 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:111:5:\n    |\n111 |     function ref_call_pack_10_22_34(bytes10 left, bytes22 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:114:5:\n    |\n114 |     function ref_call_pack_12_4_35(bytes12 left, bytes4 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:117:5:\n    |\n117 |     function ref_call_pack_12_8_36(bytes12 left, bytes8 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:120:5:\n    |\n120 |     function ref_call_pack_12_10_37(bytes12 left, bytes10 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:123:5:\n    |\n123 |     function ref_call_pack_12_12_38(bytes12 left, bytes12 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:126:5:\n    |\n126 |     function ref_call_pack_12_16_39(bytes12 left, bytes16 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:129:5:\n    |\n129 |     function ref_call_pack_12_20_40(bytes12 left, bytes20 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:132:5:\n    |\n132 |     function ref_call_pack_16_4_41(bytes16 left, bytes4 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:135:5:\n    |\n135 |     function ref_call_pack_16_6_42(bytes16 left, bytes6 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:138:5:\n    |\n138 |     function ref_call_pack_16_8_43(bytes16 left, bytes8 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:141:5:\n    |\n141 |     function ref_call_pack_16_12_44(bytes16 left, bytes12 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:144:5:\n    |\n144 |     function ref_call_pack_16_16_45(bytes16 left, bytes16 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:147:5:\n    |\n147 |     function ref_call_pack_20_2_46(bytes20 left, bytes2 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:150:5:\n    |\n150 |     function ref_call_pack_20_4_47(bytes20 left, bytes4 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:153:5:\n    |\n153 |     function ref_call_pack_20_8_48(bytes20 left, bytes8 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:156:5:\n    |\n156 |     function ref_call_pack_20_12_49(bytes20 left, bytes12 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:159:5:\n    |\n159 |     function ref_call_pack_22_2_50(bytes22 left, bytes2 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:162:5:\n    |\n162 |     function ref_call_pack_22_6_51(bytes22 left, bytes6 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:165:5:\n    |\n165 |     function ref_call_pack_22_10_52(bytes22 left, bytes10 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:168:5:\n    |\n168 |     function ref_call_pack_24_4_53(bytes24 left, bytes4 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:171:5:\n    |\n171 |     function ref_call_pack_24_8_54(bytes24 left, bytes8 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:174:5:\n    |\n174 |     function ref_call_pack_28_4_55(bytes28 left, bytes4 right) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:177:5:\n    |\n177 |     function ref_call_extract_2_1_56(bytes2 self, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:180:5:\n    |\n180 |     function ref_call_replace_2_1_57(bytes2 self, bytes1 value, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:183:5:\n    |\n183 |     function ref_call_extract_4_1_58(bytes4 self, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:186:5:\n    |\n186 |     function ref_call_replace_4_1_59(bytes4 self, bytes1 value, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:189:5:\n    |\n189 |     function ref_call_extract_4_2_60(bytes4 self, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:192:5:\n    |\n192 |     function ref_call_replace_4_2_61(bytes4 self, bytes2 value, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:195:5:\n    |\n195 |     function ref_call_extract_6_1_62(bytes6 self, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:198:5:\n    |\n198 |     function ref_call_replace_6_1_63(bytes6 self, bytes1 value, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:201:5:\n    |\n201 |     function ref_call_extract_6_2_64(bytes6 self, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:204:5:\n    |\n204 |     function ref_call_replace_6_2_65(bytes6 self, bytes2 value, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/utils/Packing.t.sol:207:5:\n    |\n207 |     function ref_call_extract_6_4_66(bytes6 self, uint8 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n \n...[truncated 58246 chars]",
+      "halmos_stderr": "--- halmos chunk 1/3 ---\n\n\n--- halmos chunk 2/3 ---\n\n\n--- halmos chunk 3/3 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 3,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Packing_pack_1_1_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Packing_extract_32_28_210(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Packing_replace_32_28_211(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/solady/lib/solady/src/utils/ext/ithaca/BLS.sol",
+  "eval_full_pass": false,
+  "code_sha256": "e332245913a068f7a8cddca5b1f5c581490e6c0ca854c0985c01f781541e067e",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:59.883462+00:00",
+  "skip_reason": "not eval FullPass"
+}

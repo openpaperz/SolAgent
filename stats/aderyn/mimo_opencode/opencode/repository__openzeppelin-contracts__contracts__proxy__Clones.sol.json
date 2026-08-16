@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+  "eval_full_pass": false,
+  "code_sha256": "80e15dd33a77ef0d76a10332a51cbe0226f998e55955bc06e75f9c666ec55d42",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:57.493741+00:00",
+  "skip_reason": "not eval FullPass"
+}

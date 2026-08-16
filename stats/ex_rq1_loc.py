@@ -6,108 +6,20 @@ Extracts code from database messages and counts lines excluding comments and emp
 
 import sys
 import os
-import re
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from db.progress_tracker import ProgressTracker
 from stats.common_utils import safe_json_loads, get_best_pass_round, print_table_header, print_table_row
-from file_parser import extract_code_blocks
+from stats.code_metrics import (
+    calculate_complexity,
+    count_loc,
+    count_physical_loc,
+    extract_code_from_messages,
+)
 
 AGENT_TYPES = ["metagpt", "deepcode", "qwenagent", "copilot"]
 TARGET_MODELS = ["claude-sonnet-4-5", "gpt-5-mini", "gpt-5.1"]
-
-
-def calculate_complexity(code: str) -> int:
-    """
-    Calculate Cyclomatic Complexity (CC) by counting decision points.
-    
-    Logic:
-    1. Strip comments and strings to avoid false positives.
-    2. Count keywords: if, while, for, case, catch, &&, ||, ?
-    3. Base complexity is 1.
-    
-    Args:
-        code: Solidity source code
-        
-    Returns:
-        int: Cyclomatic complexity score
-    """
-    # Pattern to capture:
-    # 1. Double quoted strings: "..."
-    # 2. Single quoted strings: '...'
-    # 3. Block comments: /* ... */
-    # 4. Line comments: // ...
-    pattern = r'("(?:\\[\s\S]|[^"\\])*"|\'(?:\\[\s\S]|[^\'\\])*\'|/\*[\s\S]*?\*/|//.*)'
-    
-    def replacer(match):
-        s = match.group(0)
-        if s.startswith('/'):
-            return ' ' # Replace comments with space
-        else:
-            return '""' # Replace strings with empty string
-            
-    # Clean code
-    cleaned_code = re.sub(pattern, replacer, code)
-    
-    # Count decision points
-    # Use word boundaries for keywords
-    complexity = 1
-    keywords = [
-        r'\bif\b', r'\bwhile\b', r'\bfor\b', r'\bcase\b', r'\bcatch\b',
-        r'\&\&', r'\|\|', r'\?', r'\brequire\b', r'\bassert\b'
-    ]
-    
-    for pattern in keywords:
-        complexity += len(re.findall(pattern, cleaned_code))
-        
-    return complexity
-
-
-def count_loc(code: str) -> int:
-    """
-    Count Lines of Code (LOC) excluding empty lines and comments.
-    
-    Args:
-        code: Solidity source code string
-        
-    Returns:
-        Number of non-empty, non-comment lines
-    """
-    lines = code.split('\n')
-    loc = 0
-    in_multiline_comment = False
-    
-    for line in lines:
-        stripped = line.strip()
-        
-        # Handle multi-line comments
-        if '/*' in stripped:
-            in_multiline_comment = True
-        if in_multiline_comment:
-            if '*/' in stripped:
-                in_multiline_comment = False
-            continue
-        
-        # Skip empty lines and single-line comments
-        if not stripped or stripped.startswith('//'):
-            continue
-        
-        loc += 1
-    
-    return loc
-
-
-def count_physical_loc(code: str) -> int:
-    """Count physical lines of code (total lines without filtering).
-    
-    Args:
-        code: Solidity code string
-        
-    Returns:
-        Number of physical lines (including comments and blank lines)
-    """
-    return len(code.split('\n'))
 
 
 def collect_loc_statistics_generic(tracker, tracker_name, target_models, db_path='output/progress.db', limit=None):
@@ -179,34 +91,14 @@ def collect_loc_statistics_generic(tracker, tracker_name, target_models, db_path
             
             # Get round messages and extract code
             round_messages = safe_json_loads(entry.get('round_messages', '{}'))
-            
-            if round_idx_str not in round_messages:
+
+            if not round_messages or round_idx_str not in round_messages:
                 print(f"    [SKIP] No messages found")
                 continue
-            
-            messages_list = round_messages[round_idx_str]
-            
-            # Find last assistant message with valid code (not NoContent)
-            valid_code = None
-            file_name = file_path.split('/')[-1]
-            
-            for i in range(len(messages_list) - 1, -1, -1):
-                msg = messages_list[i]
-                if isinstance(msg, dict) and msg.get('role') == 'assistant':
-                    content = msg.get('content', '')
-                    
-                    # Try to extract code from this message
-                    try:
-                        all_files, _ = extract_code_blocks(content, target_filename=file_name)
-                        
-                        if all_files:
-                            code = all_files[0]['code'].strip()
-                            # Check if code is not NoContent
-                            if code and code != "NoContent":
-                                valid_code = code
-                                break
-                    except Exception:
-                        continue
+
+            valid_code = extract_code_from_messages(
+                round_messages[round_idx_str], file_path
+            )
             
             if not valid_code:
                 print(f"    [SKIP] No assistant message with valid code found")
@@ -277,8 +169,6 @@ def collect_loc_agent_rawmodel_generic(tracker, tracker_name, target_models, db_
     Returns:
         loc_stats_by_file: Dict mapping (model, file_path) to LOC
     """
-    from utils.code_utils import try_extract_code
-    
     all_entries = tracker.get_all_entries()
     # Filter to only include target models
     all_entries = [e for e in all_entries if e.get('model_coding') in target_models]
@@ -312,51 +202,10 @@ def collect_loc_agent_rawmodel_generic(tracker, tracker_name, target_models, db_
             print(f"  [SKIP] No coding_messages found")
             continue
         
-        # Find last assistant message with valid code
-        valid_code = None
-        file_name = file_path.split('/')[-1]
-        file_class = file_name.replace('.sol', '')
         agent_type = entry.get('agent_type', '')
-        
-        for i in range(len(coding_messages) - 1, -1, -1):
-            msg = coding_messages[i]
-            if isinstance(msg, dict) and msg.get('role') == 'assistant':
-                content = msg.get('content', '')
-                try:
-                    if agent_type == 'metagpt':
-                        code_block = try_extract_code(content)
-                        if code_block and code_block.strip().startswith("// SPDX-License-Identifier: MIT"):
-                            code = code_block.strip()
-                            if file_class in code:
-                                valid_code = code
-                                break
-                        elif code_block and code_block.strip().startswith("```solidity"):
-                            code = code_block.strip().replace("```solidity", "").replace("```", "").strip()
-                            if file_class in code:
-                                valid_code = code
-                                break
-                    else:    
-                        all_files, _ = extract_code_blocks(content, target_filename=file_name)
-                        if all_files:
-                            code = all_files[0]['code'].strip()
-                            if code and code != "NoContent":
-                                valid_code = code
-                                break
-                            else:
-                                if agent_type == 'deepcode':
-                                    tool_calls = msg.get('tool_calls', [])
-                                    for call in reversed(tool_calls):
-                                        if call.get('name') == 'write_file':
-                                            input_data = call.get('input', {})
-                                            if input_data.get('file_path') == file_name:
-                                                code = input_data.get('content', '').strip()
-                                                if code and code != "NoContent":
-                                                    valid_code = code
-                                                    break
-                                if valid_code:
-                                    break
-                except Exception:
-                    continue
+        valid_code = extract_code_from_messages(
+            coding_messages, file_path, agent_type=agent_type
+        )
         
         if not valid_code:
             print(f"  [SKIP] No assistant message with valid code found")

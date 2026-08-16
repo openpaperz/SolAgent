@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/LibBitmap.sol",
+  "eval_full_pass": false,
+  "code_sha256": "6c35e7b1725abda8d310c6d1362178c340a6418982cc71ab9b1d7c17eddc2830",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:57.395609+00:00",
+  "skip_reason": "not eval FullPass"
+}

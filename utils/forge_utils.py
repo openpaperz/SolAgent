@@ -10,7 +10,31 @@ from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 load_dotenv()
 
-def check_forge(test_file_path: str, is_gas_report: bool = False) -> str:
+def _env_int(name: str, default: int) -> int:
+    value = os.environ.get(name)
+    if not value:
+        return default
+    try:
+        parsed = int(value)
+        return parsed if parsed > 0 else default
+    except ValueError:
+        return default
+
+def _find_foundry_root(start_dir: str) -> str:
+    current = os.path.abspath(start_dir)
+    while True:
+        if os.path.exists(os.path.join(current, "foundry.toml")):
+            return current
+        parent = os.path.dirname(current)
+        if parent == current:
+            return os.path.abspath(start_dir)
+        current = parent
+
+def check_forge(
+    test_file_path: str,
+    is_gas_report: bool = False,
+    fuzz_seed: Optional[str] = None,
+) -> str:
     """
     Run forge test for a specific test file.
     
@@ -23,8 +47,9 @@ def check_forge(test_file_path: str, is_gas_report: bool = False) -> str:
     Raises:
         RuntimeError: If FORGE_PATH environment variable is not set
     """
-    work_dir = "/".join(test_file_path.split('/')[0:-1])
-    match_path = test_file_path.split('/')[-1]
+    test_file_path = os.path.abspath(test_file_path)
+    work_dir = _find_foundry_root(os.path.dirname(test_file_path))
+    match_path = os.path.relpath(test_file_path, work_dir)
     
     # Extract test profile from path if it contains test-profiles
     # e.g., test-profiles/openzeppelin-contracts-v4/test/... -> openzeppelin-contracts-v4
@@ -57,18 +82,23 @@ def check_forge(test_file_path: str, is_gas_report: bool = False) -> str:
     elif 'solady' in test_file_path and 'Transient' in match_path:
         env['FOUNDRY_PROFILE'] = 'post_cancun'
     
-    # Try running forge test with timeout retry
-    max_retries = 2
+    # Try running forge test with timeout retry. Gas reports on heavy fuzz tests
+    # can be much slower than normal test execution, so keep a separate limit.
+    max_retries = _env_int("FORGE_MAX_RETRIES", 2)
+    build_timeout = _env_int("FORGE_BUILD_TIMEOUT", 120)
+    test_timeout = _env_int("FORGE_GAS_REPORT_TIMEOUT" if is_gas_report else "FORGE_TEST_TIMEOUT", 7200 if is_gas_report else 150)
     for attempt in range(max_retries):
         try:
             subprocess.run(
                 [forge_bin, 'build'], capture_output=True,
                 cwd=work_dir,
-                timeout=120,
+                timeout=build_timeout,
                 env=env
             )
             # Build test command with optional --gas-report flag
             test_cmd = [forge_bin, 'test', '--match-path', f'{match_path}']
+            if fuzz_seed:
+                test_cmd.extend(['--fuzz-seed', fuzz_seed])
             if is_gas_report:
                 test_cmd.append('--gas-report')
             
@@ -78,7 +108,7 @@ def check_forge(test_file_path: str, is_gas_report: bool = False) -> str:
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
                 cwd=work_dir,
-                timeout=150,
+                timeout=test_timeout,
                 env=env
             )
             captured_stdout = test_process.stdout.decode()# + test_process.stderr.decode()

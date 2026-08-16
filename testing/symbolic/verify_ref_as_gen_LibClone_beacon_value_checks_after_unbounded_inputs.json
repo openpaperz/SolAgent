@@ -1,0 +1,359 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 6,
+      "proved_checks": 6,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 6,
+        "proved_checks": 6,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 6,
+        "passed_methods": 6,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 6
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 6,
+          "passed_methods": 6,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 6
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibClone.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibClone.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibClone.sol"
+      ],
+      "test_names": [
+        "test_LibClone_property_beacon_proxy_deploy_value_106",
+        "test_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+        "test_LibClone_property_beacon_proxy_create_deterministic_value_110",
+        "test_LibClone_property_beacon_proxy_deploy_args_value_112",
+        "test_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+        "test_LibClone_property_beacon_proxy_create_deterministic_args_value_116"
+      ],
+      "check_names": [
+        "check_LibClone_property_beacon_proxy_deploy_value_106",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+        "check_LibClone_property_beacon_proxy_create_deterministic_value_110",
+        "check_LibClone_property_beacon_proxy_deploy_args_value_112",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+        "check_LibClone_property_beacon_proxy_create_deterministic_args_value_116"
+      ],
+      "methods_count": 6,
+      "manifest_skipped_checks": 123,
+      "skipped_checks": 0,
+      "expected_checks": 6,
+      "expected_tests": 6,
+      "proved_checks": 6,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_LibClone_property_beacon_proxy_deploy_value_106": "PASS",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_value_108": "PASS",
+        "check_LibClone_property_beacon_proxy_create_deterministic_value_110": "PASS",
+        "check_LibClone_property_beacon_proxy_deploy_args_value_112": "PASS",
+        "check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114": "PASS",
+        "check_LibClone_property_beacon_proxy_create_deterministic_args_value_116": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes memory args, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_create_deterministic_args_value_116",
+              "test_name": "test_LibClone_property_beacon_proxy_create_deterministic_args_value_116",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "createDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function createDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes32 salt) internal returns (bool alreadyDeployed, address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_create_deterministic_value_110",
+              "test_name": "test_LibClone_property_beacon_proxy_create_deterministic_value_110",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes memory args, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployDeterministicERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministicERC1967BeaconProxy(uint256 value, address beacon, bytes32 salt) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_deterministic_value_108",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967BeaconProxy(uint256 value, address beacon) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_value_106",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_value_106",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+          "class_name": "LibClone",
+          "class_kind": "library",
+          "method_name": "deployERC1967BeaconProxy",
+          "visibility": "internal",
+          "full_signature": "function deployERC1967BeaconProxy(uint256 value, address beacon, bytes memory args) internal returns (address instance)",
+          "checks": [
+            {
+              "check_name": "check_LibClone_property_beacon_proxy_deploy_args_value_112",
+              "test_name": "test_LibClone_property_beacon_proxy_deploy_args_value_112",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 6,
+        "passed_methods": 6,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 6
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibClone_property_beacon_proxy_deploy_value_106(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f3                                               \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f3                                               \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_beacon_proxy_deploy_value_106(address,uint256) (paths: 2, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 2/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f3                                               \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f3                                               \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_beacon_proxy_deploy_deterministic_value_108(address,bytes32,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n\n\n--- halmos chunk 3/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f3                                               \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f3                                               \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_beacon_proxy_create_deterministic_value_110(address,bytes32,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n\n\n--- halmos chunk 4/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f301030507090b0d0f                               \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f301030507090b0d0f                               \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_beacon_proxy_deploy_args_value_112(address,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n\n\n--- halmos chunk 5/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f301030507090b0d0f                               \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f301030507090b0d0f                               \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114(address,bytes32,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n\n\n--- halmos chunk 6/6 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/LibClone.t.sol:LibCloneEquivalenceCheck\nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f301030507090b0d0f                               \nWARNING  unknown deployed bytecode:                                             \n         0x363d3d373d3d363d602036600436635c60da1b60e01b36527fa3f0ad74e5423aebfd8\n         0d3ef4346578335a9a72aeaee59ff6cb3582b35133d50545afa5036515af43d6000803e\n         604d573d6000fd5b3d6000f301030507090b0d0f                               \n\u001b[32m[PASS]\u001b[0m check_LibClone_property_beacon_proxy_create_deterministic_args_value_116(address,bytes32,uint256) (paths: 2, time: 0.04s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.06s\n",
+      "halmos_stderr": "--- halmos chunk 1/6 ---\n\n\n--- halmos chunk 2/6 ---\n\n\n--- halmos chunk 3/6 ---\n\n\n--- halmos chunk 4/6 ---\n\n\n--- halmos chunk 5/6 ---\n\n\n--- halmos chunk 6/6 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 6,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_value_106(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_deterministic_value_108(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_create_deterministic_value_110(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_args_value_112(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_deploy_deterministic_args_value_114(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibClone_property_beacon_proxy_create_deterministic_args_value_116(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/DynamicArrayLib.sol",
+        "-o",
+        "/tmp/aderyn_report_zag6tx2g/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/DynamicArrayLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/DynamicArrayLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_zag6tx2g/report.json\n\n🪶 Aderyn spotted all it could. Stay secure.\nIf our little bird helped you out, give it a perch with a GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/DynamicArrayLib.sol",
+              "n_sloc": 379
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 379,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Downcasting int/uints in Solidity can be unsafe due to the potential for data loss and unintended behavior.When downcasting a larger integer type to a smaller one (e.g., uint256 to uint128), the value may exceed the range of the target type,leading to truncation and loss of significant digits. Use OpenZeppelin's SafeCast library to safely downcast integers.",
+              "detector_name": "unsafe-casting",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 498,
+                  "src": "17459:10",
+                  "src_char": "17459:10"
+                }
+              ],
+              "title": "Unsafe Casting of integers"
+            },
+            {
+              "description": "This causes the transaction execution to halt, and nothing after that call will execute including code following the assembly block.",
+              "detector_name": "yul-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 288,
+                  "src": "10304:20",
+                  "src_char": "10304:20"
+                }
+              ],
+              "title": "Yul block contains `return`"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 2,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Consider removing empty blocks.",
+              "detector_name": "empty-block",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 748,
+                  "src": "25810:11",
+                  "src_char": "25810:11"
+                }
+              ],
+              "title": "Empty Block"
+            },
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 106,
+                  "src": "3558:14",
+                  "src_char": "3558:14"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 115,
+                  "src": "3879:11",
+                  "src_char": "3879:11"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 124,
+                  "src": "4181:14",
+                  "src_char": "4181:14"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 133,
+                  "src": "4497:14",
+                  "src_char": "4497:14"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 142,
+                  "src": "4818:14",
+                  "src_char": "4818:14"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 151,
+                  "src": "5130:14",
+                  "src_char": "5130:14"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 191,
+                  "src": "6526:4",
+                  "src_char": "6526:4"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 237,
+                  "src": "8190:7",
+                  "src_char": "8190:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 272,
+                  "src": "9568:12",
+                  "src_char": "9568:12"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 527,
+                  "src": "18300:10",
+                  "src_char": "18300:10"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 671,
+                  "src": "23183:7",
+                  "src_char": "23183:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 678,
+                  "src": "23396:7",
+                  "src_char": "23396:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicArrayLib.sol",
+                  "line_no": 685,
+                  "src": "23626:7",
+                  "src_char": "23626:7"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 379,
+    "summary": {
+      "High": 2,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 19,
+    "best_round": 5,
+    "best_total": 22,
+    "best_vuln": 0,
+    "code_bytes": 26139,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "cd7d675c8586fc5f8a12f02b583f7a7a42354ea398be663b0923a29a83f56fe5",
+    "skip_reason": null,
+    "sloc": 379,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:19.595872+00:00",
+  "eval": {
+    "best_round": 5,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/DynamicArrayLib.t.sol",
+    "expected_tests": 84,
+    "extract_error": null,
+    "forge_total": 84,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 81,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 143,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/DynamicArrayLib.sol",
+  "id": 143,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:08.525773+00:00",
+  "reused_from": "stats/aderyn/solagent/gpt-5-mini/0143__repository__solady__lib__solady__src__utils__DynamicArrayLib.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 3,
+  "test_pass": 81,
+  "test_source": "rq2_eval",
+  "test_total": 84
+}

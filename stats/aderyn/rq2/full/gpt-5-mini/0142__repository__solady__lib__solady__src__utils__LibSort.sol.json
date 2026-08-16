@@ -1,0 +1,284 @@
+{
+  "aderyn": {
+    "count": 1,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibSort.sol",
+        "-o",
+        "/tmp/aderyn_report_oofctqlx/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibSort.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibSort.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_oofctqlx/report.json\n\n🌱 Aderyn is growing with community support.\nHelp others discover it — drop a star on GitHub:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibSort.sol",
+              "n_sloc": 742
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 742,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 12,
+                  "src": "383:13",
+                  "src_char": "383:13"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 28,
+                  "src": "831:13",
+                  "src_char": "831:13"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 44,
+                  "src": "1290:13",
+                  "src_char": "1290:13"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 60,
+                  "src": "1767:13",
+                  "src_char": "1767:13"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 195,
+                  "src": "5870:12",
+                  "src_char": "5870:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 214,
+                  "src": "6592:12",
+                  "src_char": "6592:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 237,
+                  "src": "7423:12",
+                  "src_char": "7423:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 255,
+                  "src": "8084:12",
+                  "src_char": "8084:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 415,
+                  "src": "12860:8",
+                  "src_char": "12860:8"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 427,
+                  "src": "13228:8",
+                  "src_char": "13228:8"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 439,
+                  "src": "13596:8",
+                  "src_char": "13596:8"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 451,
+                  "src": "13983:8",
+                  "src_char": "13983:8"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 742,
+    "summary": {
+      "High": 0,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 64,
+    "best_round": 4,
+    "best_total": 66,
+    "best_vuln": 0,
+    "code_bytes": 32730,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "0d981905f975faae712fc31fac9cf5717e129c5fc65a9e5e5892037dc47d5960",
+    "skip_reason": null,
+    "sloc": 742,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:19.585343+00:00",
+  "eval": {
+    "best_round": 4,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibSort.t.sol",
+    "expected_tests": 49,
+    "extract_error": null,
+    "forge_total": 49,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 29,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 142,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+  "id": 142,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:08.502185+00:00",
+  "reused_from": "stats/aderyn/solagent/gpt-5-mini/0142__repository__solady__lib__solady__src__utils__LibSort.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 20,
+  "test_pass": 29,
+  "test_source": "rq2_eval",
+  "test_total": 49
+}

@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/MagicAnimalCarousel.sol",
+  "eval_full_pass": false,
+  "code_sha256": "a38add3a07fb45e1c0cc4865ab09428079ceafb5cf4e13ecc00696ed9445bd4c",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:55.015995+00:00",
+  "skip_reason": "not eval FullPass"
+}

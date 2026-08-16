@@ -1,0 +1,921 @@
+{
+  "conditional_compiled": [
+    {
+      "eligible": 32,
+      "loc_covered": 32,
+      "method": "RawModel",
+      "model": "claude-sonnet-4-5",
+      "scanned": 32,
+      "total_sloc": 4759,
+      "total_vulnerabilities": 119,
+      "vulnerabilities_per_kloc": 25.005253204454718,
+      "vulnerable_file_rate": 0.90625,
+      "vulnerable_files": 29
+    },
+    {
+      "eligible": 77,
+      "loc_covered": 77,
+      "method": "SolAgent",
+      "model": "claude-sonnet-4-5",
+      "scanned": 77,
+      "total_sloc": 16689,
+      "total_vulnerabilities": 278,
+      "vulnerabilities_per_kloc": 16.657678710527893,
+      "vulnerable_file_rate": 0.922077922077922,
+      "vulnerable_files": 71
+    },
+    {
+      "eligible": 29,
+      "loc_covered": 29,
+      "method": "MetaGPT",
+      "model": "claude-sonnet-4-5",
+      "scanned": 29,
+      "total_sloc": 4365,
+      "total_vulnerabilities": 95,
+      "vulnerabilities_per_kloc": 21.764032073310425,
+      "vulnerable_file_rate": 0.9310344827586207,
+      "vulnerable_files": 27
+    },
+    {
+      "eligible": 30,
+      "loc_covered": 30,
+      "method": "DeepCode",
+      "model": "claude-sonnet-4-5",
+      "scanned": 30,
+      "total_sloc": 4196,
+      "total_vulnerabilities": 128,
+      "vulnerabilities_per_kloc": 30.505243088655863,
+      "vulnerable_file_rate": 0.9666666666666667,
+      "vulnerable_files": 29
+    },
+    {
+      "eligible": 37,
+      "loc_covered": 37,
+      "method": "QwenAgent",
+      "model": "claude-sonnet-4-5",
+      "scanned": 37,
+      "total_sloc": 6580,
+      "total_vulnerabilities": 134,
+      "vulnerabilities_per_kloc": 20.364741641337385,
+      "vulnerable_file_rate": 0.918918918918919,
+      "vulnerable_files": 34
+    },
+    {
+      "eligible": 26,
+      "loc_covered": 26,
+      "method": "Copilot",
+      "model": "claude-sonnet-4-5",
+      "scanned": 26,
+      "total_sloc": 3061,
+      "total_vulnerabilities": 105,
+      "vulnerabilities_per_kloc": 34.302515517804636,
+      "vulnerable_file_rate": 0.9615384615384616,
+      "vulnerable_files": 25
+    },
+    {
+      "eligible": 26,
+      "loc_covered": 26,
+      "method": "RawModel",
+      "model": "gpt-5-mini",
+      "scanned": 26,
+      "total_sloc": 3417,
+      "total_vulnerabilities": 96,
+      "vulnerabilities_per_kloc": 28.09482001755926,
+      "vulnerable_file_rate": 0.9230769230769231,
+      "vulnerable_files": 24
+    },
+    {
+      "eligible": 73,
+      "loc_covered": 73,
+      "method": "SolAgent",
+      "model": "gpt-5-mini",
+      "scanned": 73,
+      "total_sloc": 12886,
+      "total_vulnerabilities": 285,
+      "vulnerabilities_per_kloc": 22.11702623001707,
+      "vulnerable_file_rate": 0.958904109589041,
+      "vulnerable_files": 70
+    },
+    {
+      "eligible": 23,
+      "loc_covered": 22,
+      "method": "MetaGPT",
+      "model": "gpt-5-mini",
+      "scanned": 22,
+      "total_sloc": 2098,
+      "total_vulnerabilities": 83,
+      "vulnerabilities_per_kloc": 39.561487130600575,
+      "vulnerable_file_rate": 0.9545454545454546,
+      "vulnerable_files": 21
+    },
+    {
+      "eligible": 29,
+      "loc_covered": 29,
+      "method": "DeepCode",
+      "model": "gpt-5-mini",
+      "scanned": 29,
+      "total_sloc": 3651,
+      "total_vulnerabilities": 114,
+      "vulnerabilities_per_kloc": 31.22432210353328,
+      "vulnerable_file_rate": 1.0,
+      "vulnerable_files": 29
+    },
+    {
+      "eligible": 30,
+      "loc_covered": 30,
+      "method": "QwenAgent",
+      "model": "gpt-5-mini",
+      "scanned": 30,
+      "total_sloc": 4196,
+      "total_vulnerabilities": 101,
+      "vulnerabilities_per_kloc": 24.070543374642515,
+      "vulnerable_file_rate": 0.9666666666666667,
+      "vulnerable_files": 29
+    },
+    {
+      "eligible": 31,
+      "loc_covered": 31,
+      "method": "Copilot",
+      "model": "gpt-5-mini",
+      "scanned": 31,
+      "total_sloc": 4606,
+      "total_vulnerabilities": 110,
+      "vulnerabilities_per_kloc": 23.881893182805037,
+      "vulnerable_file_rate": 0.967741935483871,
+      "vulnerable_files": 30
+    },
+    {
+      "eligible": 33,
+      "loc_covered": 33,
+      "method": "RawModel",
+      "model": "gpt-5.1",
+      "scanned": 33,
+      "total_sloc": 7803,
+      "total_vulnerabilities": 127,
+      "vulnerabilities_per_kloc": 16.27579136229655,
+      "vulnerable_file_rate": 0.9696969696969697,
+      "vulnerable_files": 32
+    },
+    {
+      "eligible": 74,
+      "loc_covered": 74,
+      "method": "SolAgent",
+      "model": "gpt-5.1",
+      "scanned": 74,
+      "total_sloc": 18920,
+      "total_vulnerabilities": 257,
+      "vulnerabilities_per_kloc": 13.583509513742072,
+      "vulnerable_file_rate": 0.918918918918919,
+      "vulnerable_files": 68
+    },
+    {
+      "eligible": 28,
+      "loc_covered": 28,
+      "method": "MetaGPT",
+      "model": "gpt-5.1",
+      "scanned": 28,
+      "total_sloc": 5392,
+      "total_vulnerabilities": 93,
+      "vulnerabilities_per_kloc": 17.247774480712167,
+      "vulnerable_file_rate": 0.9285714285714286,
+      "vulnerable_files": 26
+    },
+    {
+      "eligible": 33,
+      "loc_covered": 33,
+      "method": "DeepCode",
+      "model": "gpt-5.1",
+      "scanned": 33,
+      "total_sloc": 6569,
+      "total_vulnerabilities": 121,
+      "vulnerabilities_per_kloc": 18.41985081443142,
+      "vulnerable_file_rate": 0.9393939393939394,
+      "vulnerable_files": 31
+    },
+    {
+      "eligible": 30,
+      "loc_covered": 30,
+      "method": "QwenAgent",
+      "model": "gpt-5.1",
+      "scanned": 30,
+      "total_sloc": 6595,
+      "total_vulnerabilities": 115,
+      "vulnerabilities_per_kloc": 17.437452615617893,
+      "vulnerable_file_rate": 0.9666666666666667,
+      "vulnerable_files": 29
+    },
+    {
+      "eligible": 27,
+      "loc_covered": 27,
+      "method": "Copilot",
+      "model": "gpt-5.1",
+      "scanned": 27,
+      "total_sloc": 4548,
+      "total_vulnerabilities": 96,
+      "vulnerabilities_per_kloc": 21.108179419525065,
+      "vulnerable_file_rate": 0.9629629629629629,
+      "vulnerable_files": 26
+    }
+  ],
+  "conditional_full_pass": [
+    {
+      "eligible": 18,
+      "loc_covered": 18,
+      "method": "RawModel",
+      "model": "claude-sonnet-4-5",
+      "scanned": 18,
+      "total_sloc": 2472,
+      "total_vulnerabilities": 76,
+      "vulnerabilities_per_kloc": 30.74433656957929,
+      "vulnerable_file_rate": 0.8888888888888888,
+      "vulnerable_files": 16
+    },
+    {
+      "eligible": 41,
+      "loc_covered": 41,
+      "method": "SolAgent",
+      "model": "claude-sonnet-4-5",
+      "scanned": 41,
+      "total_sloc": 5839,
+      "total_vulnerabilities": 168,
+      "vulnerabilities_per_kloc": 28.77205000856311,
+      "vulnerable_file_rate": 0.9024390243902439,
+      "vulnerable_files": 37
+    },
+    {
+      "eligible": 15,
+      "loc_covered": 15,
+      "method": "MetaGPT",
+      "model": "claude-sonnet-4-5",
+      "scanned": 15,
+      "total_sloc": 1338,
+      "total_vulnerabilities": 59,
+      "vulnerabilities_per_kloc": 44.095665171898354,
+      "vulnerable_file_rate": 0.9333333333333333,
+      "vulnerable_files": 14
+    },
+    {
+      "eligible": 16,
+      "loc_covered": 16,
+      "method": "DeepCode",
+      "model": "claude-sonnet-4-5",
+      "scanned": 16,
+      "total_sloc": 992,
+      "total_vulnerabilities": 71,
+      "vulnerabilities_per_kloc": 71.5725806451613,
+      "vulnerable_file_rate": 0.9375,
+      "vulnerable_files": 15
+    },
+    {
+      "eligible": 18,
+      "loc_covered": 18,
+      "method": "QwenAgent",
+      "model": "claude-sonnet-4-5",
+      "scanned": 18,
+      "total_sloc": 2608,
+      "total_vulnerabilities": 76,
+      "vulnerabilities_per_kloc": 29.141104294478527,
+      "vulnerable_file_rate": 0.9444444444444444,
+      "vulnerable_files": 17
+    },
+    {
+      "eligible": 17,
+      "loc_covered": 17,
+      "method": "Copilot",
+      "model": "claude-sonnet-4-5",
+      "scanned": 17,
+      "total_sloc": 1276,
+      "total_vulnerabilities": 72,
+      "vulnerabilities_per_kloc": 56.426332288401255,
+      "vulnerable_file_rate": 0.9411764705882353,
+      "vulnerable_files": 16
+    },
+    {
+      "eligible": 10,
+      "loc_covered": 10,
+      "method": "RawModel",
+      "model": "gpt-5-mini",
+      "scanned": 10,
+      "total_sloc": 559,
+      "total_vulnerabilities": 50,
+      "vulnerabilities_per_kloc": 89.44543828264759,
+      "vulnerable_file_rate": 0.9,
+      "vulnerable_files": 9
+    },
+    {
+      "eligible": 33,
+      "loc_covered": 33,
+      "method": "SolAgent",
+      "model": "gpt-5-mini",
+      "scanned": 33,
+      "total_sloc": 3469,
+      "total_vulnerabilities": 141,
+      "vulnerabilities_per_kloc": 40.64571922744307,
+      "vulnerable_file_rate": 0.9090909090909091,
+      "vulnerable_files": 30
+    },
+    {
+      "eligible": 7,
+      "loc_covered": 7,
+      "method": "MetaGPT",
+      "model": "gpt-5-mini",
+      "scanned": 7,
+      "total_sloc": 580,
+      "total_vulnerabilities": 35,
+      "vulnerabilities_per_kloc": 60.3448275862069,
+      "vulnerable_file_rate": 0.8571428571428571,
+      "vulnerable_files": 6
+    },
+    {
+      "eligible": 9,
+      "loc_covered": 9,
+      "method": "DeepCode",
+      "model": "gpt-5-mini",
+      "scanned": 9,
+      "total_sloc": 881,
+      "total_vulnerabilities": 43,
+      "vulnerabilities_per_kloc": 48.80817253121453,
+      "vulnerable_file_rate": 1.0,
+      "vulnerable_files": 9
+    },
+    {
+      "eligible": 13,
+      "loc_covered": 13,
+      "method": "QwenAgent",
+      "model": "gpt-5-mini",
+      "scanned": 13,
+      "total_sloc": 1392,
+      "total_vulnerabilities": 56,
+      "vulnerabilities_per_kloc": 40.229885057471265,
+      "vulnerable_file_rate": 0.9230769230769231,
+      "vulnerable_files": 12
+    },
+    {
+      "eligible": 11,
+      "loc_covered": 11,
+      "method": "Copilot",
+      "model": "gpt-5-mini",
+      "scanned": 11,
+      "total_sloc": 1086,
+      "total_vulnerabilities": 51,
+      "vulnerabilities_per_kloc": 46.96132596685083,
+      "vulnerable_file_rate": 0.9090909090909091,
+      "vulnerable_files": 10
+    },
+    {
+      "eligible": 12,
+      "loc_covered": 12,
+      "method": "RawModel",
+      "model": "gpt-5.1",
+      "scanned": 12,
+      "total_sloc": 957,
+      "total_vulnerabilities": 49,
+      "vulnerabilities_per_kloc": 51.20167189132707,
+      "vulnerable_file_rate": 0.9166666666666666,
+      "vulnerable_files": 11
+    },
+    {
+      "eligible": 26,
+      "loc_covered": 26,
+      "method": "SolAgent",
+      "model": "gpt-5.1",
+      "scanned": 26,
+      "total_sloc": 2753,
+      "total_vulnerabilities": 107,
+      "vulnerabilities_per_kloc": 38.866690882673446,
+      "vulnerable_file_rate": 0.8461538461538461,
+      "vulnerable_files": 22
+    },
+    {
+      "eligible": 8,
+      "loc_covered": 8,
+      "method": "MetaGPT",
+      "model": "gpt-5.1",
+      "scanned": 8,
+      "total_sloc": 731,
+      "total_vulnerabilities": 37,
+      "vulnerabilities_per_kloc": 50.6155950752394,
+      "vulnerable_file_rate": 0.875,
+      "vulnerable_files": 7
+    },
+    {
+      "eligible": 9,
+      "loc_covered": 9,
+      "method": "DeepCode",
+      "model": "gpt-5.1",
+      "scanned": 9,
+      "total_sloc": 455,
+      "total_vulnerabilities": 39,
+      "vulnerabilities_per_kloc": 85.71428571428571,
+      "vulnerable_file_rate": 0.8888888888888888,
+      "vulnerable_files": 8
+    },
+    {
+      "eligible": 12,
+      "loc_covered": 12,
+      "method": "QwenAgent",
+      "model": "gpt-5.1",
+      "scanned": 12,
+      "total_sloc": 666,
+      "total_vulnerabilities": 59,
+      "vulnerabilities_per_kloc": 88.58858858858859,
+      "vulnerable_file_rate": 0.9166666666666666,
+      "vulnerable_files": 11
+    },
+    {
+      "eligible": 11,
+      "loc_covered": 11,
+      "method": "Copilot",
+      "model": "gpt-5.1",
+      "scanned": 11,
+      "total_sloc": 1086,
+      "total_vulnerabilities": 46,
+      "vulnerabilities_per_kloc": 42.3572744014733,
+      "vulnerable_file_rate": 0.9090909090909091,
+      "vulnerable_files": 10
+    }
+  ],
+  "paired_solagent_vs_baselines": [
+    {
+      "baseline": "RawModel",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 2.4691358024691357,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.5,
+      "model": "claude-sonnet-4-5",
+      "net_gain": 2,
+      "solagent_only": 2
+    },
+    {
+      "baseline": "MetaGPT",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "claude-sonnet-4-5",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "DeepCode",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "claude-sonnet-4-5",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "QwenAgent",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "claude-sonnet-4-5",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "Copilot",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "claude-sonnet-4-5",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "RawModel",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 2.4691358024691357,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.5,
+      "model": "gpt-5-mini",
+      "net_gain": 2,
+      "solagent_only": 2
+    },
+    {
+      "baseline": "MetaGPT",
+      "baseline_only": 1,
+      "common_files": 81,
+      "delta_percentage_points": 2.4691358024691357,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.625,
+      "model": "gpt-5-mini",
+      "net_gain": 2,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "DeepCode",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "gpt-5-mini",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "QwenAgent",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 2.4691358024691357,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.5,
+      "model": "gpt-5-mini",
+      "net_gain": 2,
+      "solagent_only": 2
+    },
+    {
+      "baseline": "Copilot",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 2.4691358024691357,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.5,
+      "model": "gpt-5-mini",
+      "net_gain": 2,
+      "solagent_only": 2
+    },
+    {
+      "baseline": "RawModel",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "gpt-5.1",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "MetaGPT",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "gpt-5.1",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "DeepCode",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "gpt-5.1",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "QwenAgent",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "gpt-5.1",
+      "net_gain": 3,
+      "solagent_only": 3
+    },
+    {
+      "baseline": "Copilot",
+      "baseline_only": 0,
+      "common_files": 81,
+      "delta_percentage_points": 3.7037037037037033,
+      "holm_p": 1.0,
+      "holm_significant_0_05": false,
+      "mcnemar_p": 0.25,
+      "model": "gpt-5.1",
+      "net_gain": 3,
+      "solagent_only": 3
+    }
+  ],
+  "primary": [
+    {
+      "attempted": 81,
+      "compiled": 32,
+      "full_pass": 18,
+      "method": "RawModel",
+      "model": "claude-sonnet-4-5",
+      "safe_at_full_pass": 0.1111111111111111,
+      "safe_full_pass": 2,
+      "secure_pass_at_1": 0.024691358024691357,
+      "wilson_ci": [
+        0.006797587423664028,
+        0.08562725922196524
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 77,
+      "full_pass": 41,
+      "method": "SolAgent",
+      "model": "claude-sonnet-4-5",
+      "safe_at_full_pass": 0.0975609756097561,
+      "safe_full_pass": 4,
+      "secure_pass_at_1": 0.04938271604938271,
+      "wilson_ci": [
+        0.01936930555403383,
+        0.1202023023048095
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 29,
+      "full_pass": 15,
+      "method": "MetaGPT",
+      "model": "claude-sonnet-4-5",
+      "safe_at_full_pass": 0.06666666666666667,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 30,
+      "full_pass": 16,
+      "method": "DeepCode",
+      "model": "claude-sonnet-4-5",
+      "safe_at_full_pass": 0.0625,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 37,
+      "full_pass": 18,
+      "method": "QwenAgent",
+      "model": "claude-sonnet-4-5",
+      "safe_at_full_pass": 0.05555555555555555,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 26,
+      "full_pass": 17,
+      "method": "Copilot",
+      "model": "claude-sonnet-4-5",
+      "safe_at_full_pass": 0.058823529411764705,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 26,
+      "full_pass": 10,
+      "method": "RawModel",
+      "model": "gpt-5-mini",
+      "safe_at_full_pass": 0.1,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 73,
+      "full_pass": 33,
+      "method": "SolAgent",
+      "model": "gpt-5-mini",
+      "safe_at_full_pass": 0.09090909090909091,
+      "safe_full_pass": 3,
+      "secure_pass_at_1": 0.037037037037037035,
+      "wilson_ci": [
+        0.012675114183298107,
+        0.10332311306893818
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 23,
+      "full_pass": 7,
+      "method": "MetaGPT",
+      "model": "gpt-5-mini",
+      "safe_at_full_pass": 0.14285714285714285,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 29,
+      "full_pass": 9,
+      "method": "DeepCode",
+      "model": "gpt-5-mini",
+      "safe_at_full_pass": 0.0,
+      "safe_full_pass": 0,
+      "secure_pass_at_1": 0.0,
+      "wilson_ci": [
+        0.0,
+        0.045278085432415204
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 30,
+      "full_pass": 13,
+      "method": "QwenAgent",
+      "model": "gpt-5-mini",
+      "safe_at_full_pass": 0.07692307692307693,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 31,
+      "full_pass": 11,
+      "method": "Copilot",
+      "model": "gpt-5-mini",
+      "safe_at_full_pass": 0.09090909090909091,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 33,
+      "full_pass": 12,
+      "method": "RawModel",
+      "model": "gpt-5.1",
+      "safe_at_full_pass": 0.08333333333333333,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 74,
+      "full_pass": 26,
+      "method": "SolAgent",
+      "model": "gpt-5.1",
+      "safe_at_full_pass": 0.15384615384615385,
+      "safe_full_pass": 4,
+      "secure_pass_at_1": 0.04938271604938271,
+      "wilson_ci": [
+        0.01936930555403383,
+        0.1202023023048095
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 28,
+      "full_pass": 8,
+      "method": "MetaGPT",
+      "model": "gpt-5.1",
+      "safe_at_full_pass": 0.125,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 33,
+      "full_pass": 9,
+      "method": "DeepCode",
+      "model": "gpt-5.1",
+      "safe_at_full_pass": 0.1111111111111111,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 30,
+      "full_pass": 12,
+      "method": "QwenAgent",
+      "model": "gpt-5.1",
+      "safe_at_full_pass": 0.08333333333333333,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    },
+    {
+      "attempted": 81,
+      "compiled": 27,
+      "full_pass": 11,
+      "method": "Copilot",
+      "model": "gpt-5.1",
+      "safe_at_full_pass": 0.09090909090909091,
+      "safe_full_pass": 1,
+      "secure_pass_at_1": 0.012345679012345678,
+      "wilson_ci": [
+        0.0021826500585387723,
+        0.06666881598048346
+      ]
+    }
+  ],
+  "solagent_advantage_vs_best_baseline": [
+    {
+      "absolute_safe_full_pass_gain": 2,
+      "best_baseline": "RawModel",
+      "best_baseline_full_pass": 18,
+      "best_baseline_safe_at_full_pass": 0.1111111111111111,
+      "best_baseline_safe_full_pass": 2,
+      "best_baseline_secure_pass_at_1": 0.024691358024691357,
+      "model": "claude-sonnet-4-5",
+      "safe_at_full_pass_gain_percentage_points": -1.3550135501355003,
+      "secure_pass_gain_percentage_points": 2.4691358024691357,
+      "solagent_full_pass": 41,
+      "solagent_safe_at_full_pass": 0.0975609756097561,
+      "solagent_safe_full_pass": 4,
+      "solagent_secure_pass_at_1": 0.04938271604938271
+    },
+    {
+      "absolute_safe_full_pass_gain": 2,
+      "best_baseline": "RawModel",
+      "best_baseline_full_pass": 10,
+      "best_baseline_safe_at_full_pass": 0.1,
+      "best_baseline_safe_full_pass": 1,
+      "best_baseline_secure_pass_at_1": 0.012345679012345678,
+      "model": "gpt-5-mini",
+      "safe_at_full_pass_gain_percentage_points": -0.9090909090909094,
+      "secure_pass_gain_percentage_points": 2.4691358024691357,
+      "solagent_full_pass": 33,
+      "solagent_safe_at_full_pass": 0.09090909090909091,
+      "solagent_safe_full_pass": 3,
+      "solagent_secure_pass_at_1": 0.037037037037037035
+    },
+    {
+      "absolute_safe_full_pass_gain": 3,
+      "best_baseline": "RawModel",
+      "best_baseline_full_pass": 12,
+      "best_baseline_safe_at_full_pass": 0.08333333333333333,
+      "best_baseline_safe_full_pass": 1,
+      "best_baseline_secure_pass_at_1": 0.012345679012345678,
+      "model": "gpt-5.1",
+      "safe_at_full_pass_gain_percentage_points": 7.051282051282053,
+      "secure_pass_gain_percentage_points": 3.7037037037037033,
+      "solagent_full_pass": 26,
+      "solagent_safe_at_full_pass": 0.15384615384615385,
+      "solagent_safe_full_pass": 4,
+      "solagent_secure_pass_at_1": 0.04938271604938271
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 0,
+      "failed_sols": 1,
+      "skipped_sols": 0,
+      "expected_checks": 1,
+      "proved_checks": 0,
+      "failed_checks": 1,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {
+        "not_concrete_symbolic_memory": 1
+      }
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 0,
+        "failed_sols": 1,
+        "skipped_sols": 0,
+        "expected_checks": 1,
+        "proved_checks": 0,
+        "failed_checks": 1,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {
+          "not_concrete_symbolic_memory": 1
+        }
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 1,
+        "passed_methods": 0,
+        "failed_methods": 1,
+        "status_counts": {
+          "FAIL": 1
+        },
+        "pass_rate": 0.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 1,
+          "passed_methods": 0,
+          "failed_methods": 1,
+          "status_counts": {
+            "FAIL": 1
+          },
+          "pass_rate": 0.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/EnumerableSetLib.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/EnumerableSetLib.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol"
+      ],
+      "test_names": [
+        "test_EnumerableSetLib_property_uint8_values_at_7"
+      ],
+      "check_names": [
+        "check_EnumerableSetLib_property_uint8_values_at_7"
+      ],
+      "methods_count": 1,
+      "manifest_skipped_checks": 30,
+      "skipped_checks": 0,
+      "expected_checks": 1,
+      "expected_tests": 1,
+      "proved_checks": 0,
+      "failed_checks": 1,
+      "timeouts": 0,
+      "proved": false,
+      "ok": false,
+      "failed_check_names": [
+        "check_EnumerableSetLib_property_uint8_values_at_7"
+      ],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_EnumerableSetLib_property_uint8_values_at_7": "FAIL"
+      },
+      "compile_error": null,
+      "counterexamples": [
+        "[ERROR] check_EnumerableSetLib_property_uint8_values_at_7(uint8) (paths: 9, time: 0.24s, bounds: [])"
+      ],
+      "unsupported_error": "WARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nnot been fully explored due to the loop unrolling bound: 2",
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/EnumerableSetLib.sol",
+          "class_name": "EnumerableSetLib",
+          "class_kind": "library",
+          "method_name": "values",
+          "visibility": "internal",
+          "full_signature": "function values(Uint8Set storage set) internal view returns (uint8[] memory result)",
+          "checks": [
+            {
+              "check_name": "check_EnumerableSetLib_property_uint8_values_at_7",
+              "test_name": "test_EnumerableSetLib_property_uint8_values_at_7",
+              "attribution": "target_wrapper_name",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 1,
+        "passed_methods": 0,
+        "failed_methods": 1,
+        "status_counts": {
+          "FAIL": 1
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_EnumerableSetLib_property_uint8_values_at_7(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output",
+        "--storage-layout",
+        "generic"
+      ],
+      "halmos_returncode": 1,
+      "halmos_stdout": "Compiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 632.10ms\nCompiler run successful with warnings:\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:492:9:\n    |\n492 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:493:9:\n    |\n493 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:506:9:\n    |\n506 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:507:9:\n    |\n507 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:540:9:\n    |\n540 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:541:9:\n    |\n541 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:554:9:\n    |\n554 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:555:9:\n    |\n555 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:568:9:\n    |\n568 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:569:9:\n    |\n569 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:590:9:\n    |\n590 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:591:9:\n    |\n591 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:628:9:\n    |\n628 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_remove_15.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:629:9:\n    |\n629 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_remove_15.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:634:9:\n    |\n634 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:635:9:\n    |\n635 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:672:9:\n    |\n672 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_remove_16.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:673:9:\n    |\n673 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_remove_16.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:678:9:\n    |\n678 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:679:9:\n    |\n679 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:717:9:\n    |\n717 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_remove_18.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:718:9:\n    |\n718 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_remove_18.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:724:9:\n    |\n724 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_13.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:725:9:\n    |\n725 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_13.selector, cleaned));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:883:9:\n    |\n883 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:884:9:\n    |\n884 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:892:9:\n    |\n892 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:893:9:\n    |\n893 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:902:9:\n    |\n902 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:903:9:\n    |\n903 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:911:9:\n    |\n911 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:912:9:\n    |\n912 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_10.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:920:9:\n    |\n920 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:921:9:\n    |\n921 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_11.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:929:9:\n    |\n929 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:930:9:\n    |\n930 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_12.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:939:9:\n    |\n939 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:940:9:\n    |\n940 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_13.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:948:9:\n    |\n948 |         address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (9302): Return value of low-level calls not used.\n   --> test/EnumerableSetLib.t.sol:949:9:\n    |\n949 |         address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_add_14.selector, value));\n    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:24:5:\n   |\n24 |     function ref_call_length_0() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:27:5:\n   |\n27 |     function ref_call_length_0_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:30:5:\n   |\n30 |     function ref_call_length_1() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:33:5:\n   |\n33 |     function ref_call_length_1_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:36:5:\n   |\n36 |     function ref_call_length_2() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:39:5:\n   |\n39 |     function ref_call_length_2_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:42:5:\n   |\n42 |     function ref_call_length_3() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:45:5:\n   |\n45 |     function ref_call_length_3_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:48:5:\n   |\n48 |     function ref_call_length_4() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:51:5:\n   |\n51 |     function ref_call_length_4_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:54:5:\n   |\n54 |     function ref_call_contains_5(address value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:57:5:\n   |\n57 |     function ref_call_contains_5_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:60:5:\n   |\n60 |     function ref_call_contains_6(bytes32 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:63:5:\n   |\n63 |     function ref_call_contains_6_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:66:5:\n   |\n66 |     function ref_call_contains_7(uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:69:5:\n   |\n69 |     function ref_call_contains_7_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:72:5:\n   |\n72 |     function ref_call_contains_8(int256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:75:5:\n   |\n75 |     function ref_call_contains_8_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:78:5:\n   |\n78 |     function ref_call_contains_9(uint8 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:81:5:\n   |\n81 |     function ref_call_contains_9_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:87:5:\n   |\n87 |     function ref_call_add_10_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:93:5:\n   |\n93 |     function ref_call_add_11_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/EnumerableSetLib.t.sol:99:5:\n   |\n99 |     function ref_call_add_12_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:105:5:\n    |\n105 |     function ref_call_add_13_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:111:5:\n    |\n111 |     function ref_call_add_14_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EnumerableSetLib.t.sol:117:5:\n    |\n117 |     function ref_call_remove_15_state() ex\n...[truncated 26395 chars]",
+      "halmos_stderr": "",
+      "halmos_json_error": null,
+      "failure_category": "not_concrete_symbolic_memory"
+    }
+  ]
+}

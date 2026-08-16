@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 4,
+      "proved_checks": 4,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 4,
+        "proved_checks": 4,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 4,
+        "passed_methods": 4,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 4
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 4,
+          "passed_methods": 4,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 4
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/CREATE3.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/CREATE3.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/CREATE3.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/CREATE3.sol"
+      ],
+      "test_names": [
+        "test_CREATE3_predictDeterministicAddress_2",
+        "test_CREATE3_predictDeterministicAddress_3",
+        "test_CREATE3_property_deploy_wrapped_initcode_0",
+        "test_CREATE3_property_deploy_value_wrapped_initcode_1"
+      ],
+      "check_names": [
+        "check_CREATE3_predictDeterministicAddress_2",
+        "check_CREATE3_predictDeterministicAddress_3",
+        "check_CREATE3_property_deploy_wrapped_initcode_0",
+        "check_CREATE3_property_deploy_value_wrapped_initcode_1"
+      ],
+      "methods_count": 4,
+      "manifest_skipped_checks": 4,
+      "skipped_checks": 0,
+      "expected_checks": 4,
+      "expected_tests": 4,
+      "proved_checks": 4,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_CREATE3_predictDeterministicAddress_2": "PASS",
+        "check_CREATE3_predictDeterministicAddress_3": "PASS",
+        "check_CREATE3_property_deploy_wrapped_initcode_0": "PASS",
+        "check_CREATE3_property_deploy_value_wrapped_initcode_1": "PASS"
+      },
+      "compile_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/CREATE3.sol",
+          "class_name": "CREATE3",
+          "class_kind": "library",
+          "method_name": "deployDeterministic",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministic(bytes memory initCode, bytes32 salt) internal returns (address deployed)",
+          "checks": [
+            {
+              "check_name": "check_CREATE3_property_deploy_wrapped_initcode_0",
+              "test_name": "test_CREATE3_property_deploy_wrapped_initcode_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/CREATE3.sol",
+          "class_name": "CREATE3",
+          "class_kind": "library",
+          "method_name": "deployDeterministic",
+          "visibility": "internal",
+          "full_signature": "function deployDeterministic(uint256 value, bytes memory initCode, bytes32 salt) internal returns (address deployed)",
+          "checks": [
+            {
+              "check_name": "check_CREATE3_property_deploy_value_wrapped_initcode_1",
+              "test_name": "test_CREATE3_property_deploy_value_wrapped_initcode_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/CREATE3.sol",
+          "class_name": "CREATE3",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddress",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddress(bytes32 salt) internal view returns (address deployed)",
+          "checks": [
+            {
+              "check_name": "check_CREATE3_predictDeterministicAddress_2",
+              "test_name": "test_CREATE3_predictDeterministicAddress_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/CREATE3.sol",
+          "class_name": "CREATE3",
+          "class_kind": "library",
+          "method_name": "predictDeterministicAddress",
+          "visibility": "internal",
+          "full_signature": "function predictDeterministicAddress(bytes32 salt, address deployer) internal pure returns (address deployed)",
+          "checks": [
+            {
+              "check_name": "check_CREATE3_predictDeterministicAddress_3",
+              "test_name": "test_CREATE3_predictDeterministicAddress_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 4,
+        "passed_methods": 4,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 4
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_CREATE3_predictDeterministicAddress_2(?:\\(.*\\))?|check_CREATE3_predictDeterministicAddress_3(?:\\(.*\\))?|check_CREATE3_property_deploy_wrapped_initcode_0(?:\\(.*\\))?|check_CREATE3_property_deploy_value_wrapped_initcode_1(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "Compiling 1 files with Solc 0.8.28\nSolc 0.8.28 finished in 141.18ms\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to view\n  --> test/CREATE3.t.sol:20:5:\n   |\n20 |     function ref_call_predictDeterministicAddress_2(bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/CREATE3.t.sol:23:5:\n   |\n23 |     function ref_call_predictDeterministicAddress_3(bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/CREATE3.t.sol:32:5:\n   |\n32 |     function gen_call_predictDeterministicAddress_2(bytes32 salt) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/CREATE3.t.sol:35:5:\n   |\n35 |     function gen_call_predictDeterministicAddress_3(bytes32 salt, address deployer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 4 tests for test/CREATE3.t.sol:CREATE3EquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_CREATE3_predictDeterministicAddress_2(bytes32) (paths: 1, time: 0.02s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_CREATE3_predictDeterministicAddress_3(bytes32,address) (paths: 2, time: 0.02s, bounds: [])\nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, p_bytecode_bytes_3bb5010_00)   \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, p_bytecode_bytes_3bb5010_00)   \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, p_bytecode_bytes_3bb5010_00)   \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, Extract(0x1fff, 0x1df8,        \n         p_bytecode_bytes_3bb5010_00))                                          \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, Extract(0x1fff, 0x1df8,        \n         p_bytecode_bytes_3bb5010_00))                                          \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, Extract(0x1fff, 0x1df8,        \n         p_bytecode_bytes_3bb5010_00))                                          \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x00                                        \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x00                                        \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x00                                        \n\u001b[32m[PASS]\u001b[0m check_CREATE3_property_deploy_value_wrapped_initcode_1(uint256,bytes,bytes32) (paths: 9, time: 0.18s, bounds: [bytecode=[0, 65, 1024]])\nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, p_bytecode_bytes_d0e967c_00)   \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, p_bytecode_bytes_d0e967c_00)   \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, Extract(0x1fff, 0x1df8,        \n         p_bytecode_bytes_d0e967c_00))                                          \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: Concat(0x00, Extract(0x1fff, 0x1df8,        \n         p_bytecode_bytes_d0e967c_00))                                          \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x00                                        \nWARNING  unknown deployed bytecode: 0x363d3d37363d34f0                          \nWARNING  unknown deployed bytecode: 0x00                                        \n\u001b[32m[PASS]\u001b[0m check_CREATE3_property_deploy_wrapped_initcode_0(bytes,bytes32) (paths: 3, time: 0.08s, bounds: [bytecode=[0, 65, 1024]])\nSymbolic test result: 4 passed; 0 failed; time: 0.32s\n",
+      "halmos_stderr": "",
+      "halmos_json_error": null,
+      "failure_category": null
+    }
+  ]
+}

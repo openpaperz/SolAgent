@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 16886,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "36f82bac9c33ab2020e65764df567aaadd4126196e45189cbb794a76eb358a72",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 353,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:45.318471+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (6275): Source \"src/internal/internal/Core.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades\".\nParserError: Source \"src/internal/internal/Core.sol\" not found: File not found. Searched the following locations: \"/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades\".\n --> src/internal/DefenderDeploy.solagent_gen.sol:8:1:\n  |\n8 | import {Core} from \"./internal/Core.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/test/internal/DefenderDeploy.t.sol",
+    "expected_tests": 5,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 421,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+  "id": 421,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:11.118420+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "skipped",
+  "table": "process_tracking_ablation",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

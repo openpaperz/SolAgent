@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "OpenCode",
+  "file_path": "repository/solady/lib/solady/src/utils/UUPSUpgradeable.sol",
+  "eval_full_pass": false,
+  "code_sha256": "b7a240b2266ac629ce5b8187043a05a1d5d324738d54f66fe863801b5eba7836",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:59.750833+00:00",
+  "skip_reason": "not eval FullPass"
+}

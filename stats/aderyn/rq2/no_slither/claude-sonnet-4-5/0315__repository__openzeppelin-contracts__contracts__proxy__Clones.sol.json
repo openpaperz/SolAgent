@@ -1,0 +1,460 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/proxy/Clones.sol",
+        "-o",
+        "/tmp/aderyn_report_vlfrfg47/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/proxy/Clones.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n--------------------------------------------------------------------------------\n# Configuration\n--------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n--------------------------------------------------------------------------------\n# Source Scope\n--------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/proxy/Clones.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n--------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n--------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n--------------------------------------------------------------------------------\n# Scanning Contracts\n--------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_vlfrfg47/report.json\n\n🌱 Aderyn is growing with community support.\nHelp others discover it — drop a star on GitHub:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/proxy/Clones.sol",
+              "n_sloc": 156
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 156,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Example: `shl(shifted, 4)` will shift the right constant `4` by `a` bits. The correct order is `shl(4, shifted)`.",
+              "detector_name": "incorrect-shift-order",
+              "instances": [
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 395,
+                  "src": "21181:15",
+                  "src_char": "21181:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 397,
+                  "src": "21312:15",
+                  "src_char": "21312:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 398,
+                  "src": "21378:15",
+                  "src_char": "21378:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 399,
+                  "src": "21445:15",
+                  "src_char": "21445:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 400,
+                  "src": "21514:15",
+                  "src_char": "21514:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 402,
+                  "src": "21645:15",
+                  "src_char": "21645:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 403,
+                  "src": "21711:15",
+                  "src_char": "21711:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 404,
+                  "src": "21778:15",
+                  "src_char": "21778:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 411,
+                  "src": "22090:15",
+                  "src_char": "22090:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 413,
+                  "src": "22224:15",
+                  "src_char": "22224:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 414,
+                  "src": "22293:15",
+                  "src_char": "22293:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 415,
+                  "src": "22363:15",
+                  "src_char": "22363:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 416,
+                  "src": "22432:15",
+                  "src_char": "22432:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 417,
+                  "src": "22500:15",
+                  "src_char": "22500:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 420,
+                  "src": "22664:15",
+                  "src_char": "22664:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 421,
+                  "src": "22733:15",
+                  "src_char": "22733:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 422,
+                  "src": "22792:15",
+                  "src_char": "22792:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 423,
+                  "src": "22868:15",
+                  "src_char": "22868:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 424,
+                  "src": "22937:15",
+                  "src_char": "22937:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 425,
+                  "src": "22996:15",
+                  "src_char": "22996:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 428,
+                  "src": "23115:15",
+                  "src_char": "23115:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 432,
+                  "src": "23299:15",
+                  "src_char": "23299:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 433,
+                  "src": "23366:15",
+                  "src_char": "23366:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 436,
+                  "src": "23522:15",
+                  "src_char": "23522:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 437,
+                  "src": "23600:15",
+                  "src_char": "23600:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 438,
+                  "src": "23669:15",
+                  "src_char": "23669:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 439,
+                  "src": "23728:15",
+                  "src_char": "23728:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 440,
+                  "src": "23797:15",
+                  "src_char": "23797:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 441,
+                  "src": "23856:15",
+                  "src_char": "23856:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 444,
+                  "src": "24017:15",
+                  "src_char": "24017:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 445,
+                  "src": "24095:15",
+                  "src_char": "24095:15"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 446,
+                  "src": "24164:15",
+                  "src_char": "24164:15"
+                }
+              ],
+              "title": "Incorrect Assembly Shift Parameter Order"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 70,
+                  "src": "3428:5",
+                  "src_char": "3428:5"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 127,
+                  "src": "6780:18",
+                  "src_char": "6780:18"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 161,
+                  "src": "8655:27",
+                  "src_char": "8655:27"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 231,
+                  "src": "12582:22",
+                  "src_char": "12582:22"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 274,
+                  "src": "14811:35",
+                  "src_char": "14811:35"
+                },
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 303,
+                  "src": "16314:44",
+                  "src_char": "16314:44"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/proxy/Clones.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 156,
+    "summary": {
+      "High": 1,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 4,
+    "best_round": 3,
+    "best_total": 6,
+    "best_vuln": 0,
+    "code_bytes": 24509,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "fbe3a6663733bd6f839f986525ffef5bdc1b4cdaac3673580d6032815694da2f",
+    "skip_reason": null,
+    "sloc": 156,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:29.734171+00:00",
+  "eval": {
+    "best_round": 3,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/proxy/Clones.t.sol",
+    "expected_tests": 13,
+    "extract_error": null,
+    "forge_total": 13,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 7,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 315,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/proxy/Clones.sol",
+  "id": 315,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:10.970106+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 6,
+  "test_pass": 7,
+  "test_source": "rq2_eval",
+  "test_total": 13
+}

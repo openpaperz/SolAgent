@@ -1,0 +1,640 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibClone.sol",
+        "-o",
+        "/tmp/aderyn_report_8tulpzc4/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibClone.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibClone.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_8tulpzc4/report.json\n\nAderyn saved you hours of headaches.\n\u2615 Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibClone.sol",
+              "n_sloc": 487
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 487,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 138,
+                  "src": "5890:16",
+                  "src_char": "5890:16"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 215,
+                  "src": "9199:16",
+                  "src_char": "9199:16"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 270,
+                  "src": "11899:16",
+                  "src_char": "11899:16"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 339,
+                  "src": "15199:16",
+                  "src_char": "15199:16"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 385,
+                  "src": "17813:16",
+                  "src_char": "17813:16"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 502,
+                  "src": "25324:16",
+                  "src_char": "25324:16"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 565,
+                  "src": "30924:16",
+                  "src_char": "30924:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            },
+            {
+              "description": "Downcasting int/uints in Solidity can be unsafe due to the potential for data loss and unintended behavior.When downcasting a larger integer type to a smaller one (e.g., uint256 to uint128), the value may exceed the range of the target type,leading to truncation and loss of significant digits. Use OpenZeppelin's SafeCast library to safely downcast integers.",
+              "detector_name": "unsafe-casting",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 602,
+                  "src": "33116:13",
+                  "src_char": "33116:13"
+                }
+              ],
+              "title": "Unsafe Casting of integers"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 2,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 61,
+                  "src": "2329:27",
+                  "src_char": "2329:27"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 70,
+                  "src": "2740:11",
+                  "src_char": "2740:11"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 78,
+                  "src": "3089:24",
+                  "src_char": "3089:24"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 98,
+                  "src": "3971:5",
+                  "src_char": "3971:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 126,
+                  "src": "5230:24",
+                  "src_char": "5230:24"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 141,
+                  "src": "5940:12",
+                  "src_char": "5940:12"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 145,
+                  "src": "6113:27",
+                  "src_char": "6113:27"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 176,
+                  "src": "7410:13",
+                  "src_char": "7410:13"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 204,
+                  "src": "8619:26",
+                  "src_char": "8619:26"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 218,
+                  "src": "9344:19",
+                  "src_char": "9344:19"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 222,
+                  "src": "9506:34",
+                  "src_char": "9506:34"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 231,
+                  "src": "9960:13",
+                  "src_char": "9960:13"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 259,
+                  "src": "11269:26",
+                  "src_char": "11269:26"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 273,
+                  "src": "11976:19",
+                  "src_char": "11976:19"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 277,
+                  "src": "12163:34",
+                  "src_char": "12163:34"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 304,
+                  "src": "13446:14",
+                  "src_char": "13446:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 332,
+                  "src": "14663:27",
+                  "src_char": "14663:27"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 342,
+                  "src": "15344:20",
+                  "src_char": "15344:20"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 346,
+                  "src": "15508:35",
+                  "src_char": "15508:35"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 355,
+                  "src": "15966:14",
+                  "src_char": "15966:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 378,
+                  "src": "17227:27",
+                  "src_char": "17227:27"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 388,
+                  "src": "17891:20",
+                  "src_char": "17891:20"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 392,
+                  "src": "18080:35",
+                  "src_char": "18080:35"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 412,
+                  "src": "19299:16",
+                  "src_char": "19299:16"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 427,
+                  "src": "19870:23",
+                  "src_char": "19870:23"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 440,
+                  "src": "20457:43",
+                  "src_char": "20457:43"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 449,
+                  "src": "20931:28",
+                  "src_char": "20931:28"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 455,
+                  "src": "21257:24",
+                  "src_char": "21257:24"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 469,
+                  "src": "22354:37",
+                  "src_char": "22354:37"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 477,
+                  "src": "22959:30",
+                  "src_char": "22959:30"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 479,
+                  "src": "23115:45",
+                  "src_char": "23115:45"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 483,
+                  "src": "23549:24",
+                  "src_char": "23549:24"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 497,
+                  "src": "24746:37",
+                  "src_char": "24746:37"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 504,
+                  "src": "25400:30",
+                  "src_char": "25400:30"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 506,
+                  "src": "25581:45",
+                  "src_char": "25581:45"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 521,
+                  "src": "26851:25",
+                  "src_char": "26851:25"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 535,
+                  "src": "27956:38",
+                  "src_char": "27956:38"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 541,
+                  "src": "28549:31",
+                  "src_char": "28549:31"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 543,
+                  "src": "28707:46",
+                  "src_char": "28707:46"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 547,
+                  "src": "29145:25",
+                  "src_char": "29145:25"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 561,
+                  "src": "30350:38",
+                  "src_char": "30350:38"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 567,
+                  "src": "31001:31",
+                  "src_char": "31001:31"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 569,
+                  "src": "31184:46",
+                  "src_char": "31184:46"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 163,
+                  "src": "6946:4",
+                  "src_char": "6946:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 163,
+                  "src": "6970:4",
+                  "src_char": "6970:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 164,
+                  "src": "7023:4",
+                  "src_char": "7023:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 215,
+                  "src": "9243:25",
+                  "src_char": "9243:25"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 293,
+                  "src": "13000:4",
+                  "src_char": "13000:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 293,
+                  "src": "13024:4",
+                  "src_char": "13024:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 294,
+                  "src": "13077:4",
+                  "src_char": "13077:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 339,
+                  "src": "15243:25",
+                  "src_char": "15243:25"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 403,
+                  "src": "18892:4",
+                  "src_char": "18892:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 403,
+                  "src": "18916:4",
+                  "src_char": "18916:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 404,
+                  "src": "18969:4",
+                  "src_char": "18969:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 514,
+                  "src": "26427:4",
+                  "src_char": "26427:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 514,
+                  "src": "26451:4",
+                  "src_char": "26451:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 515,
+                  "src": "26504:4",
+                  "src_char": "26504:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 577,
+                  "src": "32037:4",
+                  "src_char": "32037:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 577,
+                  "src": "32061:4",
+                  "src_char": "32061:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 578,
+                  "src": "32114:4",
+                  "src_char": "32114:4"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 487,
+    "summary": {
+      "High": 2,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "3e127c4be65f5e999b7ec89a0e145c3cfa9af9fcb00e6a9bc5871c80bfda6199",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:17.480738+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 33419,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 122,
+    "extract_error": null,
+    "failed_tests": 101,
+    "forge_failed": 101,
+    "forge_total": 122,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 21,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3204,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+  "id": 3204,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-11T07:31:21.104788+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "deepcode",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 101,
+  "test_pass": 21,
+  "test_source": "eval_seed1",
+  "test_total": 122
+}

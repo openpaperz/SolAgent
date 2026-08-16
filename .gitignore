@@ -336,7 +336,7 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,python,pycharm
 
 price.json
-repository/
+/repository/
 # !lib/lib-agent.patch
 # lib/DeepCode@e037ec6
 # lib/Qwen-Agent@05f6536
@@ -352,12 +352,14 @@ logs/
 deepcode_temp/
 qwenagent_temp/
 metagpt_temp/
+testing/eval/.locks/
 
 baseline_copilot/workspace/
 baseline_copilot/completed.txt
 
 *.http
 progress*.db*
+!output/progress.db.7z
 
 output/memory*
 output/pro*.pkl
@@ -369,7 +371,12 @@ z0train/output
 /test001.py
 *.sqlite3-query
 *.txt
-!requirements.txt
-ex_rq1_mythril.py
+!requirements*.txt
+
+/tmp/
+/.opencode-isolated/
+output/erc4626_forge_test.out
+output/erc4626_gas_report_fuzz256.out
+
 !progress.db.7z
 !repository.7z

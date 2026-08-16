@@ -1,0 +1,1017 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/DynamicBufferLib.sol",
+        "-o",
+        "/tmp/aderyn_report_3smrqaw3/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/DynamicBufferLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/DynamicBufferLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_3smrqaw3/report.json\n\n\ud83d\udc26 Aderyn finds bugs. You write safer code.\n\u2b50 Star us on GitHub if that sounds fair:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/DynamicBufferLib.sol",
+              "n_sloc": 669
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 669,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 131,
+                  "src": "4512:1",
+                  "src_char": "4512:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 139,
+                  "src": "4732:1",
+                  "src_char": "4732:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 148,
+                  "src": "4990:1",
+                  "src_char": "4990:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 158,
+                  "src": "5286:1",
+                  "src_char": "5286:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 169,
+                  "src": "5620:1",
+                  "src_char": "5620:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 181,
+                  "src": "5992:1",
+                  "src_char": "5992:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 200,
+                  "src": "6535:5",
+                  "src_char": "6535:5"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 209,
+                  "src": "6883:8",
+                  "src_char": "6883:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 217,
+                  "src": "7155:6",
+                  "src_char": "7155:6"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 221,
+                  "src": "7332:7",
+                  "src_char": "7332:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 225,
+                  "src": "7511:7",
+                  "src_char": "7511:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 229,
+                  "src": "7690:7",
+                  "src_char": "7690:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 233,
+                  "src": "7869:7",
+                  "src_char": "7869:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 237,
+                  "src": "8048:7",
+                  "src_char": "8048:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 241,
+                  "src": "8227:7",
+                  "src_char": "8227:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 245,
+                  "src": "8406:7",
+                  "src_char": "8406:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 249,
+                  "src": "8585:7",
+                  "src_char": "8585:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 253,
+                  "src": "8764:7",
+                  "src_char": "8764:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 257,
+                  "src": "8944:7",
+                  "src_char": "8944:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 261,
+                  "src": "9124:7",
+                  "src_char": "9124:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 265,
+                  "src": "9304:8",
+                  "src_char": "9304:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 269,
+                  "src": "9486:8",
+                  "src_char": "9486:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 273,
+                  "src": "9668:8",
+                  "src_char": "9668:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 277,
+                  "src": "9850:8",
+                  "src_char": "9850:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 281,
+                  "src": "10032:8",
+                  "src_char": "10032:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 285,
+                  "src": "10214:8",
+                  "src_char": "10214:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 289,
+                  "src": "10396:8",
+                  "src_char": "10396:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 293,
+                  "src": "10578:8",
+                  "src_char": "10578:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 297,
+                  "src": "10760:8",
+                  "src_char": "10760:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 301,
+                  "src": "10942:8",
+                  "src_char": "10942:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 305,
+                  "src": "11124:8",
+                  "src_char": "11124:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 309,
+                  "src": "11306:8",
+                  "src_char": "11306:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 313,
+                  "src": "11488:8",
+                  "src_char": "11488:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 317,
+                  "src": "11670:8",
+                  "src_char": "11670:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 321,
+                  "src": "11852:8",
+                  "src_char": "11852:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 325,
+                  "src": "12034:8",
+                  "src_char": "12034:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 329,
+                  "src": "12216:8",
+                  "src_char": "12216:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 333,
+                  "src": "12398:8",
+                  "src_char": "12398:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 337,
+                  "src": "12580:8",
+                  "src_char": "12580:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 341,
+                  "src": "12762:8",
+                  "src_char": "12762:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 345,
+                  "src": "12944:7",
+                  "src_char": "12944:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 351,
+                  "src": "13159:7",
+                  "src_char": "13159:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 355,
+                  "src": "13338:7",
+                  "src_char": "13338:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 359,
+                  "src": "13517:7",
+                  "src_char": "13517:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 363,
+                  "src": "13696:7",
+                  "src_char": "13696:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 367,
+                  "src": "13875:7",
+                  "src_char": "13875:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 371,
+                  "src": "14054:7",
+                  "src_char": "14054:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 375,
+                  "src": "14233:7",
+                  "src_char": "14233:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 379,
+                  "src": "14412:7",
+                  "src_char": "14412:7"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 383,
+                  "src": "14591:8",
+                  "src_char": "14591:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 387,
+                  "src": "14773:8",
+                  "src_char": "14773:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 391,
+                  "src": "14955:8",
+                  "src_char": "14955:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 395,
+                  "src": "15137:8",
+                  "src_char": "15137:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 399,
+                  "src": "15319:8",
+                  "src_char": "15319:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 403,
+                  "src": "15501:8",
+                  "src_char": "15501:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 407,
+                  "src": "15683:8",
+                  "src_char": "15683:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 411,
+                  "src": "15865:8",
+                  "src_char": "15865:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 415,
+                  "src": "16047:8",
+                  "src_char": "16047:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 419,
+                  "src": "16229:8",
+                  "src_char": "16229:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 423,
+                  "src": "16411:8",
+                  "src_char": "16411:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 427,
+                  "src": "16593:8",
+                  "src_char": "16593:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 431,
+                  "src": "16775:8",
+                  "src_char": "16775:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 435,
+                  "src": "16957:8",
+                  "src_char": "16957:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 439,
+                  "src": "17139:8",
+                  "src_char": "17139:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 443,
+                  "src": "17321:8",
+                  "src_char": "17321:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 447,
+                  "src": "17503:8",
+                  "src_char": "17503:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 451,
+                  "src": "17685:8",
+                  "src_char": "17685:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 455,
+                  "src": "17867:8",
+                  "src_char": "17867:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 459,
+                  "src": "18049:8",
+                  "src_char": "18049:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 463,
+                  "src": "18231:8",
+                  "src_char": "18231:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 467,
+                  "src": "18413:8",
+                  "src_char": "18413:8"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 471,
+                  "src": "18595:8",
+                  "src_char": "18595:8"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 210,
+                  "src": "7024:2",
+                  "src_char": "7024:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 226,
+                  "src": "7665:1",
+                  "src_char": "7665:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 230,
+                  "src": "7844:1",
+                  "src_char": "7844:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 234,
+                  "src": "8023:1",
+                  "src_char": "8023:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 238,
+                  "src": "8202:1",
+                  "src_char": "8202:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 242,
+                  "src": "8381:1",
+                  "src_char": "8381:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 246,
+                  "src": "8560:1",
+                  "src_char": "8560:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 250,
+                  "src": "8739:1",
+                  "src_char": "8739:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 254,
+                  "src": "8918:2",
+                  "src_char": "8918:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 258,
+                  "src": "9098:2",
+                  "src_char": "9098:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 262,
+                  "src": "9278:2",
+                  "src_char": "9278:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 266,
+                  "src": "9460:2",
+                  "src_char": "9460:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 270,
+                  "src": "9642:2",
+                  "src_char": "9642:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 274,
+                  "src": "9824:2",
+                  "src_char": "9824:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 278,
+                  "src": "10006:2",
+                  "src_char": "10006:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 282,
+                  "src": "10188:2",
+                  "src_char": "10188:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 286,
+                  "src": "10370:2",
+                  "src_char": "10370:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 290,
+                  "src": "10552:2",
+                  "src_char": "10552:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 294,
+                  "src": "10734:2",
+                  "src_char": "10734:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 298,
+                  "src": "10916:2",
+                  "src_char": "10916:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 302,
+                  "src": "11098:2",
+                  "src_char": "11098:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 306,
+                  "src": "11280:2",
+                  "src_char": "11280:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 310,
+                  "src": "11462:2",
+                  "src_char": "11462:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 314,
+                  "src": "11644:2",
+                  "src_char": "11644:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 318,
+                  "src": "11826:2",
+                  "src_char": "11826:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 322,
+                  "src": "12008:2",
+                  "src_char": "12008:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 326,
+                  "src": "12190:2",
+                  "src_char": "12190:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 330,
+                  "src": "12372:2",
+                  "src_char": "12372:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 334,
+                  "src": "12554:2",
+                  "src_char": "12554:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 338,
+                  "src": "12736:2",
+                  "src_char": "12736:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 342,
+                  "src": "12918:2",
+                  "src_char": "12918:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 356,
+                  "src": "13492:1",
+                  "src_char": "13492:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 360,
+                  "src": "13671:1",
+                  "src_char": "13671:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 364,
+                  "src": "13850:1",
+                  "src_char": "13850:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 368,
+                  "src": "14029:1",
+                  "src_char": "14029:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 372,
+                  "src": "14208:1",
+                  "src_char": "14208:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 376,
+                  "src": "14387:1",
+                  "src_char": "14387:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 380,
+                  "src": "14566:1",
+                  "src_char": "14566:1"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 384,
+                  "src": "14747:2",
+                  "src_char": "14747:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 388,
+                  "src": "14929:2",
+                  "src_char": "14929:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 392,
+                  "src": "15111:2",
+                  "src_char": "15111:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 396,
+                  "src": "15293:2",
+                  "src_char": "15293:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 400,
+                  "src": "15475:2",
+                  "src_char": "15475:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 404,
+                  "src": "15657:2",
+                  "src_char": "15657:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 408,
+                  "src": "15839:2",
+                  "src_char": "15839:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 412,
+                  "src": "16021:2",
+                  "src_char": "16021:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 416,
+                  "src": "16203:2",
+                  "src_char": "16203:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 420,
+                  "src": "16385:2",
+                  "src_char": "16385:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 424,
+                  "src": "16567:2",
+                  "src_char": "16567:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 428,
+                  "src": "16749:2",
+                  "src_char": "16749:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 432,
+                  "src": "16931:2",
+                  "src_char": "16931:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 436,
+                  "src": "17113:2",
+                  "src_char": "17113:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 440,
+                  "src": "17295:2",
+                  "src_char": "17295:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 444,
+                  "src": "17477:2",
+                  "src_char": "17477:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 448,
+                  "src": "17659:2",
+                  "src_char": "17659:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 452,
+                  "src": "17841:2",
+                  "src_char": "17841:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 456,
+                  "src": "18023:2",
+                  "src_char": "18023:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 460,
+                  "src": "18205:2",
+                  "src_char": "18205:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 464,
+                  "src": "18387:2",
+                  "src_char": "18387:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 468,
+                  "src": "18569:2",
+                  "src_char": "18569:2"
+                },
+                {
+                  "contract_path": "src/utils/DynamicBufferLib.sol",
+                  "line_no": 472,
+                  "src": "18751:2",
+                  "src_char": "18751:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 669,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "139e04ea3a43792d368b38163cbdbfc145fb01e1f306ff35cbc228184eda322f",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:27.617894+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 33506,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 151,
+    "extract_error": null,
+    "failed_tests": 97,
+    "forge_failed": 97,
+    "forge_total": 151,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 54,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3371,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/DynamicBufferLib.sol",
+  "id": 3371,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-11T07:31:21.814012+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "qwenagent",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 97,
+  "test_pass": 54,
+  "test_source": "eval_seed1",
+  "test_total": 151
+}

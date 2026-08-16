@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 2,
+        "proved_checks": 2,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 2,
+          "passed_methods": 2,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 2
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/WebAuthn.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/WebAuthn.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/WebAuthn.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/WebAuthn.sol"
+      ],
+      "test_names": [
+        "test_WebAuthn_encodeAuth_2",
+        "test_WebAuthn_tryEncodeAuthCompact_4"
+      ],
+      "check_names": [
+        "check_WebAuthn_encodeAuth_2",
+        "check_WebAuthn_tryEncodeAuthCompact_4"
+      ],
+      "methods_count": 2,
+      "manifest_skipped_checks": 10,
+      "skipped_checks": 0,
+      "expected_checks": 2,
+      "expected_tests": 2,
+      "proved_checks": 2,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_WebAuthn_encodeAuth_2": "PASS",
+        "check_WebAuthn_tryEncodeAuthCompact_4": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/WebAuthn.sol",
+          "class_name": "WebAuthn",
+          "class_kind": "library",
+          "method_name": "encodeAuth",
+          "visibility": "internal",
+          "full_signature": "function encodeAuth(WebAuthnAuth memory auth) internal pure returns (bytes memory)",
+          "checks": [
+            {
+              "check_name": "check_WebAuthn_encodeAuth_2",
+              "test_name": "test_WebAuthn_encodeAuth_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/WebAuthn.sol",
+          "class_name": "WebAuthn",
+          "class_kind": "library",
+          "method_name": "tryEncodeAuthCompact",
+          "visibility": "internal",
+          "full_signature": "function tryEncodeAuthCompact(WebAuthnAuth memory auth) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_WebAuthn_tryEncodeAuthCompact_4",
+              "test_name": "test_WebAuthn_tryEncodeAuthCompact_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 2,
+        "passed_methods": 2,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 2
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_WebAuthn_encodeAuth_2(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/2 ---\nCompiling 3 files with Solc 0.8.28\nSolc 0.8.28 finished in 755.40ms\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to view\n  --> test/WebAuthn.t.sol:14:5:\n   |\n14 |     function ref_call_verify_0(uint8 tamper) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/WebAuthn.t.sol:32:5:\n   |\n32 |     function ref_call_verify_1(uint8 tamper) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/WebAuthn.t.sol:49:5:\n   |\n49 |     function ref_call_encodeAuth_2(byte ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/WebAuthn.t.sol:53:5:\n   |\n53 |     function ref_call_tryDecodeAuth_3(bytes memory encodedAuth) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/WebAuthn.t.sol:56:5:\n   |\n56 |     function ref_call_tryEncodeAuthComp ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/WebAuthn.t.sol:60:5:\n   |\n60 |     function ref_call_tryDecodeAuthCompact_5(bytes memory encodedAuth) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/WebAuthn.t.sol:63:5:\n   |\n63 |     function ref_call_tryDecodeAuthCompactCalldata_6(bytes calldata encodedAuth) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/WebAuthn.t.sol:66:5:\n   |\n66 |     function gen_call_verify_0(uint8 tamper) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/WebAuthn.t.sol:84:5:\n   |\n84 |     function gen_call_verify_1(uint8 tamper) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/WebAuthn.t.sol:101:5:\n    |\n101 |     function gen_call_encodeAuth_2(byte ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/WebAuthn.t.sol:105:5:\n    |\n105 |     function gen_call_tryDecodeAuth_3(bytes memory encodedAuth) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/WebAuthn.t.sol:108:5:\n    |\n108 |     function gen_call_tryEncodeAuthComp ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/WebAuthn.t.sol:112:5:\n    |\n112 |     function gen_call_tryDecodeAuthCompact_5(bytes memory encodedAuth) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/WebAuthn.t.sol:115:5:\n    |\n115 |     function gen_call_tryDecodeAuthCompactCalldata_6(bytes calldata encodedAuth) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/WebAuthn.t.sol:WebAuthnEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_WebAuthn_encodeAuth_2(bytes,string,uint256,uint256,bytes32,bytes32) (paths: 9, time: 0.40s, bounds: [authenticatorData=[0, 65, 1024], clientDataJSON=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.41s\n\n\n--- halmos chunk 2/2 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/WebAuthn.t.sol:WebAuthnEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_WebAuthn_tryEncodeAuthCompact_4(bytes,string,uint256,uint256,bytes32,bytes32) (paths: 18, time: 0.56s, bounds: [authenticatorData=[0, 65, 1024], clientDataJSON=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.56s\n",
+      "halmos_stderr": "--- halmos chunk 1/2 ---\n\n\n--- halmos chunk 2/2 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 2,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_WebAuthn_encodeAuth_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_WebAuthn_tryEncodeAuthCompact_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

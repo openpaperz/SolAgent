@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/ext/delegatexyz/DelegateCheckerLib.sol",
+  "eval_full_pass": false,
+  "code_sha256": "9518c618ccc3826f7b0b5e3f89738179a2f851e3f57f02abc23b915f74b16ba7",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:57.435862+00:00",
+  "skip_reason": "not eval FullPass"
+}

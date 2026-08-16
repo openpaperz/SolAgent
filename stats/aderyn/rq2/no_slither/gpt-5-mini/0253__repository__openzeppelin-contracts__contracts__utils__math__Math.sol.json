@@ -1,0 +1,738 @@
+{
+  "aderyn": {
+    "count": 5,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/utils/math/Math.sol",
+        "-o",
+        "/tmp/aderyn_report_tkuctb7m/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/utils/math/Math.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n--------------------------------------------------------------------------------\n# Configuration\n--------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n--------------------------------------------------------------------------------\n# Source Scope\n--------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/utils/math/Math.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n--------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n--------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n--------------------------------------------------------------------------------\n# Scanning Contracts\n--------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_tkuctb7m/report.json\n\n💡 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/utils/math/Math.sol",
+              "n_sloc": 332
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 332,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "The caret operator is usually mistakenly thought of as an exponentiation operator but actually, it's a bitwise xor operator.",
+              "detector_name": "incorrect-caret-operator",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 277,
+                  "src": "11550:21",
+                  "src_char": "11550:21"
+                }
+              ],
+              "title": "Incorrect use of caret operator"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 4
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Consider removing empty blocks.",
+              "detector_name": "empty-block",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 612,
+                  "src": "26579:4",
+                  "src_char": "26577:4"
+                }
+              ],
+              "title": "Empty Block"
+            },
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 236,
+                  "src": "10191:6",
+                  "src_char": "10191:6"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 400,
+                  "src": "16896:6",
+                  "src_char": "16894:6"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 425,
+                  "src": "18115:9",
+                  "src_char": "18113:9"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 474,
+                  "src": "20424:9",
+                  "src_char": "20422:9"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 557,
+                  "src": "23895:4",
+                  "src_char": "23893:4"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 680,
+                  "src": "28827:5",
+                  "src_char": "28825:5"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 739,
+                  "src": "30974:6",
+                  "src_char": "30972:6"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 277,
+                  "src": "11551:1",
+                  "src_char": "11551:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 427,
+                  "src": "18306:2",
+                  "src_char": "18304:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 427,
+                  "src": "18319:2",
+                  "src_char": "18317:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 427,
+                  "src": "18332:2",
+                  "src_char": "18330:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 428,
+                  "src": "18387:2",
+                  "src_char": "18385:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 511,
+                  "src": "21776:2",
+                  "src_char": "21774:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 511,
+                  "src": "21786:2",
+                  "src_char": "21784:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 615,
+                  "src": "26702:3",
+                  "src_char": "26700:3"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 616,
+                  "src": "26736:3",
+                  "src_char": "26734:3"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 617,
+                  "src": "26762:3",
+                  "src_char": "26760:3"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 619,
+                  "src": "26802:2",
+                  "src_char": "26800:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 620,
+                  "src": "26835:2",
+                  "src_char": "26833:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 621,
+                  "src": "26860:2",
+                  "src_char": "26858:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 623,
+                  "src": "26899:2",
+                  "src_char": "26897:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 624,
+                  "src": "26932:2",
+                  "src_char": "26930:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 625,
+                  "src": "26957:2",
+                  "src_char": "26955:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 627,
+                  "src": "26996:2",
+                  "src_char": "26994:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 628,
+                  "src": "27029:2",
+                  "src_char": "27027:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 629,
+                  "src": "27054:2",
+                  "src_char": "27052:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 631,
+                  "src": "27093:1",
+                  "src_char": "27091:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 632,
+                  "src": "27125:1",
+                  "src_char": "27123:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 633,
+                  "src": "27149:1",
+                  "src_char": "27147:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 635,
+                  "src": "27187:1",
+                  "src_char": "27185:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 636,
+                  "src": "27219:1",
+                  "src_char": "27217:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 637,
+                  "src": "27243:1",
+                  "src_char": "27241:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 640,
+                  "src": "27318:1",
+                  "src_char": "27316:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 641,
+                  "src": "27344:1",
+                  "src_char": "27342:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 642,
+                  "src": "27377:1",
+                  "src_char": "27375:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 681,
+                  "src": "28910:2",
+                  "src_char": "28908:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 681,
+                  "src": "28914:2",
+                  "src_char": "28912:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 682,
+                  "src": "28941:2",
+                  "src_char": "28939:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 682,
+                  "src": "28945:2",
+                  "src_char": "28943:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 683,
+                  "src": "28971:2",
+                  "src_char": "28969:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 685,
+                  "src": "29006:2",
+                  "src_char": "29004:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 685,
+                  "src": "29010:2",
+                  "src_char": "29008:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 686,
+                  "src": "29037:2",
+                  "src_char": "29035:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 686,
+                  "src": "29041:2",
+                  "src_char": "29039:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 687,
+                  "src": "29067:2",
+                  "src_char": "29065:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 689,
+                  "src": "29102:2",
+                  "src_char": "29100:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 689,
+                  "src": "29106:2",
+                  "src_char": "29104:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 690,
+                  "src": "29133:2",
+                  "src_char": "29131:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 690,
+                  "src": "29137:2",
+                  "src_char": "29135:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 691,
+                  "src": "29163:2",
+                  "src_char": "29161:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 693,
+                  "src": "29198:2",
+                  "src_char": "29196:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 693,
+                  "src": "29202:1",
+                  "src_char": "29200:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 694,
+                  "src": "29228:2",
+                  "src_char": "29226:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 694,
+                  "src": "29232:1",
+                  "src_char": "29230:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 695,
+                  "src": "29257:1",
+                  "src_char": "29255:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 697,
+                  "src": "29291:2",
+                  "src_char": "29289:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 697,
+                  "src": "29295:1",
+                  "src_char": "29293:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 698,
+                  "src": "29321:2",
+                  "src_char": "29319:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 698,
+                  "src": "29325:1",
+                  "src_char": "29323:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 699,
+                  "src": "29350:1",
+                  "src_char": "29348:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 701,
+                  "src": "29384:2",
+                  "src_char": "29382:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 702,
+                  "src": "29414:2",
+                  "src_char": "29412:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 705,
+                  "src": "29477:2",
+                  "src_char": "29475:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 719,
+                  "src": "29984:2",
+                  "src_char": "29982:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 742,
+                  "src": "31099:3",
+                  "src_char": "31097:3"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 743,
+                  "src": "31133:3",
+                  "src_char": "31131:3"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 744,
+                  "src": "31159:3",
+                  "src_char": "31157:3"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 746,
+                  "src": "31199:2",
+                  "src_char": "31197:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 747,
+                  "src": "31232:2",
+                  "src_char": "31230:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 748,
+                  "src": "31257:2",
+                  "src_char": "31255:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 750,
+                  "src": "31296:2",
+                  "src_char": "31294:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 751,
+                  "src": "31329:2",
+                  "src_char": "31327:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 752,
+                  "src": "31354:2",
+                  "src_char": "31352:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 754,
+                  "src": "31393:2",
+                  "src_char": "31391:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 755,
+                  "src": "31426:2",
+                  "src_char": "31424:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 756,
+                  "src": "31451:2",
+                  "src_char": "31449:2"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 758,
+                  "src": "31490:1",
+                  "src_char": "31488:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 759,
+                  "src": "31521:1",
+                  "src_char": "31519:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 761,
+                  "src": "31558:1",
+                  "src_char": "31556:1"
+                },
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 773,
+                  "src": "32066:1",
+                  "src_char": "32064:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/utils/math/Math.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 332,
+    "summary": {
+      "High": 1,
+      "Low": 4
+    }
+  },
+  "code": {
+    "best_pass": 21,
+    "best_round": 3,
+    "best_total": 25,
+    "best_vuln": 10,
+    "code_bytes": 32744,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "109a48ec1a22fa8ef88e58823530e118c65de4fb525b7048dd999703790963b8",
+    "skip_reason": null,
+    "sloc": 332,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:44.080843+00:00",
+  "eval": {
+    "best_round": 3,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/utils/math/Math.t.sol",
+    "expected_tests": 27,
+    "extract_error": null,
+    "forge_total": 27,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 18,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 253,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+  "id": 253,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:13.882258+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 10,
+    "summary": {
+      "High": 1,
+      "Low": 0,
+      "Medium": 9
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 9,
+  "test_pass": 18,
+  "test_source": "rq2_eval",
+  "test_total": 27
+}

@@ -1,0 +1,951 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 22,
+      "proved_checks": 22,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 22,
+        "proved_checks": 22,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 22,
+        "passed_methods": 22,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 22
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 22,
+          "passed_methods": 22,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 22
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibBytes.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibBytes.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibBytes.sol"
+      ],
+      "test_names": [
+        "test_LibBytes_set_0",
+        "test_LibBytes_setCalldata_1",
+        "test_LibBytes_clear_2",
+        "test_LibBytes_isEmpty_3",
+        "test_LibBytes_length_4",
+        "test_LibBytes_get_5",
+        "test_LibBytes_indexOf_8",
+        "test_LibBytes_lastIndexOf_10",
+        "test_LibBytes_contains_11",
+        "test_LibBytes_startsWith_12",
+        "test_LibBytes_endsWith_13",
+        "test_LibBytes_repeat_14",
+        "test_LibBytes_indicesOf_21",
+        "test_LibBytes_split_22",
+        "test_LibBytes_concat_23",
+        "test_LibBytes_eq_24",
+        "test_LibBytes_eqs_25",
+        "test_LibBytes_cmp_26",
+        "test_LibBytes_directReturn_27",
+        "test_LibBytes_directReturn_28",
+        "test_LibBytes_emptyCalldata_31",
+        "test_LibBytes_property_replace_0"
+      ],
+      "check_names": [
+        "check_LibBytes_set_0",
+        "check_LibBytes_setCalldata_1",
+        "check_LibBytes_clear_2",
+        "check_LibBytes_isEmpty_3",
+        "check_LibBytes_length_4",
+        "check_LibBytes_get_5",
+        "check_LibBytes_indexOf_8",
+        "check_LibBytes_lastIndexOf_10",
+        "check_LibBytes_contains_11",
+        "check_LibBytes_startsWith_12",
+        "check_LibBytes_endsWith_13",
+        "check_LibBytes_repeat_14",
+        "check_LibBytes_indicesOf_21",
+        "check_LibBytes_split_22",
+        "check_LibBytes_concat_23",
+        "check_LibBytes_eq_24",
+        "check_LibBytes_eqs_25",
+        "check_LibBytes_cmp_26",
+        "check_LibBytes_directReturn_27",
+        "check_LibBytes_directReturn_28",
+        "check_LibBytes_emptyCalldata_31",
+        "check_LibBytes_property_replace_0"
+      ],
+      "methods_count": 22,
+      "manifest_skipped_checks": 21,
+      "skipped_checks": 0,
+      "expected_checks": 22,
+      "expected_tests": 22,
+      "proved_checks": 22,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_LibBytes_set_0": "PASS",
+        "check_LibBytes_setCalldata_1": "PASS",
+        "check_LibBytes_clear_2": "PASS",
+        "check_LibBytes_isEmpty_3": "PASS",
+        "check_LibBytes_length_4": "PASS",
+        "check_LibBytes_get_5": "PASS",
+        "check_LibBytes_indexOf_8": "PASS",
+        "check_LibBytes_lastIndexOf_10": "PASS",
+        "check_LibBytes_contains_11": "PASS",
+        "check_LibBytes_startsWith_12": "PASS",
+        "check_LibBytes_endsWith_13": "PASS",
+        "check_LibBytes_repeat_14": "PASS",
+        "check_LibBytes_indicesOf_21": "PASS",
+        "check_LibBytes_split_22": "PASS",
+        "check_LibBytes_concat_23": "PASS",
+        "check_LibBytes_eq_24": "PASS",
+        "check_LibBytes_eqs_25": "PASS",
+        "check_LibBytes_cmp_26": "PASS",
+        "check_LibBytes_directReturn_27": "PASS",
+        "check_LibBytes_directReturn_28": "PASS",
+        "check_LibBytes_emptyCalldata_31": "PASS",
+        "check_LibBytes_property_replace_0": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": "explored due to the loop unrolling bound: 2\ndue to the loop unrolling bound: 2\nnot been fully explored due to the loop unrolling bound: 2",
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "clear",
+          "visibility": "internal",
+          "full_signature": "function clear(BytesStorage storage $) internal",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_clear_2",
+              "test_name": "test_LibBytes_clear_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "cmp",
+          "visibility": "internal",
+          "full_signature": "function cmp(bytes memory a, bytes memory b) internal pure returns (int256 result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_cmp_26",
+              "test_name": "test_LibBytes_cmp_26",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "concat",
+          "visibility": "internal",
+          "full_signature": "function concat(bytes memory a, bytes memory b) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_concat_23",
+              "test_name": "test_LibBytes_concat_23",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "contains",
+          "visibility": "internal",
+          "full_signature": "function contains(bytes memory subject, bytes memory needle) internal pure returns (bool)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_contains_11",
+              "test_name": "test_LibBytes_contains_11",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "directReturn",
+          "visibility": "internal",
+          "full_signature": "function directReturn(bytes memory a) internal pure",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_directReturn_27",
+              "test_name": "test_LibBytes_directReturn_27",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "directReturn",
+          "visibility": "internal",
+          "full_signature": "function directReturn(bytes[] memory a) internal pure",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_directReturn_28",
+              "test_name": "test_LibBytes_directReturn_28",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "emptyCalldata",
+          "visibility": "internal",
+          "full_signature": "function emptyCalldata() internal pure returns (bytes calldata result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_emptyCalldata_31",
+              "test_name": "test_LibBytes_emptyCalldata_31",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "endsWith",
+          "visibility": "internal",
+          "full_signature": "function endsWith(bytes memory subject, bytes memory needle) internal pure returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_endsWith_13",
+              "test_name": "test_LibBytes_endsWith_13",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "eq",
+          "visibility": "internal",
+          "full_signature": "function eq(bytes memory a, bytes memory b) internal pure returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_eq_24",
+              "test_name": "test_LibBytes_eq_24",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "eqs",
+          "visibility": "internal",
+          "full_signature": "function eqs(bytes memory a, bytes32 b) internal pure returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_eqs_25",
+              "test_name": "test_LibBytes_eqs_25",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "get",
+          "visibility": "internal",
+          "full_signature": "function get(BytesStorage storage $) internal view returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_get_5",
+              "test_name": "test_LibBytes_get_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "indexOf",
+          "visibility": "internal",
+          "full_signature": "function indexOf(bytes memory subject, bytes memory needle) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_indexOf_8",
+              "test_name": "test_LibBytes_indexOf_8",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "indicesOf",
+          "visibility": "internal",
+          "full_signature": "function indicesOf(bytes memory subject, bytes memory needle) internal pure returns (uint256[] memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_indicesOf_21",
+              "test_name": "test_LibBytes_indicesOf_21",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "isEmpty",
+          "visibility": "internal",
+          "full_signature": "function isEmpty(BytesStorage storage $) internal view returns (bool)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_isEmpty_3",
+              "test_name": "test_LibBytes_isEmpty_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "lastIndexOf",
+          "visibility": "internal",
+          "full_signature": "function lastIndexOf(bytes memory subject, bytes memory needle) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_lastIndexOf_10",
+              "test_name": "test_LibBytes_lastIndexOf_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "length",
+          "visibility": "internal",
+          "full_signature": "function length(BytesStorage storage $) internal view returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_length_4",
+              "test_name": "test_LibBytes_length_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "repeat",
+          "visibility": "internal",
+          "full_signature": "function repeat(bytes memory subject, uint256 times) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_repeat_14",
+              "test_name": "test_LibBytes_repeat_14",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "replace",
+          "visibility": "internal",
+          "full_signature": "function replace(bytes memory subject, bytes memory needle, bytes memory replacement) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_property_replace_0",
+              "test_name": "test_LibBytes_property_replace_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "set",
+          "visibility": "internal",
+          "full_signature": "function set(BytesStorage storage $, bytes memory s) internal",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_set_0",
+              "test_name": "test_LibBytes_set_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "setCalldata",
+          "visibility": "internal",
+          "full_signature": "function setCalldata(BytesStorage storage $, bytes calldata s) internal",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_setCalldata_1",
+              "test_name": "test_LibBytes_setCalldata_1",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "split",
+          "visibility": "internal",
+          "full_signature": "function split(bytes memory subject, bytes memory delimiter) internal pure returns (bytes[] memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_split_22",
+              "test_name": "test_LibBytes_split_22",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibBytes.sol",
+          "class_name": "LibBytes",
+          "class_kind": "library",
+          "method_name": "startsWith",
+          "visibility": "internal",
+          "full_signature": "function startsWith(bytes memory subject, bytes memory needle) internal pure returns (bool result)",
+          "checks": [
+            {
+              "check_name": "check_LibBytes_startsWith_12",
+              "test_name": "test_LibBytes_startsWith_12",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 22,
+        "passed_methods": 22,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 22
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibBytes_set_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/22 ---\nCompiling 1 files with Solc 0.8.28\nSolc 0.8.28 finished in 585.28ms\nCompiler run successful with warnings:\nWarning (5740): Unreachable code.\n   --> test/LibBytes.t.sol:116:40:\n    |\n116 |         RefLibBytes_0.directReturn(a); return \"\";\n    |                                        ^^^^^^^^^\n\nWarning (5740): Unreachable code.\n   --> test/LibBytes.t.sol:119:40:\n    |\n119 |         RefLibBytes_0.directReturn(a); return \"\";\n    |                                        ^^^^^^^^^\n\nWarning (5740): Unreachable code.\n   --> test/LibBytes.t.sol:230:40:\n    |\n230 |         GenLibBytes_0.directReturn(a); return \"\";\n    |                                        ^^^^^^^^^\n\nWarning (5740): Unreachable code.\n   --> test/LibBytes.t.sol:233:40:\n    |\n233 |         GenLibBytes_0.directReturn(a); return \"\";\n    |                                        ^^^^^^^^^\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:19:5:\n   |\n19 |     function ref_call_set_0_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:25:5:\n   |\n25 |     function ref_call_setCalldata_1_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:31:5:\n   |\n31 |     function ref_call_clear_2_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:34:5:\n   |\n34 |     function ref_call_isEmpty_3() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:37:5:\n   |\n37 |     function ref_call_isEmpty_3_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:40:5:\n   |\n40 |     function ref_call_length_4() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:43:5:\n   |\n43 |     function ref_call_length_4_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:46:5:\n   |\n46 |     function ref_call_get_5() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/LibBytes.t.sol:49:5:\n   |\n49 |     function ref_call_get_5_state() external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:52:5:\n   |\n52 |     function ref_call_replace_6(bytes memory subject, bytes memory needle, bytes memory replacement) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:55:5:\n   |\n55 |     function ref_call_indexOf_7(bytes memory subject, bytes memory needle, uint256 from) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:58:5:\n   |\n58 |     function ref_call_indexOf_8(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:61:5:\n   |\n61 |     function ref_call_lastIndexOf_9(bytes memory subject, bytes memory needle, uint256 from) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:64:5:\n   |\n64 |     function ref_call_lastIndexOf_10(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:67:5:\n   |\n67 |     function ref_call_contains_11(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:70:5:\n   |\n70 |     function ref_call_startsWith_12(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:73:5:\n   |\n73 |     function ref_call_endsWith_13(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:76:5:\n   |\n76 |     function ref_call_repeat_14(bytes memory subject, uint256 times) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:79:5:\n   |\n79 |     function ref_call_slice_15(bytes memory subject, uint256 start, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:82:5:\n   |\n82 |     function ref_call_slice_16(bytes memory subject, uint256 start) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:85:5:\n   |\n85 |     function ref_call_sliceCalldata_17(bytes calldata subject, uint256 start, uint256 end) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:88:5:\n   |\n88 |     function ref_call_sliceCalldata_18(bytes calldata subject, uint256 start) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:91:5:\n   |\n91 |     function ref_call_truncate_19(bytes memory subject, uint256 n) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:94:5:\n   |\n94 |     function ref_call_truncatedCalldata_20(bytes calldata subject, uint256 n) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibBytes.t.sol:97:5:\n   |\n97 |     function ref_call_indicesOf_21(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:100:5:\n    |\n100 |     function ref_call_split_22(bytes memory subject, bytes memory delimiter) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:103:5:\n    |\n103 |     function ref_call_concat_23(bytes memory a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:106:5:\n    |\n106 |     function ref_call_eq_24(bytes memory a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:109:5:\n    |\n109 |     function ref_call_eqs_25(bytes memory a, bytes32 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:112:5:\n    |\n112 |     function ref_call_cmp_26(bytes memory a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:115:5:\n    |\n115 |     function ref_call_directReturn_27(bytes memory a) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:118:5:\n    |\n118 |     function ref_call_directReturn_28(bytes[] memory a) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:121:5:\n    |\n121 |     function ref_call_load_29(bytes memory a, uint256 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:124:5:\n    |\n124 |     function ref_call_loadCalldata_30(bytes calldata a, uint256 offset) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:127:5:\n    |\n127 |     function ref_call_emptyCalldata_31() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:133:5:\n    |\n133 |     function gen_call_set_0_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:139:5:\n    |\n139 |     function gen_call_setCalldata_1_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:145:5:\n    |\n145 |     function gen_call_clear_2_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:148:5:\n    |\n148 |     function gen_call_isEmpty_3() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:151:5:\n    |\n151 |     function gen_call_isEmpty_3_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:154:5:\n    |\n154 |     function gen_call_length_4() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:157:5:\n    |\n157 |     function gen_call_length_4_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:160:5:\n    |\n160 |     function gen_call_get_5() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/LibBytes.t.sol:163:5:\n    |\n163 |     function gen_call_get_5_state() external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:166:5:\n    |\n166 |     function gen_call_replace_6(bytes memory subject, bytes memory needle, bytes memory replacement) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:169:5:\n    |\n169 |     function gen_call_indexOf_7(bytes memory subject, bytes memory needle, uint256 from) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:172:5:\n    |\n172 |     function gen_call_indexOf_8(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:175:5:\n    |\n175 |     function gen_call_lastIndexOf_9(bytes memory subject, bytes memory needle, uint256 from) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:178:5:\n    |\n178 |     function gen_call_lastIndexOf_10(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:181:5:\n    |\n181 |     function gen_call_contains_11(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:184:5:\n    |\n184 |     function gen_call_startsWith_12(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:187:5:\n    |\n187 |     function gen_call_endsWith_13(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:190:5:\n    |\n190 |     function gen_call_repeat_14(bytes memory subject, uint256 times) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:193:5:\n    |\n193 |     function gen_call_slice_15(bytes memory subject, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:196:5:\n    |\n196 |     function gen_call_slice_16(bytes memory subject, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:199:5:\n    |\n199 |     function gen_call_sliceCalldata_17(bytes calldata subject, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:202:5:\n    |\n202 |     function gen_call_sliceCalldata_18(bytes calldata subject, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:205:5:\n    |\n205 |     function gen_call_truncate_19(bytes memory subject, uint256 n) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:208:5:\n    |\n208 |     function gen_call_truncatedCalldata_20(bytes calldata subject, uint256 n) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:211:5:\n    |\n211 |     function gen_call_indicesOf_21(bytes memory subject, bytes memory needle) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:214:5:\n    |\n214 |     function gen_call_split_22(bytes memory subject, bytes memory delimiter) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:217:5:\n    |\n217 |     function gen_call_concat_23(bytes memory a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:220:5:\n    |\n220 |     function gen_call_eq_24(bytes memory a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:223:5:\n    |\n223 |     function gen_call_eqs_25(bytes memory a, bytes32 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:226:5:\n    |\n226 |     function gen_call_cmp_26(bytes memory a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/LibBytes.t.sol:229:5:\n    |\n229 |     function gen_call_directReturn_27(bytes memory a) external returns (bytes memory) {\n    |     ^ (R\n...[truncated 9684 chars]",
+      "halmos_stderr": "--- halmos chunk 1/22 ---\n\n\n--- halmos chunk 2/22 ---\n\n\n--- halmos chunk 3/22 ---\n\n\n--- halmos chunk 4/22 ---\n\n\n--- halmos chunk 5/22 ---\n\n\n--- halmos chunk 6/22 ---\n\n\n--- halmos chunk 7/22 ---\n\n\n--- halmos chunk 8/22 ---\n\n\n--- halmos chunk 9/22 ---\n\n\n--- halmos chunk 10/22 ---\n\n\n--- halmos chunk 11/22 ---\n\n\n--- halmos chunk 12/22 ---\n\n\n--- halmos chunk 13/22 ---\n\n\n--- halmos chunk 14/22 ---\n\n\n--- halmos chunk 15/22 ---\n\n\n--- halmos chunk 16/22 ---\n\n\n--- halmos chunk 17/22 ---\n\n\n--- halmos chunk 18/22 ---\n\n\n--- halmos chunk 19/22 ---\n\n\n--- halmos chunk 20/22 ---\n\n\n--- halmos chunk 21/22 ---\n\n\n--- halmos chunk 22/22 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 22,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_set_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_setCalldata_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_clear_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_isEmpty_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_length_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_get_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_indexOf_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_lastIndexOf_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_contains_11(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_startsWith_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_endsWith_13(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_repeat_14(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_indicesOf_21(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_split_22(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_concat_23(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_eq_24(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_eqs_25(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_cmp_26(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_directReturn_27(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_directReturn_28(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_emptyCalldata_31(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibBytes_property_replace_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

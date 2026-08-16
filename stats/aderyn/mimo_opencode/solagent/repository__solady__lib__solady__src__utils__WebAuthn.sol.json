@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/WebAuthn.sol",
+  "eval_full_pass": false,
+  "code_sha256": "437bccdef5e655b6f17544d13991ad7e65bdf1b422ce08858e16c6c813b8ad75",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:57.395858+00:00",
+  "skip_reason": "not eval FullPass"
+}

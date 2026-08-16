@@ -1,0 +1,466 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/SignatureCheckerLib.sol",
+        "-o",
+        "/tmp/aderyn_report_0ni_hhjx/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/SignatureCheckerLib.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/SignatureCheckerLib.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_0ni_hhjx/report.json\n\nAderyn saved you hours of headaches.\n\u2615 Buy us a virtual coffee with a GitHub star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/SignatureCheckerLib.sol",
+              "n_sloc": 370
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 370,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "The `ecrecover` function is susceptible to signature malleability. This means that the same message can be signed in multiple ways, allowing an attacker to change the message signature without invalidating it. This can lead to unexpected behavior in smart contracts, such as the loss of funds or the ability to bypass access control. Consider using OpenZeppelin's ECDSA library instead of the built-in function.",
+              "detector_name": "ecrecover",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 540,
+                  "src": "19087:9",
+                  "src_char": "19087:9"
+                }
+              ],
+              "title": "`ecrecover` Signature Malleability"
+            },
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 228,
+                  "src": "8270:34",
+                  "src_char": "8270:34"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 41,
+                  "src": "1623:2",
+                  "src_char": "1623:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 53,
+                  "src": "2026:2",
+                  "src_char": "2026:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 84,
+                  "src": "3181:2",
+                  "src_char": "3181:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 97,
+                  "src": "3669:2",
+                  "src_char": "3669:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 132,
+                  "src": "4965:2",
+                  "src_char": "4965:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 162,
+                  "src": "6048:2",
+                  "src_char": "6048:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 282,
+                  "src": "10033:2",
+                  "src_char": "10033:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 306,
+                  "src": "10945:2",
+                  "src_char": "10945:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 328,
+                  "src": "11826:2",
+                  "src_char": "11826:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 328,
+                  "src": "11831:1",
+                  "src_char": "11831:1"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 328,
+                  "src": "11835:2",
+                  "src_char": "11835:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 389,
+                  "src": "14018:2",
+                  "src_char": "14018:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 389,
+                  "src": "14023:1",
+                  "src_char": "14023:1"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 389,
+                  "src": "14027:2",
+                  "src_char": "14027:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 463,
+                  "src": "16892:2",
+                  "src_char": "16892:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 466,
+                  "src": "16966:2",
+                  "src_char": "16966:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 472,
+                  "src": "17169:4",
+                  "src_char": "17169:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 474,
+                  "src": "17231:4",
+                  "src_char": "17231:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 477,
+                  "src": "17324:4",
+                  "src_char": "17324:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 480,
+                  "src": "17420:4",
+                  "src_char": "17420:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 482,
+                  "src": "17484:4",
+                  "src_char": "17484:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 484,
+                  "src": "17548:4",
+                  "src_char": "17548:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 486,
+                  "src": "17612:4",
+                  "src_char": "17612:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 487,
+                  "src": "17644:4",
+                  "src_char": "17644:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 488,
+                  "src": "17676:4",
+                  "src_char": "17676:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 490,
+                  "src": "17740:4",
+                  "src_char": "17740:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 491,
+                  "src": "17772:4",
+                  "src_char": "17772:4"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 495,
+                  "src": "17894:2",
+                  "src_char": "17894:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 497,
+                  "src": "17953:2",
+                  "src_char": "17953:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 498,
+                  "src": "18011:2",
+                  "src_char": "18011:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 499,
+                  "src": "18038:2",
+                  "src_char": "18038:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 500,
+                  "src": "18065:2",
+                  "src_char": "18065:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 506,
+                  "src": "18187:2",
+                  "src_char": "18187:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 536,
+                  "src": "18907:66",
+                  "src_char": "18907:66"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 539,
+                  "src": "19030:2",
+                  "src_char": "19030:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 539,
+                  "src": "19041:2",
+                  "src_char": "19041:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 550,
+                  "src": "19360:2",
+                  "src_char": "19360:2"
+                },
+                {
+                  "contract_path": "src/utils/SignatureCheckerLib.sol",
+                  "line_no": 551,
+                  "src": "19407:66",
+                  "src_char": "19407:66"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 370,
+    "summary": {
+      "High": 0,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "try_extract_code",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "24061c13eb90081049bafba24a7ce48fe2a5e757835298d85843d1ca303fa345",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:48:08.737605+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 19545,
+    "code_extractor": "try_extract_code",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 13,
+    "extract_error": null,
+    "failed_tests": 10,
+    "forge_failed": 10,
+    "forge_total": 13,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 3,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3695,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/SignatureCheckerLib.sol",
+  "id": 3695,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-11T07:31:20.566840+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "metagpt",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 10,
+  "test_pass": 3,
+  "test_source": "eval_seed1",
+  "test_total": 13
+}

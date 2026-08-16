@@ -1,0 +1,1136 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 27,
+      "proved_checks": 27,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 27,
+        "proved_checks": 27,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 27,
+        "passed_methods": 27,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 27
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 27,
+          "passed_methods": 27,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 27
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/utils/math/Math.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/utils/math/Math.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/utils/math/Math.sol"
+      ],
+      "test_names": [
+        "test_Math_tryAdd_0",
+        "test_Math_trySub_1",
+        "test_Math_tryMul_2",
+        "test_Math_tryDiv_3",
+        "test_Math_tryMod_4",
+        "test_Math_ternary_5",
+        "test_Math_max_6",
+        "test_Math_min_7",
+        "test_Math_average_8",
+        "test_Math_ceilDiv_9",
+        "test_Math_mulDiv_10",
+        "test_Math_invMod_12",
+        "test_Math_sqrt_18",
+        "test_Math_sqrt_19",
+        "test_Math_log2_20",
+        "test_Math_log2_21",
+        "test_Math_log10_22",
+        "test_Math_log10_23",
+        "test_Math_log256_24",
+        "test_Math_log256_25",
+        "test_Math_unsignedRoundsUp_26",
+        "test_Math_property_try_modexp_0",
+        "test_Math_property_try_modexp_bytes_1",
+        "test_Math_property_modexp_2",
+        "test_Math_property_modexp_bytes_3",
+        "test_Math_property_invmodprime_4",
+        "test_Math_property_rounding_muldiv_5"
+      ],
+      "check_names": [
+        "check_Math_tryAdd_0",
+        "check_Math_trySub_1",
+        "check_Math_tryMul_2",
+        "check_Math_tryDiv_3",
+        "check_Math_tryMod_4",
+        "check_Math_ternary_5",
+        "check_Math_max_6",
+        "check_Math_min_7",
+        "check_Math_average_8",
+        "check_Math_ceilDiv_9",
+        "check_Math_mulDiv_10",
+        "check_Math_invMod_12",
+        "check_Math_sqrt_18",
+        "check_Math_sqrt_19",
+        "check_Math_log2_20",
+        "check_Math_log2_21",
+        "check_Math_log10_22",
+        "check_Math_log10_23",
+        "check_Math_log256_24",
+        "check_Math_log256_25",
+        "check_Math_unsignedRoundsUp_26",
+        "check_Math_property_try_modexp_0",
+        "check_Math_property_try_modexp_bytes_1",
+        "check_Math_property_modexp_2",
+        "check_Math_property_modexp_bytes_3",
+        "check_Math_property_invmodprime_4",
+        "check_Math_property_rounding_muldiv_5"
+      ],
+      "methods_count": 27,
+      "manifest_skipped_checks": 6,
+      "skipped_checks": 0,
+      "expected_checks": 27,
+      "expected_tests": 27,
+      "proved_checks": 27,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_Math_tryAdd_0": "PASS",
+        "check_Math_trySub_1": "PASS",
+        "check_Math_tryMul_2": "PASS",
+        "check_Math_tryDiv_3": "PASS",
+        "check_Math_tryMod_4": "PASS",
+        "check_Math_ternary_5": "PASS",
+        "check_Math_max_6": "PASS",
+        "check_Math_min_7": "PASS",
+        "check_Math_average_8": "PASS",
+        "check_Math_ceilDiv_9": "PASS",
+        "check_Math_mulDiv_10": "PASS",
+        "check_Math_invMod_12": "PASS",
+        "check_Math_sqrt_18": "PASS",
+        "check_Math_sqrt_19": "PASS",
+        "check_Math_log2_20": "PASS",
+        "check_Math_log2_21": "PASS",
+        "check_Math_log10_22": "PASS",
+        "check_Math_log10_23": "PASS",
+        "check_Math_log256_24": "PASS",
+        "check_Math_log256_25": "PASS",
+        "check_Math_unsignedRoundsUp_26": "PASS",
+        "check_Math_property_try_modexp_0": "PASS",
+        "check_Math_property_try_modexp_bytes_1": "PASS",
+        "check_Math_property_modexp_2": "PASS",
+        "check_Math_property_modexp_bytes_3": "PASS",
+        "check_Math_property_invmodprime_4": "PASS",
+        "check_Math_property_rounding_muldiv_5": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": "explored due to the loop unrolling bound: 2\nhave not been fully explored due to the loop unrolling bound: 2\nnot been fully explored due to the loop unrolling bound: 2",
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "average",
+          "visibility": "internal",
+          "full_signature": "function average(uint256 a, uint256 b) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_average_8",
+              "test_name": "test_Math_average_8",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "ceilDiv",
+          "visibility": "internal",
+          "full_signature": "function ceilDiv(uint256 a, uint256 b) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_ceilDiv_9",
+              "test_name": "test_Math_ceilDiv_9",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "invMod",
+          "visibility": "internal",
+          "full_signature": "function invMod(uint256 a, uint256 n) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_invMod_12",
+              "test_name": "test_Math_invMod_12",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "invModPrime",
+          "visibility": "internal",
+          "full_signature": "function invModPrime(uint256 a, uint256 p) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_invmodprime_4",
+              "test_name": "test_Math_property_invmodprime_4",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "log10",
+          "visibility": "internal",
+          "full_signature": "function log10(uint256 value) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_log10_22",
+              "test_name": "test_Math_log10_22",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "log10",
+          "visibility": "internal",
+          "full_signature": "function log10(uint256 value, Rounding rounding) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_log10_23",
+              "test_name": "test_Math_log10_23",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "log2",
+          "visibility": "internal",
+          "full_signature": "function log2(uint256 value, Rounding rounding) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_log2_21",
+              "test_name": "test_Math_log2_21",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "log2",
+          "visibility": "internal",
+          "full_signature": "function log2(uint256 x) internal pure returns (uint256 r)",
+          "checks": [
+            {
+              "check_name": "check_Math_log2_20",
+              "test_name": "test_Math_log2_20",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "log256",
+          "visibility": "internal",
+          "full_signature": "function log256(uint256 value, Rounding rounding) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_log256_25",
+              "test_name": "test_Math_log256_25",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "log256",
+          "visibility": "internal",
+          "full_signature": "function log256(uint256 x) internal pure returns (uint256 r)",
+          "checks": [
+            {
+              "check_name": "check_Math_log256_24",
+              "test_name": "test_Math_log256_24",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "max",
+          "visibility": "internal",
+          "full_signature": "function max(uint256 a, uint256 b) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_max_6",
+              "test_name": "test_Math_max_6",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "min",
+          "visibility": "internal",
+          "full_signature": "function min(uint256 a, uint256 b) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_min_7",
+              "test_name": "test_Math_min_7",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "modExp",
+          "visibility": "internal",
+          "full_signature": "function modExp(bytes memory b, bytes memory e, bytes memory m) internal view returns (bytes memory)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_modexp_bytes_3",
+              "test_name": "test_Math_property_modexp_bytes_3",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "modExp",
+          "visibility": "internal",
+          "full_signature": "function modExp(uint256 b, uint256 e, uint256 m) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_modexp_2",
+              "test_name": "test_Math_property_modexp_2",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "mulDiv",
+          "visibility": "internal",
+          "full_signature": "function mulDiv(uint256 x, uint256 y, uint256 denominator) internal pure returns (uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_mulDiv_10",
+              "test_name": "test_Math_mulDiv_10",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "mulDiv",
+          "visibility": "internal",
+          "full_signature": "function mulDiv(uint256 x, uint256 y, uint256 denominator, Rounding rounding) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_rounding_muldiv_5",
+              "test_name": "test_Math_property_rounding_muldiv_5",
+              "attribution": "single_wrapper_selector",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "sqrt",
+          "visibility": "internal",
+          "full_signature": "function sqrt(uint256 a) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_sqrt_18",
+              "test_name": "test_Math_sqrt_18",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "sqrt",
+          "visibility": "internal",
+          "full_signature": "function sqrt(uint256 a, Rounding rounding) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_sqrt_19",
+              "test_name": "test_Math_sqrt_19",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "ternary",
+          "visibility": "internal",
+          "full_signature": "function ternary(bool condition, uint256 a, uint256 b) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_Math_ternary_5",
+              "test_name": "test_Math_ternary_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryAdd",
+          "visibility": "internal",
+          "full_signature": "function tryAdd(uint256 a, uint256 b) internal pure returns (bool success, uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_tryAdd_0",
+              "test_name": "test_Math_tryAdd_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryDiv",
+          "visibility": "internal",
+          "full_signature": "function tryDiv(uint256 a, uint256 b) internal pure returns (bool success, uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_tryDiv_3",
+              "test_name": "test_Math_tryDiv_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryMod",
+          "visibility": "internal",
+          "full_signature": "function tryMod(uint256 a, uint256 b) internal pure returns (bool success, uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_tryMod_4",
+              "test_name": "test_Math_tryMod_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryModExp",
+          "visibility": "internal",
+          "full_signature": "function tryModExp(bytes memory b, bytes memory e, bytes memory m) internal view returns (bool success, bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_try_modexp_bytes_1",
+              "test_name": "test_Math_property_try_modexp_bytes_1",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryModExp",
+          "visibility": "internal",
+          "full_signature": "function tryModExp(uint256 b, uint256 e, uint256 m) internal view returns (bool success, uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_property_try_modexp_0",
+              "test_name": "test_Math_property_try_modexp_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "tryMul",
+          "visibility": "internal",
+          "full_signature": "function tryMul(uint256 a, uint256 b) internal pure returns (bool success, uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_tryMul_2",
+              "test_name": "test_Math_tryMul_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "trySub",
+          "visibility": "internal",
+          "full_signature": "function trySub(uint256 a, uint256 b) internal pure returns (bool success, uint256 result)",
+          "checks": [
+            {
+              "check_name": "check_Math_trySub_1",
+              "test_name": "test_Math_trySub_1",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/math/Math.sol",
+          "class_name": "Math",
+          "class_kind": "library",
+          "method_name": "unsignedRoundsUp",
+          "visibility": "internal",
+          "full_signature": "function unsignedRoundsUp(Rounding rounding) internal pure returns (bool)",
+          "checks": [
+            {
+              "check_name": "check_Math_unsignedRoundsUp_26",
+              "test_name": "test_Math_unsignedRoundsUp_26",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 27,
+        "passed_methods": 27,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 27
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_Math_tryAdd_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_tryAdd_0(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 2/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_trySub_1(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 3/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_tryMul_2(uint256,uint256) (paths: 3, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n\n\n--- halmos chunk 4/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_tryDiv_3(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 5/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_tryMod_4(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 6/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_ternary_5(bool,uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 7/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_max_6(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 8/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_min_7(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 9/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_average_8(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 10/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_ceilDiv_9(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 11/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_mulDiv_10(uint256,uint256,uint256) (paths: 4, time: 0.06s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.07s\n\n\n--- halmos chunk 12/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_invMod_12(uint256,uint256) (paths: 7, time: 0.09s, bounds: [])\nWARNING  check_Math_invMod_12(uint256,uint256): paths have not been fully       \n         explored due to the loop unrolling bound: 2                            \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.10s\n\n\n--- halmos chunk 13/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_sqrt_18(uint256) (paths: 306, time: 13.43s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 13.44s\n\n\n--- halmos chunk 14/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_sqrt_19(uint256,uint8) (paths: 419, time: 18.16s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 18.17s\n\n\n--- halmos chunk 15/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_log2_20(uint256) (paths: 1, time: 0.06s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.07s\n\n\n--- halmos chunk 16/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_log2_21(uint256,uint8) (paths: 4, time: 0.10s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.11s\n\n\n--- halmos chunk 17/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_log10_22(uint256) (paths: 128, time: 1.18s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 1.18s\n\n\n--- halmos chunk 18/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_log10_23(uint256,uint8) (paths: 258, time: 3.41s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 3.42s\n\n\n--- halmos chunk 19/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_log256_24(uint256) (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 20/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_log256_25(uint256,uint8) (paths: 4, time: 0.03s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.04s\n\n\n--- halmos chunk 21/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_unsignedRoundsUp_26(uint8) (paths: 3, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 22/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_try_modexp_0(uint256,uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 23/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_try_modexp_bytes_1(uint256,uint256,uint256) (paths: 3, time: 0.04s, bounds: [])\nWARNING  check_Math_property_try_modexp_bytes_1(uint256,uint256,uint256): paths \n         have not been fully explored due to the loop unrolling bound: 2        \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 24/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_modexp_2(uint256,uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 25/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_modexp_bytes_3(uint256,uint256,uint256) (paths: 3, time: 0.04s, bounds: [])\nWARNING  check_Math_property_modexp_bytes_3(uint256,uint256,uint256): paths have\n         not been fully explored due to the loop unrolling bound: 2             \n         (see https://github.com/a16z/halmos/wiki/warnings#loop-bound)          \nSymbolic test result: 1 passed; 0 failed; time: 0.05s\n\n\n--- halmos chunk 26/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_invmodprime_4(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n\n\n--- halmos chunk 27/27 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/math/Math.t.sol:MathEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_Math_property_rounding_muldiv_5(uint256,uint256,uint256,uint8) (paths: 12, time: 0.25s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.26s\n",
+      "halmos_stderr": "--- halmos chunk 1/27 ---\n\n\n--- halmos chunk 2/27 ---\n\n\n--- halmos chunk 3/27 ---\n\n\n--- halmos chunk 4/27 ---\n\n\n--- halmos chunk 5/27 ---\n\n\n--- halmos chunk 6/27 ---\n\n\n--- halmos chunk 7/27 ---\n\n\n--- halmos chunk 8/27 ---\n\n\n--- halmos chunk 9/27 ---\n\n\n--- halmos chunk 10/27 ---\n\n\n--- halmos chunk 11/27 ---\n\n\n--- halmos chunk 12/27 ---\n\n\n--- halmos chunk 13/27 ---\n\n\n--- halmos chunk 14/27 ---\n\n\n--- halmos chunk 15/27 ---\n\n\n--- halmos chunk 16/27 ---\n\n\n--- halmos chunk 17/27 ---\n\n\n--- halmos chunk 18/27 ---\n\n\n--- halmos chunk 19/27 ---\n\n\n--- halmos chunk 20/27 ---\n\n\n--- halmos chunk 21/27 ---\n\n\n--- halmos chunk 22/27 ---\n\n\n--- halmos chunk 23/27 ---\n\n\n--- halmos chunk 24/27 ---\n\n\n--- halmos chunk 25/27 ---\n\n\n--- halmos chunk 26/27 ---\n\n\n--- halmos chunk 27/27 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 27,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_tryAdd_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_trySub_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_tryMul_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_tryDiv_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_tryMod_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_ternary_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_max_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_min_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_average_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_ceilDiv_9(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_mulDiv_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_invMod_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_sqrt_18(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_sqrt_19(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_log2_20(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_log2_21(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_log10_22(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_log10_23(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_log256_24(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_log256_25(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_unsignedRoundsUp_26(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_try_modexp_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_try_modexp_bytes_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_modexp_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_modexp_bytes_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_invmodprime_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_Math_property_rounding_muldiv_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

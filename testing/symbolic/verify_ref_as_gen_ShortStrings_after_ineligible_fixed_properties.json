@@ -1,0 +1,285 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 4,
+      "proved_checks": 4,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 4,
+        "proved_checks": 4,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 4,
+        "passed_methods": 4,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 4
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 4,
+          "passed_methods": 4,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 4
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/openzeppelin-contracts/contracts/utils/ShortStrings.sol",
+      "feedback_test_path": "repository/openzeppelin-contracts/test/utils/ShortStrings.t.sol",
+      "symbolic_test_path": "repository/openzeppelin-contracts/test/utils/ShortStrings.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/openzeppelin-contracts/contracts/utils/ShortStrings.sol"
+      ],
+      "test_names": [
+        "test_ShortStrings_toShortString_0",
+        "test_ShortStrings_byteLength_2",
+        "test_ShortStrings_toShortStringWithFallback_3",
+        "test_ShortStrings_byteLengthWithFallback_5"
+      ],
+      "check_names": [
+        "check_ShortStrings_toShortString_0",
+        "check_ShortStrings_byteLength_2",
+        "check_ShortStrings_toShortStringWithFallback_3",
+        "check_ShortStrings_byteLengthWithFallback_5"
+      ],
+      "methods_count": 4,
+      "manifest_skipped_checks": 4,
+      "skipped_checks": 0,
+      "expected_checks": 4,
+      "expected_tests": 4,
+      "proved_checks": 4,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_ShortStrings_toShortString_0": "PASS",
+        "check_ShortStrings_byteLength_2": "PASS",
+        "check_ShortStrings_toShortStringWithFallback_3": "PASS",
+        "check_ShortStrings_byteLengthWithFallback_5": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/ShortStrings.sol",
+          "class_name": "ShortStrings",
+          "class_kind": "library",
+          "method_name": "byteLength",
+          "visibility": "internal",
+          "full_signature": "function byteLength(ShortString sstr) internal pure returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ShortStrings_byteLength_2",
+              "test_name": "test_ShortStrings_byteLength_2",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/ShortStrings.sol",
+          "class_name": "ShortStrings",
+          "class_kind": "library",
+          "method_name": "byteLengthWithFallback",
+          "visibility": "internal",
+          "full_signature": "function byteLengthWithFallback(ShortString value, string storage store) internal view returns (uint256)",
+          "checks": [
+            {
+              "check_name": "check_ShortStrings_byteLengthWithFallback_5",
+              "test_name": "test_ShortStrings_byteLengthWithFallback_5",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/ShortStrings.sol",
+          "class_name": "ShortStrings",
+          "class_kind": "library",
+          "method_name": "toShortString",
+          "visibility": "internal",
+          "full_signature": "function toShortString(string memory str) internal pure returns (ShortString)",
+          "checks": [
+            {
+              "check_name": "check_ShortStrings_toShortString_0",
+              "test_name": "test_ShortStrings_toShortString_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/openzeppelin-contracts/contracts/utils/ShortStrings.sol",
+          "class_name": "ShortStrings",
+          "class_kind": "library",
+          "method_name": "toShortStringWithFallback",
+          "visibility": "internal",
+          "full_signature": "function toShortStringWithFallback(string memory value, string storage store) internal returns (ShortString)",
+          "checks": [
+            {
+              "check_name": "check_ShortStrings_toShortStringWithFallback_3",
+              "test_name": "test_ShortStrings_toShortStringWithFallback_3",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 4,
+        "passed_methods": 4,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 4
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+        "--match-test",
+        "^(?:check_ShortStrings_toShortString_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/4 ---\nCompiling 3 files with Solc 0.8.24\nSolc 0.8.24 finished in 1.76s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/ShortStrings.t.sol:11:5:\n   |\n11 |     function ref_call_toShortString_0(string memory str) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/ShortStrings.t.sol:14:5:\n   |\n14 |     function ref_call_toString_1(bytes32 sstr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/ShortStrings.t.sol:17:5:\n   |\n17 |     function ref_call_byteLength_2(bytes32 sstr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/ShortStrings.t.sol:29:5:\n   |\n29 |     function gen_call_toShortString_0(string memory str) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/ShortStrings.t.sol:32:5:\n   |\n32 |     function gen_call_toString_1(bytes32 sstr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/utils/ShortStrings.t.sol:35:5:\n   |\n35 |     function gen_call_byteLength_2(bytes32 sstr) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/utils/ShortStrings.t.sol:ShortStringsEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ShortStrings_toShortString_0(string) (paths: 3, time: 0.07s, bounds: [str=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 0.08s\n\n\n--- halmos chunk 2/4 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/ShortStrings.t.sol:ShortStringsEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ShortStrings_byteLength_2(bytes32) (paths: 2, time: 0.02s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.03s\n\n\n--- halmos chunk 3/4 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/ShortStrings.t.sol:ShortStringsEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ShortStrings_toShortStringWithFallback_3(string,string) (paths: 9, time: 1.92s, bounds: [value=[0, 65, 1024], initialStore=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 1.95s\n\n\n--- halmos chunk 4/4 ---\nNo files changed, compilation skipped\n\nRunning 1 tests for test/utils/ShortStrings.t.sol:ShortStringsEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ShortStrings_byteLengthWithFallback_5(bytes32,string) (paths: 10, time: 1.19s, bounds: [initialStore=[0, 65, 1024]])\nSymbolic test result: 1 passed; 0 failed; time: 1.20s\n",
+      "halmos_stderr": "--- halmos chunk 1/4 ---\n\n\n--- halmos chunk 2/4 ---\n\n\n--- halmos chunk 3/4 ---\n\n\n--- halmos chunk 4/4 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 4,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_ShortStrings_toShortString_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_ShortStrings_byteLength_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_ShortStrings_toShortStringWithFallback_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts",
+          "--match-test",
+          "^(?:check_ShortStrings_byteLengthWithFallback_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/openzeppelin-contracts/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": null
+    }
+  ]
+}

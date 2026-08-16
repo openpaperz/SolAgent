@@ -1,0 +1,454 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibZip.sol",
+        "-o",
+        "/tmp/aderyn_report_2ebpn2rj/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibZip.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibZip.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_2ebpn2rj/report.json\n\n✔  Done! Fast, clean, effective.\n⭐ Support the project with a star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibZip.sol",
+              "n_sloc": 191
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 191,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Example: `shl(shifted, 4)` will shift the right constant `4` by `a` bits. The correct order is `shl(4, shifted)`.",
+              "detector_name": "incorrect-shift-order",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 268,
+                  "src": "9235:20",
+                  "src_char": "9235:20"
+                }
+              ],
+              "title": "Incorrect Assembly Shift Parameter Order"
+            },
+            {
+              "description": "This causes the transaction execution to halt, and nothing after that call will execute including code following the assembly block.",
+              "detector_name": "yul-return",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 255,
+                  "src": "8774:12",
+                  "src_char": "8774:12"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 282,
+                  "src": "9778:28",
+                  "src_char": "9778:28"
+                }
+              ],
+              "title": "Yul block contains `return`"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 2,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 31,
+                  "src": "1138:4",
+                  "src_char": "1138:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 31,
+                  "src": "1145:4",
+                  "src_char": "1145:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 33,
+                  "src": "1246:1",
+                  "src_char": "1246:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 40,
+                  "src": "1595:2",
+                  "src_char": "1595:2"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 42,
+                  "src": "1673:1",
+                  "src_char": "1673:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 45,
+                  "src": "1805:2",
+                  "src_char": "1805:2"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 50,
+                  "src": "1917:1",
+                  "src_char": "1917:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 52,
+                  "src": "2007:1",
+                  "src_char": "2007:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 53,
+                  "src": "2065:4",
+                  "src_char": "2065:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 53,
+                  "src": "2084:4",
+                  "src_char": "2084:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 56,
+                  "src": "2240:1",
+                  "src_char": "2240:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 57,
+                  "src": "2303:4",
+                  "src_char": "2303:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 61,
+                  "src": "2449:4",
+                  "src_char": "2449:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 87,
+                  "src": "3243:4",
+                  "src_char": "3243:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 93,
+                  "src": "3475:4",
+                  "src_char": "3475:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 94,
+                  "src": "3531:1",
+                  "src_char": "3531:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 96,
+                  "src": "3583:1",
+                  "src_char": "3583:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 110,
+                  "src": "3921:4",
+                  "src_char": "3921:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 112,
+                  "src": "4011:4",
+                  "src_char": "4011:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 113,
+                  "src": "4067:1",
+                  "src_char": "4067:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 114,
+                  "src": "4132:1",
+                  "src_char": "4132:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 125,
+                  "src": "4574:1",
+                  "src_char": "4574:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 154,
+                  "src": "5525:1",
+                  "src_char": "5525:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 161,
+                  "src": "5666:4",
+                  "src_char": "5666:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 161,
+                  "src": "5687:4",
+                  "src_char": "5687:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 171,
+                  "src": "6048:4",
+                  "src_char": "6048:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 172,
+                  "src": "6104:1",
+                  "src_char": "6104:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 200,
+                  "src": "6866:4",
+                  "src_char": "6866:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 200,
+                  "src": "6889:4",
+                  "src_char": "6889:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 207,
+                  "src": "7208:1",
+                  "src_char": "7208:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 209,
+                  "src": "7278:1",
+                  "src_char": "7278:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 221,
+                  "src": "7560:4",
+                  "src_char": "7560:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 221,
+                  "src": "7583:4",
+                  "src_char": "7583:4"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 230,
+                  "src": "8022:1",
+                  "src_char": "8022:1"
+                },
+                {
+                  "contract_path": "src/utils/LibZip.sol",
+                  "line_no": 235,
+                  "src": "8204:1",
+                  "src_char": "8204:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 191,
+    "summary": {
+      "High": 2,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 4,
+    "best_round": 5,
+    "best_total": 14,
+    "best_vuln": 0,
+    "code_bytes": 9824,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "2a66073add8da7b8a10b833020accbfd741cb3bd86b6465e0e74ea4e9a18657c",
+    "skip_reason": null,
+    "sloc": 191,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:54.230353+00:00",
+  "eval": {
+    "best_round": 5,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibZip.t.sol",
+    "expected_tests": 5,
+    "extract_error": null,
+    "forge_total": 5,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 504,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibZip.sol",
+  "id": 504,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:14.600092+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 5,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 5
+}

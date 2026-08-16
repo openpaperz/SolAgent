@@ -1,0 +1,328 @@
+{
+  "aderyn": {
+    "count": 4,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades",
+        "-i",
+        "src/internal/DefenderDeploy.sol",
+        "-o",
+        "/tmp/aderyn_report_8w8k1d38/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/internal/DefenderDeploy.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades\nSource - /home/chenwei/work/solagent/repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src\nRemappings - [\n    \"openzeppelin-foundry-upgrades/=src/\",\n    \"@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/\",\n    \"@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/solidity-stringutils/lib/ds-test/src/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/\",\n    \"solidity-stringutils/=lib/solidity-stringutils/\",\n]\nEVM version - prague\n-------------------------------------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/internal/DefenderDeploy.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_8w8k1d38/report.json\n\n\u2714 Aderyn did its job. Solidity's a bit safer now.\n\ud83d\udcab Like the tool? A star on GitHub goes a long way:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/internal/DefenderDeploy.sol",
+              "n_sloc": 286
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 286,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "abi.encodePacked() should not be used with dynamic types when passing the result to a hash function such as `keccak256()`. Use `abi.encode()` instead which will pad items to 32 bytes, preventing hash collisions: https://docs.soliditylang.org/en/v0.8.13/abi-spec.html#non-standard-packed-mode. (e.g. `abi.encodePacked(0x123,0x456)` => `0x123456` => `abi.encodePacked(0x1,0x23456)`, but `abi.encode(0x123,0x456)` => `0x0...1230...456`). Unless there is a compelling reason, `abi.encode` should be preferred. If there is only one argument to `abi.encodePacked()` it can often be cast to `bytes()` or `bytes32()` instead: https://ethereum.stackexchange.com/questions/30912/how-to-compare-strings-in-solidity#answer-82739. If all arguments are strings and or bytes, `bytes.concat()` should be used instead.",
+              "detector_name": "abi-encode-packed-hash-collision",
+              "instances": [
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 42,
+                  "src": "1462:16",
+                  "src_char": "1462:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 71,
+                  "src": "2611:16",
+                  "src_char": "2611:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 91,
+                  "src": "3621:16",
+                  "src_char": "3621:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 94,
+                  "src": "3861:16",
+                  "src_char": "3861:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 122,
+                  "src": "5227:16",
+                  "src_char": "5227:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 167,
+                  "src": "7236:16",
+                  "src_char": "7236:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 205,
+                  "src": "8628:16",
+                  "src_char": "8628:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 240,
+                  "src": "9935:16",
+                  "src_char": "9935:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 262,
+                  "src": "10579:16",
+                  "src_char": "10579:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 272,
+                  "src": "11152:16",
+                  "src_char": "11152:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 298,
+                  "src": "12200:16",
+                  "src_char": "12200:16"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 328,
+                  "src": "13212:16",
+                  "src_char": "13212:16"
+                }
+              ],
+              "title": "`abi.encodePacked()` Hash Collision"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 49,
+                  "src": "1751:18",
+                  "src_char": "1751:18"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 218,
+                  "src": "8975:27",
+                  "src_char": "8975:27"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 247,
+                  "src": "10116:26",
+                  "src_char": "10116:26"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 304,
+                  "src": "12363:28",
+                  "src_char": "12363:28"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 321,
+                  "src": "12952:30",
+                  "src_char": "12952:30"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 65,
+                  "src": "2499:3",
+                  "src_char": "2499:3"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 256,
+                  "src": "10467:3",
+                  "src_char": "10467:3"
+                },
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 322,
+                  "src": "13100:3",
+                  "src_char": "13100:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Redundant import statement. Consider removing it.",
+              "detector_name": "unused-import",
+              "instances": [
+                {
+                  "contract_path": "src/internal/DefenderDeploy.sol",
+                  "line_no": 5,
+                  "src": "94:46",
+                  "src_char": "94:46"
+                }
+              ],
+              "title": "Unused Import"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 286,
+    "summary": {
+      "High": 1,
+      "Low": 3
+    }
+  },
+  "code": {
+    "skip_reason": null,
+    "strategy": "repository_file"
+  },
+  "created_at": "2026-07-11T03:58:45.297704+00:00",
+  "eval": null,
+  "file_path": "repository/openzeppelin-foundry-upgrades/lib/openzeppelin-foundry-upgrades/src/internal/DefenderDeploy.sol",
+  "id": 41,
+  "model": "repo",
+  "refreshed_at": "2026-07-11T07:31:15.834789+00:00",
+  "slither": {
+    "count": 16,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 16,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "baseline",
+  "source_kind": "baseline",
+  "status": "analyzed",
+  "table": "baseline_test",
+  "test_fail": 0,
+  "test_pass": 16,
+  "test_source": "database",
+  "test_total": 16
+}

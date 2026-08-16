@@ -1,0 +1,2078 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibClone.sol",
+        "-o",
+        "/tmp/aderyn_report__6y1dzui/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibClone.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibClone.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report__6y1dzui/report.json\n\n\ud83d\udca1 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star \u2b50\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibClone.sol",
+              "n_sloc": 957
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 957,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 41,
+                  "src": "1230:5",
+                  "src_char": "1230:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 92,
+                  "src": "2578:5",
+                  "src_char": "2578:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 174,
+                  "src": "4727:5",
+                  "src_char": "4727:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 198,
+                  "src": "5348:5",
+                  "src_char": "5348:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 204,
+                  "src": "5512:5",
+                  "src_char": "5512:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 215,
+                  "src": "5730:5",
+                  "src_char": "5730:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 271,
+                  "src": "7248:5",
+                  "src_char": "7248:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 359,
+                  "src": "9488:5",
+                  "src_char": "9488:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 387,
+                  "src": "10153:5",
+                  "src_char": "10153:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 393,
+                  "src": "10319:5",
+                  "src_char": "10319:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 404,
+                  "src": "10539:5",
+                  "src_char": "10539:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 460,
+                  "src": "12064:5",
+                  "src_char": "12064:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 550,
+                  "src": "14322:5",
+                  "src_char": "14322:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 578,
+                  "src": "14990:5",
+                  "src_char": "14990:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 584,
+                  "src": "15157:5",
+                  "src_char": "15157:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 595,
+                  "src": "15378:5",
+                  "src_char": "15378:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 640,
+                  "src": "16583:5",
+                  "src_char": "16583:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 708,
+                  "src": "18280:5",
+                  "src_char": "18280:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 802,
+                  "src": "20523:5",
+                  "src_char": "20523:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 830,
+                  "src": "21189:5",
+                  "src_char": "21189:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 840,
+                  "src": "21394:5",
+                  "src_char": "21394:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 851,
+                  "src": "21625:5",
+                  "src_char": "21625:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 912,
+                  "src": "23155:5",
+                  "src_char": "23155:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1007,
+                  "src": "25419:5",
+                  "src_char": "25419:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1035,
+                  "src": "26088:5",
+                  "src_char": "26088:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1045,
+                  "src": "26294:5",
+                  "src_char": "26294:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1056,
+                  "src": "26526:5",
+                  "src_char": "26526:5"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Remove the redundant statement.",
+              "detector_name": "redundant-statement",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 13,
+                  "src": "446:14",
+                  "src_char": "446:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 18,
+                  "src": "608:5",
+                  "src_char": "608:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 19,
+                  "src": "623:14",
+                  "src_char": "623:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 24,
+                  "src": "797:14",
+                  "src_char": "797:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 25,
+                  "src": "821:4",
+                  "src_char": "821:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 33,
+                  "src": "1020:5",
+                  "src_char": "1020:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 34,
+                  "src": "1035:14",
+                  "src_char": "1035:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 35,
+                  "src": "1059:4",
+                  "src_char": "1059:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 40,
+                  "src": "1202:14",
+                  "src_char": "1202:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 45,
+                  "src": "1341:14",
+                  "src_char": "1341:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 54,
+                  "src": "1568:14",
+                  "src_char": "1568:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 55,
+                  "src": "1592:4",
+                  "src_char": "1592:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 56,
+                  "src": "1606:8",
+                  "src_char": "1606:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 61,
+                  "src": "1750:14",
+                  "src_char": "1750:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 66,
+                  "src": "1918:5",
+                  "src_char": "1918:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 67,
+                  "src": "1933:14",
+                  "src_char": "1933:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 75,
+                  "src": "2133:14",
+                  "src_char": "2133:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 76,
+                  "src": "2157:4",
+                  "src_char": "2157:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 84,
+                  "src": "2362:5",
+                  "src_char": "2362:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 85,
+                  "src": "2377:14",
+                  "src_char": "2377:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 86,
+                  "src": "2401:4",
+                  "src_char": "2401:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 91,
+                  "src": "2550:14",
+                  "src_char": "2550:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 96,
+                  "src": "2695:14",
+                  "src_char": "2695:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 105,
+                  "src": "2928:14",
+                  "src_char": "2928:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 106,
+                  "src": "2952:4",
+                  "src_char": "2952:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 107,
+                  "src": "2966:8",
+                  "src_char": "2966:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 112,
+                  "src": "3123:14",
+                  "src_char": "3123:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 113,
+                  "src": "3147:4",
+                  "src_char": "3147:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 121,
+                  "src": "3338:5",
+                  "src_char": "3338:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 122,
+                  "src": "3353:14",
+                  "src_char": "3353:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 123,
+                  "src": "3377:4",
+                  "src_char": "3377:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 131,
+                  "src": "3580:14",
+                  "src_char": "3580:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 132,
+                  "src": "3604:4",
+                  "src_char": "3604:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 133,
+                  "src": "3618:4",
+                  "src_char": "3618:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 141,
+                  "src": "3836:5",
+                  "src_char": "3836:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 142,
+                  "src": "3851:14",
+                  "src_char": "3851:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 143,
+                  "src": "3875:4",
+                  "src_char": "3875:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 144,
+                  "src": "3889:4",
+                  "src_char": "3889:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 152,
+                  "src": "4120:14",
+                  "src_char": "4120:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 153,
+                  "src": "4144:4",
+                  "src_char": "4144:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 154,
+                  "src": "4158:4",
+                  "src_char": "4158:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 163,
+                  "src": "4437:5",
+                  "src_char": "4437:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 164,
+                  "src": "4452:14",
+                  "src_char": "4452:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 165,
+                  "src": "4476:4",
+                  "src_char": "4476:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 166,
+                  "src": "4490:4",
+                  "src_char": "4490:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 172,
+                  "src": "4685:14",
+                  "src_char": "4685:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 173,
+                  "src": "4709:4",
+                  "src_char": "4709:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 178,
+                  "src": "4857:14",
+                  "src_char": "4857:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 179,
+                  "src": "4881:4",
+                  "src_char": "4881:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 189,
+                  "src": "5127:14",
+                  "src_char": "5127:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 190,
+                  "src": "5151:4",
+                  "src_char": "5151:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 191,
+                  "src": "5165:4",
+                  "src_char": "5165:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 192,
+                  "src": "5179:8",
+                  "src_char": "5179:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 197,
+                  "src": "5323:8",
+                  "src_char": "5323:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 202,
+                  "src": "5472:8",
+                  "src_char": "5472:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 203,
+                  "src": "5490:5",
+                  "src_char": "5490:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 212,
+                  "src": "5677:8",
+                  "src_char": "5677:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 213,
+                  "src": "5695:5",
+                  "src_char": "5695:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 214,
+                  "src": "5710:3",
+                  "src_char": "5710:3"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 219,
+                  "src": "5841:14",
+                  "src_char": "5841:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 224,
+                  "src": "6011:5",
+                  "src_char": "6011:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 225,
+                  "src": "6026:14",
+                  "src_char": "6026:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 233,
+                  "src": "6228:14",
+                  "src_char": "6228:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 234,
+                  "src": "6252:4",
+                  "src_char": "6252:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 242,
+                  "src": "6459:5",
+                  "src_char": "6459:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 243,
+                  "src": "6474:14",
+                  "src_char": "6474:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 244,
+                  "src": "6498:4",
+                  "src_char": "6498:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 252,
+                  "src": "6712:14",
+                  "src_char": "6712:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 253,
+                  "src": "6736:4",
+                  "src_char": "6736:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 262,
+                  "src": "6998:5",
+                  "src_char": "6998:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 263,
+                  "src": "7013:14",
+                  "src_char": "7013:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 264,
+                  "src": "7037:4",
+                  "src_char": "7037:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 270,
+                  "src": "7220:14",
+                  "src_char": "7220:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 275,
+                  "src": "7366:14",
+                  "src_char": "7366:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 284,
+                  "src": "7600:14",
+                  "src_char": "7600:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 285,
+                  "src": "7624:4",
+                  "src_char": "7624:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 286,
+                  "src": "7638:8",
+                  "src_char": "7638:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 291,
+                  "src": "7803:14",
+                  "src_char": "7803:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 292,
+                  "src": "7827:4",
+                  "src_char": "7827:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 300,
+                  "src": "8026:5",
+                  "src_char": "8026:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 301,
+                  "src": "8041:14",
+                  "src_char": "8041:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 302,
+                  "src": "8065:4",
+                  "src_char": "8065:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 310,
+                  "src": "8276:14",
+                  "src_char": "8276:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 311,
+                  "src": "8300:4",
+                  "src_char": "8300:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 312,
+                  "src": "8314:4",
+                  "src_char": "8314:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 320,
+                  "src": "8540:5",
+                  "src_char": "8540:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 321,
+                  "src": "8555:14",
+                  "src_char": "8555:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 322,
+                  "src": "8579:4",
+                  "src_char": "8579:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 323,
+                  "src": "8593:4",
+                  "src_char": "8593:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 331,
+                  "src": "8826:14",
+                  "src_char": "8826:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 332,
+                  "src": "8850:4",
+                  "src_char": "8850:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 333,
+                  "src": "8864:4",
+                  "src_char": "8864:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 344,
+                  "src": "9163:5",
+                  "src_char": "9163:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 345,
+                  "src": "9178:14",
+                  "src_char": "9178:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 346,
+                  "src": "9202:4",
+                  "src_char": "9202:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 347,
+                  "src": "9216:4",
+                  "src_char": "9216:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 357,
+                  "src": "9446:14",
+                  "src_char": "9446:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 358,
+                  "src": "9470:4",
+                  "src_char": "9470:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 367,
+                  "src": "9653:14",
+                  "src_char": "9653:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 368,
+                  "src": "9677:4",
+                  "src_char": "9677:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 378,
+                  "src": "9930:14",
+                  "src_char": "9930:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 379,
+                  "src": "9954:4",
+                  "src_char": "9954:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 380,
+                  "src": "9968:4",
+                  "src_char": "9968:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 381,
+                  "src": "9982:8",
+                  "src_char": "9982:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 386,
+                  "src": "10128:8",
+                  "src_char": "10128:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 391,
+                  "src": "10279:8",
+                  "src_char": "10279:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 392,
+                  "src": "10297:5",
+                  "src_char": "10297:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 401,
+                  "src": "10486:8",
+                  "src_char": "10486:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 402,
+                  "src": "10504:5",
+                  "src_char": "10504:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 403,
+                  "src": "10519:3",
+                  "src_char": "10519:3"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 408,
+                  "src": "10651:14",
+                  "src_char": "10651:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 413,
+                  "src": "10822:5",
+                  "src_char": "10822:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 414,
+                  "src": "10837:14",
+                  "src_char": "10837:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 422,
+                  "src": "11040:14",
+                  "src_char": "11040:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 423,
+                  "src": "11064:4",
+                  "src_char": "11064:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 431,
+                  "src": "11272:5",
+                  "src_char": "11272:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 432,
+                  "src": "11287:14",
+                  "src_char": "11287:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 433,
+                  "src": "11311:4",
+                  "src_char": "11311:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 441,
+                  "src": "11526:14",
+                  "src_char": "11526:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 442,
+                  "src": "11550:4",
+                  "src_char": "11550:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 451,
+                  "src": "11813:5",
+                  "src_char": "11813:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 452,
+                  "src": "11828:14",
+                  "src_char": "11828:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 453,
+                  "src": "11852:4",
+                  "src_char": "11852:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 459,
+                  "src": "12036:14",
+                  "src_char": "12036:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 464,
+                  "src": "12183:14",
+                  "src_char": "12183:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 473,
+                  "src": "12418:14",
+                  "src_char": "12418:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 474,
+                  "src": "12442:4",
+                  "src_char": "12442:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 475,
+                  "src": "12456:8",
+                  "src_char": "12456:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 480,
+                  "src": "12613:14",
+                  "src_char": "12613:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 481,
+                  "src": "12637:4",
+                  "src_char": "12637:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 489,
+                  "src": "12837:5",
+                  "src_char": "12837:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 490,
+                  "src": "12852:14",
+                  "src_char": "12852:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 491,
+                  "src": "12876:4",
+                  "src_char": "12876:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 499,
+                  "src": "13088:14",
+                  "src_char": "13088:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 500,
+                  "src": "13112:4",
+                  "src_char": "13112:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 501,
+                  "src": "13126:4",
+                  "src_char": "13126:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 511,
+                  "src": "13371:5",
+                  "src_char": "13371:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 512,
+                  "src": "13386:14",
+                  "src_char": "13386:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 513,
+                  "src": "13410:4",
+                  "src_char": "13410:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 514,
+                  "src": "13424:4",
+                  "src_char": "13424:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 522,
+                  "src": "13658:14",
+                  "src_char": "13658:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 523,
+                  "src": "13682:4",
+                  "src_char": "13682:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 524,
+                  "src": "13696:4",
+                  "src_char": "13696:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 535,
+                  "src": "13996:5",
+                  "src_char": "13996:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 536,
+                  "src": "14011:14",
+                  "src_char": "14011:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 537,
+                  "src": "14035:4",
+                  "src_char": "14035:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 538,
+                  "src": "14049:4",
+                  "src_char": "14049:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 548,
+                  "src": "14280:14",
+                  "src_char": "14280:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 549,
+                  "src": "14304:4",
+                  "src_char": "14304:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 558,
+                  "src": "14488:14",
+                  "src_char": "14488:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 559,
+                  "src": "14512:4",
+                  "src_char": "14512:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 569,
+                  "src": "14766:14",
+                  "src_char": "14766:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 570,
+                  "src": "14790:4",
+                  "src_char": "14790:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 571,
+                  "src": "14804:4",
+                  "src_char": "14804:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 572,
+                  "src": "14818:8",
+                  "src_char": "14818:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 577,
+                  "src": "14965:8",
+                  "src_char": "14965:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 582,
+                  "src": "15117:8",
+                  "src_char": "15117:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 583,
+                  "src": "15135:5",
+                  "src_char": "15135:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 592,
+                  "src": "15325:8",
+                  "src_char": "15325:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 593,
+                  "src": "15343:5",
+                  "src_char": "15343:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 594,
+                  "src": "15358:3",
+                  "src_char": "15358:3"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 603,
+                  "src": "15600:18",
+                  "src_char": "15600:18"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 608,
+                  "src": "15753:8",
+                  "src_char": "15753:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 609,
+                  "src": "15771:14",
+                  "src_char": "15771:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 614,
+                  "src": "15946:8",
+                  "src_char": "15946:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 615,
+                  "src": "15964:14",
+                  "src_char": "15964:14"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 616,
+                  "src": "15988:4",
+                  "src_char": "15988:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 629,
+                  "src": "16336:18",
+                  "src_char": "16336:18"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 630,
+                  "src": "16364:8",
+                  "src_char": "16364:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 639,
+                  "src": "16551:18",
+                  "src_char": "16551:18"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 648,
+                  "src": "16737:18",
+                  "src_char": "16737:18"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 653,
+                  "src": "16891:6",
+                  "src_char": "16891:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 661,
+                  "src": "17076:5",
+                  "src_char": "17076:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 662,
+                  "src": "17091:6",
+                  "src_char": "17091:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 670,
+                  "src": "17288:6",
+                  "src_char": "17288:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 671,
+                  "src": "17304:4",
+                  "src_char": "17304:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 679,
+                  "src": "17514:5",
+                  "src_char": "17514:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 680,
+                  "src": "17529:6",
+                  "src_char": "17529:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 681,
+                  "src": "17545:4",
+                  "src_char": "17545:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 689,
+                  "src": "17762:6",
+                  "src_char": "17762:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 690,
+                  "src": "17778:4",
+                  "src_char": "17778:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 699,
+                  "src": "18043:5",
+                  "src_char": "18043:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 700,
+                  "src": "18058:6",
+                  "src_char": "18058:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 701,
+                  "src": "18074:4",
+                  "src_char": "18074:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 707,
+                  "src": "18260:6",
+                  "src_char": "18260:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 712,
+                  "src": "18401:6",
+                  "src_char": "18401:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 721,
+                  "src": "18630:6",
+                  "src_char": "18630:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 722,
+                  "src": "18646:4",
+                  "src_char": "18646:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 723,
+                  "src": "18660:8",
+                  "src_char": "18660:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 731,
+                  "src": "18848:6",
+                  "src_char": "18848:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 732,
+                  "src": "18864:4",
+                  "src_char": "18864:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 740,
+                  "src": "19066:5",
+                  "src_char": "19066:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 741,
+                  "src": "19081:6",
+                  "src_char": "19081:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 742,
+                  "src": "19097:4",
+                  "src_char": "19097:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 750,
+                  "src": "19311:6",
+                  "src_char": "19311:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 751,
+                  "src": "19327:4",
+                  "src_char": "19327:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 752,
+                  "src": "19341:4",
+                  "src_char": "19341:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 762,
+                  "src": "19588:5",
+                  "src_char": "19588:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 763,
+                  "src": "19603:6",
+                  "src_char": "19603:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 764,
+                  "src": "19619:4",
+                  "src_char": "19619:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 765,
+                  "src": "19633:4",
+                  "src_char": "19633:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 774,
+                  "src": "19879:6",
+                  "src_char": "19879:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 775,
+                  "src": "19895:4",
+                  "src_char": "19895:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 776,
+                  "src": "19909:4",
+                  "src_char": "19909:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 787,
+                  "src": "20211:5",
+                  "src_char": "20211:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 788,
+                  "src": "20226:6",
+                  "src_char": "20226:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 789,
+                  "src": "20242:4",
+                  "src_char": "20242:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 790,
+                  "src": "20256:4",
+                  "src_char": "20256:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 800,
+                  "src": "20489:6",
+                  "src_char": "20489:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 801,
+                  "src": "20505:4",
+                  "src_char": "20505:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 810,
+                  "src": "20691:6",
+                  "src_char": "20691:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 811,
+                  "src": "20707:4",
+                  "src_char": "20707:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 821,
+                  "src": "20963:6",
+                  "src_char": "20963:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 822,
+                  "src": "20979:4",
+                  "src_char": "20979:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 823,
+                  "src": "20993:4",
+                  "src_char": "20993:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 824,
+                  "src": "21007:8",
+                  "src_char": "21007:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 829,
+                  "src": "21164:8",
+                  "src_char": "21164:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 838,
+                  "src": "21354:8",
+                  "src_char": "21354:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 839,
+                  "src": "21372:5",
+                  "src_char": "21372:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 848,
+                  "src": "21572:8",
+                  "src_char": "21572:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 849,
+                  "src": "21590:5",
+                  "src_char": "21590:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 850,
+                  "src": "21605:3",
+                  "src_char": "21605:3"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 855,
+                  "src": "21740:6",
+                  "src_char": "21740:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 863,
+                  "src": "21926:5",
+                  "src_char": "21926:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 864,
+                  "src": "21941:6",
+                  "src_char": "21941:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 872,
+                  "src": "22139:6",
+                  "src_char": "22139:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 873,
+                  "src": "22155:4",
+                  "src_char": "22155:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 882,
+                  "src": "22376:5",
+                  "src_char": "22376:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 883,
+                  "src": "22391:6",
+                  "src_char": "22391:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 884,
+                  "src": "22407:4",
+                  "src_char": "22407:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 892,
+                  "src": "22625:6",
+                  "src_char": "22625:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 893,
+                  "src": "22641:4",
+                  "src_char": "22641:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 903,
+                  "src": "22917:5",
+                  "src_char": "22917:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 904,
+                  "src": "22932:6",
+                  "src_char": "22932:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 905,
+                  "src": "22948:4",
+                  "src_char": "22948:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 911,
+                  "src": "23135:6",
+                  "src_char": "23135:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 916,
+                  "src": "23277:6",
+                  "src_char": "23277:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 925,
+                  "src": "23509:6",
+                  "src_char": "23509:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 926,
+                  "src": "23525:4",
+                  "src_char": "23525:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 927,
+                  "src": "23539:8",
+                  "src_char": "23539:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 935,
+                  "src": "23728:6",
+                  "src_char": "23728:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 936,
+                  "src": "23744:4",
+                  "src_char": "23744:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 944,
+                  "src": "23947:5",
+                  "src_char": "23947:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 945,
+                  "src": "23962:6",
+                  "src_char": "23962:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 946,
+                  "src": "23978:4",
+                  "src_char": "23978:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 955,
+                  "src": "24203:6",
+                  "src_char": "24203:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 956,
+                  "src": "24219:4",
+                  "src_char": "24219:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 957,
+                  "src": "24233:4",
+                  "src_char": "24233:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 967,
+                  "src": "24481:5",
+                  "src_char": "24481:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 968,
+                  "src": "24496:6",
+                  "src_char": "24496:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 969,
+                  "src": "24512:4",
+                  "src_char": "24512:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 970,
+                  "src": "24526:4",
+                  "src_char": "24526:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 979,
+                  "src": "24773:6",
+                  "src_char": "24773:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 980,
+                  "src": "24789:4",
+                  "src_char": "24789:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 981,
+                  "src": "24803:4",
+                  "src_char": "24803:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 992,
+                  "src": "25106:5",
+                  "src_char": "25106:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 993,
+                  "src": "25121:6",
+                  "src_char": "25121:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 994,
+                  "src": "25137:4",
+                  "src_char": "25137:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 995,
+                  "src": "25151:4",
+                  "src_char": "25151:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1005,
+                  "src": "25385:6",
+                  "src_char": "25385:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1006,
+                  "src": "25401:4",
+                  "src_char": "25401:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1015,
+                  "src": "25588:6",
+                  "src_char": "25588:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1016,
+                  "src": "25604:4",
+                  "src_char": "25604:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1026,
+                  "src": "25861:6",
+                  "src_char": "25861:6"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1027,
+                  "src": "25877:4",
+                  "src_char": "25877:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1028,
+                  "src": "25891:4",
+                  "src_char": "25891:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1029,
+                  "src": "25905:8",
+                  "src_char": "25905:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1034,
+                  "src": "26063:8",
+                  "src_char": "26063:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1043,
+                  "src": "26254:8",
+                  "src_char": "26254:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1044,
+                  "src": "26272:5",
+                  "src_char": "26272:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1053,
+                  "src": "26473:8",
+                  "src_char": "26473:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1054,
+                  "src": "26491:5",
+                  "src_char": "26491:5"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1055,
+                  "src": "26506:3",
+                  "src_char": "26506:3"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1060,
+                  "src": "26637:8",
+                  "src_char": "26637:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1069,
+                  "src": "26850:4",
+                  "src_char": "26850:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1070,
+                  "src": "26864:4",
+                  "src_char": "26864:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1071,
+                  "src": "26878:8",
+                  "src_char": "26878:8"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1076,
+                  "src": "27006:4",
+                  "src_char": "27006:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1077,
+                  "src": "27020:2",
+                  "src_char": "27020:2"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1082,
+                  "src": "27158:4",
+                  "src_char": "27158:4"
+                },
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 1083,
+                  "src": "27172:6",
+                  "src_char": "27172:6"
+                }
+              ],
+              "title": "Redundant Statement"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibClone.sol",
+                  "line_no": 10,
+                  "src": "326:29",
+                  "src_char": "326:29"
+                }
+              ],
+              "title": "Unused Error"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 957,
+    "summary": {
+      "High": 0,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "8fe7a7da7611d88d4510b34cf0b7237ad626d9a3fdc1d53777c4e2cc56d645d7",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:05.195525+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 27216,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 122,
+    "extract_error": null,
+    "failed_tests": 117,
+    "forge_failed": 117,
+    "forge_total": 122,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 5,
+    "report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "row_id": 805,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibClone.sol",
+  "id": 805,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-11T07:31:17.560600+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "rawmodel",
+  "source_kind": "rawmodel",
+  "status": "analyzed",
+  "table": "progress_tracker_rawmodel",
+  "test_fail": 117,
+  "test_pass": 5,
+  "test_source": "eval_seed1",
+  "test_total": 122
+}

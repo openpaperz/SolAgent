@@ -1,0 +1,358 @@
+{
+  "aderyn": {
+    "count": 8,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+        "-i",
+        "contracts/metatx/ERC2771Forwarder.sol",
+        "-o",
+        "/tmp/aderyn_report_j1u8zmqk/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "contracts/metatx/ERC2771Forwarder.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/openzeppelin-contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n--------------------------------------------------------------------------------\n# Configuration\n--------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/openzeppelin-contracts\nSource - /home/chenwei/work/solagent/repository/openzeppelin-contracts/contracts\nRemappings - [\n    \"@openzeppelin/contracts/=contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/erc4626-tests/\",\n    \"forge-std/=lib/forge-std/src/\",\n    \"halmos-cheatcodes/=lib/halmos-cheatcodes/src/\",\n    \"openzeppelin-contracts/=lib/openzeppelin-contracts/\",\n]\nEVM version - cancun\n--------------------------------------------------------------------------------\n# Source Scope\n--------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"contracts/metatx/ERC2771Forwarder.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n--------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n--------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.24]\n--------------------------------------------------------------------------------\n# Scanning Contracts\n--------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_j1u8zmqk/report.json\n\n💡 Did Aderyn help you today?\nShow some love with a quick star on GitHub Star ⭐\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "contracts/metatx/ERC2771Forwarder.sol",
+              "n_sloc": 167
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 167,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 8
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Invoking `SSTORE` operations in loops may waste gas. Use a local variable to hold the loop computation result.",
+              "detector_name": "costly-loop",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 119,
+                  "src": "5144:486",
+                  "src_char": "5144:486"
+                }
+              ],
+              "title": "Costly operations inside loop"
+            },
+            {
+              "description": "The `ecrecover` function is susceptible to signature malleability. This means that the same message can be signed in multiple ways, allowing an attacker to change the message signature without invalidating it. This can lead to unexpected behavior in smart contracts, such as the loss of funds or the ability to bypass access control. Consider using OpenZeppelin's ECDSA library instead of the built-in function.",
+              "detector_name": "ecrecover",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 218,
+                  "src": "8951:9",
+                  "src_char": "8951:9"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 236,
+                  "src": "9717:9",
+                  "src_char": "9717:9"
+                }
+              ],
+              "title": "`ecrecover` Signature Malleability"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 214,
+                  "src": "8810:2",
+                  "src_char": "8810:2"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 214,
+                  "src": "8819:2",
+                  "src_char": "8819:2"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 215,
+                  "src": "8844:2",
+                  "src_char": "8844:2"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 215,
+                  "src": "8855:2",
+                  "src_char": "8855:2"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 231,
+                  "src": "9545:2",
+                  "src_char": "9545:2"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 232,
+                  "src": "9570:2",
+                  "src_char": "9570:2"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 232,
+                  "src": "9581:2",
+                  "src_char": "9581:2"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "Avoid `require` / `revert` statements in a loop because a single bad item can cause the whole transaction to fail. It's better to forgive on fail and return failed elements post processing of the loop",
+              "detector_name": "require-revert-in-loop",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 119,
+                  "src": "5178:452",
+                  "src_char": "5178:452"
+                }
+              ],
+              "title": "Loop Contains `require`/`revert`"
+            },
+            {
+              "description": "There are state variable changes in this function but no event is emitted. Consider emitting an event to enable offchain indexers to track the changes.",
+              "detector_name": "state-change-without-event",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 80,
+                  "src": "3416:7",
+                  "src_char": "3416:7"
+                },
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 107,
+                  "src": "4686:12",
+                  "src_char": "4686:12"
+                }
+              ],
+              "title": "State Change Without Event"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 2,
+                  "src": "32:24",
+                  "src_char": "32:24"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "Consider using or removing the unused error.",
+              "detector_name": "unused-error",
+              "instances": [
+                {
+                  "contract_path": "contracts/metatx/ERC2771Forwarder.sol",
+                  "line_no": 17,
+                  "src": "647:73",
+                  "src_char": "647:73"
+                }
+              ],
+              "title": "Unused Error"
+            }
+          ]
+        }
+      },
+      "return_code": 0,
+      "source_dir": null
+    },
+    "reported_sloc": 167,
+    "sloc": 167,
+    "summary": {
+      "High": 0,
+      "Low": 8
+    }
+  },
+  "code": {
+    "best_pass": 1,
+    "best_round": 4,
+    "best_total": 6,
+    "best_vuln": 19,
+    "code_bytes": 15007,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "576728603fc1692e946bbcb07e1606cce6778a679507a2e091002feffc9c83c3",
+    "skip_reason": null,
+    "sloc": 167,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:38.932101+00:00",
+  "eval": {
+    "best_round": 4,
+    "compile_error": "Compiler run failed:\nError (5704): This expression is not callable.\n  --> test/metatx/ERC2771Forwarder.t.sol:41:33:\n   |\n41 |         return abi.encode(ret0, nonces(request.from));\n   |                                 ^^^^^^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-contracts/test/metatx/ERC2771Forwarder.t.sol",
+    "expected_tests": 6,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 93,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-contracts/contracts/metatx/ERC2771Forwarder.sol",
+  "id": 93,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:07.913779+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 19,
+    "summary": {
+      "High": 4,
+      "Low": 6,
+      "Medium": 9
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

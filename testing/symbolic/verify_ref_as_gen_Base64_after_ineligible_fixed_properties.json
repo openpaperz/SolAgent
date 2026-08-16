@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 0,
+      "failed_sols": 0,
+      "skipped_sols": 1,
+      "expected_checks": 0,
+      "proved_checks": 0,
+      "failed_checks": 0,
+      "skipped_checks": 8,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 0,
+        "failed_sols": 0,
+        "skipped_sols": 1,
+        "expected_checks": 0,
+        "proved_checks": 0,
+        "failed_checks": 0,
+        "skipped_checks": 8,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 0,
+        "passed_methods": 0,
+        "failed_methods": 0,
+        "status_counts": {},
+        "pass_rate": null
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 0,
+          "passed_methods": 0,
+          "failed_methods": 0,
+          "status_counts": {},
+          "pass_rate": null
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/Base64.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/Base64.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/Base64.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/Base64.sol"
+      ],
+      "test_names": [],
+      "check_names": [],
+      "methods_count": 0,
+      "manifest_skipped_checks": 8,
+      "skipped_checks": 8,
+      "expected_checks": 0,
+      "expected_tests": 0,
+      "proved_checks": 0,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": false,
+      "ok": false,
+      "skipped": true,
+      "skip_reason": "no Halmos-eligible symbolic methods for sol_path"
+    }
+  ]
+}

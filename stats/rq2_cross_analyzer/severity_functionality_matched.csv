@@ -1,0 +1,28 @@
+analyzer,analyzer_name,model,impact,files,full_findings,no_slither_findings,full_lower,equal,full_higher,p_value
+slither,Slither,claude-sonnet-4-5,High,54,28,33,4,50,0,0.125
+slither,Slither,claude-sonnet-4-5,Low,54,27,34,2,52,0,0.5
+slither,Slither,claude-sonnet-4-5,Medium,54,108,127,3,51,0,0.25
+slither,Slither,gpt-5-mini,High,42,15,12,0,39,3,0.25
+slither,Slither,gpt-5-mini,Low,42,21,23,2,40,0,0.5
+slither,Slither,gpt-5-mini,Medium,42,55,49,6,34,2,0.2890625
+slither,Slither,gpt-5.1,High,46,11,11,0,46,0,1.0
+slither,Slither,gpt-5.1,Low,46,10,21,6,39,1,0.125
+slither,Slither,gpt-5.1,Medium,46,50,59,6,39,1,0.125
+aderyn,Aderyn,claude-sonnet-4-5,High,54,19,21,3,50,1,0.625
+aderyn,Aderyn,claude-sonnet-4-5,Low,54,188,186,2,50,2,1.0
+aderyn,Aderyn,gpt-5-mini,High,43,22,21,1,40,2,1.0
+aderyn,Aderyn,gpt-5-mini,Low,43,141,143,4,36,3,1.0
+aderyn,Aderyn,gpt-5.1,High,46,16,18,2,43,1,1.0
+aderyn,Aderyn,gpt-5.1,Low,46,145,148,5,40,1,0.21875
+wake,Wake (Low+),claude-sonnet-4-5,high,54,11,12,1,53,0,1.0
+wake,Wake (Low+),claude-sonnet-4-5,medium,54,14,14,0,54,0,1.0
+wake,Wake (Low+),gpt-5-mini,high,43,11,10,1,40,2,1.0
+wake,Wake (Low+),gpt-5-mini,medium,43,15,15,0,43,0,1.0
+wake,Wake (Low+),gpt-5.1,high,46,1,2,1,45,0,1.0
+wake,Wake (Low+),gpt-5.1,medium,46,11,11,0,46,0,1.0
+semgrep,Semgrep + Decurity,claude-sonnet-4-5,HIGH,48,12,12,0,48,0,1.0
+semgrep,Semgrep + Decurity,claude-sonnet-4-5,MEDIUM,48,20,14,0,45,3,0.25
+semgrep,Semgrep + Decurity,gpt-5-mini,HIGH,43,11,10,0,42,1,1.0
+semgrep,Semgrep + Decurity,gpt-5-mini,MEDIUM,43,3,2,1,41,1,1.0
+semgrep,Semgrep + Decurity,gpt-5.1,HIGH,43,7,7,0,43,0,1.0
+semgrep,Semgrep + Decurity,gpt-5.1,MEDIUM,43,11,9,1,41,1,1.0

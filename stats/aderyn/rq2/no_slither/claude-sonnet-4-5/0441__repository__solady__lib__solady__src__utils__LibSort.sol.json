@@ -1,0 +1,316 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibSort.sol",
+        "-o",
+        "/tmp/aderyn_report__1fnbp99/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibSort.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibSort.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report__1fnbp99/report.json\n\n🐦 Aderyn finds bugs. You write safer code.\n⭐ Star us on GitHub if that sounds fair:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibSort.sol",
+              "n_sloc": 603
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 603,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Example: `shl(shifted, 4)` will shift the right constant `4` by `a` bits. The correct order is `shl(4, shifted)`.",
+              "detector_name": "incorrect-shift-order",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 358,
+                  "src": "13549:11",
+                  "src_char": "13024:11"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 412,
+                  "src": "15468:11",
+                  "src_char": "14943:11"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 561,
+                  "src": "21197:11",
+                  "src_char": "20447:11"
+                }
+              ],
+              "title": "Incorrect Assembly Shift Parameter Order"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 1,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 235,
+                  "src": "8784:12",
+                  "src_char": "8484:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 239,
+                  "src": "8949:12",
+                  "src_char": "8649:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 243,
+                  "src": "9151:12",
+                  "src_char": "8851:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 247,
+                  "src": "9344:12",
+                  "src_char": "9044:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 337,
+                  "src": "12776:8",
+                  "src_char": "12251:8"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 391,
+                  "src": "14677:21",
+                  "src_char": "14152:21"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 501,
+                  "src": "19261:5",
+                  "src_char": "18586:5"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 240,
+                  "src": "9114:3",
+                  "src_char": "8814:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 240,
+                  "src": "9125:3",
+                  "src_char": "8825:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 454,
+                  "src": "17208:3",
+                  "src_char": "16608:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 470,
+                  "src": "17916:3",
+                  "src_char": "17316:3"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 486,
+                  "src": "18604:3",
+                  "src_char": "18004:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 603,
+    "summary": {
+      "High": 1,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 43,
+    "best_round": 4,
+    "best_total": 66,
+    "best_vuln": 0,
+    "code_bytes": 26419,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "c7e5c00e15b724fc6367a26315976d8eb1127101c707c89fa430155512d1fcf5",
+    "skip_reason": null,
+    "sloc": 603,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:39.003603+00:00",
+  "eval": {
+    "best_round": 4,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibSort.t.sol",
+    "expected_tests": 49,
+    "extract_error": null,
+    "forge_total": 49,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 42,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 441,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+  "id": 441,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:13.009942+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 7,
+  "test_pass": 42,
+  "test_source": "rq2_eval",
+  "test_total": 49
+}

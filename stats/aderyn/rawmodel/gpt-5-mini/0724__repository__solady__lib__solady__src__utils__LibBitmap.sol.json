@@ -1,0 +1,596 @@
+{
+  "aderyn": {
+    "count": 3,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibBitmap.sol",
+        "-o",
+        "/tmp/aderyn_report_6h066any/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibBitmap.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibBitmap.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_6h066any/report.json\n\n\ud83e\udeb6 Aderyn spotted all it could. Stay secure.\nIf our little bird helped you out, give it a perch with a GitHub Star \u2b50\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibBitmap.sol",
+              "n_sloc": 240
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 240,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 3
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 433,
+                  "src": "17494:11",
+                  "src_char": "17494:11"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 449,
+                  "src": "18293:6",
+                  "src_char": "18293:6"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 465,
+                  "src": "18954:6",
+                  "src_char": "18954:6"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 33,
+                  "src": "1269:1",
+                  "src_char": "1269:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 34,
+                  "src": "1319:4",
+                  "src_char": "1319:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 54,
+                  "src": "2063:1",
+                  "src_char": "2063:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 55,
+                  "src": "2096:4",
+                  "src_char": "2096:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 71,
+                  "src": "2803:1",
+                  "src_char": "2803:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 72,
+                  "src": "2836:4",
+                  "src_char": "2836:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 96,
+                  "src": "4011:1",
+                  "src_char": "4011:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 97,
+                  "src": "4044:4",
+                  "src_char": "4044:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 126,
+                  "src": "5372:1",
+                  "src_char": "5372:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 127,
+                  "src": "5405:4",
+                  "src_char": "5405:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 162,
+                  "src": "7030:1",
+                  "src_char": "7030:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 163,
+                  "src": "7065:4",
+                  "src_char": "7065:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 211,
+                  "src": "8758:1",
+                  "src_char": "8758:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 212,
+                  "src": "8793:4",
+                  "src_char": "8793:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 259,
+                  "src": "10665:1",
+                  "src_char": "10665:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 260,
+                  "src": "10700:4",
+                  "src_char": "10700:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 318,
+                  "src": "12867:1",
+                  "src_char": "12867:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 319,
+                  "src": "12899:4",
+                  "src_char": "12899:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 334,
+                  "src": "13442:1",
+                  "src_char": "13442:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 371,
+                  "src": "15200:1",
+                  "src_char": "15200:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 372,
+                  "src": "15245:1",
+                  "src_char": "15245:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 375,
+                  "src": "15319:4",
+                  "src_char": "15319:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 382,
+                  "src": "15615:4",
+                  "src_char": "15615:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 401,
+                  "src": "16422:4",
+                  "src_char": "16422:4"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 416,
+                  "src": "16968:1",
+                  "src_char": "16968:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 443,
+                  "src": "18133:1",
+                  "src_char": "18133:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 453,
+                  "src": "18442:3",
+                  "src_char": "18442:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 453,
+                  "src": "18460:3",
+                  "src_char": "18460:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 453,
+                  "src": "18470:3",
+                  "src_char": "18470:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 454,
+                  "src": "18494:2",
+                  "src_char": "18494:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 454,
+                  "src": "18511:2",
+                  "src_char": "18511:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 454,
+                  "src": "18520:2",
+                  "src_char": "18520:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 455,
+                  "src": "18543:2",
+                  "src_char": "18543:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 455,
+                  "src": "18560:2",
+                  "src_char": "18560:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 455,
+                  "src": "18569:2",
+                  "src_char": "18569:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 456,
+                  "src": "18592:2",
+                  "src_char": "18592:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 456,
+                  "src": "18609:2",
+                  "src_char": "18609:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 456,
+                  "src": "18618:2",
+                  "src_char": "18618:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 457,
+                  "src": "18641:1",
+                  "src_char": "18641:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 457,
+                  "src": "18657:1",
+                  "src_char": "18657:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 457,
+                  "src": "18665:1",
+                  "src_char": "18665:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 458,
+                  "src": "18687:1",
+                  "src_char": "18687:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 458,
+                  "src": "18703:1",
+                  "src_char": "18703:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 458,
+                  "src": "18711:1",
+                  "src_char": "18711:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 468,
+                  "src": "19113:3",
+                  "src_char": "19113:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 468,
+                  "src": "19123:3",
+                  "src_char": "19123:3"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 469,
+                  "src": "19196:2",
+                  "src_char": "19196:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 469,
+                  "src": "19205:2",
+                  "src_char": "19205:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 470,
+                  "src": "19268:2",
+                  "src_char": "19268:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 470,
+                  "src": "19277:2",
+                  "src_char": "19277:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 471,
+                  "src": "19340:2",
+                  "src_char": "19340:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 471,
+                  "src": "19349:2",
+                  "src_char": "19349:2"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 472,
+                  "src": "19411:1",
+                  "src_char": "19411:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 472,
+                  "src": "19419:1",
+                  "src_char": "19419:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 473,
+                  "src": "19461:1",
+                  "src_char": "19461:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 473,
+                  "src": "19469:1",
+                  "src_char": "19469:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 474,
+                  "src": "19510:1",
+                  "src_char": "19510:1"
+                },
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 474,
+                  "src": "19518:1",
+                  "src_char": "19518:1"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero to improve code readability.",
+              "detector_name": "uninitialized-local-variable",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibBitmap.sol",
+                  "line_no": 451,
+                  "src": "18403:5",
+                  "src_char": "18403:5"
+                }
+              ],
+              "title": "Uninitialized Local Variable"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 240,
+    "summary": {
+      "High": 0,
+      "Low": 3
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "3ee3590e8771a81bde8006fdc6fbe4f7733e150387e05769f26e093461050601",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:03.834710+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 19634,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 10,
+    "extract_error": null,
+    "failed_tests": 1,
+    "forge_failed": 1,
+    "forge_total": 10,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 9,
+    "report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "row_id": 724,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibBitmap.sol",
+  "id": 724,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:17.217955+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "rawmodel",
+  "source_kind": "rawmodel",
+  "status": "analyzed",
+  "table": "progress_tracker_rawmodel",
+  "test_fail": 1,
+  "test_pass": 9,
+  "test_source": "eval_seed1",
+  "test_total": 10
+}

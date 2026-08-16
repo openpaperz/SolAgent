@@ -1,0 +1,362 @@
+{
+  "aderyn": {
+    "count": 1,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibMap.sol",
+        "-o",
+        "/tmp/aderyn_report_vm_u6c4c/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibMap.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibMap.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_vm_u6c4c/report.json\n\n🛡️ Together we make Solidity safer.\n✨ Support open-source security — star Aderyn:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibMap.sol",
+              "n_sloc": 161
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 161,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 1
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 78,
+                  "src": "3182:1",
+                  "src_char": "3182:1"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 97,
+                  "src": "4039:1",
+                  "src_char": "4039:1"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 118,
+                  "src": "5059:2",
+                  "src_char": "5059:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 137,
+                  "src": "5919:2",
+                  "src_char": "5919:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 158,
+                  "src": "6940:2",
+                  "src_char": "6940:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 177,
+                  "src": "7800:2",
+                  "src_char": "7800:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 198,
+                  "src": "8821:2",
+                  "src_char": "8821:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 217,
+                  "src": "9681:2",
+                  "src_char": "9681:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 238,
+                  "src": "10702:2",
+                  "src_char": "10702:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 257,
+                  "src": "11562:2",
+                  "src_char": "11562:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 278,
+                  "src": "12586:3",
+                  "src_char": "12586:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 297,
+                  "src": "13449:3",
+                  "src_char": "13449:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 360,
+                  "src": "16762:1",
+                  "src_char": "16762:1"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 381,
+                  "src": "17978:2",
+                  "src_char": "17978:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 402,
+                  "src": "19195:2",
+                  "src_char": "19195:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 423,
+                  "src": "20412:2",
+                  "src_char": "20412:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 444,
+                  "src": "21629:2",
+                  "src_char": "21629:2"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 465,
+                  "src": "22848:3",
+                  "src_char": "22848:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 523,
+                  "src": "25524:3",
+                  "src_char": "25524:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 524,
+                  "src": "25581:3",
+                  "src_char": "25581:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 537,
+                  "src": "26029:3",
+                  "src_char": "26029:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 547,
+                  "src": "26445:3",
+                  "src_char": "26445:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 548,
+                  "src": "26502:3",
+                  "src_char": "26502:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 554,
+                  "src": "26756:3",
+                  "src_char": "26756:3"
+                },
+                {
+                  "contract_path": "src/utils/LibMap.sol",
+                  "line_no": 575,
+                  "src": "27591:3",
+                  "src_char": "27591:3"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 161,
+    "summary": {
+      "High": 0,
+      "Low": 1
+    }
+  },
+  "code": {
+    "best_pass": 27,
+    "best_round": 2,
+    "best_total": 35,
+    "best_vuln": 0,
+    "code_bytes": 28166,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "eab7a0624dace64b2c241e8bd2f1d5dfa35489d700e3dc713a8a70aeb83aec7b",
+    "skip_reason": null,
+    "sloc": 161,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:06:19.378382+00:00",
+  "eval": {
+    "best_round": 2,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/LibMap.t.sol",
+    "expected_tests": 21,
+    "extract_error": null,
+    "forge_total": 21,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 14,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 129,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibMap.sol",
+  "id": 129,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-12T03:05:08.189245+00:00",
+  "reused_from": "stats/aderyn/solagent/gpt-5-mini/0129__repository__solady__lib__solady__src__utils__LibMap.sol.json",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq1_sha_reuse",
+  "slither": {
+    "count": 0,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 0
+    }
+  },
+  "source": "full",
+  "source_name": "SolAgent (Full)",
+  "status": "analyzed",
+  "table": "process_tracking",
+  "test_fail": 7,
+  "test_pass": 14,
+  "test_source": "rq2_eval",
+  "test_total": 21
+}

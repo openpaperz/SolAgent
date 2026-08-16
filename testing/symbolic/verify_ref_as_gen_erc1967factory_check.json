@@ -1,0 +1,133 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 12,
+      "proved_checks": 12,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 12,
+        "proved_checks": 12,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ]
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/ERC1967Factory.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/ERC1967Factory.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/ERC1967Factory.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/ERC1967Factory.sol"
+      ],
+      "test_names": [
+        "test_ERC1967Factory__emptyData_12",
+        "test_ERC1967Factory_property_admin_fixed_0",
+        "test_ERC1967Factory_property_change_admin_fixed_1",
+        "test_ERC1967Factory_property_upgrade_unauthorized_2",
+        "test_ERC1967Factory_property_upgrade_and_call_unauthorized_3",
+        "test_ERC1967Factory_property_deterministic_bad_salt_reverts_4",
+        "test_ERC1967Factory_property_deterministic_and_call_bad_salt_reverts_5",
+        "test_ERC1967Factory_property_init_code_hash_direct_7",
+        "test_ERC1967Factory_property_predict_deterministic_direct_9",
+        "test_ERC1967Factory_property_internal_deploy_direct_10",
+        "test_ERC1967Factory_property_deploy_direct_11",
+        "test_ERC1967Factory_property_deploy_and_call_direct_12"
+      ],
+      "check_names": [
+        "check_ERC1967Factory__emptyData_12",
+        "check_ERC1967Factory_property_admin_fixed_0",
+        "check_ERC1967Factory_property_change_admin_fixed_1",
+        "check_ERC1967Factory_property_upgrade_unauthorized_2",
+        "check_ERC1967Factory_property_upgrade_and_call_unauthorized_3",
+        "check_ERC1967Factory_property_deterministic_bad_salt_reverts_4",
+        "check_ERC1967Factory_property_deterministic_and_call_bad_salt_reverts_5",
+        "check_ERC1967Factory_property_init_code_hash_direct_7",
+        "check_ERC1967Factory_property_predict_deterministic_direct_9",
+        "check_ERC1967Factory_property_internal_deploy_direct_10",
+        "check_ERC1967Factory_property_deploy_direct_11",
+        "check_ERC1967Factory_property_deploy_and_call_direct_12"
+      ],
+      "methods_count": 12,
+      "manifest_skipped_checks": 14,
+      "skipped_checks": 0,
+      "expected_checks": 12,
+      "expected_tests": 12,
+      "proved_checks": 12,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_ERC1967Factory__emptyData_12": "PASS",
+        "check_ERC1967Factory_property_admin_fixed_0": "PASS",
+        "check_ERC1967Factory_property_change_admin_fixed_1": "PASS",
+        "check_ERC1967Factory_property_upgrade_unauthorized_2": "PASS",
+        "check_ERC1967Factory_property_upgrade_and_call_unauthorized_3": "PASS",
+        "check_ERC1967Factory_property_deterministic_bad_salt_reverts_4": "PASS",
+        "check_ERC1967Factory_property_deterministic_and_call_bad_salt_reverts_5": "PASS",
+        "check_ERC1967Factory_property_init_code_hash_direct_7": "PASS",
+        "check_ERC1967Factory_property_predict_deterministic_direct_9": "PASS",
+        "check_ERC1967Factory_property_internal_deploy_direct_10": "PASS",
+        "check_ERC1967Factory_property_deploy_direct_11": "PASS",
+        "check_ERC1967Factory_property_deploy_and_call_direct_12": "PASS"
+      },
+      "compile_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_ERC1967Factory__emptyData_12(?:\\(.*\\))?|check_ERC1967Factory_property_admin_fixed_0(?:\\(.*\\))?|check_ERC1967Factory_property_change_admin_fixed_1(?:\\(.*\\))?|check_ERC1967Factory_property_upgrade_unauthorized_2(?:\\(.*\\))?|check_ERC1967Factory_property_upgrade_and_call_unauthorized_3(?:\\(.*\\))?|check_ERC1967Factory_property_deterministic_bad_salt_reverts_4(?:\\(.*\\))?|check_ERC1967Factory_property_deterministic_and_call_bad_salt_reverts_5(?:\\(.*\\))?|check_ERC1967Factory_property_init_code_hash_direct_7(?:\\(.*\\))?|check_ERC1967Factory_property_predict_deterministic_direct_9(?:\\(.*\\))?|check_ERC1967Factory_property_internal_deploy_direct_10(?:\\(.*\\))?|check_ERC1967Factory_property_deploy_direct_11(?:\\(.*\\))?|check_ERC1967Factory_property_deploy_and_call_direct_12(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "30000",
+        "--solver-timeout-branching",
+        "30000",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "Compiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 542.91ms\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ERC1967Factory.t.sol:27:5:\n   |\n27 |     function exposed__initCode_1() public returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ERC1967Factory.t.sol:30:5:\n   |\n30 |     function exposed__emptyData_2() public returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ERC1967Factory.t.sol:49:5:\n   |\n49 |     function exposed__initCode_1() public returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/ERC1967Factory.t.sol:52:5:\n   |\n52 |     function exposed__emptyData_2() public returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n  --> test/ERC1967Factory.t.sol:70:5:\n   |\n70 |     function ref_call_adminOf_0(address proxy) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/ERC1967Factory.t.sol:109:5:\n    |\n109 |     function gen_call_adminOf_0(address proxy) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/ERC1967Factory.t.sol:161:5:\n    |\n161 |     function ref_call_predictDeterministicAddressOnly_15(bytes32 salt) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/ERC1967Factory.t.sol:164:5:\n    |\n164 |     function gen_call_predictDeterministicAddressOnly_15(bytes32 salt) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 12 tests for test/ERC1967Factory.t.sol:ERC1967FactoryEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory__emptyData_12() (paths: 1, time: 0.01s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_admin_fixed_0() (paths: 1, time: 0.02s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_change_admin_fixed_1() (paths: 1, time: 0.01s, bounds: [])\nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa000e14605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa001114605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_deploy_and_call_direct_12() (paths: 1, time: 0.05s, bounds: [])\nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa000e14605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa001114605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_deploy_direct_11() (paths: 1, time: 0.03s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_deterministic_and_call_bad_salt_reverts_5(bytes32,address,address) (paths: 3, time: 0.02s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_deterministic_bad_salt_reverts_4(bytes32,address,address) (paths: 3, time: 0.02s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_init_code_hash_direct_7() (paths: 1, time: 0.01s, bounds: [])\nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa000e14605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa001014605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa000e14605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \nWARNING  unknown deployed bytecode:                                             \n         0x3d3d336d00000000000000000000aaaa001114605157363d3d37363d7f360894a13ba\n         1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc545af43d6000803e60\n         4c573d6000fd5b3d6000f35b3d3560203555604080361115604c5736038060403d373d3\n         d355af43d6000803e604c573d6000fd                                        \n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_internal_deploy_direct_10(uint8,address,bytes32) (paths: 4, time: 0.08s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_predict_deterministic_direct_9(bytes32) (paths: 1, time: 0.02s, bounds: [])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_upgrade_and_call_unauthorized_3(bytes) (paths: 3, time: 0.04s, bounds: [data=[0, 65, 1024]])\n\u001b[32m[PASS]\u001b[0m check_ERC1967Factory_property_upgrade_unauthorized_2() (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 12 passed; 0 failed; time: 0.37s\n",
+      "halmos_stderr": "",
+      "halmos_json_error": null,
+      "failure_category": null
+    }
+  ]
+}

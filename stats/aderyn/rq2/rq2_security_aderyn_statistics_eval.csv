@@ -1,0 +1,7 @@
+analyzer,analyzer_name,model,mode,files,full_findings,no_slither_findings,finding_reduction,full_findings_per_kloc,no_slither_findings_per_kloc,full_lower,equal,full_higher,discordant,full_lower_among_discordant,median_difference,p_value,holm_p_within_analyzer,holm_p_all_analyzers_models
+aderyn,Aderyn,claude-sonnet-4-5,functionality_matched,54,207,207,0.0,21.902444185800444,21.90939881456393,4,48,2,6,0.6666666666666666,0.0,0.6875,1.0,1.0
+aderyn,Aderyn,gpt-5-mini,functionality_matched,43,163,164,0.006097560975609756,22.06877877064717,22.15916768004324,5,33,5,10,0.5,0,1.0,1.0,1.0
+aderyn,Aderyn,gpt-5.1,functionality_matched,46,161,166,0.030120481927710843,15.43032394096224,16.649949849548644,6,38,2,8,0.75,0.0,0.2890625,0.8671875,0.8671875
+aderyn,Aderyn,claude-sonnet-4-5,both_full_pass,37,151,153,0.013071895424836602,24.441566850113304,24.82154445165477,2,34,1,3,0.6666666666666666,0,1.0,1.0,1.0
+aderyn,Aderyn,gpt-5-mini,both_full_pass,17,63,67,0.05970149253731343,28.34008097165992,30.454545454545453,4,12,1,5,0.8,0,0.375,0.75,0.75
+aderyn,Aderyn,gpt-5.1,both_full_pass,19,67,70,0.04285714285714286,24.879316747122168,27.110766847405113,3,16,0,3,1.0,0,0.25,0.75,0.75

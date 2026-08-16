@@ -1,0 +1,357 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+        "-i",
+        "src/utils/LibSort.sol",
+        "-o",
+        "/tmp/aderyn_report_i5wyir18/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/LibSort.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n-------------------------------------------------------------------------------------\n# Configuration\n-------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/agent-smart-new/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n-------------------------------------------------------------------------------------\n# Source Scope\n-------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/LibSort.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-------------------------------------------------------------------------------------\n# Scanning Contracts\n-------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_i5wyir18/report.json\n\n\ud83d\udee1\ufe0f Together we make Solidity safer.\n\u2728 Support open-source security \u2014 star Aderyn:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/LibSort.sol",
+              "n_sloc": 694
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 694,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Inconsistency in declaring uint256/uint (or) int256/int variables within a contract. Use explicit size declarations (uint256 or int256). Consider keeping the naming convention consistent in a given contract. Explicit size declarations are preferred (uint256, int256) over implicit ones (uint, int) to avoid confusion.",
+              "detector_name": "inconsistent-type-names",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 872,
+                  "src": "27487:4",
+                  "src_char": "27487:4"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 872,
+                  "src": "27497:5",
+                  "src_char": "27497:5"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 874,
+                  "src": "27566:1",
+                  "src_char": "27566:1"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 875,
+                  "src": "27588:1",
+                  "src_char": "27588:1"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 890,
+                  "src": "28093:4",
+                  "src_char": "28093:4"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 890,
+                  "src": "28103:5",
+                  "src_char": "28103:5"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 892,
+                  "src": "28172:1",
+                  "src_char": "28172:1"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 893,
+                  "src": "28194:1",
+                  "src_char": "28194:1"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 908,
+                  "src": "28698:4",
+                  "src_char": "28698:4"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 908,
+                  "src": "28708:5",
+                  "src_char": "28708:5"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 910,
+                  "src": "28777:1",
+                  "src_char": "28777:1"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 911,
+                  "src": "28799:1",
+                  "src_char": "28799:1"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 926,
+                  "src": "29345:4",
+                  "src_char": "29345:4"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 926,
+                  "src": "29355:5",
+                  "src_char": "29355:5"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 928,
+                  "src": "29424:1",
+                  "src_char": "29424:1"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 929,
+                  "src": "29446:1",
+                  "src_char": "29446:1"
+                }
+              ],
+              "title": "Inconsistent uint256/uint (or) int256/int types"
+            },
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 176,
+                  "src": "4906:12",
+                  "src_char": "4906:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 183,
+                  "src": "5167:12",
+                  "src_char": "5167:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 204,
+                  "src": "5899:12",
+                  "src_char": "5899:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 221,
+                  "src": "6482:12",
+                  "src_char": "6482:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 458,
+                  "src": "13501:10",
+                  "src_char": "13501:10"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 554,
+                  "src": "16469:12",
+                  "src_char": "16469:12"
+                },
+                {
+                  "contract_path": "src/utils/LibSort.sol",
+                  "line_no": 650,
+                  "src": "19983:5",
+                  "src_char": "19983:5"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 694,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "e66fb8912d2cad52fc4f1749a1c4621fbffcf4054d56361552c1bca4396f7679",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T03:47:17.339035+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 29945,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 49,
+    "extract_error": null,
+    "failed_tests": 20,
+    "forge_failed": 20,
+    "forge_total": 49,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 29,
+    "report_path": "testing/eval/rq1_verify_eval_rawmodel_seed1.json",
+    "row_id": 710,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/LibSort.sol",
+  "id": 710,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:17.198810+00:00",
+  "slither": {
+    "count": 0,
+    "raw_count": 0,
+    "raw_present": true,
+    "raw_summary": {
+      "error": 1
+    },
+    "rq1_count": 0,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "rawmodel",
+  "source_kind": "rawmodel",
+  "status": "analyzed",
+  "table": "progress_tracker_rawmodel",
+  "test_fail": 20,
+  "test_pass": 29,
+  "test_source": "eval_seed1",
+  "test_total": 49
+}

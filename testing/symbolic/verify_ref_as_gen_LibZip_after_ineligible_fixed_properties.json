@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 1,
+      "failed_sols": 0,
+      "skipped_sols": 0,
+      "expected_checks": 1,
+      "proved_checks": 1,
+      "failed_checks": 0,
+      "skipped_checks": 0,
+      "timeouts": 0,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {}
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 1,
+        "failed_sols": 0,
+        "skipped_sols": 0,
+        "expected_checks": 1,
+        "proved_checks": 1,
+        "failed_checks": 0,
+        "skipped_checks": 0,
+        "timeouts": 0,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {}
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 1,
+        "passed_methods": 1,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 1
+        },
+        "pass_rate": 1.0
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 1,
+          "passed_methods": 1,
+          "failed_methods": 0,
+          "status_counts": {
+            "PASS": 1
+          },
+          "pass_rate": 1.0
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibZip.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibZip.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibZip.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibZip.sol"
+      ],
+      "test_names": [
+        "test_LibZip_cdFallback_4"
+      ],
+      "check_names": [
+        "check_LibZip_cdFallback_4"
+      ],
+      "methods_count": 1,
+      "manifest_skipped_checks": 8,
+      "skipped_checks": 0,
+      "expected_checks": 1,
+      "expected_tests": 1,
+      "proved_checks": 1,
+      "failed_checks": 0,
+      "timeouts": 0,
+      "proved": true,
+      "ok": true,
+      "failed_check_names": [],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_LibZip_cdFallback_4": "PASS"
+      },
+      "compile_error": null,
+      "counterexamples": [],
+      "unsupported_error": null,
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibZip.sol",
+          "class_name": "LibZip",
+          "class_kind": "library",
+          "method_name": "cdFallback",
+          "visibility": "internal",
+          "full_signature": "function cdFallback() internal",
+          "checks": [
+            {
+              "check_name": "check_LibZip_cdFallback_4",
+              "test_name": "test_LibZip_cdFallback_4",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 1,
+        "passed_methods": 1,
+        "failed_methods": 0,
+        "status_counts": {
+          "PASS": 1
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibZip_cdFallback_4(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "Compiling 2 files with Solc 0.8.28\nSolc 0.8.28 finished in 109.95ms\nCompiler run successful with warnings:\nWarning (5740): Unreachable code.\n  --> test/LibZip.t.sol:22:35:\n   |\n22 |         RefLibZip_0.cdFallback(); return \"\";\n   |                                   ^^^^^^^^^\n\nWarning (5740): Unreachable code.\n  --> test/LibZip.t.sol:37:35:\n   |\n37 |         GenLibZip_0.cdFallback(); return \"\";\n   |                                   ^^^^^^^^^\n\nWarning (2018): Function state mutability can be restricted to pure\n --> test/LibZip.t.sol:9:5:\n  |\n9 |     function ref_call_flzCompress_0(bytes memory data) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibZip.t.sol:12:5:\n   |\n12 |     function ref_call_flzDecompress_1(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibZip.t.sol:15:5:\n   |\n15 |     function ref_call_cdCompress_2(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibZip.t.sol:18:5:\n   |\n18 |     function ref_call_cdDecompress_3(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibZip.t.sol:24:5:\n   |\n24 |     function gen_call_flzCompress_0(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibZip.t.sol:27:5:\n   |\n27 |     function gen_call_flzDecompress_1(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibZip.t.sol:30:5:\n   |\n30 |     function gen_call_cdCompress_2(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/LibZip.t.sol:33:5:\n   |\n33 |     function gen_call_cdDecompress_3(bytes memory data) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\n\nRunning 1 tests for test/LibZip.t.sol:LibZipEquivalenceCheck\n\u001b[32m[PASS]\u001b[0m check_LibZip_cdFallback_4() (paths: 1, time: 0.01s, bounds: [])\nSymbolic test result: 1 passed; 0 failed; time: 0.02s\n",
+      "halmos_stderr": "",
+      "halmos_json_error": null,
+      "failure_category": null
+    }
+  ]
+}

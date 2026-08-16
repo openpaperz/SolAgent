@@ -1,0 +1,785 @@
+{
+  "summary": {
+    "global": {
+      "sols": 1,
+      "proved_sols": 0,
+      "failed_sols": 1,
+      "skipped_sols": 0,
+      "expected_checks": 17,
+      "proved_checks": 13,
+      "failed_checks": 4,
+      "skipped_checks": 0,
+      "timeouts": 1,
+      "compile_errors": 0,
+      "extract_errors": 0,
+      "missing_rows": 0,
+      "failure_categories": {
+        "timeout": 1
+      }
+    },
+    "groups": [
+      {
+        "source": "ref-as-gen",
+        "source_name": "Reference as Generated",
+        "model": "reference",
+        "agent_type": null,
+        "sols": 1,
+        "proved_sols": 0,
+        "failed_sols": 1,
+        "skipped_sols": 0,
+        "expected_checks": 17,
+        "proved_checks": 13,
+        "failed_checks": 4,
+        "skipped_checks": 0,
+        "timeouts": 1,
+        "compile_errors": 0,
+        "extract_errors": 0,
+        "missing_rows": 0,
+        "failure_categories": {
+          "timeout": 1
+        }
+      }
+    ],
+    "method_level": {
+      "global": {
+        "expected_methods": 17,
+        "passed_methods": 13,
+        "failed_methods": 4,
+        "status_counts": {
+          "PASS": 13,
+          "FAIL": 3,
+          "TIMEOUT": 1
+        },
+        "pass_rate": 0.7647058823529411
+      },
+      "groups": [
+        {
+          "source": "ref-as-gen",
+          "source_name": "Reference as Generated",
+          "model": "reference",
+          "agent_type": null,
+          "expected_methods": 17,
+          "passed_methods": 13,
+          "failed_methods": 4,
+          "status_counts": {
+            "PASS": 13,
+            "FAIL": 3,
+            "TIMEOUT": 1
+          },
+          "pass_rate": 0.7647058823529411
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "source": "ref-as-gen",
+      "source_name": "Reference as Generated",
+      "model": "reference",
+      "agent_type": null,
+      "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+      "feedback_test_path": "repository/solady/lib/solady/test/LibRLP.t.sol",
+      "symbolic_test_path": "repository/solady/lib/solady/test/LibRLP.t.sol",
+      "shared_symbolic_group_size": 1,
+      "shared_symbolic_group_sol_paths": [
+        "repository/solady/lib/solady/src/utils/LibRLP.sol"
+      ],
+      "test_names": [
+        "test_LibRLP_computeAddress_0",
+        "test_LibRLP_property_p_empty_0",
+        "test_LibRLP_property_p_uint256_1",
+        "test_LibRLP_property_p_address_2",
+        "test_LibRLP_property_p_bool_3",
+        "test_LibRLP_property_p_bytes_4",
+        "test_LibRLP_property_p_list_5",
+        "test_LibRLP_property_p_list_uint256_6",
+        "test_LibRLP_property_p_list_address_7",
+        "test_LibRLP_property_p_list_bool_8",
+        "test_LibRLP_property_p_list_bytes_9",
+        "test_LibRLP_property_p_list_list_10",
+        "test_LibRLP_property_encode_list_11",
+        "test_LibRLP_property_encode_uint256_12",
+        "test_LibRLP_property_encode_address_13",
+        "test_LibRLP_property_encode_bool_14",
+        "test_LibRLP_property_encode_bytes_15"
+      ],
+      "check_names": [
+        "check_LibRLP_computeAddress_0",
+        "check_LibRLP_property_p_empty_0",
+        "check_LibRLP_property_p_uint256_1",
+        "check_LibRLP_property_p_address_2",
+        "check_LibRLP_property_p_bool_3",
+        "check_LibRLP_property_p_bytes_4",
+        "check_LibRLP_property_p_list_5",
+        "check_LibRLP_property_p_list_uint256_6",
+        "check_LibRLP_property_p_list_address_7",
+        "check_LibRLP_property_p_list_bool_8",
+        "check_LibRLP_property_p_list_bytes_9",
+        "check_LibRLP_property_p_list_list_10",
+        "check_LibRLP_property_encode_list_11",
+        "check_LibRLP_property_encode_uint256_12",
+        "check_LibRLP_property_encode_address_13",
+        "check_LibRLP_property_encode_bool_14",
+        "check_LibRLP_property_encode_bytes_15"
+      ],
+      "methods_count": 17,
+      "manifest_skipped_checks": 16,
+      "skipped_checks": 0,
+      "expected_checks": 17,
+      "expected_tests": 17,
+      "proved_checks": 13,
+      "failed_checks": 4,
+      "timeouts": 1,
+      "proved": false,
+      "ok": false,
+      "failed_check_names": [
+        "check_LibRLP_property_p_uint256_1",
+        "check_LibRLP_property_p_list_uint256_6",
+        "check_LibRLP_property_p_list_list_10",
+        "check_LibRLP_property_encode_uint256_12"
+      ],
+      "missing_check_names": [],
+      "check_statuses": {
+        "check_LibRLP_computeAddress_0": "PASS",
+        "check_LibRLP_property_p_empty_0": "PASS",
+        "check_LibRLP_property_p_uint256_1": "FAIL",
+        "check_LibRLP_property_p_address_2": "PASS",
+        "check_LibRLP_property_p_bool_3": "PASS",
+        "check_LibRLP_property_p_bytes_4": "PASS",
+        "check_LibRLP_property_p_list_5": "PASS",
+        "check_LibRLP_property_p_list_uint256_6": "FAIL",
+        "check_LibRLP_property_p_list_address_7": "PASS",
+        "check_LibRLP_property_p_list_bool_8": "PASS",
+        "check_LibRLP_property_p_list_bytes_9": "PASS",
+        "check_LibRLP_property_p_list_list_10": "TIMEOUT",
+        "check_LibRLP_property_encode_list_11": "PASS",
+        "check_LibRLP_property_encode_uint256_12": "FAIL",
+        "check_LibRLP_property_encode_address_13": "PASS",
+        "check_LibRLP_property_encode_bool_14": "PASS",
+        "check_LibRLP_property_encode_bytes_15": "PASS"
+      },
+      "compile_error": null,
+      "timeout_error": "halmos timeout after 120s",
+      "counterexamples": [
+        "[ERROR] check_LibRLP_property_p_uint256_1(uint256) (paths: 3, time: 0.12s, bounds: [])",
+        "[ERROR] check_LibRLP_property_p_list_uint256_6(uint256,bytes32,bytes32) (paths: 3, time: 0.16s, bounds: [])",
+        "[ERROR] check_LibRLP_property_encode_uint256_12(uint256) (paths: 2, time: 0.09s, bounds: [])"
+      ],
+      "unsupported_error": "fully explored due to the loop unrolling bound: 2\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:\nWARNING  Encountered NotConcreteError: symbolic memory offset:",
+      "method_results": [
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "computeAddress",
+          "visibility": "internal",
+          "full_signature": "function computeAddress(address deployer, uint256 nonce) internal pure returns (address deployed)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_computeAddress_0",
+              "test_name": "test_LibRLP_computeAddress_0",
+              "attribution": "direct_manifest",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "encode",
+          "visibility": "internal",
+          "full_signature": "function encode(List memory list) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_encode_list_11",
+              "test_name": "test_LibRLP_property_encode_list_11",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "encode",
+          "visibility": "internal",
+          "full_signature": "function encode(address x) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_encode_address_13",
+              "test_name": "test_LibRLP_property_encode_address_13",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "encode",
+          "visibility": "internal",
+          "full_signature": "function encode(bool x) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_encode_bool_14",
+              "test_name": "test_LibRLP_property_encode_bool_14",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "encode",
+          "visibility": "internal",
+          "full_signature": "function encode(bytes memory x) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_encode_bytes_15",
+              "test_name": "test_LibRLP_property_encode_bytes_15",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "encode",
+          "visibility": "internal",
+          "full_signature": "function encode(uint256 x) internal pure returns (bytes memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_encode_uint256_12",
+              "test_name": "test_LibRLP_property_encode_uint256_12",
+              "attribution": "target_wrapper_name",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p() internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_empty_0",
+              "test_name": "test_LibRLP_property_p_empty_0",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory list, List memory x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_list_10",
+              "test_name": "test_LibRLP_property_p_list_list_10",
+              "attribution": "target_wrapper_name",
+              "status": "TIMEOUT"
+            }
+          ],
+          "status": "TIMEOUT",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory list, address x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_address_7",
+              "test_name": "test_LibRLP_property_p_list_address_7",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory list, bool x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_bool_8",
+              "test_name": "test_LibRLP_property_p_list_bool_8",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory list, bytes memory x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_bytes_9",
+              "test_name": "test_LibRLP_property_p_list_bytes_9",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory list, uint256 x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_uint256_6",
+              "test_name": "test_LibRLP_property_p_list_uint256_6",
+              "attribution": "target_wrapper_name",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(List memory x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_list_5",
+              "test_name": "test_LibRLP_property_p_list_5",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(address x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_address_2",
+              "test_name": "test_LibRLP_property_p_address_2",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bool x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_bool_3",
+              "test_name": "test_LibRLP_property_p_bool_3",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(bytes memory x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_bytes_4",
+              "test_name": "test_LibRLP_property_p_bytes_4",
+              "attribution": "target_wrapper_name",
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS",
+          "passed": true
+        },
+        {
+          "sol_path": "repository/solady/lib/solady/src/utils/LibRLP.sol",
+          "class_name": "LibRLP",
+          "class_kind": "library",
+          "method_name": "p",
+          "visibility": "internal",
+          "full_signature": "function p(uint256 x) internal pure returns (List memory result)",
+          "checks": [
+            {
+              "check_name": "check_LibRLP_property_p_uint256_1",
+              "test_name": "test_LibRLP_property_p_uint256_1",
+              "attribution": "target_wrapper_name",
+              "status": "FAIL"
+            }
+          ],
+          "status": "FAIL",
+          "passed": false
+        }
+      ],
+      "method_level_summary": {
+        "expected_methods": 17,
+        "passed_methods": 13,
+        "failed_methods": 4,
+        "status_counts": {
+          "PASS": 13,
+          "FAIL": 3,
+          "TIMEOUT": 1
+        }
+      },
+      "halmos_command": [
+        "/Users/chenwei/.local/bin/halmos",
+        "--root",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+        "--match-test",
+        "^(?:check_LibRLP_computeAddress_0(?:\\(.*\\))?)$",
+        "--loop",
+        "2",
+        "--solver-timeout-assertion",
+        "1000",
+        "--solver-timeout-branching",
+        "1",
+        "--json-output",
+        "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+        "--minimal-json-output"
+      ],
+      "halmos_returncode": 0,
+      "halmos_stdout": "--- halmos chunk 1/17 ---\nCompiling 4 files with Solc 0.8.28\nSolc 0.8.28 finished in 1.56s\nCompiler run successful with warnings:\nWarning (2018): Function state mutability can be restricted to pure\n --> test/EfficientHashLib.t.sol:9:5:\n  |\n9 |     function ref_call_hash_0(bytes32 v0) external returns (bytes memory) {\n  |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:12:5:\n   |\n12 |     function ref_call_hash_1(uint256 v0) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:15:5:\n   |\n15 |     function ref_call_hash_2(bytes32 v0, bytes32 v1) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:18:5:\n   |\n18 |     function ref_call_hash_3(uint256 v0, uint256 v1) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:21:5:\n   |\n21 |     function ref_call_hash_4(bytes32 v0, bytes32 v1, bytes32 v2) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:24:5:\n   |\n24 |     function ref_call_hash_5(uint256 v0, uint256 v1, uint256 v2) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:27:5:\n   |\n27 |     function ref_call_hash_6(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:30:5:\n   |\n30 |     function ref_call_hash_7(uint256 v0, uint256 v1, uint256 v2, uint256 v3) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:33:5:\n   |\n33 |     function ref_call_hash_8(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:36:5:\n   |\n36 |     function ref_call_hash_9(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:39:5:\n   |\n39 |     function ref_call_hash_10(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:42:5:\n   |\n42 |     function ref_call_hash_11(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:45:5:\n   |\n45 |     function ref_call_hash_12(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:48:5:\n   |\n48 |     function ref_call_hash_13(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:51:5:\n   |\n51 |     function ref_call_hash_14(bytes32 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:54:5:\n   |\n54 |     function ref_call_hash_15(uint256 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:57:5:\n   |\n57 |     function ref_call_hash_16(bytes32 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:60:5:\n   |\n60 |     function ref_call_hash_17(uint256 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:63:5:\n   |\n63 |     function ref_call_hash_18(bytes32 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:66:5:\n   |\n66 |     function ref_call_hash_19(uint256 v ... ) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:69:5:\n   |\n69 |     function ref_call_hash_20(bytes32[11] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:72:5:\n   |\n72 |     function ref_call_hash_21(uint256[11] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:75:5:\n   |\n75 |     function ref_call_hash_22(bytes32[12] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:78:5:\n   |\n78 |     function ref_call_hash_23(uint256[12] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:81:5:\n   |\n81 |     function ref_call_hash_24(bytes32[13] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:84:5:\n   |\n84 |     function ref_call_hash_25(uint256[13] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:87:5:\n   |\n87 |     function ref_call_hash_26(bytes32[14] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:90:5:\n   |\n90 |     function ref_call_hash_27(uint256[14] memory values) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:93:5:\n   |\n93 |     function ref_call_hash_28(bytes32[] memory buffer) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:96:5:\n   |\n96 |     function ref_call_set_29(bytes32[] memory buffer, uint256 i, bytes32 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n  --> test/EfficientHashLib.t.sol:99:5:\n   |\n99 |     function ref_call_set_30(bytes32[] memory buffer, uint256 i, uint256 value) external returns (bytes memory) {\n   |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:102:5:\n    |\n102 |     function ref_call_malloc_31(uint256 n) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:105:5:\n    |\n105 |     function ref_call_free_32(bytes32[] memory buffer) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:108:5:\n    |\n108 |     function ref_call_eq_33(bytes32 a, bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:111:5:\n    |\n111 |     function ref_call_eq_34(bytes memory a, bytes32 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:114:5:\n    |\n114 |     function ref_call_hash_35(bytes memory b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:117:5:\n    |\n117 |     function ref_call_hash_36(bytes memory b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:120:5:\n    |\n120 |     function ref_call_hash_37(bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:123:5:\n    |\n123 |     function ref_call_hashCalldata_38(bytes calldata b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:126:5:\n    |\n126 |     function ref_call_hashCalldata_39(bytes calldata b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:129:5:\n    |\n129 |     function ref_call_hashCalldata_40(bytes calldata b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:132:5:\n    |\n132 |     function ref_call_sha2_41(bytes32 b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:135:5:\n    |\n135 |     function ref_call_sha2_42(bytes memory b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:138:5:\n    |\n138 |     function ref_call_sha2_43(bytes memory b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:141:5:\n    |\n141 |     function ref_call_sha2_44(bytes memory b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:144:5:\n    |\n144 |     function ref_call_sha2Calldata_45(bytes calldata b, uint256 start, uint256 end) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:147:5:\n    |\n147 |     function ref_call_sha2Calldata_46(bytes calldata b, uint256 start) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to view\n   --> test/EfficientHashLib.t.sol:150:5:\n    |\n150 |     function ref_call_sha2Calldata_47(bytes calldata b) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:153:5:\n    |\n153 |     function gen_call_hash_0(bytes32 v0) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:156:5:\n    |\n156 |     function gen_call_hash_1(uint256 v0) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:159:5:\n    |\n159 |     function gen_call_hash_2(bytes32 v0, bytes32 v1) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:162:5:\n    |\n162 |     function gen_call_hash_3(uint256 v0, uint256 v1) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:165:5:\n    |\n165 |     function gen_call_hash_4(bytes32 v0, bytes32 v1, bytes32 v2) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:168:5:\n    |\n168 |     function gen_call_hash_5(uint256 v0, uint256 v1, uint256 v2) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:171:5:\n    |\n171 |     function gen_call_hash_6(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:174:5:\n    |\n174 |     function gen_call_hash_7(uint256 v0, uint256 v1, uint256 v2, uint256 v3) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:177:5:\n    |\n177 |     function gen_call_hash_8(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:180:5:\n    |\n180 |     function gen_call_hash_9(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:183:5:\n    |\n183 |     function gen_call_hash_10(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:186:5:\n    |\n186 |     function gen_call_hash_11(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:189:5:\n    |\n189 |     function gen_call_hash_12(bytes32 v0, bytes32 v1, bytes32 v2, bytes32 v3, bytes32 v4, bytes32 v5, bytes32 v6) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:192:5:\n    |\n192 |     function gen_call_hash_13(uint256 v0, uint256 v1, uint256 v2, uint256 v3, uint256 v4, uint256 v5, uint256 v6) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:195:5:\n    |\n195 |     function gen_call_hash_14(bytes32 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:198:5:\n    |\n198 |     function gen_call_hash_15(uint256 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:201:5:\n    |\n201 |     function gen_call_hash_16(bytes32 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted to pure\n   --> test/EfficientHashLib.t.sol:204:5:\n    |\n204 |     function gen_call_hash_17(uint256 v ... ) external returns (bytes memory) {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\nWarning (2018): Function state mutability can be restricted \n...[truncated 74894 chars]",
+      "halmos_stderr": "--- halmos chunk 1/17 ---\n\n\n--- halmos chunk 2/17 ---\n\n\n--- halmos chunk 3/17 ---\n\n\n--- halmos chunk 4/17 ---\n\n\n--- halmos chunk 5/17 ---\n\n\n--- halmos chunk 6/17 ---\n\n\n--- halmos chunk 7/17 ---\n\n\n--- halmos chunk 8/17 ---\n\n\n--- halmos chunk 9/17 ---\n\n\n--- halmos chunk 10/17 ---\n\n\n--- halmos chunk 11/17 ---\n\n\n--- halmos chunk 12/17 ---\n\n\n--- halmos chunk 13/17 ---\n\n\n--- halmos chunk 14/17 ---\n\n\n--- halmos chunk 15/17 ---\n\n\n--- halmos chunk 16/17 ---\n\n\n--- halmos chunk 17/17 ---\n",
+      "halmos_json_error": null,
+      "halmos_chunk_count": 17,
+      "halmos_commands": [
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_computeAddress_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_empty_0(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_uint256_1(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_address_2(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_bool_3(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_bytes_4(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_5(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_uint256_6(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_address_7(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_bool_8(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_bytes_9(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_p_list_list_10(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_encode_list_11(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_encode_uint256_12(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_encode_address_13(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_encode_bool_14(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ],
+        [
+          "/Users/chenwei/.local/bin/halmos",
+          "--root",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady",
+          "--match-test",
+          "^(?:check_LibRLP_property_encode_bytes_15(?:\\(.*\\))?)$",
+          "--loop",
+          "2",
+          "--solver-timeout-assertion",
+          "1000",
+          "--solver-timeout-branching",
+          "1",
+          "--json-output",
+          "/Users/chenwei/GolandProjects/solagent/agent-smart/repository/solady/lib/solady/.halmos-symbolic-result.json",
+          "--minimal-json-output"
+        ]
+      ],
+      "failure_category": "timeout"
+    }
+  ]
+}

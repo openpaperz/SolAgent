@@ -1,0 +1,60 @@
+{
+  "aderyn": {},
+  "code": {
+    "best_pass": 0,
+    "best_round": null,
+    "best_total": 0,
+    "best_vuln": null,
+    "code_bytes": 6381,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "coding_messages_fallback",
+    "feedback_compiled": false,
+    "selection_policy": "test-first-security-second",
+    "sha256": "d382e5dc49b6711e062fb861493e11a5b8c781798208e08a48b8eaa43c789ba6",
+    "skip_reason": "selected code did not compile in feedback or eval tests",
+    "sloc": 37,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-12T02:53:45.273806+00:00",
+  "eval": {
+    "best_round": null,
+    "compile_error": "Compiler run failed:\nError (7920): Identifier not found or not unique.\n  --> test/utils/Masks.t.sol:37:9:\n   |\n37 |         GenMasks_0.Mask ret0 = GenMasks_0.toMask(group); return abi.encode(GenMasks_0.Mask.unwrap(ret0));\n   |         ^^^^^^^^^^^^^^^\n\nError: Compilation failed\n",
+    "compiled": false,
+    "error": null,
+    "eval_test_path": "repository/openzeppelin-community-contracts/lib/openzeppelin-community-contracts/test/utils/Masks.t.sol",
+    "expected_tests": 9,
+    "extract_error": null,
+    "forge_total": 0,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 0,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 418,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/openzeppelin-community-contracts/lib/openzeppelin-community-contracts/contracts/utils/Masks.sol",
+  "id": 418,
+  "model": "claude-sonnet-4-5",
+  "refreshed_at": "2026-07-12T03:05:11.050334+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "skip_reason": "selected code did not compile in feedback or eval tests",
+  "slither": {
+    "count": null,
+    "summary": null
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "skipped",
+  "table": "process_tracking_ablation",
+  "test_fail": 0,
+  "test_pass": 0,
+  "test_source": "rq2_eval",
+  "test_total": 0
+}

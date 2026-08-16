@@ -1,0 +1,2072 @@
+[
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 501,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_at_25.selector, uint256(0)),"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 502,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_at_25.selector, uint256(0))"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 510,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_at_26.selector, uint256(0)),"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 511,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_at_26.selector, uint256(0))"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 519,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_at_27.selector, uint256(0)),"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 520,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_at_27.selector, uint256(0))"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 529,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_at_28.selector, uint256(0)),"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 530,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_at_28.selector, uint256(0))"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 538,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_at_29.selector, uint256(0)),"
+  },
+  {
+    "template": "_enumerable_set_property_methods",
+    "line": 539,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_at_29.selector, uint256(0))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 123,
+    "code": "_assertLibMapCallSame(refHarness.ref_call_get_0.selector, genHarness.gen_call_get_0.selector, abi.encode(uint256(0)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 127,
+    "code": "_assertLibMapCallSame(refHarness.ref_call_set_1.selector, genHarness.gen_call_set_1.selector, abi.encode(uint256(0), value));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 156,
+    "code": "uint256 index = rawIndex % 6;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 162,
+    "code": "uint256 index = rawIndex % 6;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 217,
+    "code": "abi.encode(uint8(rawNeedle % 9), uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 229,
+    "code": "abi.encode(uint16(rawNeedle % 9), uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 241,
+    "code": "abi.encode(uint32(rawNeedle % 9), uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 253,
+    "code": "abi.encode(uint40(rawNeedle % 9), uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 265,
+    "code": "abi.encode(uint64(rawNeedle % 9), uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 275,
+    "code": "abi.encode(uint128(rawNeedle % 5), uint256(0), uint256(2))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 288,
+    "code": "abi.encode(uint256(rawNeedle % 9), uint256(0), uint256(4), bitWidthMode)"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 356,
+    "code": "uint256 index = rawIndex % 6;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 448,
+    "code": "address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_set_1.selector, uint256(0), uint8(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 452,
+    "code": "address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_set_1.selector, uint256(0), uint8(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 456,
+    "code": "uint8 needle = rawNeedle % 9;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 458,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_searchSorted_14.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 461,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_searchSorted_14.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 469,
+    "code": "address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_set_3.selector, uint256(0), uint16(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 473,
+    "code": "address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_set_3.selector, uint256(0), uint16(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 477,
+    "code": "uint16 needle = rawNeedle % 9;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 479,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_searchSorted_15.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 482,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_searchSorted_15.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 491,
+    "code": "address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_set_13.selector, uint256(0), uint256(1), bitWidthMode));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 495,
+    "code": "address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_set_13.selector, uint256(0), uint256(1), bitWidthMode));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 499,
+    "code": "uint256 needle = uint256(rawNeedle % 9);"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 501,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_searchSorted_20.selector, needle, uint256(0), uint256(4), bitWidthMode)"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 504,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_searchSorted_20.selector, needle, uint256(0), uint256(4), bitWidthMode)"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 519,
+    "code": "address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_set_5.selector, uint256(0), uint32(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 523,
+    "code": "address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_set_5.selector, uint256(0), uint32(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 527,
+    "code": "uint32 needle = rawNeedle % 9;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 529,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_searchSorted_16.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 532,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_searchSorted_16.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 540,
+    "code": "address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_set_7.selector, uint256(0), uint40(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 544,
+    "code": "address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_set_7.selector, uint256(0), uint40(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 548,
+    "code": "uint40 needle = rawNeedle % 9;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 550,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_searchSorted_17.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 553,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_searchSorted_17.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 561,
+    "code": "address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_set_9.selector, uint256(0), uint64(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 565,
+    "code": "address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_set_9.selector, uint256(0), uint64(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 569,
+    "code": "uint64 needle = rawNeedle % 9;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 571,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_searchSorted_18.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 574,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_searchSorted_18.selector, needle, uint256(0), uint256(4))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 582,
+    "code": "address(refHarness).call(abi.encodeWithSelector(refHarness.ref_call_set_11.selector, uint256(0), uint128(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 584,
+    "code": "address(genHarness).call(abi.encodeWithSelector(genHarness.gen_call_set_11.selector, uint256(0), uint128(1)));"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 586,
+    "code": "uint128 needle = rawNeedle % 5;"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 588,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_searchSorted_19.selector, needle, uint256(0), uint256(2))"
+  },
+  {
+    "template": "_libmap_property_methods",
+    "line": 591,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_searchSorted_19.selector, needle, uint256(0), uint256(2))"
+  },
+  {
+    "template": "_enumerable_map_direct_configs",
+    "line": 59,
+    "code": "_assertMapCall(selectors.refAt, selectors.genAt, abi.encode(uint256(0)));"
+  },
+  {
+    "template": "_enumerable_map_direct_configs",
+    "line": 458,
+    "code": "abi.encode(uint256(0))"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 44,
+    "code": "uint32 query = uint32(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 53,
+    "code": "uint32 query = uint32(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 62,
+    "code": "uint32 query = uint32(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 96,
+    "code": "uint48 query = uint48(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 105,
+    "code": "uint48 query = uint48(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 114,
+    "code": "uint48 query = uint48(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 148,
+    "code": "uint96 query = uint96(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 157,
+    "code": "uint96 query = uint96(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_checkpoints_property_methods",
+    "line": 166,
+    "code": "uint96 query = uint96(uint256(rawQuery) % (uint256(key1) + 2));"
+  },
+  {
+    "template": "_masks_property_methods",
+    "line": 68,
+    "code": "RefMasks_0.isEmpty(RefMasks_0.Mask.wrap(bytes32(0)))"
+  },
+  {
+    "template": "_masks_property_methods",
+    "line": 69,
+    "code": "== GenMasks_0.isEmpty(GenMasks_0.Mask.wrap(bytes32(0)))"
+  },
+  {
+    "template": "_clones_property_methods",
+    "line": 17,
+    "code": "bytes memory args = hex\"01020304\";"
+  },
+  {
+    "template": "_clones_property_methods",
+    "line": 119,
+    "code": "return address(0xBEEF);"
+  },
+  {
+    "template": "_clones_property_methods",
+    "line": 177,
+    "code": "bytes memory args = hex\"01020304\";"
+  },
+  {
+    "template": "_clones_property_methods",
+    "line": 191,
+    "code": "bytes memory args = hex\"01020304\";"
+  },
+  {
+    "template": "_clones_property_methods",
+    "line": 215,
+    "code": "bytes memory args = hex\"01020304\";"
+  },
+  {
+    "template": "_p256_property_methods",
+    "line": 13,
+    "code": "bytes32 zero = bytes32(0);"
+  },
+  {
+    "template": "_p256_property_methods",
+    "line": 22,
+    "code": "bytes32 zero = bytes32(0);"
+  },
+  {
+    "template": "_p256_property_methods",
+    "line": 31,
+    "code": "bytes32 zero = bytes32(0);"
+  },
+  {
+    "template": "_p256_property_methods",
+    "line": 40,
+    "code": "bytes32 zero = bytes32(0);"
+  },
+  {
+    "template": "_p256_property_methods",
+    "line": 43,
+    "code": "abi.encodeWithSelector(harness.ref_call_recovery_3.selector, h, uint8(0), zero, one),"
+  },
+  {
+    "template": "_p256_property_methods",
+    "line": 44,
+    "code": "abi.encodeWithSelector(harness.gen_call_recovery_3.selector, h, uint8(0), zero, one)"
+  },
+  {
+    "template": "_ecdsa_property_methods",
+    "line": 21,
+    "code": "bytes memory payload = hex\"112233445566\";"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 13,
+    "code": "bytes memory signature = hex\"1234\";"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 17,
+    "code": "address(0x1234),"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 23,
+    "code": "address(0x1234),"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 31,
+    "code": "bytes memory signature = hex\"1234\";"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 35,
+    "code": "address(0x1234),"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 41,
+    "code": "address(0x1234),"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 50,
+    "code": "bytes memory signature = hex\"1234\";"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 69,
+    "code": "bytes memory signature = hex\"1234\";"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 136,
+    "code": "bytes memory signature = hex\"1234\";"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 155,
+    "code": "bytes memory signature = hex\"1234\";"
+  },
+  {
+    "template": "_signature_checker_property_methods",
+    "line": 221,
+    "code": "bytes memory payload = hex\"112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_delegate_checker_property_methods",
+    "line": 2,
+    "code": "bytes memory zeroReturn = hex\"60206000f3\";"
+  },
+  {
+    "template": "_delegate_checker_property_methods",
+    "line": 3,
+    "code": "vm.etch(address(0x00000000000076A84feF008CDAbe6409d2FE638B), zeroReturn);"
+  },
+  {
+    "template": "_delegate_checker_property_methods",
+    "line": 4,
+    "code": "vm.etch(address(0x00000000000000447e69651d841bD8D104Bed493), zeroReturn);"
+  },
+  {
+    "template": "_delegate_checker_property_methods",
+    "line": 83,
+    "code": "to = address(0x1111111111111111111111111111111111111111);"
+  },
+  {
+    "template": "_delegate_checker_property_methods",
+    "line": 84,
+    "code": "from = address(0x2222222222222222222222222222222222222222);"
+  },
+  {
+    "template": "_delegate_checker_property_methods",
+    "line": 85,
+    "code": "token = address(0x3333333333333333333333333333333333333333);"
+  },
+  {
+    "template": "_base64_property_methods",
+    "line": 6,
+    "code": "bytes memory data = hex\"48656c6c6f\";"
+  },
+  {
+    "template": "_base64_property_methods",
+    "line": 18,
+    "code": "bytes memory data = hex\"4869\";"
+  },
+  {
+    "template": "_base64_property_methods",
+    "line": 30,
+    "code": "bytes memory data = hex\"ffffff\";"
+  },
+  {
+    "template": "_libzip_property_methods",
+    "line": 13,
+    "code": "bytes memory data = hex\"0011223344556677889900112233445566778899\";"
+  },
+  {
+    "template": "_libzip_property_methods",
+    "line": 25,
+    "code": "bytes memory data = hex\"0011223344556677889900112233445566778899\";"
+  },
+  {
+    "template": "_libzip_property_methods",
+    "line": 41,
+    "code": "bytes memory data = hex\"0011223344556677889900112233445566778899\";"
+  },
+  {
+    "template": "_libzip_property_methods",
+    "line": 53,
+    "code": "bytes memory data = hex\"0011223344556677889900112233445566778899\";"
+  },
+  {
+    "template": "_strings_property_methods",
+    "line": 143,
+    "code": "abi.encodeWithSelector(harness.ref_call_toChecksumHexString_5.selector, address(0x1234567890123456789012345678901234567890)),"
+  },
+  {
+    "template": "_strings_property_methods",
+    "line": 144,
+    "code": "abi.encodeWithSelector(harness.gen_call_toChecksumHexString_5.selector, address(0x1234567890123456789012345678901234567890))"
+  },
+  {
+    "template": "_strings_property_methods",
+    "line": 149,
+    "code": "address target = address(0x1234567890123456789012345678901234567890);"
+  },
+  {
+    "template": "_sstore2_property_methods",
+    "line": 13,
+    "code": "bytes memory data = hex\"112233445566\";"
+  },
+  {
+    "template": "_sstore2_property_methods",
+    "line": 20,
+    "code": "bytes memory data = hex\"112233445566\";"
+  },
+  {
+    "template": "_sstore2_property_methods",
+    "line": 27,
+    "code": "bytes memory data = hex\"112233445566\";"
+  },
+  {
+    "template": "_sstore2_property_methods",
+    "line": 28,
+    "code": "address deployer = address(0x123456);"
+  },
+  {
+    "template": "_sstore2_property_methods",
+    "line": 38,
+    "code": "bytes memory data = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_sstore2_property_methods",
+    "line": 64,
+    "code": "bytes memory data = hex\"102030405060708090\";"
+  },
+  {
+    "template": "_sstore2_property_methods",
+    "line": 73,
+    "code": "bytes memory data = hex\"102030405060708090\";"
+  },
+  {
+    "template": "_dynamic_buffer_single_call_specs",
+    "line": 35,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_approve_4.selector, address(0xBEEF), uint256(7)),"
+  },
+  {
+    "template": "_dynamic_buffer_single_call_specs",
+    "line": 36,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_approve_4.selector, address(0xBEEF), uint256(7))"
+  },
+  {
+    "template": "_dynamic_buffer_single_call_specs",
+    "line": 42,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_balanceOf_5.selector, address(0xBEEF), address(this)),"
+  },
+  {
+    "template": "_dynamic_buffer_single_call_specs",
+    "line": 43,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_balanceOf_5.selector, address(0xBEEF), address(this))"
+  },
+  {
+    "template": "_dynamic_buffer_single_call_specs",
+    "line": 49,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_approve_6.selector, address(this), address(0xBEEF), uint256(7)),"
+  },
+  {
+    "template": "_dynamic_buffer_single_call_specs",
+    "line": 50,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_approve_6.selector, address(this), address(0xBEEF), uint256(7))"
+  },
+  {
+    "template": "_dex_two_property_methods",
+    "line": 35,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_approve_4.selector, address(0xBEEF), uint256(7)),"
+  },
+  {
+    "template": "_dex_two_property_methods",
+    "line": 36,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_approve_4.selector, address(0xBEEF), uint256(7))"
+  },
+  {
+    "template": "_dex_two_property_methods",
+    "line": 42,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_balanceOf_5.selector, address(0xBEEF), address(this)),"
+  },
+  {
+    "template": "_dex_two_property_methods",
+    "line": 43,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_balanceOf_5.selector, address(0xBEEF), address(this))"
+  },
+  {
+    "template": "_dex_two_property_methods",
+    "line": 49,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_approve_6.selector, address(this), address(0xBEEF), uint256(7)),"
+  },
+  {
+    "template": "_dex_two_property_methods",
+    "line": 50,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_approve_6.selector, address(this), address(0xBEEF), uint256(7))"
+  },
+  {
+    "template": "_inject_good_samaritan_interface_imports",
+    "line": 62,
+    "code": "refInstance.init(1 ether);"
+  },
+  {
+    "template": "_inject_good_samaritan_interface_imports",
+    "line": 70,
+    "code": "genInstance.init(1 ether);"
+  },
+  {
+    "template": "_inject_good_samaritan_interface_imports",
+    "line": 80,
+    "code": "refInstance.init(1 ether);"
+  },
+  {
+    "template": "_inject_good_samaritan_interface_imports",
+    "line": 86,
+    "code": "genInstance.init(1 ether);"
+  },
+  {
+    "template": "_inject_good_samaritan_interface_imports",
+    "line": 94,
+    "code": "refInstance.init(1 ether);"
+  },
+  {
+    "template": "_inject_good_samaritan_interface_imports",
+    "line": 105,
+    "code": "genInstance.init(1 ether);"
+  },
+  {
+    "template": "_privacy_properties_content",
+    "line": 7,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_unlock_0.selector, uint8(0))"
+  },
+  {
+    "template": "_privacy_properties_content",
+    "line": 10,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_unlock_0.selector, uint8(0))"
+  },
+  {
+    "template": "_motorbike_property_methods",
+    "line": 13,
+    "code": "_assertMotorbikeAddressSlot(bytes32(uint256(0)));"
+  },
+  {
+    "template": "_motorbike_property_methods",
+    "line": 28,
+    "code": "_assertMotorbikeFallbackSame(abi.encodeWithSignature(\"ping(uint256)\", uint256(0)));"
+  },
+  {
+    "template": "_motorbike_property_methods",
+    "line": 31,
+    "code": "_assertMotorbikeFallbackSame(hex\"deadbeef\");"
+  },
+  {
+    "template": "_inject_motorbike_harness_wrappers",
+    "line": 43,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_inject_motorbike_harness_wrappers",
+    "line": 48,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_governor_stateful_property_methods",
+    "line": 22,
+    "code": "bytes32 descriptionHash = bytes32(uint256(0));"
+  },
+  {
+    "template": "_governor_stateful_property_methods",
+    "line": 31,
+    "code": "abi.encodeWithSelector(harness.ref_call_execute_18.selector, uint8(0), uint256(0)),"
+  },
+  {
+    "template": "_governor_stateful_property_methods",
+    "line": 32,
+    "code": "abi.encodeWithSelector(harness.gen_call_execute_18.selector, uint8(0), uint256(0))"
+  },
+  {
+    "template": "_governor_stateful_property_methods",
+    "line": 38,
+    "code": "abi.encodeWithSelector(harness.ref_call__executeOperations_19.selector, uint8(0), uint256(0)),"
+  },
+  {
+    "template": "_governor_stateful_property_methods",
+    "line": 39,
+    "code": "abi.encodeWithSelector(harness.gen_call__executeOperations_19.selector, uint8(0), uint256(0))"
+  },
+  {
+    "template": "_erc2771_forwarder_property_methods",
+    "line": 6,
+    "code": "return rawMode % 3;"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 6,
+    "code": "return rawMode % 2;"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 161,
+    "code": "owner = owner == address(0) ? address(0xCAFE) : owner;"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 185,
+    "code": "owner = owner == address(0) ? address(0xCAFE) : owner;"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 198,
+    "code": "owner = owner == address(0) ? address(0xCAFE) : owner;"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 211,
+    "code": "owner = owner == address(0) ? address(0xCAFE) : owner;"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 288,
+    "code": "receiver = receiver == address(0) ? address(0xBEEF) : receiver;"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 308,
+    "code": "address receiver = address(0xBEEF);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 309,
+    "code": "address owner = address(0xCAFE);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 322,
+    "code": "address receiver = address(0xBEEF);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 323,
+    "code": "address owner = address(0xCAFE);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 336,
+    "code": "address receiver = address(0xBEEF);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 337,
+    "code": "address owner = address(0xCAFE);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 370,
+    "code": "address receiver = address(0xBEEF);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 372,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_deposit_13.selector, uint8(0), uint256(0), receiver)"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 375,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_deposit_13.selector, uint8(0), uint256(0), receiver)"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 385,
+    "code": "address receiver = address(0xBEEF);"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 387,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_mint_14.selector, uint8(0), uint256(0), receiver)"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 390,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_mint_14.selector, uint8(0), uint256(0), receiver)"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 447,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 448,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 457,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 458,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 474,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 475,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 476,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 485,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 486,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_erc4626_property_methods",
+    "line": 487,
+    "code": "address(0xCAFE),"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 14,
+    "code": "abi.encodeWithSelector(harness.ref_call_safeTransferFrom_12.selector, address(0xA11CE), address(0xB0B), uint256(2)),"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 15,
+    "code": "abi.encodeWithSelector(harness.gen_call_safeTransferFrom_12.selector, address(0xA11CE), address(0xB0B), uint256(2))"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 20,
+    "code": "bytes memory data = hex\"1234\";"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 22,
+    "code": "abi.encodeWithSelector(harness.ref_call_safeTransferFrom_13.selector, address(0xA11CE), address(0xB0B), uint256(2), data),"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 23,
+    "code": "abi.encodeWithSelector(harness.gen_call_safeTransferFrom_13.selector, address(0xA11CE), address(0xB0B), uint256(2), data)"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 35,
+    "code": "bytes memory data = hex\"1234\";"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 44,
+    "code": "abi.encodeWithSelector(harness.ref_call__transfer_24.selector, address(0xA11CE), address(0xB0B), uint256(2)),"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 45,
+    "code": "abi.encodeWithSelector(harness.gen_call__transfer_24.selector, address(0xA11CE), address(0xB0B), uint256(2))"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 51,
+    "code": "abi.encodeWithSelector(harness.ref_call__safeTransfer_25.selector, address(0xA11CE), address(0xB0B), uint256(2)),"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 52,
+    "code": "abi.encodeWithSelector(harness.gen_call__safeTransfer_25.selector, address(0xA11CE), address(0xB0B), uint256(2))"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 57,
+    "code": "bytes memory data = hex\"1234\";"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 59,
+    "code": "abi.encodeWithSelector(harness.ref_call__safeTransfer_26.selector, address(0xA11CE), address(0xB0B), uint256(2), data),"
+  },
+  {
+    "template": "_erc721_property_methods",
+    "line": 60,
+    "code": "abi.encodeWithSelector(harness.gen_call__safeTransfer_26.selector, address(0xA11CE), address(0xB0B), uint256(2), data)"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 186,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 204,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 211,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 217,
+    "code": "address newImpl = address(0x1111000000000000000000000000000000002222);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 218,
+    "code": "bytes memory data = hex\"12345678\";"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 234,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 244,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 250,
+    "code": "address newImpl = address(0x1111000000000000000000000000000000003333);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 252,
+    "code": "address tryCaller = address(0x1234);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 265,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 272,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 278,
+    "code": "address newImpl = address(0x1111000000000000000000000000000000004444);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 291,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 298,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 304,
+    "code": "address newImpl = address(0x1111000000000000000000000000000000005555);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 305,
+    "code": "address tryCaller = address(0x1234);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 321,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 331,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 341,
+    "code": "bytes memory data = hex\"12345678\";"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 358,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 369,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 380,
+    "code": "address tryCaller = address(0x1234);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 393,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 400,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 425,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 435,
+    "code": "_coreUpgradeDataHash = bytes32(0);"
+  },
+  {
+    "template": "_core_property_methods",
+    "line": 445,
+    "code": "address tryCaller = address(0x1234);"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 388,
+    "code": "RefUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\", opts);"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 396,
+    "code": "GenUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\", opts);"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 401,
+    "code": "RefUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\");"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 406,
+    "code": "GenUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\");"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 414,
+    "code": "RefUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\", opts, address(this));"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 422,
+    "code": "GenUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\", opts, address(this));"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 427,
+    "code": "RefUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\", address(this));"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 432,
+    "code": "GenUpgrades_0.upgradeProxy(address(0x1234), \"out/Greeter.sol/Greeter.json\", hex\"\", address(this));"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 440,
+    "code": "RefUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\", opts);"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 448,
+    "code": "GenUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\", opts);"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 453,
+    "code": "RefUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\");"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 458,
+    "code": "GenUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\");"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 466,
+    "code": "RefUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\", opts, address(this));"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 474,
+    "code": "GenUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\", opts, address(this));"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 479,
+    "code": "RefUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\", address(this));"
+  },
+  {
+    "template": "_legacy_upgrades_property_methods",
+    "line": 484,
+    "code": "GenUpgrades_0.upgradeBeacon(address(0x1234), \"out/Greeter.sol/Greeter.json\", address(this));"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 21,
+    "code": "abi.encodeWithSelector(harness.ref_call_parseProposeUpgradeResponse_1.selector, uint8(0)),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 22,
+    "code": "abi.encodeWithSelector(harness.gen_call_parseProposeUpgradeResponse_1.selector, uint8(0))"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 92,
+    "code": "address(0x1230000000000000000000000000000000000456),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 93,
+    "code": "address(0x4560000000000000000000000000000000000789),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 94,
+    "code": "address(0x1110000000000000000000000000000000000222),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 99,
+    "code": "address(0x1230000000000000000000000000000000000456),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 100,
+    "code": "address(0x4560000000000000000000000000000000000789),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 101,
+    "code": "address(0x1110000000000000000000000000000000000222),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 114,
+    "code": "address(0x1230000000000000000000000000000000000456),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 116,
+    "code": "address(0x1110000000000000000000000000000000000222),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 126,
+    "code": "address(0x1230000000000000000000000000000000000456),"
+  },
+  {
+    "template": "_defender_deploy_property_methods",
+    "line": 128,
+    "code": "address(0x1110000000000000000000000000000000000222),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 52,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 79,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 106,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 144,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 171,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 214,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 229,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 244,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 266,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 281,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 335,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 380,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 425,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 488,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 533,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 592,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_bootstrapERC1967_70.selector, address(0), address(0xBEEF)),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 593,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_bootstrapERC1967_70.selector, address(0), address(0xBEEF))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 599,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 600,
+    "code": "hex\"\""
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 605,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 606,
+    "code": "hex\"\""
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 670,
+    "code": "if (implementation == address(0)) implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 676,
+    "code": "refHarness.ref_call_clone_1(uint256(0), implementation),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 677,
+    "code": "genHarness.gen_call_clone_1(uint256(0), implementation)"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 684,
+    "code": "refHarness.ref_call_clone_PUSH0_8(uint256(0), implementation),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 685,
+    "code": "genHarness.gen_call_clone_PUSH0_8(uint256(0), implementation)"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 692,
+    "code": "refHarness.ref_call_cloneDeterministic_3(uint256(0), implementation, keccak256(abi.encodePacked(\"ref-min-v\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 693,
+    "code": "genHarness.gen_call_cloneDeterministic_3(uint256(0), implementation, keccak256(abi.encodePacked(\"gen-min-v\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 700,
+    "code": "refHarness.ref_call_cloneDeterministic_PUSH0_10(uint256(0), implementation, keccak256(abi.encodePacked(\"ref-push0-v\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 701,
+    "code": "genHarness.gen_call_cloneDeterministic_PUSH0_10(uint256(0), implementation, keccak256(abi.encodePacked(\"gen-push0-v\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 706,
+    "code": "if (implementation == address(0)) implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 707,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 716,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_clone_15(uint256(0), implementation, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 717,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_clone_15(uint256(0), implementation, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 726,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_cloneDeterministic_17(uint256(0), implementation, args, keccak256(abi.encodePacked(\"ref-cwia-v\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 727,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_cloneDeterministic_17(uint256(0), implementation, args, keccak256(abi.encodePacked(\"gen-cwia-v\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 735,
+    "code": "refData = refHarness.ref_call_createDeterministicClone_19(uint256(0), implementation, args, keccak256(abi.encodePacked(\"ref-create-v\", salt)));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 736,
+    "code": "genData = genHarness.gen_call_createDeterministicClone_19(uint256(0), implementation, args, keccak256(abi.encodePacked(\"gen-create-v\", salt)));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 741,
+    "code": "if (implementation == address(0)) implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 742,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 747,
+    "code": "_libCloneAssertDeployedAddressPair(refHarness.ref_call_deployERC1967_27(uint256(0), implementation), genHarness.gen_call_deployERC1967_27(uint256(0), implementation));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 753,
+    "code": "refHarness.ref_call_deployDeterministicERC1967_29(uint256(0), implementation, keccak256(abi.encodePacked(\"ref-1967-v\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 754,
+    "code": "genHarness.gen_call_deployDeterministicERC1967_29(uint256(0), implementation, keccak256(abi.encodePacked(\"gen-1967-v\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 761,
+    "code": "refHarness.ref_call_createDeterministicERC1967_31(uint256(0), implementation, keccak256(abi.encodePacked(\"ref-1967-cv\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 762,
+    "code": "genHarness.gen_call_createDeterministicERC1967_31(uint256(0), implementation, keccak256(abi.encodePacked(\"gen-1967-cv\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 770,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployERC1967_36(uint256(0), implementation, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 771,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployERC1967_36(uint256(0), implementation, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 780,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployDeterministicERC1967_38(uint256(0), implementation, args, keccak256(abi.encodePacked(\"ref-1967-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 781,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployDeterministicERC1967_38(uint256(0), implementation, args, keccak256(abi.encodePacked(\"gen-1967-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 790,
+    "code": "refHarness.ref_call_createDeterministicERC1967_40(uint256(0), implementation, args, keccak256(abi.encodePacked(\"ref-1967-cav\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 791,
+    "code": "genHarness.gen_call_createDeterministicERC1967_40(uint256(0), implementation, args, keccak256(abi.encodePacked(\"gen-1967-cav\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 796,
+    "code": "if (implementation == address(0)) implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 797,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 802,
+    "code": "_libCloneAssertDeployedAddressPair(refHarness.ref_call_deployERC1967I_48(uint256(0), implementation), genHarness.gen_call_deployERC1967I_48(uint256(0), implementation));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 808,
+    "code": "refHarness.ref_call_deployDeterministicERC1967I_50(uint256(0), implementation, keccak256(abi.encodePacked(\"ref-1967i-v\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 809,
+    "code": "genHarness.gen_call_deployDeterministicERC1967I_50(uint256(0), implementation, keccak256(abi.encodePacked(\"gen-1967i-v\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 816,
+    "code": "refHarness.ref_call_createDeterministicERC1967I_52(uint256(0), implementation, keccak256(abi.encodePacked(\"ref-1967i-cv\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 817,
+    "code": "genHarness.gen_call_createDeterministicERC1967I_52(uint256(0), implementation, keccak256(abi.encodePacked(\"gen-1967i-cv\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 825,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployERC1967I_57(uint256(0), implementation, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 826,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployERC1967I_57(uint256(0), implementation, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 835,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployDeterministicERC1967I_59(uint256(0), implementation, args, keccak256(abi.encodePacked(\"ref-1967i-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 836,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployDeterministicERC1967I_59(uint256(0), implementation, args, keccak256(abi.encodePacked(\"gen-1967i-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 845,
+    "code": "refHarness.ref_call_createDeterministicERC1967I_61(uint256(0), implementation, args, keccak256(abi.encodePacked(\"ref-1967i-cav\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 846,
+    "code": "genHarness.gen_call_createDeterministicERC1967I_61(uint256(0), implementation, args, keccak256(abi.encodePacked(\"gen-1967i-cav\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 851,
+    "code": "if (beacon == address(0)) beacon = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 852,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 857,
+    "code": "_libCloneAssertDeployedAddressPair(refHarness.ref_call_deployERC1967BeaconProxy_77(uint256(0), beacon), genHarness.gen_call_deployERC1967BeaconProxy_77(uint256(0), beacon));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 863,
+    "code": "refHarness.ref_call_deployDeterministicERC1967BeaconProxy_79(uint256(0), beacon, keccak256(abi.encodePacked(\"ref-beacon-v\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 864,
+    "code": "genHarness.gen_call_deployDeterministicERC1967BeaconProxy_79(uint256(0), beacon, keccak256(abi.encodePacked(\"gen-beacon-v\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 871,
+    "code": "refHarness.ref_call_createDeterministicERC1967BeaconProxy_81(uint256(0), beacon, keccak256(abi.encodePacked(\"ref-beacon-cv\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 872,
+    "code": "genHarness.gen_call_createDeterministicERC1967BeaconProxy_81(uint256(0), beacon, keccak256(abi.encodePacked(\"gen-beacon-cv\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 880,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployERC1967BeaconProxy_86(uint256(0), beacon, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 881,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployERC1967BeaconProxy_86(uint256(0), beacon, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 890,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployDeterministicERC1967BeaconProxy_88(uint256(0), beacon, args, keccak256(abi.encodePacked(\"ref-beacon-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 891,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployDeterministicERC1967BeaconProxy_88(uint256(0), beacon, args, keccak256(abi.encodePacked(\"gen-beacon-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 900,
+    "code": "refHarness.ref_call_createDeterministicERC1967BeaconProxy_90(uint256(0), beacon, args, keccak256(abi.encodePacked(\"ref-beacon-cav\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 901,
+    "code": "genHarness.gen_call_createDeterministicERC1967BeaconProxy_90(uint256(0), beacon, args, keccak256(abi.encodePacked(\"gen-beacon-cav\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 906,
+    "code": "if (beacon == address(0)) beacon = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 907,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 912,
+    "code": "_libCloneAssertDeployedAddressPair(refHarness.ref_call_deployERC1967IBeaconProxy_98(uint256(0), beacon), genHarness.gen_call_deployERC1967IBeaconProxy_98(uint256(0), beacon));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 918,
+    "code": "refHarness.ref_call_deployDeterministicERC1967IBeaconProxy_100(uint256(0), beacon, keccak256(abi.encodePacked(\"ref-ibeacon-v\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 919,
+    "code": "genHarness.gen_call_deployDeterministicERC1967IBeaconProxy_100(uint256(0), beacon, keccak256(abi.encodePacked(\"gen-ibeacon-v\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 926,
+    "code": "refHarness.ref_call_createDeterministicERC1967IBeaconProxy_102(uint256(0), beacon, keccak256(abi.encodePacked(\"ref-ibeacon-cv\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 927,
+    "code": "genHarness.gen_call_createDeterministicERC1967IBeaconProxy_102(uint256(0), beacon, keccak256(abi.encodePacked(\"gen-ibeacon-cv\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 935,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployERC1967IBeaconProxy_107(uint256(0), beacon, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 936,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployERC1967IBeaconProxy_107(uint256(0), beacon, args));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 945,
+    "code": "refInstance = _libCloneDecodeAddress(refHarness.ref_call_deployDeterministicERC1967IBeaconProxy_109(uint256(0), beacon, args, keccak256(abi.encodePacked(\"ref-ibeacon-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 946,
+    "code": "genInstance = _libCloneDecodeAddress(genHarness.gen_call_deployDeterministicERC1967IBeaconProxy_109(uint256(0), beacon, args, keccak256(abi.encodePacked(\"gen-ibeacon-av\", salt))));"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 955,
+    "code": "refHarness.ref_call_createDeterministicERC1967IBeaconProxy_111(uint256(0), beacon, args, keccak256(abi.encodePacked(\"ref-ibeacon-cav\", salt))),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 956,
+    "code": "genHarness.gen_call_createDeterministicERC1967IBeaconProxy_111(uint256(0), beacon, args, keccak256(abi.encodePacked(\"gen-ibeacon-cav\", salt)))"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 961,
+    "code": "if (authorizedUpgrader == address(0)) authorizedUpgrader = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 979,
+    "code": "if (authorizedUpgrader == address(0)) authorizedUpgrader = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 988,
+    "code": "implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 990,
+    "code": "args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 999,
+    "code": "implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1001,
+    "code": "args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1010,
+    "code": "implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1012,
+    "code": "args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1021,
+    "code": "beacon = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1023,
+    "code": "args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1032,
+    "code": "beacon = address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1034,
+    "code": "args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1169,
+    "code": "return address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1256,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1266,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1276,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1287,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1297,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1308,
+    "code": "bytes memory args = hex\"00112233445566778899aabbccddeeff\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1372,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1382,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1392,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1403,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1413,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1424,
+    "code": "bytes memory args = hex\"112233445566778899\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1488,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1498,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1508,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1519,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1529,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1540,
+    "code": "bytes memory args = hex\"abcdef0102030405\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1549,
+    "code": "return address(0xBEEF);"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1609,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1619,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1629,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1640,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1650,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1661,
+    "code": "bytes memory args = hex\"01030507090b0d0f\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1725,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1735,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1745,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1756,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1766,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1777,
+    "code": "bytes memory args = hex\"feedfacecafebeef\";"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1789,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1790,
+    "code": "hex\"\""
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1795,
+    "code": "address(0xBEEF),"
+  },
+  {
+    "template": "_libclone_property_methods",
+    "line": 1796,
+    "code": "hex\"\""
+  },
+  {
+    "template": "_metadata_reader_property_methods",
+    "line": 125,
+    "code": "uint256 limit = uint256(rawLimit % 32);"
+  },
+  {
+    "template": "_metadata_reader_property_methods",
+    "line": 138,
+    "code": "uint256 limit = uint256(rawLimit % 32);"
+  },
+  {
+    "template": "_metadata_reader_property_methods",
+    "line": 176,
+    "code": "bytes memory data = hex\"06fdde03\";"
+  },
+  {
+    "template": "_json_parser_property_methods",
+    "line": 178,
+    "code": "uint256 itemType = uint256(rawType) % 7;"
+  },
+  {
+    "template": "_json_parser_property_methods",
+    "line": 201,
+    "code": "uint256 itemType = uint256(rawType) % 7;"
+  },
+  {
+    "template": "_json_parser_property_methods",
+    "line": 208,
+    "code": "uint256 itemType = uint256(rawType) % 7;"
+  },
+  {
+    "template": "_json_parser_property_methods",
+    "line": 220,
+    "code": "assert(GenJSONParserLib_0.at(genItem, uint256(0))._data == RefJSONParserLib_0.at(refItem, uint256(0))._data);"
+  },
+  {
+    "template": "_json_parser_property_methods",
+    "line": 277,
+    "code": "uint256 itemType = uint256(rawType) % 7;"
+  },
+  {
+    "template": "_json_parser_property_methods",
+    "line": 322,
+    "code": "uint256 itemType = uint256(rawType) % 7;"
+  },
+  {
+    "template": "_libtransient_single_call_specs",
+    "line": 44,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_rescueETH_1.selector, address(0xBEEF), uint256(0)),"
+  },
+  {
+    "template": "_libtransient_single_call_specs",
+    "line": 45,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_rescueETH_1.selector, address(0xBEEF), uint256(0))"
+  },
+  {
+    "template": "_libtransient_single_call_specs",
+    "line": 52,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_rescueERC20_2.selector, address(0xCAFE), address(0xBEEF), uint256(0)),"
+  },
+  {
+    "template": "_libtransient_single_call_specs",
+    "line": 53,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_rescueERC20_2.selector, address(0xCAFE), address(0xBEEF), uint256(0))"
+  },
+  {
+    "template": "_libtransient_single_call_specs",
+    "line": 60,
+    "code": "abi.encodeWithSelector(refHarness.ref_call_rescueERC6909_5.selector, address(0xCAFE), address(0xBEEF), uint256(1), uint256(0)),"
+  },
+  {
+    "template": "_libtransient_single_call_specs",
+    "line": 61,
+    "code": "abi.encodeWithSelector(genHarness.gen_call_rescueERC6909_5.selector, address(0xCAFE), address(0xBEEF), uint256(1), uint256(0))"
+  },
+  {
+    "template": "_multicallable_property_methods",
+    "line": 6,
+    "code": "address target = address(0x712);"
+  },
+  {
+    "template": "_multicallable_property_methods",
+    "line": 44,
+    "code": "return keccak256(abi.encodePacked(hex\"1901\", _expectedEIP712DomainSeparator(verifyingContract), structHash));"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 13,
+    "code": "address proxy = address(0x123456);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 14,
+    "code": "address admin = address(0xBEEF);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 26,
+    "code": "address proxy = address(0x123456);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 27,
+    "code": "address admin = address(0xBEEF);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 35,
+    "code": "address proxy = address(0x123456);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 36,
+    "code": "address implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 44,
+    "code": "address proxy = address(0x123456);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 45,
+    "code": "address implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 53,
+    "code": "address proxy = address(0x123456);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 54,
+    "code": "address implementation = address(0xBEEF);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 142,
+    "code": "return address(uint160(uint256(keccak256(abi.encodePacked(hex\"ff\", factory, salt, initCodeHash)))));"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 164,
+    "code": "address admin = address(0xBEEF);"
+  },
+  {
+    "template": "_erc1967_factory_property_methods",
+    "line": 194,
+    "code": "address admin = address(0xBEEF);"
+  },
+  {
+    "template": "_inject_erc1967_factory_harness_wrappers",
+    "line": 6,
+    "code": "uint8 mode = rawMode % 3;"
+  },
+  {
+    "template": "_inject_erc1967_factory_harness_wrappers",
+    "line": 19,
+    "code": "abi.encodeWithSelector(refHarness.ref_call__multicall_1.selector, uint8(0), uint256(0))"
+  },
+  {
+    "template": "_inject_erc1967_factory_harness_wrappers",
+    "line": 22,
+    "code": "abi.encodeWithSelector(genHarness.gen_call__multicall_1.selector, uint8(0), uint256(0))"
+  }
+]

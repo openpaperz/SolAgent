@@ -1,0 +1,378 @@
+{
+  "aderyn": {
+    "count": 11,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts",
+        "-i",
+        "src/levels/Stake.sol",
+        "-o",
+        "/tmp/aderyn_report_fnkcoh4y/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/levels/Stake.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts",
+      "raw_stderr": "",
+      "raw_stdout": "\n-----------------------------------------------------------------------------------------\n# Configuration\n-----------------------------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts\nSource - /home/chenwei/work/solagent/repository/ethernaut/lib/ethernaut.git/contracts/src\nRemappings - [\n    \"forge-std/=lib/forge-std/src/\",\n    \"openzeppelin-contracts-06/=lib/openzeppelin-contracts-06/contracts/\",\n    \"openzeppelin-contracts-08/=lib/openzeppelin-contracts-08/contracts/\",\n    \"openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n    \"ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/\",\n    \"erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\n    \"openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\n    \"openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/\",\n]\nEVM version - shanghai\n-----------------------------------------------------------------------------------------\n# Source Scope\n-----------------------------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/levels/Stake.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n-----------------------------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n-----------------------------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n-----------------------------------------------------------------------------------------\n# Scanning Contracts\n-----------------------------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_fnkcoh4y/report.json\n\n\u2714  Done! Fast, clean, effective.\n\u2b50 Support the project with a star:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/levels/Stake.sol",
+              "n_sloc": 67
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 67,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": [
+            {
+              "description": "Consider introducing checks for `msg.sender` to ensure the recipient of the money is as intended.",
+              "detector_name": "eth-send-unchecked-address",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 103,
+                  "src": "4166:7",
+                  "src_char": "4166:7"
+                }
+              ],
+              "title": "ETH transferred without address checks"
+            },
+            {
+              "description": "Changing state after an external call can lead to re-entrancy attacks.Use the checks-effects-interactions pattern to avoid this issue.",
+              "detector_name": "reentrancy-state-change",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "hint": "State is changed at: `totalStaked += amount`, `UserStake[msg.sender] += amount`, `Stakers[msg.sender] = true`",
+                  "line_no": 77,
+                  "src": "3117:57",
+                  "src_char": "3117:57"
+                }
+              ],
+              "title": "Reentrancy: State change after external call"
+            }
+          ]
+        },
+        "issue_count": {
+          "high": 2,
+          "low": 9
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Functions that are not used. Consider removing them.",
+              "detector_name": "dead-code",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 136,
+                  "src": "5418:11",
+                  "src_char": "5418:11"
+                }
+              ],
+              "title": "Dead Code"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 52,
+                  "src": "1807:11",
+                  "src_char": "1807:11"
+                },
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 75,
+                  "src": "3041:11",
+                  "src_char": "3041:11"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            },
+            {
+              "description": "Solc compiler version 0.8.20 switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes. Be sure to select the appropriate EVM version in case you intend to deploy on a chain other than mainnet like L2 chains that may not support PUSH0, otherwise deployment of your contracts will fail.",
+              "detector_name": "push-zero-opcode",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "PUSH0 Opcode"
+            },
+            {
+              "description": "There are state variable changes in this function but no event is emitted. Consider emitting an event to enable offchain indexers to track the changes.",
+              "detector_name": "state-change-without-event",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 51,
+                  "src": "1751:8",
+                  "src_char": "1751:8"
+                },
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 74,
+                  "src": "2966:9",
+                  "src_char": "2966:9"
+                },
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 103,
+                  "src": "4166:7",
+                  "src_char": "4166:7"
+                }
+              ],
+              "title": "State Change Without Event"
+            },
+            {
+              "description": "Check for `address(0)` when assigning values to address state variables.",
+              "detector_name": "state-no-address-check",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 32,
+                  "src": "1161:12",
+                  "src_char": "1161:12"
+                }
+              ],
+              "title": "Address State Variable Set Without Checks"
+            },
+            {
+              "description": "State variables that are only changed in the constructor should be declared immutable to save gas. Add the `immutable` attribute to state variables that are only changed in the constructor",
+              "detector_name": "state-variable-could-be-immutable",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 17,
+                  "src": "559:4",
+                  "src_char": "559:4"
+                }
+              ],
+              "title": "State Variable Could Be Immutable"
+            },
+            {
+              "description": "ERC20 functions may not behave as expected. For example: return values are not always meaningful. It is recommended to use OpenZeppelin's SafeERC20 library.",
+              "detector_name": "unsafe-erc20-operation",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 85,
+                  "src": "3409:17",
+                  "src_char": "3409:17"
+                }
+              ],
+              "title": "Unsafe ERC20 Operation"
+            },
+            {
+              "description": "Consider using a specific version of Solidity in your contracts instead of a wide version. For example, instead of `pragma solidity ^0.8.0;`, use `pragma solidity 0.8.0;`",
+              "detector_name": "unspecific-solidity-pragma",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 2,
+                  "src": "32:23",
+                  "src_char": "32:23"
+                }
+              ],
+              "title": "Unspecific Solidity Pragma"
+            },
+            {
+              "description": "If a function is marked public but is not used internally, consider marking it as `external`.",
+              "detector_name": "unused-public-function",
+              "instances": [
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 51,
+                  "src": "1751:8",
+                  "src_char": "1751:8"
+                },
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 74,
+                  "src": "2966:9",
+                  "src_char": "2966:9"
+                },
+                {
+                  "contract_path": "src/levels/Stake.sol",
+                  "line_no": 103,
+                  "src": "4166:7",
+                  "src_char": "4166:7"
+                }
+              ],
+              "title": "Public Function Not Used Internally"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 67,
+    "summary": {
+      "High": 2,
+      "Low": 9
+    }
+  },
+  "code": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "eval_report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "selection_policy": "best-pass-first",
+    "sha256": "f8bbacd7025cda3e2ef2a2c51b401e722a1e4003297c0b2891ffe5e355c16834",
+    "skip_reason": null,
+    "strategy": "eval_report_selection"
+  },
+  "created_at": "2026-07-11T07:29:14.227810+00:00",
+  "eval": {
+    "best_pass": null,
+    "best_round": null,
+    "best_total": null,
+    "best_vuln": null,
+    "code_bytes": 5867,
+    "code_extractor": "deepcode_tool_call",
+    "code_selection": "coding_messages",
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "expected_tests": 4,
+    "extract_error": null,
+    "failed_tests": 1,
+    "forge_failed": 1,
+    "forge_total": 4,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 3,
+    "report_path": "testing/eval/rq1_verify_eval_agents_seed1.json",
+    "row_id": 3238,
+    "row_status": 1,
+    "selection_policy": "best-pass-first"
+  },
+  "file_path": "repository/ethernaut/lib/ethernaut.git/contracts/src/levels/Stake.sol",
+  "id": 3238,
+  "model": "gpt-5-mini",
+  "refreshed_at": "2026-07-11T07:31:20.795713+00:00",
+  "slither": {
+    "count": -1,
+    "raw_count": null,
+    "raw_present": false,
+    "raw_summary": {},
+    "rq1_count": -1,
+    "rq1_source": "vuln_count",
+    "source": "vuln_count",
+    "summary": {}
+  },
+  "source": "deepcode",
+  "source_kind": "agent",
+  "status": "analyzed",
+  "table": "progress_tracker_agent",
+  "test_fail": 1,
+  "test_pass": 3,
+  "test_source": "eval_seed1",
+  "test_total": 4
+}

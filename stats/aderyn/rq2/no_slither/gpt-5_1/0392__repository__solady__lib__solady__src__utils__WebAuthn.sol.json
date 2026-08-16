@@ -1,0 +1,344 @@
+{
+  "aderyn": {
+    "count": 2,
+    "raw": {
+      "command": [
+        "/home/chenwei/.cargo/bin/aderyn",
+        "/home/chenwei/work/solagent/repository/solady/lib/solady",
+        "-i",
+        "src/utils/WebAuthn.sol",
+        "-o",
+        "/tmp/aderyn_report_pnwpr_jl/report.json",
+        "--skip-update-check",
+        "--no-snippets"
+      ],
+      "included_file": "src/utils/WebAuthn.sol",
+      "profile": null,
+      "project_root": "/home/chenwei/work/solagent/repository/solady/lib/solady",
+      "raw_stderr": "",
+      "raw_stdout": "\n---------------------------------------------------------------------\n# Configuration\n---------------------------------------------------------------------\nRoot - /home/chenwei/work/solagent/repository/solady/lib/solady\nSource - /home/chenwei/work/solagent/repository/solady/lib/solady/src\nRemappings - [\n    \"forge-std/=test/utils/forge-std/\",\n]\nEVM version - paris\n---------------------------------------------------------------------\n# Source Scope\n---------------------------------------------------------------------\nInclude Filepaths Containing - [\n    \"src/utils/WebAuthn.sol\",\n]\nExclude Filepaths Containing - No specific criteria.\nAuto Excluding - No Files.\n---------------------------------------------------------------------\n# Compiling Abstract Syntax Trees\n---------------------------------------------------------------------\nIngesting 1 compiled files [solc : v0.8.28]\n---------------------------------------------------------------------\n# Scanning Contracts\n---------------------------------------------------------------------\nRunning 88 detectors\nDetectors run, printing report.\nReport printed to /tmp/aderyn_report_pnwpr_jl/report.json\n\n✔ Aderyn did its job. Solidity's a bit safer now.\n💫 Like the tool? A star on GitHub goes a long way:\nhttps://github.com/Cyfrin/aderyn\n",
+      "report": {
+        "detectors_used": [
+          "abi-encode-packed-hash-collision",
+          "arbitrary-transfer-from",
+          "assert-state-change",
+          "block-timestamp-deadline",
+          "boolean-equality",
+          "builtin-symbol-shadowing",
+          "centralization-risk",
+          "constant-function-changes-state",
+          "constant-function-contains-assembly",
+          "contract-locks-ether",
+          "costly-loop",
+          "dangerous-unary-operator",
+          "dead-code",
+          "delegate-call-unchecked-address",
+          "delegatecall-in-loop",
+          "delete-nested-mapping",
+          "deprecated-oz-function",
+          "division-before-multiplication",
+          "dynamic-array-length-assignment",
+          "ecrecover",
+          "empty-block",
+          "empty-require-revert",
+          "enumerable-loop-removal",
+          "eth-send-unchecked-address",
+          "experimental-encoder",
+          "function-initializing-state",
+          "function-pointer-in-constructor",
+          "function-selector-collision",
+          "inconsistent-type-names",
+          "incorrect-caret-operator",
+          "incorrect-erc20-interface",
+          "incorrect-erc721-interface",
+          "incorrect-shift-order",
+          "incorrect-use-of-modifier",
+          "internal-function-used-once",
+          "large-numeric-literal",
+          "literal-instead-of-constant",
+          "local-variable-shadowing",
+          "missing-inheritance",
+          "misused-boolean",
+          "modifier-used-only-once",
+          "msg-value-in-loop",
+          "multiple-constructors",
+          "multiple-placeholders",
+          "nested-struct-in-mapping",
+          "non-reentrant-not-first",
+          "out-of-order-retryable",
+          "pre-declared-local-variable-usage",
+          "push-zero-opcode",
+          "redundant-statement",
+          "reentrancy-state-change",
+          "require-revert-in-loop",
+          "return-bomb",
+          "reused-contract-name",
+          "rtlo",
+          "selfdestruct",
+          "signed-integer-storage-array",
+          "solmate-safe-transfer-lib",
+          "state-change-without-event",
+          "state-no-address-check",
+          "state-variable-could-be-constant",
+          "state-variable-could-be-immutable",
+          "state-variable-init-order",
+          "state-variable-read-external",
+          "state-variable-shadowing",
+          "storage-array-length-not-cached",
+          "storage-array-memory-edit",
+          "strict-equality-contract-balance",
+          "tautological-compare",
+          "tautology-or-contradiction",
+          "todo",
+          "tx-origin-used-for-auth",
+          "unchecked-low-level-call",
+          "unchecked-return",
+          "unchecked-send",
+          "uninitialized-local-variable",
+          "unprotected-initializer",
+          "unsafe-casting",
+          "unsafe-erc20-operation",
+          "unsafe-oz-erc721-mint",
+          "unspecific-solidity-pragma",
+          "unused-error",
+          "unused-import",
+          "unused-public-function",
+          "unused-state-variable",
+          "void-constructor",
+          "weak-randomness",
+          "yul-return"
+        ],
+        "files_details": {
+          "files_details": [
+            {
+              "file_path": "src/utils/WebAuthn.sol",
+              "n_sloc": 288
+            }
+          ]
+        },
+        "files_summary": {
+          "total_sloc": 288,
+          "total_source_units": 1
+        },
+        "high_issues": {
+          "issues": []
+        },
+        "issue_count": {
+          "high": 0,
+          "low": 2
+        },
+        "low_issues": {
+          "issues": [
+            {
+              "description": "Instead of separating the logic into a separate function, consider inlining the logic into the calling function. This can reduce the number of function calls and improve readability.",
+              "detector_name": "internal-function-used-once",
+              "instances": [
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 35,
+                  "src": "789:6",
+                  "src_char": "789:6"
+                }
+              ],
+              "title": "Internal Function Used Only Once"
+            },
+            {
+              "description": "Define and use `constant` variables instead of using literals. If the same constant literal value is used multiple times, create a constant state variable and reference it throughout the contract.",
+              "detector_name": "literal-instead-of-constant",
+              "instances": [
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 130,
+                  "src": "4480:6",
+                  "src_char": "4480:6"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 130,
+                  "src": "4497:6",
+                  "src_char": "4497:6"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 131,
+                  "src": "4557:6",
+                  "src_char": "4557:6"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 131,
+                  "src": "4584:6",
+                  "src_char": "4584:6"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 133,
+                  "src": "4638:1",
+                  "src_char": "4638:1"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 133,
+                  "src": "4656:2",
+                  "src_char": "4656:2"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 133,
+                  "src": "4661:2",
+                  "src_char": "4661:2"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 179,
+                  "src": "6037:4",
+                  "src_char": "6037:4"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 196,
+                  "src": "6466:1",
+                  "src_char": "6466:1"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 197,
+                  "src": "6528:2",
+                  "src_char": "6528:2"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 246,
+                  "src": "7938:4",
+                  "src_char": "7938:4"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 263,
+                  "src": "8391:1",
+                  "src_char": "8391:1"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 264,
+                  "src": "8453:2",
+                  "src_char": "8453:2"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 312,
+                  "src": "9971:1",
+                  "src_char": "9971:1"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 317,
+                  "src": "10101:1",
+                  "src_char": "10101:1"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 322,
+                  "src": "10318:1",
+                  "src_char": "10318:1"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 324,
+                  "src": "10376:4",
+                  "src_char": "10376:4"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 325,
+                  "src": "10432:4",
+                  "src_char": "10432:4"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 326,
+                  "src": "10501:4",
+                  "src_char": "10501:4"
+                },
+                {
+                  "contract_path": "src/utils/WebAuthn.sol",
+                  "line_no": 327,
+                  "src": "10577:4",
+                  "src_char": "10577:4"
+                }
+              ],
+              "title": "Literal Instead of Constant"
+            }
+          ]
+        }
+      },
+      "return_code": 0
+    },
+    "sloc": 288,
+    "summary": {
+      "High": 0,
+      "Low": 2
+    }
+  },
+  "code": {
+    "best_pass": 1,
+    "best_round": 4,
+    "best_total": 6,
+    "best_vuln": 2,
+    "code_bytes": 10814,
+    "code_extractor": "extract_code_blocks",
+    "code_selection": "round_messages",
+    "feedback_compiled": true,
+    "selection_policy": "test-first-security-second",
+    "sha256": "f4e29aad663ff4e59ecf99a34c00082743621f736d54caa53b557c7ccf3dc676",
+    "skip_reason": null,
+    "sloc": 288,
+    "strategy": "rq2_test_first_security_second"
+  },
+  "created_at": "2026-07-11T11:07:11.609654+00:00",
+  "eval": {
+    "best_round": 4,
+    "compile_error": null,
+    "compiled": true,
+    "error": null,
+    "eval_test_path": "repository/solady/lib/solady/test/WebAuthn.t.sol",
+    "expected_tests": 7,
+    "extract_error": null,
+    "forge_total": 7,
+    "foundry_profile": null,
+    "foundry_source_dir": null,
+    "full_pass": false,
+    "fuzz_seed": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "passed_tests": 2,
+    "report_path": "testing/eval/rq2_verify_eval_ablation.json",
+    "row_id": 392,
+    "selection_policy": "test-first-security-second"
+  },
+  "file_path": "repository/solady/lib/solady/src/utils/WebAuthn.sol",
+  "id": 392,
+  "model": "gpt-5.1",
+  "refreshed_at": "2026-07-12T03:05:16.001225+00:00",
+  "row_status": 1,
+  "scan_config": {
+    "foundry_profile": null,
+    "source_dir": null,
+    "tool": "Aderyn"
+  },
+  "scan_origin": "rq2_scan",
+  "slither": {
+    "count": 2,
+    "summary": {
+      "High": 0,
+      "Low": 0,
+      "Medium": 2
+    }
+  },
+  "source": "no_slither",
+  "source_name": "w/o Slither feedback",
+  "status": "analyzed",
+  "table": "process_tracking_ablation",
+  "test_fail": 5,
+  "test_pass": 2,
+  "test_source": "rq2_eval",
+  "test_total": 7
+}

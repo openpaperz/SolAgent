@@ -1,0 +1,10 @@
+{
+  "model": "mimo-v2.5-pro",
+  "method": "SolAgent",
+  "file_path": "repository/solady/lib/solady/src/utils/SSTORE2.sol",
+  "eval_full_pass": false,
+  "code_sha256": "aa78415d23872e191f73f6c2081f1a858f1892238c1ff77d6ff3d4b66c9c79bf",
+  "status": "skipped",
+  "created_at": "2026-07-13T12:55:56.762669+00:00",
+  "skip_reason": "not eval FullPass"
+}
