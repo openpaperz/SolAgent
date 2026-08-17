@@ -463,4 +463,4 @@ python z0train/train_sft_swift.py \
 
 ## Statistics and Analysis
 
-- `stats/ex_rq1_*.py`: Supplementary statistics (LOC, Token usage, Gas analysis)
+- `stats/ex_rq1_*.py`: Supplementary statistics (LOC, Gas analysis)
